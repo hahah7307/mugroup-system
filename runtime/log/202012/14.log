@@ -1,0 +1,2089 @@
+---------------------------------------------------------------
+[ 2020-12-14T16:19:36+08:00 ] 0.0.0.0 GET localhost:82/
+[运行时间：0.079906s] [吞吐率：12.51req/s] [内存消耗：3,096.90kb] [文件加载：49]
+[ info ] [ LANG ] /Users/hahah./Documents/wwwroot/hardware-tools/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost:82',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4350.4 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'sec-fetch-site' => 'same-origin',
+  'sec-fetch-mode' => 'navigate',
+  'sec-fetch-user' => '?1',
+  'sec-fetch-dest' => 'document',
+  'referer' => 'http://localhost:82/manage/Member/feature/id/7.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'cookie' => 'Hm_lvt_dea6bad1057861a8f0ec2b6f8332eec1=1593507666,1594256411; reload=; live_num=; url_num=0; UM_distinctid=1743435027a3dc-0ea8b851e725b8-67360a77-13c680-1743435027b8d0; CNZZDATA1272141907=1901091492-1598602705-%7C1602575711; ECS[visit_times]=19; __atuvc=10%7C45%2C10%7C46%2C17%7C47; SESS49960de5880e8c687434170f6476605b=tgySfQ7IbpkSz5_48Ec9Q2a6yiZergRJ0VD2PXyZbGI; PHPSESSID=pqgiuf487ccjii7ovi3m64n1sm; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ error ] [1045]SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: YES)[/Users/hahah./Documents/wwwroot/hardware-tools/thinkphp/library/think/db/Connection.php:295]
+---------------------------------------------------------------
+[ 2020-12-14T16:19:53+08:00 ] 0.0.0.0 GET localhost:82/
+[运行时间：0.150966s] [吞吐率：6.62req/s] [内存消耗：4,056.52kb] [文件加载：69]
+[ info ] [ LANG ] /Users/hahah./Documents/wwwroot/hardware-tools/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost:82',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4350.4 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'sec-fetch-site' => 'same-origin',
+  'sec-fetch-mode' => 'navigate',
+  'sec-fetch-user' => '?1',
+  'sec-fetch-dest' => 'document',
+  'referer' => 'http://localhost:82/manage/Member/feature/id/7.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'cookie' => 'Hm_lvt_dea6bad1057861a8f0ec2b6f8332eec1=1593507666,1594256411; reload=; live_num=; url_num=0; UM_distinctid=1743435027a3dc-0ea8b851e725b8-67360a77-13c680-1743435027b8d0; CNZZDATA1272141907=1901091492-1598602705-%7C1602575711; ECS[visit_times]=19; __atuvc=10%7C45%2C10%7C46%2C17%7C47; SESS49960de5880e8c687434170f6476605b=tgySfQ7IbpkSz5_48Ec9Q2a6yiZergRJ0VD2PXyZbGI; PHPSESSID=pqgiuf487ccjii7ovi3m64n1sm; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => '',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\Home\controller\IndexController->index[ /Users/hahah./Documents/wwwroot/hardware-tools/application/Home/controller/IndexController.php ]
+[ info ] [ VIEW ] /Users/hahah./Documents/wwwroot/hardware-tools/public/../application/Home/view/default/index/index.php [ array (
+  0 => 'language',
+  1 => 'languages',
+  2 => 'website',
+  3 => 'navigation',
+  4 => 'pages',
+  5 => 'block',
+  6 => 'block1',
+  7 => 'article',
+  8 => 'notice',
+  9 => 'link',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001668s ] mysql:host=127.0.0.1;port=3306;dbname=hardware-tools;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `cms_website_language` [ RunTime:0.003795s ]
+[ sql ] [ SQL ] SELECT * FROM `cms_website_language` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000574s ]
+[ sql ] [ SQL ] SELECT * FROM `cms_website_language` WHERE  `status` = 1  AND `is_avail` = 1 [ RunTime:0.000426s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `cms_website` [ RunTime:0.003906s ]
+[ sql ] [ SQL ] SELECT * FROM `cms_website` WHERE  `language_id` = 1 LIMIT 1 [ RunTime:0.000642s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `cms_app_template` [ RunTime:0.001048s ]
+[ sql ] [ SQL ] SELECT * FROM `cms_app_template` WHERE  `current` = 1  AND `status` = 1 LIMIT 1 [ RunTime:0.000469s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `cms_navigation` [ RunTime:0.000660s ]
+[ sql ] [ SQL ] SELECT * FROM `cms_navigation` WHERE  `language_id` = 1  AND `pid` = 0 ORDER BY `sort` ASC [ RunTime:0.001554s ]
+[ sql ] [ SQL ] SELECT * FROM `cms_navigation` WHERE  `language_id` = 1  AND `pid` = 7 ORDER BY `sort` ASC [ RunTime:0.000346s ]
+[ sql ] [ SQL ] SELECT * FROM `cms_navigation` WHERE  `language_id` = 1  AND `pid` = 8 ORDER BY `sort` ASC [ RunTime:0.000285s ]
+[ sql ] [ SQL ] SELECT * FROM `cms_navigation` WHERE  `language_id` = 1  AND `pid` = 9 ORDER BY `sort` ASC [ RunTime:0.000345s ]
+[ sql ] [ SQL ] SELECT * FROM `cms_navigation` WHERE  `language_id` = 1  AND `pid` = 12 ORDER BY `sort` ASC [ RunTime:0.000326s ]
+[ sql ] [ SQL ] SELECT * FROM `cms_navigation` WHERE  `language_id` = 1  AND `pid` = 13 ORDER BY `sort` ASC [ RunTime:0.000339s ]
+[ sql ] [ SQL ] SELECT * FROM `cms_navigation` WHERE  `language_id` = 1  AND `pid` = 14 ORDER BY `sort` ASC [ RunTime:0.000228s ]
+[ sql ] [ SQL ] SELECT * FROM `cms_navigation` WHERE  `language_id` = 1  AND `pid` = 10 ORDER BY `sort` ASC [ RunTime:0.000312s ]
+[ sql ] [ SQL ] SELECT * FROM `cms_navigation` WHERE  `language_id` = 1  AND `pid` = 15 ORDER BY `sort` ASC [ RunTime:0.000231s ]
+[ sql ] [ SQL ] SELECT * FROM `cms_navigation` WHERE  `language_id` = 1  AND `pid` = 16 ORDER BY `sort` ASC [ RunTime:0.000313s ]
+[ sql ] [ SQL ] SELECT * FROM `cms_navigation` WHERE  `language_id` = 1  AND `pid` = 11 ORDER BY `sort` ASC [ RunTime:0.000382s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `cms_page` [ RunTime:0.002346s ]
+[ sql ] [ SQL ] SELECT * FROM `cms_page` WHERE  `language_id` = 1  AND `status` = 1 [ RunTime:0.001066s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `cms_block_child` [ RunTime:0.001891s ]
+[ sql ] [ SQL ] SELECT * FROM `cms_block_child` WHERE  `language_id` = 1  AND `status` = 1  AND `block_id` = 1 [ RunTime:0.001454s ]
+[ sql ] [ SQL ] SELECT * FROM `cms_block_child` WHERE  `language_id` = 1  AND `status` = 1  AND `block_id` = 2 LIMIT 1 [ RunTime:0.000213s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `cms_article_category` [ RunTime:0.003088s ]
+[ sql ] [ SQL ] SELECT * FROM `cms_article_category` WHERE  `language_id` = 1  AND `status` = 1 [ RunTime:0.001069s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `cms_article` [ RunTime:0.001877s ]
+[ sql ] [ SQL ] SELECT * FROM `cms_article` WHERE  `status` = 1  AND `show_home` = 1  AND `cid` IN (1,2,3,4) ORDER BY `sort` ASC,`created_at` DESC [ RunTime:0.001449s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `cms_notice` [ RunTime:0.005351s ]
+[ sql ] [ SQL ] SELECT * FROM `cms_notice` WHERE  `cid` = 1  AND `language_id` = 1  AND `status` = 1 ORDER BY `sort` ASC,`created_at` DESC LIMIT 3 [ RunTime:0.008313s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `cms_link_category` [ RunTime:0.002433s ]
+[ sql ] [ SQL ] SELECT * FROM `cms_link_category` WHERE  `language_id` = 1  AND `status` = 1 [ RunTime:0.002116s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `cms_link` [ RunTime:0.001696s ]
+[ sql ] [ SQL ] SELECT * FROM `cms_link` WHERE  `status` = 1  AND `type` IN (3,4,5,6) [ RunTime:0.000960s ]
+[ error ] [8]未定义数组下标: 1[/Users/hahah./Documents/wwwroot/hardware-tools/thinkphp/library/think/Collection.php:376]
+[ error ] [8]未定义数组下标: 1[/Users/hahah./Documents/wwwroot/hardware-tools/thinkphp/library/think/Collection.php:376]
+[ error ] [8]未定义数组下标: 1[/Users/hahah./Documents/wwwroot/hardware-tools/thinkphp/library/think/Collection.php:376]
+[ error ] [8]未定义数组下标: 2[/Users/hahah./Documents/wwwroot/hardware-tools/thinkphp/library/think/Collection.php:376]
+[ error ] [8]未定义数组下标: 2[/Users/hahah./Documents/wwwroot/hardware-tools/thinkphp/library/think/Collection.php:376]
+[ error ] [8]未定义数组下标: 2[/Users/hahah./Documents/wwwroot/hardware-tools/thinkphp/library/think/Collection.php:376]
+---------------------------------------------------------------
+[ 2020-12-14T16:19:53+08:00 ] 0.0.0.0 GET localhost:82/upload/image-path/20201202/20201202100400116.png
+[运行时间：0.016111s] [吞吐率：62.07req/s] [内存消耗：1,443.98kb] [文件加载：33]
+[ info ] [ LANG ] /Users/hahah./Documents/wwwroot/hardware-tools/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'upload',
+    1 => 'image-path',
+    2 => '20201202',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost:82',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4350.4 Safari/537.36',
+  'accept' => 'image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8',
+  'sec-fetch-site' => 'same-origin',
+  'sec-fetch-mode' => 'no-cors',
+  'sec-fetch-dest' => 'image',
+  'referer' => 'http://localhost:82/',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'cookie' => 'Hm_lvt_dea6bad1057861a8f0ec2b6f8332eec1=1593507666,1594256411; reload=; live_num=; url_num=0; UM_distinctid=1743435027a3dc-0ea8b851e725b8-67360a77-13c680-1743435027b8d0; CNZZDATA1272141907=1901091492-1598602705-%7C1602575711; ECS[visit_times]=19; __atuvc=10%7C45%2C10%7C46%2C17%7C47; SESS49960de5880e8c687434170f6476605b=tgySfQ7IbpkSz5_48Ec9Q2a6yiZergRJ0VD2PXyZbGI; PHPSESSID=pqgiuf487ccjii7ovi3m64n1sm; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2020-12-14T16:19:53+08:00 ] 0.0.0.0 GET localhost:82/Home/Analytics/index.html?domain=localhost&url=http%3A%2F%2Flocalhost%3A82%2F&title=%E5%AE%81%E6%B3%A2%E5%B8%82%E9%84%9E%E5%B7%9E%E4%BA%94%E9%87%91%E5%B7%A5%E5%85%B7%E5%9B%BD%E9%99%85%E5%95%86%E4%BC%9A&referrer=http%3A%2F%2Flocalhost%3A82%2Fmanage%2FMember%2Ffeature%2Fid%2F7.html&sh=900&sw=1440&cd=24&lang=zh-CN&account=Ningbo%20Suntek
+[运行时间：0.494752s] [吞吐率：2.02req/s] [内存消耗：3,431.17kb] [文件加载：56]
+[ info ] [ LANG ] /Users/hahah./Documents/wwwroot/hardware-tools/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'Home',
+    1 => 'Analytics',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost:82',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4350.4 Safari/537.36',
+  'accept' => 'image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8',
+  'sec-fetch-site' => 'same-origin',
+  'sec-fetch-mode' => 'no-cors',
+  'sec-fetch-dest' => 'image',
+  'referer' => 'http://localhost:82/',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'cookie' => 'Hm_lvt_dea6bad1057861a8f0ec2b6f8332eec1=1593507666,1594256411; reload=; live_num=; url_num=0; UM_distinctid=1743435027a3dc-0ea8b851e725b8-67360a77-13c680-1743435027b8d0; CNZZDATA1272141907=1901091492-1598602705-%7C1602575711; ECS[visit_times]=19; __atuvc=10%7C45%2C10%7C46%2C17%7C47; SESS49960de5880e8c687434170f6476605b=tgySfQ7IbpkSz5_48Ec9Q2a6yiZergRJ0VD2PXyZbGI; PHPSESSID=pqgiuf487ccjii7ovi3m64n1sm; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+  'domain' => 'localhost',
+  'url' => 'http://localhost:82/',
+  'title' => '宁波市鄞州五金工具国际商会',
+  'referrer' => 'http://localhost:82/manage/Member/feature/id/7.html',
+  'sh' => '900',
+  'sw' => '1440',
+  'cd' => '24',
+  'lang' => 'zh-CN',
+  'account' => 'Ningbo Suntek',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => '',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\Home\controller\AnalyticsController->index[ /Users/hahah./Documents/wwwroot/hardware-tools/application/Home/controller/AnalyticsController.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000732s ] mysql:host=127.0.0.1;port=3306;dbname=hardware-tools;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `cms_website_language` [ RunTime:0.001267s ]
+[ sql ] [ SQL ] SELECT * FROM `cms_website_language` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.001154s ]
+[ sql ] [ SQL ] SELECT * FROM `cms_website_language` WHERE  `status` = 1  AND `is_avail` = 1 [ RunTime:0.000529s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `cms_website` [ RunTime:0.000835s ]
+[ sql ] [ SQL ] SELECT * FROM `cms_website` WHERE  `language_id` = 1 LIMIT 1 [ RunTime:0.000503s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `cms_app_template` [ RunTime:0.000600s ]
+[ sql ] [ SQL ] SELECT * FROM `cms_app_template` WHERE  `current` = 1  AND `status` = 1 LIMIT 1 [ RunTime:0.000388s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `cms_navigation` [ RunTime:0.000578s ]
+[ sql ] [ SQL ] SELECT * FROM `cms_navigation` WHERE  `language_id` = 1  AND `pid` = 0 ORDER BY `sort` ASC [ RunTime:0.000386s ]
+[ sql ] [ SQL ] SELECT * FROM `cms_navigation` WHERE  `language_id` = 1  AND `pid` = 7 ORDER BY `sort` ASC [ RunTime:0.000355s ]
+[ sql ] [ SQL ] SELECT * FROM `cms_navigation` WHERE  `language_id` = 1  AND `pid` = 8 ORDER BY `sort` ASC [ RunTime:0.000363s ]
+[ sql ] [ SQL ] SELECT * FROM `cms_navigation` WHERE  `language_id` = 1  AND `pid` = 9 ORDER BY `sort` ASC [ RunTime:0.000286s ]
+[ sql ] [ SQL ] SELECT * FROM `cms_navigation` WHERE  `language_id` = 1  AND `pid` = 12 ORDER BY `sort` ASC [ RunTime:0.000293s ]
+[ sql ] [ SQL ] SELECT * FROM `cms_navigation` WHERE  `language_id` = 1  AND `pid` = 13 ORDER BY `sort` ASC [ RunTime:0.000291s ]
+[ sql ] [ SQL ] SELECT * FROM `cms_navigation` WHERE  `language_id` = 1  AND `pid` = 14 ORDER BY `sort` ASC [ RunTime:0.000416s ]
+[ sql ] [ SQL ] SELECT * FROM `cms_navigation` WHERE  `language_id` = 1  AND `pid` = 10 ORDER BY `sort` ASC [ RunTime:0.000467s ]
+[ sql ] [ SQL ] SELECT * FROM `cms_navigation` WHERE  `language_id` = 1  AND `pid` = 15 ORDER BY `sort` ASC [ RunTime:0.000357s ]
+[ sql ] [ SQL ] SELECT * FROM `cms_navigation` WHERE  `language_id` = 1  AND `pid` = 16 ORDER BY `sort` ASC [ RunTime:0.000451s ]
+[ sql ] [ SQL ] SELECT * FROM `cms_navigation` WHERE  `language_id` = 1  AND `pid` = 11 ORDER BY `sort` ASC [ RunTime:0.000516s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `cms_page` [ RunTime:0.000675s ]
+[ sql ] [ SQL ] SELECT * FROM `cms_page` WHERE  `language_id` = 1  AND `status` = 1 [ RunTime:0.000389s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `cms_visitor` [ RunTime:0.006086s ]
+[ sql ] [ SQL ] INSERT INTO `cms_visitor` (`code` , `first_visit_at` , `last_visit_at` , `created_day` , `created_month` , `created_year` , `is_returning` , `visit_count` , `created_at` , `updated_at`) VALUES ('7428147e9db77d83c10001eeab47c5d4' , 1607933993 , 1607933993 , 14 , 1214 , 2020 , 0 , 1 , 1607933993 , 1607933993) [ RunTime:0.005207s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `cms_visitor_log` [ RunTime:0.003901s ]
+[ sql ] [ SQL ] INSERT INTO `cms_visitor_log` (`created_at` , `created_day` , `created_month` , `created_year` , `domain` , `v_url` , `v_title` , `referrer` , `screen_height` , `screen_width` , `screen_colordepth` , `lang` , `account` , `client_ip` , `country` , `user_agent` , `vid` , `updated_at`) VALUES (1607933993 , 14 , 1214 , 2020 , 'localhost' , 'http://localhost:82/' , '宁波市鄞州五金工具国际商会' , 'http://localhost:82/manage/Member/feature/id/7.html' , 900 , 1440 , 24 , 'zh-CN' , 'Ningbo Suntek' , 0 , 'China' , 'Chrome' , 7 , 1607933993) [ RunTime:0.002063s ]
+---------------------------------------------------------------
+[ 2020-12-14T16:19:56+08:00 ] 0.0.0.0 GET localhost:82/page/contact-us.html
+[运行时间：0.064464s] [吞吐率：15.51req/s] [内存消耗：3,781.96kb] [文件加载：63]
+[ info ] [ LANG ] /Users/hahah./Documents/wwwroot/hardware-tools/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'Home',
+    1 => 'Page',
+    2 => 'detail',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost:82',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4350.4 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'sec-fetch-site' => 'same-origin',
+  'sec-fetch-mode' => 'navigate',
+  'sec-fetch-user' => '?1',
+  'sec-fetch-dest' => 'document',
+  'referer' => 'http://localhost:82/',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'cookie' => 'Hm_lvt_dea6bad1057861a8f0ec2b6f8332eec1=1593507666,1594256411; reload=; live_num=; url_num=0; UM_distinctid=1743435027a3dc-0ea8b851e725b8-67360a77-13c680-1743435027b8d0; CNZZDATA1272141907=1901091492-1598602705-%7C1602575711; ECS[visit_times]=19; __atuvc=10%7C45%2C10%7C46%2C17%7C47; SESS49960de5880e8c687434170f6476605b=tgySfQ7IbpkSz5_48Ec9Q2a6yiZergRJ0VD2PXyZbGI; PHPSESSID=pqgiuf487ccjii7ovi3m64n1sm; thinkphp_show_page_trace=0|0; _dt-key=7428147e9db77d83c10001eeab47c5d4',
+)
+[ info ] [ PARAM ] array (
+  'slug' => 'contact-us',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => '',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\Home\controller\PageController->detail[ /Users/hahah./Documents/wwwroot/hardware-tools/application/Home/controller/PageController.php ]
+[ info ] [ VIEW ] /Users/hahah./Documents/wwwroot/hardware-tools/public/../application/Home/view/default/page/detail.php [ array (
+  0 => 'language',
+  1 => 'languages',
+  2 => 'website',
+  3 => 'navigation',
+  4 => 'pages',
+  5 => 'banner',
+  6 => 'info',
+  7 => 'lastPage',
+  8 => 'id',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000537s ] mysql:host=127.0.0.1;port=3306;dbname=hardware-tools;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `cms_website_language` [ RunTime:0.000964s ]
+[ sql ] [ SQL ] SELECT * FROM `cms_website_language` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.001316s ]
+[ sql ] [ SQL ] SELECT * FROM `cms_website_language` WHERE  `status` = 1  AND `is_avail` = 1 [ RunTime:0.000379s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `cms_website` [ RunTime:0.001942s ]
+[ sql ] [ SQL ] SELECT * FROM `cms_website` WHERE  `language_id` = 1 LIMIT 1 [ RunTime:0.000630s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `cms_app_template` [ RunTime:0.000766s ]
+[ sql ] [ SQL ] SELECT * FROM `cms_app_template` WHERE  `current` = 1  AND `status` = 1 LIMIT 1 [ RunTime:0.000325s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `cms_navigation` [ RunTime:0.001945s ]
+[ sql ] [ SQL ] SELECT * FROM `cms_navigation` WHERE  `language_id` = 1  AND `pid` = 0 ORDER BY `sort` ASC [ RunTime:0.000646s ]
+[ sql ] [ SQL ] SELECT * FROM `cms_navigation` WHERE  `language_id` = 1  AND `pid` = 7 ORDER BY `sort` ASC [ RunTime:0.000358s ]
+[ sql ] [ SQL ] SELECT * FROM `cms_navigation` WHERE  `language_id` = 1  AND `pid` = 8 ORDER BY `sort` ASC [ RunTime:0.000259s ]
+[ sql ] [ SQL ] SELECT * FROM `cms_navigation` WHERE  `language_id` = 1  AND `pid` = 9 ORDER BY `sort` ASC [ RunTime:0.000245s ]
+[ sql ] [ SQL ] SELECT * FROM `cms_navigation` WHERE  `language_id` = 1  AND `pid` = 12 ORDER BY `sort` ASC [ RunTime:0.000313s ]
+[ sql ] [ SQL ] SELECT * FROM `cms_navigation` WHERE  `language_id` = 1  AND `pid` = 13 ORDER BY `sort` ASC [ RunTime:0.000297s ]
+[ sql ] [ SQL ] SELECT * FROM `cms_navigation` WHERE  `language_id` = 1  AND `pid` = 14 ORDER BY `sort` ASC [ RunTime:0.000265s ]
+[ sql ] [ SQL ] SELECT * FROM `cms_navigation` WHERE  `language_id` = 1  AND `pid` = 10 ORDER BY `sort` ASC [ RunTime:0.000244s ]
+[ sql ] [ SQL ] SELECT * FROM `cms_navigation` WHERE  `language_id` = 1  AND `pid` = 15 ORDER BY `sort` ASC [ RunTime:0.000234s ]
+[ sql ] [ SQL ] SELECT * FROM `cms_navigation` WHERE  `language_id` = 1  AND `pid` = 16 ORDER BY `sort` ASC [ RunTime:0.000239s ]
+[ sql ] [ SQL ] SELECT * FROM `cms_navigation` WHERE  `language_id` = 1  AND `pid` = 11 ORDER BY `sort` ASC [ RunTime:0.000198s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `cms_page` [ RunTime:0.001157s ]
+[ sql ] [ SQL ] SELECT * FROM `cms_page` WHERE  `language_id` = 1  AND `status` = 1 [ RunTime:0.000325s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `cms_block_child` [ RunTime:0.001627s ]
+[ sql ] [ SQL ] SELECT * FROM `cms_block_child` WHERE  `language_id` = 1  AND `status` = 1  AND `block_id` = 30 LIMIT 1 [ RunTime:0.000325s ]
+[ sql ] [ SQL ] SELECT * FROM `cms_page` WHERE  `language_id` = 1  AND `status` = 1  AND `slug` = 'contact-us' LIMIT 1 [ RunTime:0.000459s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `cms_page_category` [ RunTime:0.000646s ]
+[ sql ] [ SQL ] SELECT * FROM `cms_page_category` WHERE  `id` = 2 [ RunTime:0.000325s ]
+[ sql ] [ SQL ] SELECT * FROM `cms_page` WHERE  `language_id` = 1  AND `status` = 1 ORDER BY `sort` ASC LIMIT 20 [ RunTime:0.000282s ]
+[ sql ] [ SQL ] SELECT * FROM `cms_page_category` WHERE  `id` IN (2) [ RunTime:0.000199s ]
+---------------------------------------------------------------
+[ 2020-12-14T16:19:56+08:00 ] 0.0.0.0 GET localhost:82/static/images/contactmap.jpg
+[运行时间：0.020251s] [吞吐率：49.38req/s] [内存消耗：1,444.52kb] [文件加载：33]
+[ info ] [ LANG ] /Users/hahah./Documents/wwwroot/hardware-tools/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'images',
+    2 => 'contactmap.jpg',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost:82',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4350.4 Safari/537.36',
+  'accept' => 'image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8',
+  'sec-fetch-site' => 'same-origin',
+  'sec-fetch-mode' => 'no-cors',
+  'sec-fetch-dest' => 'image',
+  'referer' => 'http://localhost:82/page/contact-us.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'cookie' => 'Hm_lvt_dea6bad1057861a8f0ec2b6f8332eec1=1593507666,1594256411; reload=; live_num=; url_num=0; UM_distinctid=1743435027a3dc-0ea8b851e725b8-67360a77-13c680-1743435027b8d0; CNZZDATA1272141907=1901091492-1598602705-%7C1602575711; ECS[visit_times]=19; __atuvc=10%7C45%2C10%7C46%2C17%7C47; SESS49960de5880e8c687434170f6476605b=tgySfQ7IbpkSz5_48Ec9Q2a6yiZergRJ0VD2PXyZbGI; PHPSESSID=pqgiuf487ccjii7ovi3m64n1sm; thinkphp_show_page_trace=0|0; _dt-key=7428147e9db77d83c10001eeab47c5d4',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2020-12-14T16:19:58+08:00 ] 0.0.0.0 GET localhost:82/Home/Analytics/index.html?domain=localhost&url=http%3A%2F%2Flocalhost%3A82%2Fpage%2Fcontact-us.html&title=%E5%AE%81%E6%B3%A2%E5%B8%82%E9%84%9E%E5%B7%9E%E4%BA%94%E9%87%91%E5%B7%A5%E5%85%B7%E5%9B%BD%E9%99%85%E5%95%86%E4%BC%9A&referrer=http%3A%2F%2Flocalhost%3A82%2F&sh=900&sw=1440&cd=24&lang=zh-CN&account=Ningbo%20Suntek
+[运行时间：1.340338s] [吞吐率：0.75req/s] [内存消耗：3,489.77kb] [文件加载：58]
+[ info ] [ LANG ] /Users/hahah./Documents/wwwroot/hardware-tools/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'Home',
+    1 => 'Analytics',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost:82',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4350.4 Safari/537.36',
+  'accept' => 'image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8',
+  'sec-fetch-site' => 'same-origin',
+  'sec-fetch-mode' => 'no-cors',
+  'sec-fetch-dest' => 'image',
+  'referer' => 'http://localhost:82/page/contact-us.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'cookie' => 'Hm_lvt_dea6bad1057861a8f0ec2b6f8332eec1=1593507666,1594256411; reload=; live_num=; url_num=0; UM_distinctid=1743435027a3dc-0ea8b851e725b8-67360a77-13c680-1743435027b8d0; CNZZDATA1272141907=1901091492-1598602705-%7C1602575711; ECS[visit_times]=19; __atuvc=10%7C45%2C10%7C46%2C17%7C47; SESS49960de5880e8c687434170f6476605b=tgySfQ7IbpkSz5_48Ec9Q2a6yiZergRJ0VD2PXyZbGI; PHPSESSID=pqgiuf487ccjii7ovi3m64n1sm; thinkphp_show_page_trace=0|0; _dt-key=7428147e9db77d83c10001eeab47c5d4',
+)
+[ info ] [ PARAM ] array (
+  'domain' => 'localhost',
+  'url' => 'http://localhost:82/page/contact-us.html',
+  'title' => '宁波市鄞州五金工具国际商会',
+  'referrer' => 'http://localhost:82/',
+  'sh' => '900',
+  'sw' => '1440',
+  'cd' => '24',
+  'lang' => 'zh-CN',
+  'account' => 'Ningbo Suntek',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => '',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\Home\controller\AnalyticsController->index[ /Users/hahah./Documents/wwwroot/hardware-tools/application/Home/controller/AnalyticsController.php ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000541s ] mysql:host=127.0.0.1;port=3306;dbname=hardware-tools;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `cms_website_language` [ RunTime:0.001016s ]
+[ sql ] [ SQL ] SELECT * FROM `cms_website_language` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000422s ]
+[ sql ] [ SQL ] SELECT * FROM `cms_website_language` WHERE  `status` = 1  AND `is_avail` = 1 [ RunTime:0.000397s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `cms_website` [ RunTime:0.001597s ]
+[ sql ] [ SQL ] SELECT * FROM `cms_website` WHERE  `language_id` = 1 LIMIT 1 [ RunTime:0.000565s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `cms_app_template` [ RunTime:0.000486s ]
+[ sql ] [ SQL ] SELECT * FROM `cms_app_template` WHERE  `current` = 1  AND `status` = 1 LIMIT 1 [ RunTime:0.000242s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `cms_navigation` [ RunTime:0.000427s ]
+[ sql ] [ SQL ] SELECT * FROM `cms_navigation` WHERE  `language_id` = 1  AND `pid` = 0 ORDER BY `sort` ASC [ RunTime:0.001643s ]
+[ sql ] [ SQL ] SELECT * FROM `cms_navigation` WHERE  `language_id` = 1  AND `pid` = 7 ORDER BY `sort` ASC [ RunTime:0.000391s ]
+[ sql ] [ SQL ] SELECT * FROM `cms_navigation` WHERE  `language_id` = 1  AND `pid` = 8 ORDER BY `sort` ASC [ RunTime:0.000603s ]
+[ sql ] [ SQL ] SELECT * FROM `cms_navigation` WHERE  `language_id` = 1  AND `pid` = 9 ORDER BY `sort` ASC [ RunTime:0.000333s ]
+[ sql ] [ SQL ] SELECT * FROM `cms_navigation` WHERE  `language_id` = 1  AND `pid` = 12 ORDER BY `sort` ASC [ RunTime:0.000221s ]
+[ sql ] [ SQL ] SELECT * FROM `cms_navigation` WHERE  `language_id` = 1  AND `pid` = 13 ORDER BY `sort` ASC [ RunTime:0.000216s ]
+[ sql ] [ SQL ] SELECT * FROM `cms_navigation` WHERE  `language_id` = 1  AND `pid` = 14 ORDER BY `sort` ASC [ RunTime:0.000305s ]
+[ sql ] [ SQL ] SELECT * FROM `cms_navigation` WHERE  `language_id` = 1  AND `pid` = 10 ORDER BY `sort` ASC [ RunTime:0.000212s ]
+[ sql ] [ SQL ] SELECT * FROM `cms_navigation` WHERE  `language_id` = 1  AND `pid` = 15 ORDER BY `sort` ASC [ RunTime:0.000281s ]
+[ sql ] [ SQL ] SELECT * FROM `cms_navigation` WHERE  `language_id` = 1  AND `pid` = 16 ORDER BY `sort` ASC [ RunTime:0.000325s ]
+[ sql ] [ SQL ] SELECT * FROM `cms_navigation` WHERE  `language_id` = 1  AND `pid` = 11 ORDER BY `sort` ASC [ RunTime:0.000283s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `cms_page` [ RunTime:0.001185s ]
+[ sql ] [ SQL ] SELECT * FROM `cms_page` WHERE  `language_id` = 1  AND `status` = 1 [ RunTime:0.000522s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `cms_visitor` [ RunTime:0.005659s ]
+[ sql ] [ SQL ] SELECT * FROM `cms_visitor` WHERE  `code` = '7428147e9db77d83c10001eeab47c5d4' LIMIT 1 [ RunTime:0.002568s ]
+[ sql ] [ SQL ] UPDATE `cms_visitor`  SET `last_visit_at`=1607933996,`is_returning`=1,`visit_count`=2,`updated_at`=1607933998  WHERE  `id` = 7 [ RunTime:0.007157s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `cms_visitor_log` [ RunTime:0.002229s ]
+[ sql ] [ SQL ] INSERT INTO `cms_visitor_log` (`created_at` , `created_day` , `created_month` , `created_year` , `domain` , `v_url` , `v_title` , `referrer` , `screen_height` , `screen_width` , `screen_colordepth` , `lang` , `account` , `client_ip` , `country` , `user_agent` , `vid` , `updated_at`) VALUES (1607933998 , 14 , 1214 , 2020 , 'localhost' , 'http://localhost:82/page/contact-us.html' , '宁波市鄞州五金工具国际商会' , 'http://localhost:82/' , 900 , 1440 , 24 , 'zh-CN' , 'Ningbo Suntek' , 0 , 'China' , 'Chrome' , 7 , 1607933998) [ RunTime:0.002265s ]
+---------------------------------------------------------------
+[ 2020-12-14T16:19:59+08:00 ] 0.0.0.0 GET localhost:82/page/contact-us.html
+[运行时间：0.066972s] [吞吐率：14.93req/s] [内存消耗：3,556.50kb] [文件加载：61]
+[ info ] [ LANG ] /Users/hahah./Documents/wwwroot/hardware-tools/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'Home',
+    1 => 'Page',
+    2 => 'detail',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost:82',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4350.4 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'sec-fetch-site' => 'same-origin',
+  'sec-fetch-mode' => 'navigate',
+  'sec-fetch-user' => '?1',
+  'sec-fetch-dest' => 'document',
+  'referer' => 'http://localhost:82/',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'cookie' => 'thinkphp_show_page_trace=0|0; Hm_lvt_dea6bad1057861a8f0ec2b6f8332eec1=1593507666,1594256411; reload=; live_num=; url_num=0; UM_distinctid=1743435027a3dc-0ea8b851e725b8-67360a77-13c680-1743435027b8d0; CNZZDATA1272141907=1901091492-1598602705-%7C1602575711; ECS[visit_times]=19; __atuvc=10%7C45%2C10%7C46%2C17%7C47; SESS49960de5880e8c687434170f6476605b=tgySfQ7IbpkSz5_48Ec9Q2a6yiZergRJ0VD2PXyZbGI; PHPSESSID=pqgiuf487ccjii7ovi3m64n1sm; thinkphp_show_page_trace=0|0; _dt-key=7428147e9db77d83c10001eeab47c5d4',
+)
+[ info ] [ PARAM ] array (
+  'slug' => 'contact-us',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => '',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\Home\controller\PageController->detail[ /Users/hahah./Documents/wwwroot/hardware-tools/application/Home/controller/PageController.php ]
+[ info ] [ VIEW ] /Users/hahah./Documents/wwwroot/hardware-tools/public/../application/Home/view/default/page/detail.php [ array (
+  0 => 'language',
+  1 => 'languages',
+  2 => 'website',
+  3 => 'navigation',
+  4 => 'pages',
+  5 => 'banner',
+  6 => 'info',
+  7 => 'lastPage',
+  8 => 'id',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000803s ] mysql:host=127.0.0.1;port=3306;dbname=hardware-tools;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `cms_website_language` [ RunTime:0.000991s ]
+[ sql ] [ SQL ] SELECT * FROM `cms_website_language` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.001569s ]
+[ sql ] [ SQL ] SELECT * FROM `cms_website_language` WHERE  `status` = 1  AND `is_avail` = 1 [ RunTime:0.000394s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `cms_website` [ RunTime:0.002585s ]
+[ sql ] [ SQL ] SELECT * FROM `cms_website` WHERE  `language_id` = 1 LIMIT 1 [ RunTime:0.000579s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `cms_app_template` [ RunTime:0.000891s ]
+[ sql ] [ SQL ] SELECT * FROM `cms_app_template` WHERE  `current` = 1  AND `status` = 1 LIMIT 1 [ RunTime:0.000414s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `cms_navigation` [ RunTime:0.001514s ]
+[ sql ] [ SQL ] SELECT * FROM `cms_navigation` WHERE  `language_id` = 1  AND `pid` = 0 ORDER BY `sort` ASC [ RunTime:0.002413s ]
+[ sql ] [ SQL ] SELECT * FROM `cms_navigation` WHERE  `language_id` = 1  AND `pid` = 7 ORDER BY `sort` ASC [ RunTime:0.000346s ]
+[ sql ] [ SQL ] SELECT * FROM `cms_navigation` WHERE  `language_id` = 1  AND `pid` = 8 ORDER BY `sort` ASC [ RunTime:0.000298s ]
+[ sql ] [ SQL ] SELECT * FROM `cms_navigation` WHERE  `language_id` = 1  AND `pid` = 9 ORDER BY `sort` ASC [ RunTime:0.000330s ]
+[ sql ] [ SQL ] SELECT * FROM `cms_navigation` WHERE  `language_id` = 1  AND `pid` = 12 ORDER BY `sort` ASC [ RunTime:0.000327s ]
+[ sql ] [ SQL ] SELECT * FROM `cms_navigation` WHERE  `language_id` = 1  AND `pid` = 13 ORDER BY `sort` ASC [ RunTime:0.001492s ]
+[ sql ] [ SQL ] SELECT * FROM `cms_navigation` WHERE  `language_id` = 1  AND `pid` = 14 ORDER BY `sort` ASC [ RunTime:0.000287s ]
+[ sql ] [ SQL ] SELECT * FROM `cms_navigation` WHERE  `language_id` = 1  AND `pid` = 10 ORDER BY `sort` ASC [ RunTime:0.000346s ]
+[ sql ] [ SQL ] SELECT * FROM `cms_navigation` WHERE  `language_id` = 1  AND `pid` = 15 ORDER BY `sort` ASC [ RunTime:0.000350s ]
+[ sql ] [ SQL ] SELECT * FROM `cms_navigation` WHERE  `language_id` = 1  AND `pid` = 16 ORDER BY `sort` ASC [ RunTime:0.000281s ]
+[ sql ] [ SQL ] SELECT * FROM `cms_navigation` WHERE  `language_id` = 1  AND `pid` = 11 ORDER BY `sort` ASC [ RunTime:0.000296s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `cms_page` [ RunTime:0.003098s ]
+[ sql ] [ SQL ] SELECT * FROM `cms_page` WHERE  `language_id` = 1  AND `status` = 1 [ RunTime:0.000442s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `cms_block_child` [ RunTime:0.002755s ]
+[ sql ] [ SQL ] SELECT * FROM `cms_block_child` WHERE  `language_id` = 1  AND `status` = 1  AND `block_id` = 30 LIMIT 1 [ RunTime:0.000514s ]
+[ sql ] [ SQL ] SELECT * FROM `cms_page` WHERE  `language_id` = 1  AND `status` = 1  AND `slug` = 'contact-us' LIMIT 1 [ RunTime:0.000498s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `cms_page_category` [ RunTime:0.001132s ]
+[ sql ] [ SQL ] SELECT * FROM `cms_page_category` WHERE  `id` = 2 [ RunTime:0.000834s ]
+[ sql ] [ SQL ] SELECT * FROM `cms_page` WHERE  `language_id` = 1  AND `status` = 1 ORDER BY `sort` ASC LIMIT 20 [ RunTime:0.000384s ]
+[ sql ] [ SQL ] SELECT * FROM `cms_page_category` WHERE  `id` IN (2) [ RunTime:0.000250s ]
+---------------------------------------------------------------
+[ 2020-12-14T16:19:59+08:00 ] 0.0.0.0 GET localhost:82/static/images/contactmap.jpg
+[运行时间：0.014962s] [吞吐率：66.84req/s] [内存消耗：1,444.52kb] [文件加载：33]
+[ info ] [ LANG ] /Users/hahah./Documents/wwwroot/hardware-tools/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'images',
+    2 => 'contactmap.jpg',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost:82',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4350.4 Safari/537.36',
+  'accept' => 'image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8',
+  'sec-fetch-site' => 'same-origin',
+  'sec-fetch-mode' => 'no-cors',
+  'sec-fetch-dest' => 'image',
+  'referer' => 'http://localhost:82/page/contact-us.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'cookie' => 'Hm_lvt_dea6bad1057861a8f0ec2b6f8332eec1=1593507666,1594256411; reload=; live_num=; url_num=0; UM_distinctid=1743435027a3dc-0ea8b851e725b8-67360a77-13c680-1743435027b8d0; CNZZDATA1272141907=1901091492-1598602705-%7C1602575711; ECS[visit_times]=19; __atuvc=10%7C45%2C10%7C46%2C17%7C47; SESS49960de5880e8c687434170f6476605b=tgySfQ7IbpkSz5_48Ec9Q2a6yiZergRJ0VD2PXyZbGI; PHPSESSID=pqgiuf487ccjii7ovi3m64n1sm; thinkphp_show_page_trace=0|0; _dt-key=7428147e9db77d83c10001eeab47c5d4',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2020-12-14T16:20:01+08:00 ] 0.0.0.0 GET localhost:82/Home/Analytics/index.html?domain=localhost&url=http%3A%2F%2Flocalhost%3A82%2Fpage%2Fcontact-us.html&title=%E5%AE%81%E6%B3%A2%E5%B8%82%E9%84%9E%E5%B7%9E%E4%BA%94%E9%87%91%E5%B7%A5%E5%85%B7%E5%9B%BD%E9%99%85%E5%95%86%E4%BC%9A&referrer=http%3A%2F%2Flocalhost%3A82%2F&sh=900&sw=1440&cd=24&lang=zh-CN&account=Ningbo%20Suntek
+[运行时间：2.413865s] [吞吐率：0.41req/s] [内存消耗：3,489.77kb] [文件加载：58]
+[ info ] [ LANG ] /Users/hahah./Documents/wwwroot/hardware-tools/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'Home',
+    1 => 'Analytics',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost:82',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4350.4 Safari/537.36',
+  'accept' => 'image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8',
+  'sec-fetch-site' => 'same-origin',
+  'sec-fetch-mode' => 'no-cors',
+  'sec-fetch-dest' => 'image',
+  'referer' => 'http://localhost:82/page/contact-us.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'cookie' => 'Hm_lvt_dea6bad1057861a8f0ec2b6f8332eec1=1593507666,1594256411; reload=; live_num=; url_num=0; UM_distinctid=1743435027a3dc-0ea8b851e725b8-67360a77-13c680-1743435027b8d0; CNZZDATA1272141907=1901091492-1598602705-%7C1602575711; ECS[visit_times]=19; __atuvc=10%7C45%2C10%7C46%2C17%7C47; SESS49960de5880e8c687434170f6476605b=tgySfQ7IbpkSz5_48Ec9Q2a6yiZergRJ0VD2PXyZbGI; PHPSESSID=pqgiuf487ccjii7ovi3m64n1sm; thinkphp_show_page_trace=0|0; _dt-key=7428147e9db77d83c10001eeab47c5d4',
+)
+[ info ] [ PARAM ] array (
+  'domain' => 'localhost',
+  'url' => 'http://localhost:82/page/contact-us.html',
+  'title' => '宁波市鄞州五金工具国际商会',
+  'referrer' => 'http://localhost:82/',
+  'sh' => '900',
+  'sw' => '1440',
+  'cd' => '24',
+  'lang' => 'zh-CN',
+  'account' => 'Ningbo Suntek',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => '',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\Home\controller\AnalyticsController->index[ /Users/hahah./Documents/wwwroot/hardware-tools/application/Home/controller/AnalyticsController.php ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001329s ] mysql:host=127.0.0.1;port=3306;dbname=hardware-tools;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `cms_website_language` [ RunTime:0.000859s ]
+[ sql ] [ SQL ] SELECT * FROM `cms_website_language` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000646s ]
+[ sql ] [ SQL ] SELECT * FROM `cms_website_language` WHERE  `status` = 1  AND `is_avail` = 1 [ RunTime:0.000359s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `cms_website` [ RunTime:0.000815s ]
+[ sql ] [ SQL ] SELECT * FROM `cms_website` WHERE  `language_id` = 1 LIMIT 1 [ RunTime:0.000527s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `cms_app_template` [ RunTime:0.000578s ]
+[ sql ] [ SQL ] SELECT * FROM `cms_app_template` WHERE  `current` = 1  AND `status` = 1 LIMIT 1 [ RunTime:0.000290s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `cms_navigation` [ RunTime:0.001434s ]
+[ sql ] [ SQL ] SELECT * FROM `cms_navigation` WHERE  `language_id` = 1  AND `pid` = 0 ORDER BY `sort` ASC [ RunTime:0.000643s ]
+[ sql ] [ SQL ] SELECT * FROM `cms_navigation` WHERE  `language_id` = 1  AND `pid` = 7 ORDER BY `sort` ASC [ RunTime:0.000514s ]
+[ sql ] [ SQL ] SELECT * FROM `cms_navigation` WHERE  `language_id` = 1  AND `pid` = 8 ORDER BY `sort` ASC [ RunTime:0.000296s ]
+[ sql ] [ SQL ] SELECT * FROM `cms_navigation` WHERE  `language_id` = 1  AND `pid` = 9 ORDER BY `sort` ASC [ RunTime:0.000338s ]
+[ sql ] [ SQL ] SELECT * FROM `cms_navigation` WHERE  `language_id` = 1  AND `pid` = 12 ORDER BY `sort` ASC [ RunTime:0.000347s ]
+[ sql ] [ SQL ] SELECT * FROM `cms_navigation` WHERE  `language_id` = 1  AND `pid` = 13 ORDER BY `sort` ASC [ RunTime:0.000414s ]
+[ sql ] [ SQL ] SELECT * FROM `cms_navigation` WHERE  `language_id` = 1  AND `pid` = 14 ORDER BY `sort` ASC [ RunTime:0.000343s ]
+[ sql ] [ SQL ] SELECT * FROM `cms_navigation` WHERE  `language_id` = 1  AND `pid` = 10 ORDER BY `sort` ASC [ RunTime:0.000272s ]
+[ sql ] [ SQL ] SELECT * FROM `cms_navigation` WHERE  `language_id` = 1  AND `pid` = 15 ORDER BY `sort` ASC [ RunTime:0.000295s ]
+[ sql ] [ SQL ] SELECT * FROM `cms_navigation` WHERE  `language_id` = 1  AND `pid` = 16 ORDER BY `sort` ASC [ RunTime:0.000235s ]
+[ sql ] [ SQL ] SELECT * FROM `cms_navigation` WHERE  `language_id` = 1  AND `pid` = 11 ORDER BY `sort` ASC [ RunTime:0.000242s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `cms_page` [ RunTime:0.000562s ]
+[ sql ] [ SQL ] SELECT * FROM `cms_page` WHERE  `language_id` = 1  AND `status` = 1 [ RunTime:0.000286s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `cms_visitor` [ RunTime:0.012747s ]
+[ sql ] [ SQL ] SELECT * FROM `cms_visitor` WHERE  `code` = '7428147e9db77d83c10001eeab47c5d4' LIMIT 1 [ RunTime:0.000674s ]
+[ sql ] [ SQL ] UPDATE `cms_visitor`  SET `last_visit_at`=1607933999,`visit_count`=3,`updated_at`=1607934001  WHERE  `id` = 7 [ RunTime:0.002019s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `cms_visitor_log` [ RunTime:0.012730s ]
+[ sql ] [ SQL ] INSERT INTO `cms_visitor_log` (`created_at` , `created_day` , `created_month` , `created_year` , `domain` , `v_url` , `v_title` , `referrer` , `screen_height` , `screen_width` , `screen_colordepth` , `lang` , `account` , `client_ip` , `country` , `user_agent` , `vid` , `updated_at`) VALUES (1607934001 , 14 , 1214 , 2020 , 'localhost' , 'http://localhost:82/page/contact-us.html' , '宁波市鄞州五金工具国际商会' , 'http://localhost:82/' , 900 , 1440 , 24 , 'zh-CN' , 'Ningbo Suntek' , 0 , 'China' , 'Chrome' , 7 , 1607934001) [ RunTime:0.001347s ]
+---------------------------------------------------------------
+[ 2020-12-14T16:38:04+08:00 ] 0.0.0.0 GET localhost:82/Manage
+[运行时间：0.109185s] [吞吐率：9.16req/s] [内存消耗：3,993.20kb] [文件加载：62]
+[ info ] [ LANG ] /Users/hahah./Documents/wwwroot/hardware-tools/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'Manage',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost:82',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4350.4 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'sec-fetch-site' => 'none',
+  'sec-fetch-mode' => 'navigate',
+  'sec-fetch-user' => '?1',
+  'sec-fetch-dest' => 'document',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'cookie' => 'thinkphp_show_page_trace=0|0; Hm_lvt_dea6bad1057861a8f0ec2b6f8332eec1=1593507666,1594256411; reload=; live_num=; url_num=0; UM_distinctid=1743435027a3dc-0ea8b851e725b8-67360a77-13c680-1743435027b8d0; CNZZDATA1272141907=1901091492-1598602705-%7C1602575711; ECS[visit_times]=19; __atuvc=10%7C45%2C10%7C46%2C17%7C47; SESS49960de5880e8c687434170f6476605b=tgySfQ7IbpkSz5_48Ec9Q2a6yiZergRJ0VD2PXyZbGI; PHPSESSID=pqgiuf487ccjii7ovi3m64n1sm; thinkphp_show_page_trace=0|0; _dt-key=7428147e9db77d83c10001eeab47c5d4',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => '',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\Manage\controller\IndexController->index[ /Users/hahah./Documents/wwwroot/hardware-tools/application/Manage/controller/IndexController.php ]
+[ info ] [ VIEW ] /Users/hahah./Documents/wwwroot/hardware-tools/public/../application/Manage/view/index/index.php [ array (
+  0 => 'user',
+  1 => 'userMenu',
+  2 => 'language',
+  3 => 'languages',
+  4 => 'tinymce',
+  5 => 'article',
+  6 => 'page',
+  7 => 'article_list',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000724s ] mysql:host=127.0.0.1;port=3306;dbname=hardware-tools;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `cms_admin_user` [ RunTime:0.000868s ]
+[ sql ] [ SQL ] SELECT * FROM `cms_admin_user` WHERE  `id` = 1  AND `status` = 1 LIMIT 1 [ RunTime:0.000462s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `cms_website_language` [ RunTime:0.000763s ]
+[ sql ] [ SQL ] SELECT * FROM `cms_website_language` WHERE  `status` = 1  AND `is_default` = 1  AND `is_avail` = 1 LIMIT 1 [ RunTime:0.000510s ]
+[ sql ] [ SQL ] SELECT * FROM `cms_website_language` WHERE  `status` = 1  AND `is_avail` = 1 [ RunTime:0.000578s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `cms_app_template` [ RunTime:0.000802s ]
+[ sql ] [ SQL ] SELECT * FROM `cms_app_template` WHERE  `current` = 1  AND `status` = 1 LIMIT 1 [ RunTime:0.000375s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `cms_block` [ RunTime:0.000665s ]
+[ sql ] [ SQL ] SELECT * FROM `cms_block` WHERE  `index_code` = 'index_banner' LIMIT 1 [ RunTime:0.000401s ]
+[ sql ] [ SQL ] SELECT * FROM `cms_block` WHERE  `index_code` = 'index_ad1' LIMIT 1 [ RunTime:0.000305s ]
+[ sql ] [ SQL ] SELECT * FROM `cms_block` WHERE  `index_code` = 'news_banner' LIMIT 1 [ RunTime:0.000338s ]
+[ sql ] [ SQL ] SELECT * FROM `cms_block` WHERE  `index_code` = 'member_banner' LIMIT 1 [ RunTime:0.000268s ]
+[ sql ] [ SQL ] SELECT * FROM `cms_block` WHERE  `index_code` = 'page_ad1' LIMIT 1 [ RunTime:0.000295s ]
+[ sql ] [ SQL ] SELECT * FROM `cms_block` WHERE  `index_code` = 'page_ad2' LIMIT 1 [ RunTime:0.000395s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `cms_article` [ RunTime:0.000517s ]
+[ sql ] [ SQL ] SELECT * FROM `cms_article` WHERE  `language_id` = 1  AND `status` = 1 [ RunTime:0.000473s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `cms_page` [ RunTime:0.000465s ]
+[ sql ] [ SQL ] SELECT * FROM `cms_page` WHERE  `language_id` = 1  AND `status` = 1 [ RunTime:0.000336s ]
+[ sql ] [ SQL ] SELECT * FROM `cms_article` WHERE  `language_id` = 1  AND `status` = 1 ORDER BY `view_num` DESC LIMIT 9 [ RunTime:0.000391s ]
+[ error ] [8]未定义变量: inquiry[/Users/hahah./Documents/wwwroot/hardware-tools/runtime/temp/c7bf29a631f8ae5b0d261e4b03565ebc.php:292]
+[ error ] [2]count(): Parameter must be an array or an object that implements Countable[/Users/hahah./Documents/wwwroot/hardware-tools/runtime/temp/c7bf29a631f8ae5b0d261e4b03565ebc.php:292]
+[ error ] [8]未定义变量: product[/Users/hahah./Documents/wwwroot/hardware-tools/runtime/temp/c7bf29a631f8ae5b0d261e4b03565ebc.php:301]
+[ error ] [2]count(): Parameter must be an array or an object that implements Countable[/Users/hahah./Documents/wwwroot/hardware-tools/runtime/temp/c7bf29a631f8ae5b0d261e4b03565ebc.php:301]
+[ error ] [8]未定义变量: product_list[/Users/hahah./Documents/wwwroot/hardware-tools/runtime/temp/c7bf29a631f8ae5b0d261e4b03565ebc.php:337]
+[ error ] [8]未定义变量: product_list[/Users/hahah./Documents/wwwroot/hardware-tools/runtime/temp/c7bf29a631f8ae5b0d261e4b03565ebc.php:337]
+[ error ] [8]未定义变量: product_list[/Users/hahah./Documents/wwwroot/hardware-tools/runtime/temp/c7bf29a631f8ae5b0d261e4b03565ebc.php:337]
+---------------------------------------------------------------
+[ 2020-12-14T16:38:07+08:00 ] 0.0.0.0 POST localhost:82/Manage/Index/initMenu.html
+[运行时间：0.037038s] [吞吐率：27.00req/s] [内存消耗：3,246.59kb] [文件加载：48]
+[ info ] [ LANG ] /Users/hahah./Documents/wwwroot/hardware-tools/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'Manage',
+    1 => 'Index',
+    2 => 'initMenu',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost:82',
+  'connection' => 'keep-alive',
+  'content-length' => '13132',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4350.4 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'origin' => 'http://localhost:82',
+  'sec-fetch-site' => 'same-origin',
+  'sec-fetch-mode' => 'cors',
+  'sec-fetch-dest' => 'empty',
+  'referer' => 'http://localhost:82/Manage',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; Hm_lvt_dea6bad1057861a8f0ec2b6f8332eec1=1593507666,1594256411; reload=; live_num=; url_num=0; UM_distinctid=1743435027a3dc-0ea8b851e725b8-67360a77-13c680-1743435027b8d0; CNZZDATA1272141907=1901091492-1598602705-%7C1602575711; ECS[visit_times]=19; __atuvc=10%7C45%2C10%7C46%2C17%7C47; SESS49960de5880e8c687434170f6476605b=tgySfQ7IbpkSz5_48Ec9Q2a6yiZergRJ0VD2PXyZbGI; PHPSESSID=pqgiuf487ccjii7ovi3m64n1sm; thinkphp_show_page_trace=0|0; _dt-key=7428147e9db77d83c10001eeab47c5d4',
+)
+[ info ] [ PARAM ] array (
+  'info' => '        <div class="layui-side-scroll">            <a class="layui-logo" layui-href="/Manage">                <span><img src="/static/images/logo.png" height="40"></span>            </a>                      <ul class="layui-nav layui-nav-tree" lay-shrink="all" id="LAY-system-side-menu" lay-filter="layadmin-system-side-menu">                <li data-name="Home" class="layui-nav-item">                    <a layui-href="/Manage/Index/index.html" lay-tips="控制台" lay-direction="2">                        <i class="layui-icon layui-icon-home"></i>                        <cite>控制台</cite>                    </a>                </li>                <li data-name="Member" class="layui-nav-item layui-nav-itemed">                    <a layui-href="javascript:;" lay-tips="会员" lay-direction="2">                        <i class="layui-icon iconfont icon-chanpin"></i>                        <cite>会员</cite>                    <span class="layui-nav-more"></span></a>                    <dl class="layui-nav-child">                        <dd class=""><a layui-href="/manage/Member/index.html">会员管理</a></dd>                        <dd><a layui-href="/manage/MemberRank/index.html">会员职位</a></dd>                    </dl>                </li>                <li data-name="Content" class="layui-nav-item">                    <a layui-href="javascript:;" lay-tips="内容" lay-direction="2">                        <i class="layui-icon iconfont icon-neirong"></i>                        <cite>内容</cite>                    <span class="layui-nav-more"></span></a>                    <dl class="layui-nav-child">                        <dd data-name="page" class="">                            <a layui-href="javascript:;">单页管理<span class="layui-nav-more"></span></a>                            <dl class="layui-nav-child">                                <dd class=""><a layui-href="/manage/Page/index.html">列表</a></dd>                                <dd><a layui-href="/manage/PageCategory/index.html">分类</a></dd>                            </dl>                        </dd>                        <dd data-name="article">                            <a layui-href="javascript:;">公告管理<span class="layui-nav-more"></span></a>                            <dl class="layui-nav-child">                                <dd><a layui-href="/manage/Notice/index.html">列表</a></dd>                                <dd><a layui-href="/manage/NoticeCategory/index.html">分类</a></dd>                            </dl>                        </dd>                        <dd data-name="article">                            <a layui-href="javascript:;">文章管理<span class="layui-nav-more"></span></a>                            <dl class="layui-nav-child">                                <dd><a layui-href="/manage/Article/index.html">列表</a></dd>                                <dd><a layui-href="/manage/ArticleCategory/index.html">分类</a></dd>                            </dl>                        </dd>                        <dd data-name="download">                            <a layui-href="javascript:;">下载管理<span class="layui-nav-more"></span></a>                            <dl class="layui-nav-child">                                <dd><a layui-href="/manage/Download/index.html">列表</a></dd>                                <dd><a layui-href="/manage/DownloadCategory/index.html">分类</a></dd>                            </dl>                        </dd>                        <dd data-name="link">                            <a layui-href="javascript:;">友情链接<span class="layui-nav-more"></span></a>                            <dl class="layui-nav-child">                                <dd><a layui-href="/manage/Link/index.html">列表</a></dd>                                <dd><a layui-href="/manage/LinkCategory/index.html">分类</a></dd>                            </dl>                        </dd>                    </dl>                </li>                <li data-name="Seo" class="layui-nav-item">                    <a layui-href="javascript:;" lay-tips="SEO" lay-direction="2">                        <i class="layui-icon iconfont icon-seo1"></i>                        <cite>SEO</cite>                    <span class="layui-nav-more"></span></a>                    <dl class="layui-nav-child">                        <dd class=""><a layui-href="/manage/Seo/tkd.html">TKD标签</a></dd>                        <dd><a layui-href="/manage/Seo/sitemap.html">网站地图</a></dd>                    </dl>                </li>                <li data-name="Visit" class="layui-nav-item">                    <a layui-href="javascript:;" lay-tips="高级" lay-direction="2">                        <i class="layui-icon iconfont icon-tongji1"></i>                        <cite>统计</cite>                    <span class="layui-nav-more"></span></a>                    <dl class="layui-nav-child">                        <dd><a layui-href="/manage/Visit/index.html">访客统计</a></dd>                        <dd><a layui-href="/manage/Visit/area.html">地域统计</a></dd>                        <dd><a layui-href="/manage/Visit/source.html">来源统计</a></dd>                    </dl>                </li>                <li data-name="Image" class="layui-nav-item">                    <a layui-href="javascript:;" lay-tips="高级" lay-direction="2">                        <i class="layui-icon iconfont icon-icon"></i>                        <cite>辅助</cite>                    <span class="layui-nav-more"></span></a>                    <dl class="layui-nav-child">                        <dd data-name="image">                            <a layui-href="javascript:;">图册管理<span class="layui-nav-more"></span></a>                            <dl class="layui-nav-child">                                <dd><a layui-href="/manage/Image/index.html">列表</a></dd>                                <dd><a layui-href="/manage/ImageCategory/index.html">分类</a></dd>                            </dl>                        </dd>                    </dl>                </li>                <li data-name="Site" class="layui-nav-item">                    <a layui-href="javascript:;" lay-tips="设置" lay-direction="2">                        <i class="layui-icon layui-icon-set"></i>                        <cite>设置</cite>                    <span class="layui-nav-more"></span></a>                    <dl class="layui-nav-child">                        <dd><a layui-href="/manage/Site/web_params.html">网站设置</a></dd>                        <dd><a layui-href="/manage/Param/web.html">参数设置</a></dd>                        <!-- <dd><a layui-href="/manage/Language/index.html">语言设置</a></dd> -->                        <!-- <dd><a layui-href="/manage/AppTemplate/index.html">模板设置</a></dd> -->                        <dd><a layui-href="/manage/BlockChild/index.html">广告设置</a></dd>                        <dd><a layui-href="/manage/Navigation/index.html">导航设置</a></dd>                        <!-- <dd><a layui-href="/manage/Service/index.html">客服设置</a></dd> -->                        <!-- <dd><a layui-href="/manage/Mail/index.html">邮件设置</a></dd> -->                                                <dd data-name="info">                            <a layui-href="javascript:;">管理设置<span class="layui-nav-more"></span></a>                            <dl class="layui-nav-child">                                <dd><a layui-href="/manage/Admin/index.html">管理员</a></dd>                                <dd><a layui-href="/manage/Admin/role.html">角色</a></dd>                                                                <dd><a layui-href="/manage/Admin/node.html">节点</a></dd>                                                            </dl>                        </dd>                                            </dl>                </li>                                <li data-name="Manage" class="layui-nav-item">                    <a layui-href="javascript:;" lay-tips="管理" lay-direction="2">                        <i class="layui-icon layui-icon-template-1"></i>                        <cite>管理</cite>                    <span class="layui-nav-more"></span></a>                    <dl class="layui-nav-child">                        <dd class=""><a layui-href="/manage/Language/manage.html">语言管理</a></dd>                        <dd class=""><a layui-href="/manage/AppTemplate/manage.html">模板管理</a></dd>                        <dd data-name="info" class="">                            <a layui-href="javascript:;">详情管理<span class="layui-nav-more"></span></a>                            <dl class="layui-nav-child">                                <dd><a layui-href="/manage/Info/index.html">列表</a></dd>                                <dd><a layui-href="/manage/InfoCategory/index.html">分类</a></dd>                            </dl>                        </dd>                        <dd class=""><a layui-href="/manage/Block/index.html">广告位管理</a></dd>                    </dl>                </li>                            <span class="layui-nav-bar" style="top: 314px; height: 56px; opacity: 1;"></span></ul>        </div>    ',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => '',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\Manage\controller\IndexController->initMenu[ /Users/hahah./Documents/wwwroot/hardware-tools/application/Manage/controller/IndexController.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000490s ] mysql:host=127.0.0.1;port=3306;dbname=hardware-tools;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `cms_admin_user` [ RunTime:0.000717s ]
+[ sql ] [ SQL ] SELECT * FROM `cms_admin_user` WHERE  `id` = 1  AND `status` = 1 LIMIT 1 [ RunTime:0.000395s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `cms_website_language` [ RunTime:0.000621s ]
+[ sql ] [ SQL ] SELECT * FROM `cms_website_language` WHERE  `status` = 1  AND `is_default` = 1  AND `is_avail` = 1 LIMIT 1 [ RunTime:0.000402s ]
+[ sql ] [ SQL ] SELECT * FROM `cms_website_language` WHERE  `status` = 1  AND `is_avail` = 1 [ RunTime:0.000339s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `cms_app_template` [ RunTime:0.000950s ]
+[ sql ] [ SQL ] SELECT * FROM `cms_app_template` WHERE  `current` = 1  AND `status` = 1 LIMIT 1 [ RunTime:0.000361s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `cms_block` [ RunTime:0.000628s ]
+[ sql ] [ SQL ] SELECT * FROM `cms_block` WHERE  `index_code` = 'index_banner' LIMIT 1 [ RunTime:0.000540s ]
+[ sql ] [ SQL ] SELECT * FROM `cms_block` WHERE  `index_code` = 'index_ad1' LIMIT 1 [ RunTime:0.000247s ]
+[ sql ] [ SQL ] SELECT * FROM `cms_block` WHERE  `index_code` = 'news_banner' LIMIT 1 [ RunTime:0.000233s ]
+[ sql ] [ SQL ] SELECT * FROM `cms_block` WHERE  `index_code` = 'member_banner' LIMIT 1 [ RunTime:0.000287s ]
+[ sql ] [ SQL ] SELECT * FROM `cms_block` WHERE  `index_code` = 'page_ad1' LIMIT 1 [ RunTime:0.000250s ]
+[ sql ] [ SQL ] SELECT * FROM `cms_block` WHERE  `index_code` = 'page_ad2' LIMIT 1 [ RunTime:0.000283s ]
+---------------------------------------------------------------
+[ 2020-12-14T16:38:08+08:00 ] 0.0.0.0 POST localhost:82/Manage/Index/initMenu.html
+[运行时间：0.034774s] [吞吐率：28.76req/s] [内存消耗：3,246.59kb] [文件加载：48]
+[ info ] [ LANG ] /Users/hahah./Documents/wwwroot/hardware-tools/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'Manage',
+    1 => 'Index',
+    2 => 'initMenu',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost:82',
+  'connection' => 'keep-alive',
+  'content-length' => '13132',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4350.4 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'origin' => 'http://localhost:82',
+  'sec-fetch-site' => 'same-origin',
+  'sec-fetch-mode' => 'cors',
+  'sec-fetch-dest' => 'empty',
+  'referer' => 'http://localhost:82/Manage',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; Hm_lvt_dea6bad1057861a8f0ec2b6f8332eec1=1593507666,1594256411; reload=; live_num=; url_num=0; UM_distinctid=1743435027a3dc-0ea8b851e725b8-67360a77-13c680-1743435027b8d0; CNZZDATA1272141907=1901091492-1598602705-%7C1602575711; ECS[visit_times]=19; __atuvc=10%7C45%2C10%7C46%2C17%7C47; SESS49960de5880e8c687434170f6476605b=tgySfQ7IbpkSz5_48Ec9Q2a6yiZergRJ0VD2PXyZbGI; PHPSESSID=pqgiuf487ccjii7ovi3m64n1sm; thinkphp_show_page_trace=0|0; _dt-key=7428147e9db77d83c10001eeab47c5d4',
+)
+[ info ] [ PARAM ] array (
+  'info' => '        <div class="layui-side-scroll">            <a class="layui-logo" layui-href="/Manage">                <span><img src="/static/images/logo.png" height="40"></span>            </a>                      <ul class="layui-nav layui-nav-tree" lay-shrink="all" id="LAY-system-side-menu" lay-filter="layadmin-system-side-menu">                <li data-name="Home" class="layui-nav-item">                    <a layui-href="/Manage/Index/index.html" lay-tips="控制台" lay-direction="2">                        <i class="layui-icon layui-icon-home"></i>                        <cite>控制台</cite>                    </a>                </li>                <li data-name="Member" class="layui-nav-item">                    <a layui-href="javascript:;" lay-tips="会员" lay-direction="2">                        <i class="layui-icon iconfont icon-chanpin"></i>                        <cite>会员</cite>                    <span class="layui-nav-more"></span></a>                    <dl class="layui-nav-child">                        <dd class=""><a layui-href="/manage/Member/index.html">会员管理</a></dd>                        <dd><a layui-href="/manage/MemberRank/index.html">会员职位</a></dd>                    </dl>                </li>                <li data-name="Content" class="layui-nav-item">                    <a layui-href="javascript:;" lay-tips="内容" lay-direction="2">                        <i class="layui-icon iconfont icon-neirong"></i>                        <cite>内容</cite>                    <span class="layui-nav-more"></span></a>                    <dl class="layui-nav-child">                        <dd data-name="page" class="">                            <a layui-href="javascript:;">单页管理<span class="layui-nav-more"></span></a>                            <dl class="layui-nav-child">                                <dd class=""><a layui-href="/manage/Page/index.html">列表</a></dd>                                <dd><a layui-href="/manage/PageCategory/index.html">分类</a></dd>                            </dl>                        </dd>                        <dd data-name="article">                            <a layui-href="javascript:;">公告管理<span class="layui-nav-more"></span></a>                            <dl class="layui-nav-child">                                <dd><a layui-href="/manage/Notice/index.html">列表</a></dd>                                <dd><a layui-href="/manage/NoticeCategory/index.html">分类</a></dd>                            </dl>                        </dd>                        <dd data-name="article">                            <a layui-href="javascript:;">文章管理<span class="layui-nav-more"></span></a>                            <dl class="layui-nav-child">                                <dd><a layui-href="/manage/Article/index.html">列表</a></dd>                                <dd><a layui-href="/manage/ArticleCategory/index.html">分类</a></dd>                            </dl>                        </dd>                        <dd data-name="download">                            <a layui-href="javascript:;">下载管理<span class="layui-nav-more"></span></a>                            <dl class="layui-nav-child">                                <dd><a layui-href="/manage/Download/index.html">列表</a></dd>                                <dd><a layui-href="/manage/DownloadCategory/index.html">分类</a></dd>                            </dl>                        </dd>                        <dd data-name="link">                            <a layui-href="javascript:;">友情链接<span class="layui-nav-more"></span></a>                            <dl class="layui-nav-child">                                <dd><a layui-href="/manage/Link/index.html">列表</a></dd>                                <dd><a layui-href="/manage/LinkCategory/index.html">分类</a></dd>                            </dl>                        </dd>                    </dl>                </li>                <li data-name="Seo" class="layui-nav-item">                    <a layui-href="javascript:;" lay-tips="SEO" lay-direction="2">                        <i class="layui-icon iconfont icon-seo1"></i>                        <cite>SEO</cite>                    <span class="layui-nav-more"></span></a>                    <dl class="layui-nav-child">                        <dd class=""><a layui-href="/manage/Seo/tkd.html">TKD标签</a></dd>                        <dd><a layui-href="/manage/Seo/sitemap.html">网站地图</a></dd>                    </dl>                </li>                <li data-name="Visit" class="layui-nav-item layui-nav-itemed">                    <a layui-href="javascript:;" lay-tips="高级" lay-direction="2">                        <i class="layui-icon iconfont icon-tongji1"></i>                        <cite>统计</cite>                    <span class="layui-nav-more"></span></a>                    <dl class="layui-nav-child">                        <dd><a layui-href="/manage/Visit/index.html">访客统计</a></dd>                        <dd><a layui-href="/manage/Visit/area.html">地域统计</a></dd>                        <dd><a layui-href="/manage/Visit/source.html">来源统计</a></dd>                    </dl>                </li>                <li data-name="Image" class="layui-nav-item">                    <a layui-href="javascript:;" lay-tips="高级" lay-direction="2">                        <i class="layui-icon iconfont icon-icon"></i>                        <cite>辅助</cite>                    <span class="layui-nav-more"></span></a>                    <dl class="layui-nav-child">                        <dd data-name="image">                            <a layui-href="javascript:;">图册管理<span class="layui-nav-more"></span></a>                            <dl class="layui-nav-child">                                <dd><a layui-href="/manage/Image/index.html">列表</a></dd>                                <dd><a layui-href="/manage/ImageCategory/index.html">分类</a></dd>                            </dl>                        </dd>                    </dl>                </li>                <li data-name="Site" class="layui-nav-item">                    <a layui-href="javascript:;" lay-tips="设置" lay-direction="2">                        <i class="layui-icon layui-icon-set"></i>                        <cite>设置</cite>                    <span class="layui-nav-more"></span></a>                    <dl class="layui-nav-child">                        <dd><a layui-href="/manage/Site/web_params.html">网站设置</a></dd>                        <dd><a layui-href="/manage/Param/web.html">参数设置</a></dd>                        <!-- <dd><a layui-href="/manage/Language/index.html">语言设置</a></dd> -->                        <!-- <dd><a layui-href="/manage/AppTemplate/index.html">模板设置</a></dd> -->                        <dd><a layui-href="/manage/BlockChild/index.html">广告设置</a></dd>                        <dd><a layui-href="/manage/Navigation/index.html">导航设置</a></dd>                        <!-- <dd><a layui-href="/manage/Service/index.html">客服设置</a></dd> -->                        <!-- <dd><a layui-href="/manage/Mail/index.html">邮件设置</a></dd> -->                                                <dd data-name="info">                            <a layui-href="javascript:;">管理设置<span class="layui-nav-more"></span></a>                            <dl class="layui-nav-child">                                <dd><a layui-href="/manage/Admin/index.html">管理员</a></dd>                                <dd><a layui-href="/manage/Admin/role.html">角色</a></dd>                                                                <dd><a layui-href="/manage/Admin/node.html">节点</a></dd>                                                            </dl>                        </dd>                                            </dl>                </li>                                <li data-name="Manage" class="layui-nav-item">                    <a layui-href="javascript:;" lay-tips="管理" lay-direction="2">                        <i class="layui-icon layui-icon-template-1"></i>                        <cite>管理</cite>                    <span class="layui-nav-more"></span></a>                    <dl class="layui-nav-child">                        <dd class=""><a layui-href="/manage/Language/manage.html">语言管理</a></dd>                        <dd class=""><a layui-href="/manage/AppTemplate/manage.html">模板管理</a></dd>                        <dd data-name="info" class="">                            <a layui-href="javascript:;">详情管理<span class="layui-nav-more"></span></a>                            <dl class="layui-nav-child">                                <dd><a layui-href="/manage/Info/index.html">列表</a></dd>                                <dd><a layui-href="/manage/InfoCategory/index.html">分类</a></dd>                            </dl>                        </dd>                        <dd class=""><a layui-href="/manage/Block/index.html">广告位管理</a></dd>                    </dl>                </li>                            <span class="layui-nav-bar" style="top: 410px; height: 56px; opacity: 1;"></span></ul>        </div>    ',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => '',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\Manage\controller\IndexController->initMenu[ /Users/hahah./Documents/wwwroot/hardware-tools/application/Manage/controller/IndexController.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000501s ] mysql:host=127.0.0.1;port=3306;dbname=hardware-tools;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `cms_admin_user` [ RunTime:0.000798s ]
+[ sql ] [ SQL ] SELECT * FROM `cms_admin_user` WHERE  `id` = 1  AND `status` = 1 LIMIT 1 [ RunTime:0.000541s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `cms_website_language` [ RunTime:0.000904s ]
+[ sql ] [ SQL ] SELECT * FROM `cms_website_language` WHERE  `status` = 1  AND `is_default` = 1  AND `is_avail` = 1 LIMIT 1 [ RunTime:0.000530s ]
+[ sql ] [ SQL ] SELECT * FROM `cms_website_language` WHERE  `status` = 1  AND `is_avail` = 1 [ RunTime:0.000497s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `cms_app_template` [ RunTime:0.000708s ]
+[ sql ] [ SQL ] SELECT * FROM `cms_app_template` WHERE  `current` = 1  AND `status` = 1 LIMIT 1 [ RunTime:0.000288s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `cms_block` [ RunTime:0.000519s ]
+[ sql ] [ SQL ] SELECT * FROM `cms_block` WHERE  `index_code` = 'index_banner' LIMIT 1 [ RunTime:0.000253s ]
+[ sql ] [ SQL ] SELECT * FROM `cms_block` WHERE  `index_code` = 'index_ad1' LIMIT 1 [ RunTime:0.000251s ]
+[ sql ] [ SQL ] SELECT * FROM `cms_block` WHERE  `index_code` = 'news_banner' LIMIT 1 [ RunTime:0.000217s ]
+[ sql ] [ SQL ] SELECT * FROM `cms_block` WHERE  `index_code` = 'member_banner' LIMIT 1 [ RunTime:0.000255s ]
+[ sql ] [ SQL ] SELECT * FROM `cms_block` WHERE  `index_code` = 'page_ad1' LIMIT 1 [ RunTime:0.000251s ]
+[ sql ] [ SQL ] SELECT * FROM `cms_block` WHERE  `index_code` = 'page_ad2' LIMIT 1 [ RunTime:0.000301s ]
+---------------------------------------------------------------
+[ 2020-12-14T16:38:09+08:00 ] 0.0.0.0 POST localhost:82/Manage/Index/initMenu.html
+[运行时间：0.036852s] [吞吐率：27.14req/s] [内存消耗：3,246.59kb] [文件加载：48]
+[ info ] [ LANG ] /Users/hahah./Documents/wwwroot/hardware-tools/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'Manage',
+    1 => 'Index',
+    2 => 'initMenu',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost:82',
+  'connection' => 'keep-alive',
+  'content-length' => '13132',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4350.4 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'origin' => 'http://localhost:82',
+  'sec-fetch-site' => 'same-origin',
+  'sec-fetch-mode' => 'cors',
+  'sec-fetch-dest' => 'empty',
+  'referer' => 'http://localhost:82/Manage',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; Hm_lvt_dea6bad1057861a8f0ec2b6f8332eec1=1593507666,1594256411; reload=; live_num=; url_num=0; UM_distinctid=1743435027a3dc-0ea8b851e725b8-67360a77-13c680-1743435027b8d0; CNZZDATA1272141907=1901091492-1598602705-%7C1602575711; ECS[visit_times]=19; __atuvc=10%7C45%2C10%7C46%2C17%7C47; SESS49960de5880e8c687434170f6476605b=tgySfQ7IbpkSz5_48Ec9Q2a6yiZergRJ0VD2PXyZbGI; PHPSESSID=pqgiuf487ccjii7ovi3m64n1sm; thinkphp_show_page_trace=0|0; _dt-key=7428147e9db77d83c10001eeab47c5d4',
+)
+[ info ] [ PARAM ] array (
+  'info' => '        <div class="layui-side-scroll">            <a class="layui-logo" layui-href="/Manage">                <span><img src="/static/images/logo.png" height="40"></span>            </a>                      <ul class="layui-nav layui-nav-tree" lay-shrink="all" id="LAY-system-side-menu" lay-filter="layadmin-system-side-menu">                <li data-name="Home" class="layui-nav-item">                    <a layui-href="/Manage/Index/index.html" lay-tips="控制台" lay-direction="2">                        <i class="layui-icon layui-icon-home"></i>                        <cite>控制台</cite>                    </a>                </li>                <li data-name="Member" class="layui-nav-item">                    <a layui-href="javascript:;" lay-tips="会员" lay-direction="2">                        <i class="layui-icon iconfont icon-chanpin"></i>                        <cite>会员</cite>                    <span class="layui-nav-more"></span></a>                    <dl class="layui-nav-child">                        <dd class=""><a layui-href="/manage/Member/index.html">会员管理</a></dd>                        <dd><a layui-href="/manage/MemberRank/index.html">会员职位</a></dd>                    </dl>                </li>                <li data-name="Content" class="layui-nav-item">                    <a layui-href="javascript:;" lay-tips="内容" lay-direction="2">                        <i class="layui-icon iconfont icon-neirong"></i>                        <cite>内容</cite>                    <span class="layui-nav-more"></span></a>                    <dl class="layui-nav-child">                        <dd data-name="page" class="">                            <a layui-href="javascript:;">单页管理<span class="layui-nav-more"></span></a>                            <dl class="layui-nav-child">                                <dd class=""><a layui-href="/manage/Page/index.html">列表</a></dd>                                <dd><a layui-href="/manage/PageCategory/index.html">分类</a></dd>                            </dl>                        </dd>                        <dd data-name="article">                            <a layui-href="javascript:;">公告管理<span class="layui-nav-more"></span></a>                            <dl class="layui-nav-child">                                <dd><a layui-href="/manage/Notice/index.html">列表</a></dd>                                <dd><a layui-href="/manage/NoticeCategory/index.html">分类</a></dd>                            </dl>                        </dd>                        <dd data-name="article">                            <a layui-href="javascript:;">文章管理<span class="layui-nav-more"></span></a>                            <dl class="layui-nav-child">                                <dd><a layui-href="/manage/Article/index.html">列表</a></dd>                                <dd><a layui-href="/manage/ArticleCategory/index.html">分类</a></dd>                            </dl>                        </dd>                        <dd data-name="download">                            <a layui-href="javascript:;">下载管理<span class="layui-nav-more"></span></a>                            <dl class="layui-nav-child">                                <dd><a layui-href="/manage/Download/index.html">列表</a></dd>                                <dd><a layui-href="/manage/DownloadCategory/index.html">分类</a></dd>                            </dl>                        </dd>                        <dd data-name="link">                            <a layui-href="javascript:;">友情链接<span class="layui-nav-more"></span></a>                            <dl class="layui-nav-child">                                <dd><a layui-href="/manage/Link/index.html">列表</a></dd>                                <dd><a layui-href="/manage/LinkCategory/index.html">分类</a></dd>                            </dl>                        </dd>                    </dl>                </li>                <li data-name="Seo" class="layui-nav-item">                    <a layui-href="javascript:;" lay-tips="SEO" lay-direction="2">                        <i class="layui-icon iconfont icon-seo1"></i>                        <cite>SEO</cite>                    <span class="layui-nav-more"></span></a>                    <dl class="layui-nav-child">                        <dd class=""><a layui-href="/manage/Seo/tkd.html">TKD标签</a></dd>                        <dd><a layui-href="/manage/Seo/sitemap.html">网站地图</a></dd>                    </dl>                </li>                <li data-name="Visit" class="layui-nav-item">                    <a layui-href="javascript:;" lay-tips="高级" lay-direction="2">                        <i class="layui-icon iconfont icon-tongji1"></i>                        <cite>统计</cite>                    <span class="layui-nav-more"></span></a>                    <dl class="layui-nav-child">                        <dd><a layui-href="/manage/Visit/index.html">访客统计</a></dd>                        <dd><a layui-href="/manage/Visit/area.html">地域统计</a></dd>                        <dd><a layui-href="/manage/Visit/source.html">来源统计</a></dd>                    </dl>                </li>                <li data-name="Image" class="layui-nav-item layui-nav-itemed">                    <a layui-href="javascript:;" lay-tips="高级" lay-direction="2">                        <i class="layui-icon iconfont icon-icon"></i>                        <cite>辅助</cite>                    <span class="layui-nav-more"></span></a>                    <dl class="layui-nav-child">                        <dd data-name="image">                            <a layui-href="javascript:;">图册管理<span class="layui-nav-more"></span></a>                            <dl class="layui-nav-child">                                <dd><a layui-href="/manage/Image/index.html">列表</a></dd>                                <dd><a layui-href="/manage/ImageCategory/index.html">分类</a></dd>                            </dl>                        </dd>                    </dl>                </li>                <li data-name="Site" class="layui-nav-item">                    <a layui-href="javascript:;" lay-tips="设置" lay-direction="2">                        <i class="layui-icon layui-icon-set"></i>                        <cite>设置</cite>                    <span class="layui-nav-more"></span></a>                    <dl class="layui-nav-child">                        <dd><a layui-href="/manage/Site/web_params.html">网站设置</a></dd>                        <dd><a layui-href="/manage/Param/web.html">参数设置</a></dd>                        <!-- <dd><a layui-href="/manage/Language/index.html">语言设置</a></dd> -->                        <!-- <dd><a layui-href="/manage/AppTemplate/index.html">模板设置</a></dd> -->                        <dd><a layui-href="/manage/BlockChild/index.html">广告设置</a></dd>                        <dd><a layui-href="/manage/Navigation/index.html">导航设置</a></dd>                        <!-- <dd><a layui-href="/manage/Service/index.html">客服设置</a></dd> -->                        <!-- <dd><a layui-href="/manage/Mail/index.html">邮件设置</a></dd> -->                                                <dd data-name="info">                            <a layui-href="javascript:;">管理设置<span class="layui-nav-more"></span></a>                            <dl class="layui-nav-child">                                <dd><a layui-href="/manage/Admin/index.html">管理员</a></dd>                                <dd><a layui-href="/manage/Admin/role.html">角色</a></dd>                                                                <dd><a layui-href="/manage/Admin/node.html">节点</a></dd>                                                            </dl>                        </dd>                                            </dl>                </li>                                <li data-name="Manage" class="layui-nav-item">                    <a layui-href="javascript:;" lay-tips="管理" lay-direction="2">                        <i class="layui-icon layui-icon-template-1"></i>                        <cite>管理</cite>                    <span class="layui-nav-more"></span></a>                    <dl class="layui-nav-child">                        <dd class=""><a layui-href="/manage/Language/manage.html">语言管理</a></dd>                        <dd class=""><a layui-href="/manage/AppTemplate/manage.html">模板管理</a></dd>                        <dd data-name="info" class="">                            <a layui-href="javascript:;">详情管理<span class="layui-nav-more"></span></a>                            <dl class="layui-nav-child">                                <dd><a layui-href="/manage/Info/index.html">列表</a></dd>                                <dd><a layui-href="/manage/InfoCategory/index.html">分类</a></dd>                            </dl>                        </dd>                        <dd class=""><a layui-href="/manage/Block/index.html">广告位管理</a></dd>                    </dl>                </li>                            <span class="layui-nav-bar" style="top: 280px; height: 56px; opacity: 1;"></span></ul>        </div>    ',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => '',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\Manage\controller\IndexController->initMenu[ /Users/hahah./Documents/wwwroot/hardware-tools/application/Manage/controller/IndexController.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000554s ] mysql:host=127.0.0.1;port=3306;dbname=hardware-tools;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `cms_admin_user` [ RunTime:0.000846s ]
+[ sql ] [ SQL ] SELECT * FROM `cms_admin_user` WHERE  `id` = 1  AND `status` = 1 LIMIT 1 [ RunTime:0.000453s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `cms_website_language` [ RunTime:0.000735s ]
+[ sql ] [ SQL ] SELECT * FROM `cms_website_language` WHERE  `status` = 1  AND `is_default` = 1  AND `is_avail` = 1 LIMIT 1 [ RunTime:0.000404s ]
+[ sql ] [ SQL ] SELECT * FROM `cms_website_language` WHERE  `status` = 1  AND `is_avail` = 1 [ RunTime:0.000373s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `cms_app_template` [ RunTime:0.000620s ]
+[ sql ] [ SQL ] SELECT * FROM `cms_app_template` WHERE  `current` = 1  AND `status` = 1 LIMIT 1 [ RunTime:0.000330s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `cms_block` [ RunTime:0.000592s ]
+[ sql ] [ SQL ] SELECT * FROM `cms_block` WHERE  `index_code` = 'index_banner' LIMIT 1 [ RunTime:0.000341s ]
+[ sql ] [ SQL ] SELECT * FROM `cms_block` WHERE  `index_code` = 'index_ad1' LIMIT 1 [ RunTime:0.000256s ]
+[ sql ] [ SQL ] SELECT * FROM `cms_block` WHERE  `index_code` = 'news_banner' LIMIT 1 [ RunTime:0.000263s ]
+[ sql ] [ SQL ] SELECT * FROM `cms_block` WHERE  `index_code` = 'member_banner' LIMIT 1 [ RunTime:0.000255s ]
+[ sql ] [ SQL ] SELECT * FROM `cms_block` WHERE  `index_code` = 'page_ad1' LIMIT 1 [ RunTime:0.000265s ]
+[ sql ] [ SQL ] SELECT * FROM `cms_block` WHERE  `index_code` = 'page_ad2' LIMIT 1 [ RunTime:0.000286s ]
+---------------------------------------------------------------
+[ 2020-12-14T16:38:09+08:00 ] 0.0.0.0 POST localhost:82/Manage/Index/initMenu.html
+[运行时间：0.036553s] [吞吐率：27.36req/s] [内存消耗：3,246.59kb] [文件加载：48]
+[ info ] [ LANG ] /Users/hahah./Documents/wwwroot/hardware-tools/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'Manage',
+    1 => 'Index',
+    2 => 'initMenu',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost:82',
+  'connection' => 'keep-alive',
+  'content-length' => '13188',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4350.4 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'origin' => 'http://localhost:82',
+  'sec-fetch-site' => 'same-origin',
+  'sec-fetch-mode' => 'cors',
+  'sec-fetch-dest' => 'empty',
+  'referer' => 'http://localhost:82/Manage',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; Hm_lvt_dea6bad1057861a8f0ec2b6f8332eec1=1593507666,1594256411; reload=; live_num=; url_num=0; UM_distinctid=1743435027a3dc-0ea8b851e725b8-67360a77-13c680-1743435027b8d0; CNZZDATA1272141907=1901091492-1598602705-%7C1602575711; ECS[visit_times]=19; __atuvc=10%7C45%2C10%7C46%2C17%7C47; SESS49960de5880e8c687434170f6476605b=tgySfQ7IbpkSz5_48Ec9Q2a6yiZergRJ0VD2PXyZbGI; PHPSESSID=pqgiuf487ccjii7ovi3m64n1sm; thinkphp_show_page_trace=0|0; _dt-key=7428147e9db77d83c10001eeab47c5d4',
+)
+[ info ] [ PARAM ] array (
+  'info' => '        <div class="layui-side-scroll">            <a class="layui-logo" layui-href="/Manage">                <span><img src="/static/images/logo.png" height="40"></span>            </a>                      <ul class="layui-nav layui-nav-tree" lay-shrink="all" id="LAY-system-side-menu" lay-filter="layadmin-system-side-menu">                <li data-name="Home" class="layui-nav-item">                    <a layui-href="/Manage/Index/index.html" lay-tips="控制台" lay-direction="2">                        <i class="layui-icon layui-icon-home"></i>                        <cite>控制台</cite>                    </a>                </li>                <li data-name="Member" class="layui-nav-item">                    <a layui-href="javascript:;" lay-tips="会员" lay-direction="2">                        <i class="layui-icon iconfont icon-chanpin"></i>                        <cite>会员</cite>                    <span class="layui-nav-more"></span></a>                    <dl class="layui-nav-child">                        <dd class=""><a layui-href="/manage/Member/index.html">会员管理</a></dd>                        <dd><a layui-href="/manage/MemberRank/index.html">会员职位</a></dd>                    </dl>                </li>                <li data-name="Content" class="layui-nav-item">                    <a layui-href="javascript:;" lay-tips="内容" lay-direction="2">                        <i class="layui-icon iconfont icon-neirong"></i>                        <cite>内容</cite>                    <span class="layui-nav-more"></span></a>                    <dl class="layui-nav-child">                        <dd data-name="page" class="">                            <a layui-href="javascript:;">单页管理<span class="layui-nav-more"></span></a>                            <dl class="layui-nav-child">                                <dd class=""><a layui-href="/manage/Page/index.html">列表</a></dd>                                <dd><a layui-href="/manage/PageCategory/index.html">分类</a></dd>                            </dl>                        </dd>                        <dd data-name="article">                            <a layui-href="javascript:;">公告管理<span class="layui-nav-more"></span></a>                            <dl class="layui-nav-child">                                <dd><a layui-href="/manage/Notice/index.html">列表</a></dd>                                <dd><a layui-href="/manage/NoticeCategory/index.html">分类</a></dd>                            </dl>                        </dd>                        <dd data-name="article">                            <a layui-href="javascript:;">文章管理<span class="layui-nav-more"></span></a>                            <dl class="layui-nav-child">                                <dd><a layui-href="/manage/Article/index.html">列表</a></dd>                                <dd><a layui-href="/manage/ArticleCategory/index.html">分类</a></dd>                            </dl>                        </dd>                        <dd data-name="download">                            <a layui-href="javascript:;">下载管理<span class="layui-nav-more"></span></a>                            <dl class="layui-nav-child">                                <dd><a layui-href="/manage/Download/index.html">列表</a></dd>                                <dd><a layui-href="/manage/DownloadCategory/index.html">分类</a></dd>                            </dl>                        </dd>                        <dd data-name="link">                            <a layui-href="javascript:;">友情链接<span class="layui-nav-more"></span></a>                            <dl class="layui-nav-child">                                <dd><a layui-href="/manage/Link/index.html">列表</a></dd>                                <dd><a layui-href="/manage/LinkCategory/index.html">分类</a></dd>                            </dl>                        </dd>                    </dl>                </li>                <li data-name="Seo" class="layui-nav-item">                    <a layui-href="javascript:;" lay-tips="SEO" lay-direction="2">                        <i class="layui-icon iconfont icon-seo1"></i>                        <cite>SEO</cite>                    <span class="layui-nav-more"></span></a>                    <dl class="layui-nav-child">                        <dd class=""><a layui-href="/manage/Seo/tkd.html">TKD标签</a></dd>                        <dd><a layui-href="/manage/Seo/sitemap.html">网站地图</a></dd>                    </dl>                </li>                <li data-name="Visit" class="layui-nav-item">                    <a layui-href="javascript:;" lay-tips="高级" lay-direction="2">                        <i class="layui-icon iconfont icon-tongji1"></i>                        <cite>统计</cite>                    <span class="layui-nav-more"></span></a>                    <dl class="layui-nav-child">                        <dd><a layui-href="/manage/Visit/index.html">访客统计</a></dd>                        <dd><a layui-href="/manage/Visit/area.html">地域统计</a></dd>                        <dd><a layui-href="/manage/Visit/source.html">来源统计</a></dd>                    </dl>                </li>                <li data-name="Image" class="layui-nav-item layui-nav-itemed">                    <a layui-href="javascript:;" lay-tips="高级" lay-direction="2">                        <i class="layui-icon iconfont icon-icon"></i>                        <cite>辅助</cite>                    <span class="layui-nav-more"></span></a>                    <dl class="layui-nav-child">                        <dd data-name="image" class="layui-nav-itemed">                            <a layui-href="javascript:;">图册管理<span class="layui-nav-more"></span></a>                            <dl class="layui-nav-child">                                <dd class="layui-this"><a layui-href="/manage/Image/index.html">列表</a></dd>                                <dd><a layui-href="/manage/ImageCategory/index.html">分类</a></dd>                            </dl>                        </dd>                    </dl>                </li>                <li data-name="Site" class="layui-nav-item">                    <a layui-href="javascript:;" lay-tips="设置" lay-direction="2">                        <i class="layui-icon layui-icon-set"></i>                        <cite>设置</cite>                    <span class="layui-nav-more"></span></a>                    <dl class="layui-nav-child">                        <dd><a layui-href="/manage/Site/web_params.html">网站设置</a></dd>                        <dd><a layui-href="/manage/Param/web.html">参数设置</a></dd>                        <!-- <dd><a layui-href="/manage/Language/index.html">语言设置</a></dd> -->                        <!-- <dd><a layui-href="/manage/AppTemplate/index.html">模板设置</a></dd> -->                        <dd><a layui-href="/manage/BlockChild/index.html">广告设置</a></dd>                        <dd><a layui-href="/manage/Navigation/index.html">导航设置</a></dd>                        <!-- <dd><a layui-href="/manage/Service/index.html">客服设置</a></dd> -->                        <!-- <dd><a layui-href="/manage/Mail/index.html">邮件设置</a></dd> -->                                                <dd data-name="info">                            <a layui-href="javascript:;">管理设置<span class="layui-nav-more"></span></a>                            <dl class="layui-nav-child">                                <dd><a layui-href="/manage/Admin/index.html">管理员</a></dd>                                <dd><a layui-href="/manage/Admin/role.html">角色</a></dd>                                                                <dd><a layui-href="/manage/Admin/node.html">节点</a></dd>                                                            </dl>                        </dd>                                            </dl>                </li>                                <li data-name="Manage" class="layui-nav-item">                    <a layui-href="javascript:;" lay-tips="管理" lay-direction="2">                        <i class="layui-icon layui-icon-template-1"></i>                        <cite>管理</cite>                    <span class="layui-nav-more"></span></a>                    <dl class="layui-nav-child">                        <dd class=""><a layui-href="/manage/Language/manage.html">语言管理</a></dd>                        <dd class=""><a layui-href="/manage/AppTemplate/manage.html">模板管理</a></dd>                        <dd data-name="info" class="">                            <a layui-href="javascript:;">详情管理<span class="layui-nav-more"></span></a>                            <dl class="layui-nav-child">                                <dd><a layui-href="/manage/Info/index.html">列表</a></dd>                                <dd><a layui-href="/manage/InfoCategory/index.html">分类</a></dd>                            </dl>                        </dd>                        <dd class=""><a layui-href="/manage/Block/index.html">广告位管理</a></dd>                    </dl>                </li>                            <span class="layui-nav-bar" style="top: 280px; height: 56px; opacity: 1;"></span></ul>        </div>    ',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => '',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\Manage\controller\IndexController->initMenu[ /Users/hahah./Documents/wwwroot/hardware-tools/application/Manage/controller/IndexController.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000559s ] mysql:host=127.0.0.1;port=3306;dbname=hardware-tools;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `cms_admin_user` [ RunTime:0.000803s ]
+[ sql ] [ SQL ] SELECT * FROM `cms_admin_user` WHERE  `id` = 1  AND `status` = 1 LIMIT 1 [ RunTime:0.000439s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `cms_website_language` [ RunTime:0.000618s ]
+[ sql ] [ SQL ] SELECT * FROM `cms_website_language` WHERE  `status` = 1  AND `is_default` = 1  AND `is_avail` = 1 LIMIT 1 [ RunTime:0.000427s ]
+[ sql ] [ SQL ] SELECT * FROM `cms_website_language` WHERE  `status` = 1  AND `is_avail` = 1 [ RunTime:0.000375s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `cms_app_template` [ RunTime:0.000616s ]
+[ sql ] [ SQL ] SELECT * FROM `cms_app_template` WHERE  `current` = 1  AND `status` = 1 LIMIT 1 [ RunTime:0.000375s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `cms_block` [ RunTime:0.000589s ]
+[ sql ] [ SQL ] SELECT * FROM `cms_block` WHERE  `index_code` = 'index_banner' LIMIT 1 [ RunTime:0.000541s ]
+[ sql ] [ SQL ] SELECT * FROM `cms_block` WHERE  `index_code` = 'index_ad1' LIMIT 1 [ RunTime:0.000354s ]
+[ sql ] [ SQL ] SELECT * FROM `cms_block` WHERE  `index_code` = 'news_banner' LIMIT 1 [ RunTime:0.000293s ]
+[ sql ] [ SQL ] SELECT * FROM `cms_block` WHERE  `index_code` = 'member_banner' LIMIT 1 [ RunTime:0.000328s ]
+[ sql ] [ SQL ] SELECT * FROM `cms_block` WHERE  `index_code` = 'page_ad1' LIMIT 1 [ RunTime:0.000247s ]
+[ sql ] [ SQL ] SELECT * FROM `cms_block` WHERE  `index_code` = 'page_ad2' LIMIT 1 [ RunTime:0.000265s ]
+---------------------------------------------------------------
+[ 2020-12-14T16:38:09+08:00 ] 0.0.0.0 GET localhost:82/manage/Image/index.html
+[运行时间：0.055319s] [吞吐率：18.08req/s] [内存消耗：3,844.49kb] [文件加载：62]
+[ info ] [ LANG ] /Users/hahah./Documents/wwwroot/hardware-tools/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'manage',
+    1 => 'Image',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost:82',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4350.4 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'sec-fetch-site' => 'same-origin',
+  'sec-fetch-mode' => 'navigate',
+  'sec-fetch-user' => '?1',
+  'sec-fetch-dest' => 'document',
+  'referer' => 'http://localhost:82/Manage',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'cookie' => 'thinkphp_show_page_trace=0|0; Hm_lvt_dea6bad1057861a8f0ec2b6f8332eec1=1593507666,1594256411; reload=; live_num=; url_num=0; UM_distinctid=1743435027a3dc-0ea8b851e725b8-67360a77-13c680-1743435027b8d0; CNZZDATA1272141907=1901091492-1598602705-%7C1602575711; ECS[visit_times]=19; __atuvc=10%7C45%2C10%7C46%2C17%7C47; SESS49960de5880e8c687434170f6476605b=tgySfQ7IbpkSz5_48Ec9Q2a6yiZergRJ0VD2PXyZbGI; PHPSESSID=pqgiuf487ccjii7ovi3m64n1sm; thinkphp_show_page_trace=0|0; _dt-key=7428147e9db77d83c10001eeab47c5d4',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => '',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\Manage\controller\ImageController->index[ /Users/hahah./Documents/wwwroot/hardware-tools/application/manage/controller/ImageController.php ]
+[ info ] [ VIEW ] /Users/hahah./Documents/wwwroot/hardware-tools/public/../application/manage/view/image/index.php [ array (
+  0 => 'user',
+  1 => 'userMenu',
+  2 => 'language',
+  3 => 'languages',
+  4 => 'tinymce',
+  5 => 'sort',
+  6 => 'cid',
+  7 => 'keyword',
+  8 => 'list',
+  9 => 'category',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000532s ] mysql:host=127.0.0.1;port=3306;dbname=hardware-tools;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `cms_admin_user` [ RunTime:0.000723s ]
+[ sql ] [ SQL ] SELECT * FROM `cms_admin_user` WHERE  `id` = 1  AND `status` = 1 LIMIT 1 [ RunTime:0.000481s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `cms_website_language` [ RunTime:0.001753s ]
+[ sql ] [ SQL ] SELECT * FROM `cms_website_language` WHERE  `status` = 1  AND `is_default` = 1  AND `is_avail` = 1 LIMIT 1 [ RunTime:0.000459s ]
+[ sql ] [ SQL ] SELECT * FROM `cms_website_language` WHERE  `status` = 1  AND `is_avail` = 1 [ RunTime:0.000389s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `cms_app_template` [ RunTime:0.000638s ]
+[ sql ] [ SQL ] SELECT * FROM `cms_app_template` WHERE  `current` = 1  AND `status` = 1 LIMIT 1 [ RunTime:0.000362s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `cms_block` [ RunTime:0.000499s ]
+[ sql ] [ SQL ] SELECT * FROM `cms_block` WHERE  `index_code` = 'index_banner' LIMIT 1 [ RunTime:0.000336s ]
+[ sql ] [ SQL ] SELECT * FROM `cms_block` WHERE  `index_code` = 'index_ad1' LIMIT 1 [ RunTime:0.000320s ]
+[ sql ] [ SQL ] SELECT * FROM `cms_block` WHERE  `index_code` = 'news_banner' LIMIT 1 [ RunTime:0.000329s ]
+[ sql ] [ SQL ] SELECT * FROM `cms_block` WHERE  `index_code` = 'member_banner' LIMIT 1 [ RunTime:0.000309s ]
+[ sql ] [ SQL ] SELECT * FROM `cms_block` WHERE  `index_code` = 'page_ad1' LIMIT 1 [ RunTime:0.000350s ]
+[ sql ] [ SQL ] SELECT * FROM `cms_block` WHERE  `index_code` = 'page_ad2' LIMIT 1 [ RunTime:0.000300s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `cms_image` [ RunTime:0.000526s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `cms_image` WHERE  `language_id` = 1 LIMIT 1 [ RunTime:0.000257s ]
+[ sql ] [ SQL ] SELECT * FROM `cms_image` WHERE  `language_id` = 1 ORDER BY `id` DESC LIMIT 0,10 [ RunTime:0.000332s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `cms_image_category` [ RunTime:0.000724s ]
+[ sql ] [ SQL ] SELECT * FROM `cms_image_category` WHERE  `language_id` = 1  AND `parent_id` = 0 ORDER BY `sort` ASC,`id` ASC [ RunTime:0.000359s ]
+---------------------------------------------------------------
+[ 2020-12-14T16:38:09+08:00 ] 0.0.0.0 POST localhost:82/Manage/imageCategory/get_category
+[运行时间：0.044944s] [吞吐率：22.25req/s] [内存消耗：3,251.36kb] [文件加载：49]
+[ info ] [ LANG ] /Users/hahah./Documents/wwwroot/hardware-tools/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'Manage',
+    1 => 'imageCategory',
+    2 => 'get_category',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost:82',
+  'connection' => 'keep-alive',
+  'content-length' => '0',
+  'accept' => '*/*',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4350.4 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://localhost:82',
+  'sec-fetch-site' => 'same-origin',
+  'sec-fetch-mode' => 'cors',
+  'sec-fetch-dest' => 'empty',
+  'referer' => 'http://localhost:82/manage/Image/index.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'cookie' => 'thinkphp_show_page_trace=0|0; Hm_lvt_dea6bad1057861a8f0ec2b6f8332eec1=1593507666,1594256411; reload=; live_num=; url_num=0; UM_distinctid=1743435027a3dc-0ea8b851e725b8-67360a77-13c680-1743435027b8d0; CNZZDATA1272141907=1901091492-1598602705-%7C1602575711; ECS[visit_times]=19; __atuvc=10%7C45%2C10%7C46%2C17%7C47; SESS49960de5880e8c687434170f6476605b=tgySfQ7IbpkSz5_48Ec9Q2a6yiZergRJ0VD2PXyZbGI; PHPSESSID=pqgiuf487ccjii7ovi3m64n1sm; thinkphp_show_page_trace=0|0; _dt-key=7428147e9db77d83c10001eeab47c5d4',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => '',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\Manage\controller\ImageCategoryController->get_category[ /Users/hahah./Documents/wwwroot/hardware-tools/application/Manage/controller/ImageCategoryController.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000554s ] mysql:host=127.0.0.1;port=3306;dbname=hardware-tools;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `cms_admin_user` [ RunTime:0.000798s ]
+[ sql ] [ SQL ] SELECT * FROM `cms_admin_user` WHERE  `id` = 1  AND `status` = 1 LIMIT 1 [ RunTime:0.000522s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `cms_website_language` [ RunTime:0.000621s ]
+[ sql ] [ SQL ] SELECT * FROM `cms_website_language` WHERE  `status` = 1  AND `is_default` = 1  AND `is_avail` = 1 LIMIT 1 [ RunTime:0.000558s ]
+[ sql ] [ SQL ] SELECT * FROM `cms_website_language` WHERE  `status` = 1  AND `is_avail` = 1 [ RunTime:0.000466s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `cms_app_template` [ RunTime:0.000547s ]
+[ sql ] [ SQL ] SELECT * FROM `cms_app_template` WHERE  `current` = 1  AND `status` = 1 LIMIT 1 [ RunTime:0.000295s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `cms_block` [ RunTime:0.000526s ]
+[ sql ] [ SQL ] SELECT * FROM `cms_block` WHERE  `index_code` = 'index_banner' LIMIT 1 [ RunTime:0.000317s ]
+[ sql ] [ SQL ] SELECT * FROM `cms_block` WHERE  `index_code` = 'index_ad1' LIMIT 1 [ RunTime:0.000267s ]
+[ sql ] [ SQL ] SELECT * FROM `cms_block` WHERE  `index_code` = 'news_banner' LIMIT 1 [ RunTime:0.000277s ]
+[ sql ] [ SQL ] SELECT * FROM `cms_block` WHERE  `index_code` = 'member_banner' LIMIT 1 [ RunTime:0.000307s ]
+[ sql ] [ SQL ] SELECT * FROM `cms_block` WHERE  `index_code` = 'page_ad1' LIMIT 1 [ RunTime:0.000266s ]
+[ sql ] [ SQL ] SELECT * FROM `cms_block` WHERE  `index_code` = 'page_ad2' LIMIT 1 [ RunTime:0.000296s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `cms_image_category` [ RunTime:0.000465s ]
+[ sql ] [ SQL ] SELECT * FROM `cms_image_category` WHERE  `language_id` = 1  AND `parent_id` = 0 ORDER BY `sort` ASC,`id` ASC [ RunTime:0.000329s ]
+---------------------------------------------------------------
+[ 2020-12-14T16:38:12+08:00 ] 0.0.0.0 GET localhost:82/manage/Image/index.html?page=3
+[运行时间：0.047330s] [吞吐率：21.13req/s] [内存消耗：3,634.52kb] [文件加载：60]
+[ info ] [ LANG ] /Users/hahah./Documents/wwwroot/hardware-tools/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'manage',
+    1 => 'Image',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost:82',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4350.4 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'sec-fetch-site' => 'same-origin',
+  'sec-fetch-mode' => 'navigate',
+  'sec-fetch-user' => '?1',
+  'sec-fetch-dest' => 'document',
+  'referer' => 'http://localhost:82/manage/Image/index.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; Hm_lvt_dea6bad1057861a8f0ec2b6f8332eec1=1593507666,1594256411; reload=; live_num=; url_num=0; UM_distinctid=1743435027a3dc-0ea8b851e725b8-67360a77-13c680-1743435027b8d0; CNZZDATA1272141907=1901091492-1598602705-%7C1602575711; ECS[visit_times]=19; __atuvc=10%7C45%2C10%7C46%2C17%7C47; SESS49960de5880e8c687434170f6476605b=tgySfQ7IbpkSz5_48Ec9Q2a6yiZergRJ0VD2PXyZbGI; PHPSESSID=pqgiuf487ccjii7ovi3m64n1sm; thinkphp_show_page_trace=0|0; _dt-key=7428147e9db77d83c10001eeab47c5d4',
+)
+[ info ] [ PARAM ] array (
+  'page' => '3',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => '',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\Manage\controller\ImageController->index[ /Users/hahah./Documents/wwwroot/hardware-tools/application/manage/controller/ImageController.php ]
+[ info ] [ VIEW ] /Users/hahah./Documents/wwwroot/hardware-tools/public/../application/manage/view/image/index.php [ array (
+  0 => 'user',
+  1 => 'userMenu',
+  2 => 'language',
+  3 => 'languages',
+  4 => 'tinymce',
+  5 => 'sort',
+  6 => 'cid',
+  7 => 'keyword',
+  8 => 'list',
+  9 => 'category',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000607s ] mysql:host=127.0.0.1;port=3306;dbname=hardware-tools;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `cms_admin_user` [ RunTime:0.000852s ]
+[ sql ] [ SQL ] SELECT * FROM `cms_admin_user` WHERE  `id` = 1  AND `status` = 1 LIMIT 1 [ RunTime:0.000432s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `cms_website_language` [ RunTime:0.000642s ]
+[ sql ] [ SQL ] SELECT * FROM `cms_website_language` WHERE  `status` = 1  AND `is_default` = 1  AND `is_avail` = 1 LIMIT 1 [ RunTime:0.000425s ]
+[ sql ] [ SQL ] SELECT * FROM `cms_website_language` WHERE  `status` = 1  AND `is_avail` = 1 [ RunTime:0.000418s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `cms_app_template` [ RunTime:0.000638s ]
+[ sql ] [ SQL ] SELECT * FROM `cms_app_template` WHERE  `current` = 1  AND `status` = 1 LIMIT 1 [ RunTime:0.000363s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `cms_block` [ RunTime:0.000754s ]
+[ sql ] [ SQL ] SELECT * FROM `cms_block` WHERE  `index_code` = 'index_banner' LIMIT 1 [ RunTime:0.000340s ]
+[ sql ] [ SQL ] SELECT * FROM `cms_block` WHERE  `index_code` = 'index_ad1' LIMIT 1 [ RunTime:0.000265s ]
+[ sql ] [ SQL ] SELECT * FROM `cms_block` WHERE  `index_code` = 'news_banner' LIMIT 1 [ RunTime:0.000262s ]
+[ sql ] [ SQL ] SELECT * FROM `cms_block` WHERE  `index_code` = 'member_banner' LIMIT 1 [ RunTime:0.000335s ]
+[ sql ] [ SQL ] SELECT * FROM `cms_block` WHERE  `index_code` = 'page_ad1' LIMIT 1 [ RunTime:0.000228s ]
+[ sql ] [ SQL ] SELECT * FROM `cms_block` WHERE  `index_code` = 'page_ad2' LIMIT 1 [ RunTime:0.000274s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `cms_image` [ RunTime:0.000464s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `cms_image` WHERE  `language_id` = 1 LIMIT 1 [ RunTime:0.000190s ]
+[ sql ] [ SQL ] SELECT * FROM `cms_image` WHERE  `language_id` = 1 ORDER BY `id` DESC LIMIT 20,10 [ RunTime:0.000271s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `cms_image_category` [ RunTime:0.000399s ]
+[ sql ] [ SQL ] SELECT * FROM `cms_image_category` WHERE  `language_id` = 1  AND `parent_id` = 0 ORDER BY `sort` ASC,`id` ASC [ RunTime:0.000242s ]
+---------------------------------------------------------------
+[ 2020-12-14T16:38:12+08:00 ] 0.0.0.0 POST localhost:82/Manage/imageCategory/get_category
+[运行时间：0.040889s] [吞吐率：24.46req/s] [内存消耗：3,251.36kb] [文件加载：49]
+[ info ] [ LANG ] /Users/hahah./Documents/wwwroot/hardware-tools/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'Manage',
+    1 => 'imageCategory',
+    2 => 'get_category',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost:82',
+  'connection' => 'keep-alive',
+  'content-length' => '0',
+  'accept' => '*/*',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4350.4 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://localhost:82',
+  'sec-fetch-site' => 'same-origin',
+  'sec-fetch-mode' => 'cors',
+  'sec-fetch-dest' => 'empty',
+  'referer' => 'http://localhost:82/manage/Image/index.html?page=3',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'cookie' => 'thinkphp_show_page_trace=0|0; Hm_lvt_dea6bad1057861a8f0ec2b6f8332eec1=1593507666,1594256411; reload=; live_num=; url_num=0; UM_distinctid=1743435027a3dc-0ea8b851e725b8-67360a77-13c680-1743435027b8d0; CNZZDATA1272141907=1901091492-1598602705-%7C1602575711; ECS[visit_times]=19; __atuvc=10%7C45%2C10%7C46%2C17%7C47; SESS49960de5880e8c687434170f6476605b=tgySfQ7IbpkSz5_48Ec9Q2a6yiZergRJ0VD2PXyZbGI; PHPSESSID=pqgiuf487ccjii7ovi3m64n1sm; thinkphp_show_page_trace=0|0; _dt-key=7428147e9db77d83c10001eeab47c5d4',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => '',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\Manage\controller\ImageCategoryController->get_category[ /Users/hahah./Documents/wwwroot/hardware-tools/application/Manage/controller/ImageCategoryController.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000565s ] mysql:host=127.0.0.1;port=3306;dbname=hardware-tools;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `cms_admin_user` [ RunTime:0.000704s ]
+[ sql ] [ SQL ] SELECT * FROM `cms_admin_user` WHERE  `id` = 1  AND `status` = 1 LIMIT 1 [ RunTime:0.000392s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `cms_website_language` [ RunTime:0.000543s ]
+[ sql ] [ SQL ] SELECT * FROM `cms_website_language` WHERE  `status` = 1  AND `is_default` = 1  AND `is_avail` = 1 LIMIT 1 [ RunTime:0.000313s ]
+[ sql ] [ SQL ] SELECT * FROM `cms_website_language` WHERE  `status` = 1  AND `is_avail` = 1 [ RunTime:0.000272s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `cms_app_template` [ RunTime:0.000670s ]
+[ sql ] [ SQL ] SELECT * FROM `cms_app_template` WHERE  `current` = 1  AND `status` = 1 LIMIT 1 [ RunTime:0.000304s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `cms_block` [ RunTime:0.000510s ]
+[ sql ] [ SQL ] SELECT * FROM `cms_block` WHERE  `index_code` = 'index_banner' LIMIT 1 [ RunTime:0.000298s ]
+[ sql ] [ SQL ] SELECT * FROM `cms_block` WHERE  `index_code` = 'index_ad1' LIMIT 1 [ RunTime:0.000293s ]
+[ sql ] [ SQL ] SELECT * FROM `cms_block` WHERE  `index_code` = 'news_banner' LIMIT 1 [ RunTime:0.000286s ]
+[ sql ] [ SQL ] SELECT * FROM `cms_block` WHERE  `index_code` = 'member_banner' LIMIT 1 [ RunTime:0.000520s ]
+[ sql ] [ SQL ] SELECT * FROM `cms_block` WHERE  `index_code` = 'page_ad1' LIMIT 1 [ RunTime:0.000570s ]
+[ sql ] [ SQL ] SELECT * FROM `cms_block` WHERE  `index_code` = 'page_ad2' LIMIT 1 [ RunTime:0.000327s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `cms_image_category` [ RunTime:0.000934s ]
+[ sql ] [ SQL ] SELECT * FROM `cms_image_category` WHERE  `language_id` = 1  AND `parent_id` = 0 ORDER BY `sort` ASC,`id` ASC [ RunTime:0.000443s ]
+---------------------------------------------------------------
+[ 2020-12-14T16:38:14+08:00 ] 0.0.0.0 GET localhost:82/manage/Image/index.html?page=1
+[运行时间：0.053767s] [吞吐率：18.60req/s] [内存消耗：3,638.11kb] [文件加载：60]
+[ info ] [ LANG ] /Users/hahah./Documents/wwwroot/hardware-tools/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'manage',
+    1 => 'Image',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost:82',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4350.4 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'sec-fetch-site' => 'same-origin',
+  'sec-fetch-mode' => 'navigate',
+  'sec-fetch-user' => '?1',
+  'sec-fetch-dest' => 'document',
+  'referer' => 'http://localhost:82/manage/Image/index.html?page=3',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; Hm_lvt_dea6bad1057861a8f0ec2b6f8332eec1=1593507666,1594256411; reload=; live_num=; url_num=0; UM_distinctid=1743435027a3dc-0ea8b851e725b8-67360a77-13c680-1743435027b8d0; CNZZDATA1272141907=1901091492-1598602705-%7C1602575711; ECS[visit_times]=19; __atuvc=10%7C45%2C10%7C46%2C17%7C47; SESS49960de5880e8c687434170f6476605b=tgySfQ7IbpkSz5_48Ec9Q2a6yiZergRJ0VD2PXyZbGI; PHPSESSID=pqgiuf487ccjii7ovi3m64n1sm; thinkphp_show_page_trace=0|0; _dt-key=7428147e9db77d83c10001eeab47c5d4',
+)
+[ info ] [ PARAM ] array (
+  'page' => '1',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => '',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\Manage\controller\ImageController->index[ /Users/hahah./Documents/wwwroot/hardware-tools/application/manage/controller/ImageController.php ]
+[ info ] [ VIEW ] /Users/hahah./Documents/wwwroot/hardware-tools/public/../application/manage/view/image/index.php [ array (
+  0 => 'user',
+  1 => 'userMenu',
+  2 => 'language',
+  3 => 'languages',
+  4 => 'tinymce',
+  5 => 'sort',
+  6 => 'cid',
+  7 => 'keyword',
+  8 => 'list',
+  9 => 'category',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000507s ] mysql:host=127.0.0.1;port=3306;dbname=hardware-tools;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `cms_admin_user` [ RunTime:0.000799s ]
+[ sql ] [ SQL ] SELECT * FROM `cms_admin_user` WHERE  `id` = 1  AND `status` = 1 LIMIT 1 [ RunTime:0.000478s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `cms_website_language` [ RunTime:0.000713s ]
+[ sql ] [ SQL ] SELECT * FROM `cms_website_language` WHERE  `status` = 1  AND `is_default` = 1  AND `is_avail` = 1 LIMIT 1 [ RunTime:0.000538s ]
+[ sql ] [ SQL ] SELECT * FROM `cms_website_language` WHERE  `status` = 1  AND `is_avail` = 1 [ RunTime:0.000275s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `cms_app_template` [ RunTime:0.000460s ]
+[ sql ] [ SQL ] SELECT * FROM `cms_app_template` WHERE  `current` = 1  AND `status` = 1 LIMIT 1 [ RunTime:0.000337s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `cms_block` [ RunTime:0.000444s ]
+[ sql ] [ SQL ] SELECT * FROM `cms_block` WHERE  `index_code` = 'index_banner' LIMIT 1 [ RunTime:0.000232s ]
+[ sql ] [ SQL ] SELECT * FROM `cms_block` WHERE  `index_code` = 'index_ad1' LIMIT 1 [ RunTime:0.000248s ]
+[ sql ] [ SQL ] SELECT * FROM `cms_block` WHERE  `index_code` = 'news_banner' LIMIT 1 [ RunTime:0.000255s ]
+[ sql ] [ SQL ] SELECT * FROM `cms_block` WHERE  `index_code` = 'member_banner' LIMIT 1 [ RunTime:0.000253s ]
+[ sql ] [ SQL ] SELECT * FROM `cms_block` WHERE  `index_code` = 'page_ad1' LIMIT 1 [ RunTime:0.000283s ]
+[ sql ] [ SQL ] SELECT * FROM `cms_block` WHERE  `index_code` = 'page_ad2' LIMIT 1 [ RunTime:0.000259s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `cms_image` [ RunTime:0.000459s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `cms_image` WHERE  `language_id` = 1 LIMIT 1 [ RunTime:0.000219s ]
+[ sql ] [ SQL ] SELECT * FROM `cms_image` WHERE  `language_id` = 1 ORDER BY `id` DESC LIMIT 0,10 [ RunTime:0.000327s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `cms_image_category` [ RunTime:0.000495s ]
+[ sql ] [ SQL ] SELECT * FROM `cms_image_category` WHERE  `language_id` = 1  AND `parent_id` = 0 ORDER BY `sort` ASC,`id` ASC [ RunTime:0.000286s ]
+---------------------------------------------------------------
+[ 2020-12-14T16:38:15+08:00 ] 0.0.0.0 POST localhost:82/Manage/imageCategory/get_category
+[运行时间：0.040557s] [吞吐率：24.66req/s] [内存消耗：3,251.36kb] [文件加载：49]
+[ info ] [ LANG ] /Users/hahah./Documents/wwwroot/hardware-tools/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'Manage',
+    1 => 'imageCategory',
+    2 => 'get_category',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost:82',
+  'connection' => 'keep-alive',
+  'content-length' => '0',
+  'accept' => '*/*',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4350.4 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://localhost:82',
+  'sec-fetch-site' => 'same-origin',
+  'sec-fetch-mode' => 'cors',
+  'sec-fetch-dest' => 'empty',
+  'referer' => 'http://localhost:82/manage/Image/index.html?page=1',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'cookie' => 'thinkphp_show_page_trace=0|0; Hm_lvt_dea6bad1057861a8f0ec2b6f8332eec1=1593507666,1594256411; reload=; live_num=; url_num=0; UM_distinctid=1743435027a3dc-0ea8b851e725b8-67360a77-13c680-1743435027b8d0; CNZZDATA1272141907=1901091492-1598602705-%7C1602575711; ECS[visit_times]=19; __atuvc=10%7C45%2C10%7C46%2C17%7C47; SESS49960de5880e8c687434170f6476605b=tgySfQ7IbpkSz5_48Ec9Q2a6yiZergRJ0VD2PXyZbGI; PHPSESSID=pqgiuf487ccjii7ovi3m64n1sm; thinkphp_show_page_trace=0|0; _dt-key=7428147e9db77d83c10001eeab47c5d4',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => '',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\Manage\controller\ImageCategoryController->get_category[ /Users/hahah./Documents/wwwroot/hardware-tools/application/Manage/controller/ImageCategoryController.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000616s ] mysql:host=127.0.0.1;port=3306;dbname=hardware-tools;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `cms_admin_user` [ RunTime:0.000851s ]
+[ sql ] [ SQL ] SELECT * FROM `cms_admin_user` WHERE  `id` = 1  AND `status` = 1 LIMIT 1 [ RunTime:0.000461s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `cms_website_language` [ RunTime:0.000608s ]
+[ sql ] [ SQL ] SELECT * FROM `cms_website_language` WHERE  `status` = 1  AND `is_default` = 1  AND `is_avail` = 1 LIMIT 1 [ RunTime:0.000394s ]
+[ sql ] [ SQL ] SELECT * FROM `cms_website_language` WHERE  `status` = 1  AND `is_avail` = 1 [ RunTime:0.000365s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `cms_app_template` [ RunTime:0.000517s ]
+[ sql ] [ SQL ] SELECT * FROM `cms_app_template` WHERE  `current` = 1  AND `status` = 1 LIMIT 1 [ RunTime:0.000372s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `cms_block` [ RunTime:0.001463s ]
+[ sql ] [ SQL ] SELECT * FROM `cms_block` WHERE  `index_code` = 'index_banner' LIMIT 1 [ RunTime:0.000486s ]
+[ sql ] [ SQL ] SELECT * FROM `cms_block` WHERE  `index_code` = 'index_ad1' LIMIT 1 [ RunTime:0.000470s ]
+[ sql ] [ SQL ] SELECT * FROM `cms_block` WHERE  `index_code` = 'news_banner' LIMIT 1 [ RunTime:0.000574s ]
+[ sql ] [ SQL ] SELECT * FROM `cms_block` WHERE  `index_code` = 'member_banner' LIMIT 1 [ RunTime:0.000371s ]
+[ sql ] [ SQL ] SELECT * FROM `cms_block` WHERE  `index_code` = 'page_ad1' LIMIT 1 [ RunTime:0.000273s ]
+[ sql ] [ SQL ] SELECT * FROM `cms_block` WHERE  `index_code` = 'page_ad2' LIMIT 1 [ RunTime:0.000323s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `cms_image_category` [ RunTime:0.000500s ]
+[ sql ] [ SQL ] SELECT * FROM `cms_image_category` WHERE  `language_id` = 1  AND `parent_id` = 0 ORDER BY `sort` ASC,`id` ASC [ RunTime:0.000229s ]
+---------------------------------------------------------------
+[ 2020-12-14T16:38:16+08:00 ] 0.0.0.0 GET localhost:82/manage/Image/index.html?page=2
+[运行时间：0.050469s] [吞吐率：19.81req/s] [内存消耗：3,638.19kb] [文件加载：60]
+[ info ] [ LANG ] /Users/hahah./Documents/wwwroot/hardware-tools/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'manage',
+    1 => 'Image',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost:82',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4350.4 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'sec-fetch-site' => 'same-origin',
+  'sec-fetch-mode' => 'navigate',
+  'sec-fetch-user' => '?1',
+  'sec-fetch-dest' => 'document',
+  'referer' => 'http://localhost:82/manage/Image/index.html?page=1',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; Hm_lvt_dea6bad1057861a8f0ec2b6f8332eec1=1593507666,1594256411; reload=; live_num=; url_num=0; UM_distinctid=1743435027a3dc-0ea8b851e725b8-67360a77-13c680-1743435027b8d0; CNZZDATA1272141907=1901091492-1598602705-%7C1602575711; ECS[visit_times]=19; __atuvc=10%7C45%2C10%7C46%2C17%7C47; SESS49960de5880e8c687434170f6476605b=tgySfQ7IbpkSz5_48Ec9Q2a6yiZergRJ0VD2PXyZbGI; PHPSESSID=pqgiuf487ccjii7ovi3m64n1sm; thinkphp_show_page_trace=0|0; _dt-key=7428147e9db77d83c10001eeab47c5d4',
+)
+[ info ] [ PARAM ] array (
+  'page' => '2',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => '',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\Manage\controller\ImageController->index[ /Users/hahah./Documents/wwwroot/hardware-tools/application/manage/controller/ImageController.php ]
+[ info ] [ VIEW ] /Users/hahah./Documents/wwwroot/hardware-tools/public/../application/manage/view/image/index.php [ array (
+  0 => 'user',
+  1 => 'userMenu',
+  2 => 'language',
+  3 => 'languages',
+  4 => 'tinymce',
+  5 => 'sort',
+  6 => 'cid',
+  7 => 'keyword',
+  8 => 'list',
+  9 => 'category',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000588s ] mysql:host=127.0.0.1;port=3306;dbname=hardware-tools;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `cms_admin_user` [ RunTime:0.000855s ]
+[ sql ] [ SQL ] SELECT * FROM `cms_admin_user` WHERE  `id` = 1  AND `status` = 1 LIMIT 1 [ RunTime:0.000565s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `cms_website_language` [ RunTime:0.000703s ]
+[ sql ] [ SQL ] SELECT * FROM `cms_website_language` WHERE  `status` = 1  AND `is_default` = 1  AND `is_avail` = 1 LIMIT 1 [ RunTime:0.000461s ]
+[ sql ] [ SQL ] SELECT * FROM `cms_website_language` WHERE  `status` = 1  AND `is_avail` = 1 [ RunTime:0.000417s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `cms_app_template` [ RunTime:0.000729s ]
+[ sql ] [ SQL ] SELECT * FROM `cms_app_template` WHERE  `current` = 1  AND `status` = 1 LIMIT 1 [ RunTime:0.000404s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `cms_block` [ RunTime:0.000771s ]
+[ sql ] [ SQL ] SELECT * FROM `cms_block` WHERE  `index_code` = 'index_banner' LIMIT 1 [ RunTime:0.000464s ]
+[ sql ] [ SQL ] SELECT * FROM `cms_block` WHERE  `index_code` = 'index_ad1' LIMIT 1 [ RunTime:0.000443s ]
+[ sql ] [ SQL ] SELECT * FROM `cms_block` WHERE  `index_code` = 'news_banner' LIMIT 1 [ RunTime:0.000497s ]
+[ sql ] [ SQL ] SELECT * FROM `cms_block` WHERE  `index_code` = 'member_banner' LIMIT 1 [ RunTime:0.000340s ]
+[ sql ] [ SQL ] SELECT * FROM `cms_block` WHERE  `index_code` = 'page_ad1' LIMIT 1 [ RunTime:0.000336s ]
+[ sql ] [ SQL ] SELECT * FROM `cms_block` WHERE  `index_code` = 'page_ad2' LIMIT 1 [ RunTime:0.000262s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `cms_image` [ RunTime:0.000594s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `cms_image` WHERE  `language_id` = 1 LIMIT 1 [ RunTime:0.000292s ]
+[ sql ] [ SQL ] SELECT * FROM `cms_image` WHERE  `language_id` = 1 ORDER BY `id` DESC LIMIT 10,10 [ RunTime:0.000323s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `cms_image_category` [ RunTime:0.000482s ]
+[ sql ] [ SQL ] SELECT * FROM `cms_image_category` WHERE  `language_id` = 1  AND `parent_id` = 0 ORDER BY `sort` ASC,`id` ASC [ RunTime:0.000314s ]
+---------------------------------------------------------------
+[ 2020-12-14T16:38:16+08:00 ] 0.0.0.0 POST localhost:82/Manage/imageCategory/get_category
+[运行时间：0.050367s] [吞吐率：19.85req/s] [内存消耗：3,251.36kb] [文件加载：49]
+[ info ] [ LANG ] /Users/hahah./Documents/wwwroot/hardware-tools/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'Manage',
+    1 => 'imageCategory',
+    2 => 'get_category',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost:82',
+  'connection' => 'keep-alive',
+  'content-length' => '0',
+  'accept' => '*/*',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4350.4 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://localhost:82',
+  'sec-fetch-site' => 'same-origin',
+  'sec-fetch-mode' => 'cors',
+  'sec-fetch-dest' => 'empty',
+  'referer' => 'http://localhost:82/manage/Image/index.html?page=2',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'cookie' => 'thinkphp_show_page_trace=0|0; Hm_lvt_dea6bad1057861a8f0ec2b6f8332eec1=1593507666,1594256411; reload=; live_num=; url_num=0; UM_distinctid=1743435027a3dc-0ea8b851e725b8-67360a77-13c680-1743435027b8d0; CNZZDATA1272141907=1901091492-1598602705-%7C1602575711; ECS[visit_times]=19; __atuvc=10%7C45%2C10%7C46%2C17%7C47; SESS49960de5880e8c687434170f6476605b=tgySfQ7IbpkSz5_48Ec9Q2a6yiZergRJ0VD2PXyZbGI; PHPSESSID=pqgiuf487ccjii7ovi3m64n1sm; thinkphp_show_page_trace=0|0; _dt-key=7428147e9db77d83c10001eeab47c5d4',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => '',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\Manage\controller\ImageCategoryController->get_category[ /Users/hahah./Documents/wwwroot/hardware-tools/application/Manage/controller/ImageCategoryController.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000605s ] mysql:host=127.0.0.1;port=3306;dbname=hardware-tools;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `cms_admin_user` [ RunTime:0.000839s ]
+[ sql ] [ SQL ] SELECT * FROM `cms_admin_user` WHERE  `id` = 1  AND `status` = 1 LIMIT 1 [ RunTime:0.000502s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `cms_website_language` [ RunTime:0.000954s ]
+[ sql ] [ SQL ] SELECT * FROM `cms_website_language` WHERE  `status` = 1  AND `is_default` = 1  AND `is_avail` = 1 LIMIT 1 [ RunTime:0.000821s ]
+[ sql ] [ SQL ] SELECT * FROM `cms_website_language` WHERE  `status` = 1  AND `is_avail` = 1 [ RunTime:0.000464s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `cms_app_template` [ RunTime:0.000609s ]
+[ sql ] [ SQL ] SELECT * FROM `cms_app_template` WHERE  `current` = 1  AND `status` = 1 LIMIT 1 [ RunTime:0.000248s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `cms_block` [ RunTime:0.000501s ]
+[ sql ] [ SQL ] SELECT * FROM `cms_block` WHERE  `index_code` = 'index_banner' LIMIT 1 [ RunTime:0.000263s ]
+[ sql ] [ SQL ] SELECT * FROM `cms_block` WHERE  `index_code` = 'index_ad1' LIMIT 1 [ RunTime:0.000277s ]
+[ sql ] [ SQL ] SELECT * FROM `cms_block` WHERE  `index_code` = 'news_banner' LIMIT 1 [ RunTime:0.000330s ]
+[ sql ] [ SQL ] SELECT * FROM `cms_block` WHERE  `index_code` = 'member_banner' LIMIT 1 [ RunTime:0.000440s ]
+[ sql ] [ SQL ] SELECT * FROM `cms_block` WHERE  `index_code` = 'page_ad1' LIMIT 1 [ RunTime:0.000315s ]
+[ sql ] [ SQL ] SELECT * FROM `cms_block` WHERE  `index_code` = 'page_ad2' LIMIT 1 [ RunTime:0.000262s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `cms_image_category` [ RunTime:0.000876s ]
+[ sql ] [ SQL ] SELECT * FROM `cms_image_category` WHERE  `language_id` = 1  AND `parent_id` = 0 ORDER BY `sort` ASC,`id` ASC [ RunTime:0.000383s ]
+---------------------------------------------------------------
+[ 2020-12-14T16:38:18+08:00 ] 0.0.0.0 GET localhost:82/manage/Image/index.html?page=3
+[运行时间：0.051501s] [吞吐率：19.42req/s] [内存消耗：3,634.77kb] [文件加载：60]
+[ info ] [ LANG ] /Users/hahah./Documents/wwwroot/hardware-tools/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'manage',
+    1 => 'Image',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost:82',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4350.4 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'sec-fetch-site' => 'same-origin',
+  'sec-fetch-mode' => 'navigate',
+  'sec-fetch-user' => '?1',
+  'sec-fetch-dest' => 'document',
+  'referer' => 'http://localhost:82/manage/Image/index.html?page=2',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; Hm_lvt_dea6bad1057861a8f0ec2b6f8332eec1=1593507666,1594256411; reload=; live_num=; url_num=0; UM_distinctid=1743435027a3dc-0ea8b851e725b8-67360a77-13c680-1743435027b8d0; CNZZDATA1272141907=1901091492-1598602705-%7C1602575711; ECS[visit_times]=19; __atuvc=10%7C45%2C10%7C46%2C17%7C47; SESS49960de5880e8c687434170f6476605b=tgySfQ7IbpkSz5_48Ec9Q2a6yiZergRJ0VD2PXyZbGI; PHPSESSID=pqgiuf487ccjii7ovi3m64n1sm; thinkphp_show_page_trace=0|0; _dt-key=7428147e9db77d83c10001eeab47c5d4',
+)
+[ info ] [ PARAM ] array (
+  'page' => '3',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => '',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\Manage\controller\ImageController->index[ /Users/hahah./Documents/wwwroot/hardware-tools/application/manage/controller/ImageController.php ]
+[ info ] [ VIEW ] /Users/hahah./Documents/wwwroot/hardware-tools/public/../application/manage/view/image/index.php [ array (
+  0 => 'user',
+  1 => 'userMenu',
+  2 => 'language',
+  3 => 'languages',
+  4 => 'tinymce',
+  5 => 'sort',
+  6 => 'cid',
+  7 => 'keyword',
+  8 => 'list',
+  9 => 'category',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000527s ] mysql:host=127.0.0.1;port=3306;dbname=hardware-tools;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `cms_admin_user` [ RunTime:0.001007s ]
+[ sql ] [ SQL ] SELECT * FROM `cms_admin_user` WHERE  `id` = 1  AND `status` = 1 LIMIT 1 [ RunTime:0.000456s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `cms_website_language` [ RunTime:0.000974s ]
+[ sql ] [ SQL ] SELECT * FROM `cms_website_language` WHERE  `status` = 1  AND `is_default` = 1  AND `is_avail` = 1 LIMIT 1 [ RunTime:0.000558s ]
+[ sql ] [ SQL ] SELECT * FROM `cms_website_language` WHERE  `status` = 1  AND `is_avail` = 1 [ RunTime:0.000416s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `cms_app_template` [ RunTime:0.000591s ]
+[ sql ] [ SQL ] SELECT * FROM `cms_app_template` WHERE  `current` = 1  AND `status` = 1 LIMIT 1 [ RunTime:0.000399s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `cms_block` [ RunTime:0.000637s ]
+[ sql ] [ SQL ] SELECT * FROM `cms_block` WHERE  `index_code` = 'index_banner' LIMIT 1 [ RunTime:0.000368s ]
+[ sql ] [ SQL ] SELECT * FROM `cms_block` WHERE  `index_code` = 'index_ad1' LIMIT 1 [ RunTime:0.000398s ]
+[ sql ] [ SQL ] SELECT * FROM `cms_block` WHERE  `index_code` = 'news_banner' LIMIT 1 [ RunTime:0.000392s ]
+[ sql ] [ SQL ] SELECT * FROM `cms_block` WHERE  `index_code` = 'member_banner' LIMIT 1 [ RunTime:0.000406s ]
+[ sql ] [ SQL ] SELECT * FROM `cms_block` WHERE  `index_code` = 'page_ad1' LIMIT 1 [ RunTime:0.000433s ]
+[ sql ] [ SQL ] SELECT * FROM `cms_block` WHERE  `index_code` = 'page_ad2' LIMIT 1 [ RunTime:0.000396s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `cms_image` [ RunTime:0.000699s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `cms_image` WHERE  `language_id` = 1 LIMIT 1 [ RunTime:0.000396s ]
+[ sql ] [ SQL ] SELECT * FROM `cms_image` WHERE  `language_id` = 1 ORDER BY `id` DESC LIMIT 20,10 [ RunTime:0.000438s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `cms_image_category` [ RunTime:0.000606s ]
+[ sql ] [ SQL ] SELECT * FROM `cms_image_category` WHERE  `language_id` = 1  AND `parent_id` = 0 ORDER BY `sort` ASC,`id` ASC [ RunTime:0.000360s ]
+---------------------------------------------------------------
+[ 2020-12-14T16:38:18+08:00 ] 0.0.0.0 POST localhost:82/Manage/imageCategory/get_category
+[运行时间：0.041692s] [吞吐率：23.99req/s] [内存消耗：3,251.36kb] [文件加载：49]
+[ info ] [ LANG ] /Users/hahah./Documents/wwwroot/hardware-tools/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'Manage',
+    1 => 'imageCategory',
+    2 => 'get_category',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost:82',
+  'connection' => 'keep-alive',
+  'content-length' => '0',
+  'accept' => '*/*',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4350.4 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://localhost:82',
+  'sec-fetch-site' => 'same-origin',
+  'sec-fetch-mode' => 'cors',
+  'sec-fetch-dest' => 'empty',
+  'referer' => 'http://localhost:82/manage/Image/index.html?page=3',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'cookie' => 'thinkphp_show_page_trace=0|0; Hm_lvt_dea6bad1057861a8f0ec2b6f8332eec1=1593507666,1594256411; reload=; live_num=; url_num=0; UM_distinctid=1743435027a3dc-0ea8b851e725b8-67360a77-13c680-1743435027b8d0; CNZZDATA1272141907=1901091492-1598602705-%7C1602575711; ECS[visit_times]=19; __atuvc=10%7C45%2C10%7C46%2C17%7C47; SESS49960de5880e8c687434170f6476605b=tgySfQ7IbpkSz5_48Ec9Q2a6yiZergRJ0VD2PXyZbGI; PHPSESSID=pqgiuf487ccjii7ovi3m64n1sm; thinkphp_show_page_trace=0|0; _dt-key=7428147e9db77d83c10001eeab47c5d4',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => '',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\Manage\controller\ImageCategoryController->get_category[ /Users/hahah./Documents/wwwroot/hardware-tools/application/Manage/controller/ImageCategoryController.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000719s ] mysql:host=127.0.0.1;port=3306;dbname=hardware-tools;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `cms_admin_user` [ RunTime:0.000872s ]
+[ sql ] [ SQL ] SELECT * FROM `cms_admin_user` WHERE  `id` = 1  AND `status` = 1 LIMIT 1 [ RunTime:0.000484s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `cms_website_language` [ RunTime:0.000799s ]
+[ sql ] [ SQL ] SELECT * FROM `cms_website_language` WHERE  `status` = 1  AND `is_default` = 1  AND `is_avail` = 1 LIMIT 1 [ RunTime:0.001548s ]
+[ sql ] [ SQL ] SELECT * FROM `cms_website_language` WHERE  `status` = 1  AND `is_avail` = 1 [ RunTime:0.000836s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `cms_app_template` [ RunTime:0.000849s ]
+[ sql ] [ SQL ] SELECT * FROM `cms_app_template` WHERE  `current` = 1  AND `status` = 1 LIMIT 1 [ RunTime:0.000590s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `cms_block` [ RunTime:0.000648s ]
+[ sql ] [ SQL ] SELECT * FROM `cms_block` WHERE  `index_code` = 'index_banner' LIMIT 1 [ RunTime:0.000289s ]
+[ sql ] [ SQL ] SELECT * FROM `cms_block` WHERE  `index_code` = 'index_ad1' LIMIT 1 [ RunTime:0.000273s ]
+[ sql ] [ SQL ] SELECT * FROM `cms_block` WHERE  `index_code` = 'news_banner' LIMIT 1 [ RunTime:0.000431s ]
+[ sql ] [ SQL ] SELECT * FROM `cms_block` WHERE  `index_code` = 'member_banner' LIMIT 1 [ RunTime:0.000548s ]
+[ sql ] [ SQL ] SELECT * FROM `cms_block` WHERE  `index_code` = 'page_ad1' LIMIT 1 [ RunTime:0.000426s ]
+[ sql ] [ SQL ] SELECT * FROM `cms_block` WHERE  `index_code` = 'page_ad2' LIMIT 1 [ RunTime:0.000287s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `cms_image_category` [ RunTime:0.000423s ]
+[ sql ] [ SQL ] SELECT * FROM `cms_image_category` WHERE  `language_id` = 1  AND `parent_id` = 0 ORDER BY `sort` ASC,`id` ASC [ RunTime:0.000256s ]
+---------------------------------------------------------------
+[ 2020-12-14T16:38:45+08:00 ] 0.0.0.0 GET localhost:82/manage/Image/index.html?page=3
+[运行时间：0.058764s] [吞吐率：17.02req/s] [内存消耗：3,613.72kb] [文件加载：60]
+[ info ] [ LANG ] /Users/hahah./Documents/wwwroot/hardware-tools/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'manage',
+    1 => 'Image',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost:82',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4350.4 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'sec-fetch-site' => 'same-origin',
+  'sec-fetch-mode' => 'navigate',
+  'sec-fetch-user' => '?1',
+  'sec-fetch-dest' => 'document',
+  'referer' => 'http://localhost:82/manage/Image/index.html?page=2',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; Hm_lvt_dea6bad1057861a8f0ec2b6f8332eec1=1593507666,1594256411; reload=; live_num=; url_num=0; UM_distinctid=1743435027a3dc-0ea8b851e725b8-67360a77-13c680-1743435027b8d0; CNZZDATA1272141907=1901091492-1598602705-%7C1602575711; ECS[visit_times]=19; __atuvc=10%7C45%2C10%7C46%2C17%7C47; SESS49960de5880e8c687434170f6476605b=tgySfQ7IbpkSz5_48Ec9Q2a6yiZergRJ0VD2PXyZbGI; PHPSESSID=pqgiuf487ccjii7ovi3m64n1sm; thinkphp_show_page_trace=0|0; _dt-key=7428147e9db77d83c10001eeab47c5d4',
+)
+[ info ] [ PARAM ] array (
+  'page' => '3',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => '',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\Manage\controller\ImageController->index[ /Users/hahah./Documents/wwwroot/hardware-tools/application/manage/controller/ImageController.php ]
+[ info ] [ VIEW ] /Users/hahah./Documents/wwwroot/hardware-tools/public/../application/manage/view/image/index.php [ array (
+  0 => 'user',
+  1 => 'userMenu',
+  2 => 'language',
+  3 => 'languages',
+  4 => 'tinymce',
+  5 => 'sort',
+  6 => 'cid',
+  7 => 'keyword',
+  8 => 'list',
+  9 => 'category',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000663s ] mysql:host=127.0.0.1;port=3306;dbname=hardware-tools;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `cms_admin_user` [ RunTime:0.000761s ]
+[ sql ] [ SQL ] SELECT * FROM `cms_admin_user` WHERE  `id` = 1  AND `status` = 1 LIMIT 1 [ RunTime:0.000371s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `cms_website_language` [ RunTime:0.000466s ]
+[ sql ] [ SQL ] SELECT * FROM `cms_website_language` WHERE  `status` = 1  AND `is_default` = 1  AND `is_avail` = 1 LIMIT 1 [ RunTime:0.000337s ]
+[ sql ] [ SQL ] SELECT * FROM `cms_website_language` WHERE  `status` = 1  AND `is_avail` = 1 [ RunTime:0.000394s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `cms_app_template` [ RunTime:0.000567s ]
+[ sql ] [ SQL ] SELECT * FROM `cms_app_template` WHERE  `current` = 1  AND `status` = 1 LIMIT 1 [ RunTime:0.000332s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `cms_block` [ RunTime:0.000506s ]
+[ sql ] [ SQL ] SELECT * FROM `cms_block` WHERE  `index_code` = 'index_banner' LIMIT 1 [ RunTime:0.000278s ]
+[ sql ] [ SQL ] SELECT * FROM `cms_block` WHERE  `index_code` = 'index_ad1' LIMIT 1 [ RunTime:0.000257s ]
+[ sql ] [ SQL ] SELECT * FROM `cms_block` WHERE  `index_code` = 'news_banner' LIMIT 1 [ RunTime:0.000213s ]
+[ sql ] [ SQL ] SELECT * FROM `cms_block` WHERE  `index_code` = 'member_banner' LIMIT 1 [ RunTime:0.000298s ]
+[ sql ] [ SQL ] SELECT * FROM `cms_block` WHERE  `index_code` = 'page_ad1' LIMIT 1 [ RunTime:0.000343s ]
+[ sql ] [ SQL ] SELECT * FROM `cms_block` WHERE  `index_code` = 'page_ad2' LIMIT 1 [ RunTime:0.000364s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `cms_image` [ RunTime:0.000795s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `cms_image` WHERE  `language_id` = 1 LIMIT 1 [ RunTime:0.000465s ]
+[ sql ] [ SQL ] SELECT * FROM `cms_image` WHERE  `language_id` = 1 ORDER BY `id` DESC LIMIT 30,15 [ RunTime:0.000342s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `cms_image_category` [ RunTime:0.000597s ]
+[ sql ] [ SQL ] SELECT * FROM `cms_image_category` WHERE  `language_id` = 1  AND `parent_id` = 0 ORDER BY `sort` ASC,`id` ASC [ RunTime:0.000515s ]
+---------------------------------------------------------------
+[ 2020-12-14T16:38:45+08:00 ] 0.0.0.0 POST localhost:82/Manage/imageCategory/get_category
+[运行时间：0.036176s] [吞吐率：27.64req/s] [内存消耗：3,251.36kb] [文件加载：49]
+[ info ] [ LANG ] /Users/hahah./Documents/wwwroot/hardware-tools/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'Manage',
+    1 => 'imageCategory',
+    2 => 'get_category',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost:82',
+  'connection' => 'keep-alive',
+  'content-length' => '0',
+  'accept' => '*/*',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4350.4 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://localhost:82',
+  'sec-fetch-site' => 'same-origin',
+  'sec-fetch-mode' => 'cors',
+  'sec-fetch-dest' => 'empty',
+  'referer' => 'http://localhost:82/manage/Image/index.html?page=3',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'cookie' => 'thinkphp_show_page_trace=0|0; Hm_lvt_dea6bad1057861a8f0ec2b6f8332eec1=1593507666,1594256411; reload=; live_num=; url_num=0; UM_distinctid=1743435027a3dc-0ea8b851e725b8-67360a77-13c680-1743435027b8d0; CNZZDATA1272141907=1901091492-1598602705-%7C1602575711; ECS[visit_times]=19; __atuvc=10%7C45%2C10%7C46%2C17%7C47; SESS49960de5880e8c687434170f6476605b=tgySfQ7IbpkSz5_48Ec9Q2a6yiZergRJ0VD2PXyZbGI; PHPSESSID=pqgiuf487ccjii7ovi3m64n1sm; thinkphp_show_page_trace=0|0; _dt-key=7428147e9db77d83c10001eeab47c5d4',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => '',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\Manage\controller\ImageCategoryController->get_category[ /Users/hahah./Documents/wwwroot/hardware-tools/application/Manage/controller/ImageCategoryController.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000525s ] mysql:host=127.0.0.1;port=3306;dbname=hardware-tools;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `cms_admin_user` [ RunTime:0.000752s ]
+[ sql ] [ SQL ] SELECT * FROM `cms_admin_user` WHERE  `id` = 1  AND `status` = 1 LIMIT 1 [ RunTime:0.000551s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `cms_website_language` [ RunTime:0.000686s ]
+[ sql ] [ SQL ] SELECT * FROM `cms_website_language` WHERE  `status` = 1  AND `is_default` = 1  AND `is_avail` = 1 LIMIT 1 [ RunTime:0.000402s ]
+[ sql ] [ SQL ] SELECT * FROM `cms_website_language` WHERE  `status` = 1  AND `is_avail` = 1 [ RunTime:0.000360s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `cms_app_template` [ RunTime:0.000603s ]
+[ sql ] [ SQL ] SELECT * FROM `cms_app_template` WHERE  `current` = 1  AND `status` = 1 LIMIT 1 [ RunTime:0.000301s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `cms_block` [ RunTime:0.000420s ]
+[ sql ] [ SQL ] SELECT * FROM `cms_block` WHERE  `index_code` = 'index_banner' LIMIT 1 [ RunTime:0.000261s ]
+[ sql ] [ SQL ] SELECT * FROM `cms_block` WHERE  `index_code` = 'index_ad1' LIMIT 1 [ RunTime:0.000229s ]
+[ sql ] [ SQL ] SELECT * FROM `cms_block` WHERE  `index_code` = 'news_banner' LIMIT 1 [ RunTime:0.000311s ]
+[ sql ] [ SQL ] SELECT * FROM `cms_block` WHERE  `index_code` = 'member_banner' LIMIT 1 [ RunTime:0.000253s ]
+[ sql ] [ SQL ] SELECT * FROM `cms_block` WHERE  `index_code` = 'page_ad1' LIMIT 1 [ RunTime:0.000334s ]
+[ sql ] [ SQL ] SELECT * FROM `cms_block` WHERE  `index_code` = 'page_ad2' LIMIT 1 [ RunTime:0.000241s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `cms_image_category` [ RunTime:0.000414s ]
+[ sql ] [ SQL ] SELECT * FROM `cms_image_category` WHERE  `language_id` = 1  AND `parent_id` = 0 ORDER BY `sort` ASC,`id` ASC [ RunTime:0.000241s ]
+---------------------------------------------------------------
+[ 2020-12-14T16:38:47+08:00 ] 0.0.0.0 GET localhost:82/manage/Image/index.html?page=1
+[运行时间：0.044332s] [吞吐率：22.56req/s] [内存消耗：3,649.84kb] [文件加载：60]
+[ info ] [ LANG ] /Users/hahah./Documents/wwwroot/hardware-tools/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'manage',
+    1 => 'Image',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost:82',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4350.4 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'sec-fetch-site' => 'same-origin',
+  'sec-fetch-mode' => 'navigate',
+  'sec-fetch-user' => '?1',
+  'sec-fetch-dest' => 'document',
+  'referer' => 'http://localhost:82/manage/Image/index.html?page=3',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; Hm_lvt_dea6bad1057861a8f0ec2b6f8332eec1=1593507666,1594256411; reload=; live_num=; url_num=0; UM_distinctid=1743435027a3dc-0ea8b851e725b8-67360a77-13c680-1743435027b8d0; CNZZDATA1272141907=1901091492-1598602705-%7C1602575711; ECS[visit_times]=19; __atuvc=10%7C45%2C10%7C46%2C17%7C47; SESS49960de5880e8c687434170f6476605b=tgySfQ7IbpkSz5_48Ec9Q2a6yiZergRJ0VD2PXyZbGI; PHPSESSID=pqgiuf487ccjii7ovi3m64n1sm; thinkphp_show_page_trace=0|0; _dt-key=7428147e9db77d83c10001eeab47c5d4',
+)
+[ info ] [ PARAM ] array (
+  'page' => '1',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => '',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\Manage\controller\ImageController->index[ /Users/hahah./Documents/wwwroot/hardware-tools/application/manage/controller/ImageController.php ]
+[ info ] [ VIEW ] /Users/hahah./Documents/wwwroot/hardware-tools/public/../application/manage/view/image/index.php [ array (
+  0 => 'user',
+  1 => 'userMenu',
+  2 => 'language',
+  3 => 'languages',
+  4 => 'tinymce',
+  5 => 'sort',
+  6 => 'cid',
+  7 => 'keyword',
+  8 => 'list',
+  9 => 'category',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000480s ] mysql:host=127.0.0.1;port=3306;dbname=hardware-tools;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `cms_admin_user` [ RunTime:0.000603s ]
+[ sql ] [ SQL ] SELECT * FROM `cms_admin_user` WHERE  `id` = 1  AND `status` = 1 LIMIT 1 [ RunTime:0.000340s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `cms_website_language` [ RunTime:0.000557s ]
+[ sql ] [ SQL ] SELECT * FROM `cms_website_language` WHERE  `status` = 1  AND `is_default` = 1  AND `is_avail` = 1 LIMIT 1 [ RunTime:0.000521s ]
+[ sql ] [ SQL ] SELECT * FROM `cms_website_language` WHERE  `status` = 1  AND `is_avail` = 1 [ RunTime:0.000340s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `cms_app_template` [ RunTime:0.000511s ]
+[ sql ] [ SQL ] SELECT * FROM `cms_app_template` WHERE  `current` = 1  AND `status` = 1 LIMIT 1 [ RunTime:0.000367s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `cms_block` [ RunTime:0.000681s ]
+[ sql ] [ SQL ] SELECT * FROM `cms_block` WHERE  `index_code` = 'index_banner' LIMIT 1 [ RunTime:0.000530s ]
+[ sql ] [ SQL ] SELECT * FROM `cms_block` WHERE  `index_code` = 'index_ad1' LIMIT 1 [ RunTime:0.000452s ]
+[ sql ] [ SQL ] SELECT * FROM `cms_block` WHERE  `index_code` = 'news_banner' LIMIT 1 [ RunTime:0.000367s ]
+[ sql ] [ SQL ] SELECT * FROM `cms_block` WHERE  `index_code` = 'member_banner' LIMIT 1 [ RunTime:0.000457s ]
+[ sql ] [ SQL ] SELECT * FROM `cms_block` WHERE  `index_code` = 'page_ad1' LIMIT 1 [ RunTime:0.000457s ]
+[ sql ] [ SQL ] SELECT * FROM `cms_block` WHERE  `index_code` = 'page_ad2' LIMIT 1 [ RunTime:0.000343s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `cms_image` [ RunTime:0.000459s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `cms_image` WHERE  `language_id` = 1 LIMIT 1 [ RunTime:0.000218s ]
+[ sql ] [ SQL ] SELECT * FROM `cms_image` WHERE  `language_id` = 1 ORDER BY `id` DESC LIMIT 0,15 [ RunTime:0.000220s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `cms_image_category` [ RunTime:0.000428s ]
+[ sql ] [ SQL ] SELECT * FROM `cms_image_category` WHERE  `language_id` = 1  AND `parent_id` = 0 ORDER BY `sort` ASC,`id` ASC [ RunTime:0.000228s ]
+---------------------------------------------------------------
+[ 2020-12-14T16:38:47+08:00 ] 0.0.0.0 POST localhost:82/Manage/imageCategory/get_category
+[运行时间：0.043644s] [吞吐率：22.91req/s] [内存消耗：3,251.36kb] [文件加载：49]
+[ info ] [ LANG ] /Users/hahah./Documents/wwwroot/hardware-tools/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'Manage',
+    1 => 'imageCategory',
+    2 => 'get_category',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost:82',
+  'connection' => 'keep-alive',
+  'content-length' => '0',
+  'accept' => '*/*',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4350.4 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://localhost:82',
+  'sec-fetch-site' => 'same-origin',
+  'sec-fetch-mode' => 'cors',
+  'sec-fetch-dest' => 'empty',
+  'referer' => 'http://localhost:82/manage/Image/index.html?page=1',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'cookie' => 'thinkphp_show_page_trace=0|0; Hm_lvt_dea6bad1057861a8f0ec2b6f8332eec1=1593507666,1594256411; reload=; live_num=; url_num=0; UM_distinctid=1743435027a3dc-0ea8b851e725b8-67360a77-13c680-1743435027b8d0; CNZZDATA1272141907=1901091492-1598602705-%7C1602575711; ECS[visit_times]=19; __atuvc=10%7C45%2C10%7C46%2C17%7C47; SESS49960de5880e8c687434170f6476605b=tgySfQ7IbpkSz5_48Ec9Q2a6yiZergRJ0VD2PXyZbGI; PHPSESSID=pqgiuf487ccjii7ovi3m64n1sm; thinkphp_show_page_trace=0|0; _dt-key=7428147e9db77d83c10001eeab47c5d4',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => '',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\Manage\controller\ImageCategoryController->get_category[ /Users/hahah./Documents/wwwroot/hardware-tools/application/Manage/controller/ImageCategoryController.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000862s ] mysql:host=127.0.0.1;port=3306;dbname=hardware-tools;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `cms_admin_user` [ RunTime:0.000719s ]
+[ sql ] [ SQL ] SELECT * FROM `cms_admin_user` WHERE  `id` = 1  AND `status` = 1 LIMIT 1 [ RunTime:0.000499s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `cms_website_language` [ RunTime:0.000665s ]
+[ sql ] [ SQL ] SELECT * FROM `cms_website_language` WHERE  `status` = 1  AND `is_default` = 1  AND `is_avail` = 1 LIMIT 1 [ RunTime:0.000443s ]
+[ sql ] [ SQL ] SELECT * FROM `cms_website_language` WHERE  `status` = 1  AND `is_avail` = 1 [ RunTime:0.000432s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `cms_app_template` [ RunTime:0.000622s ]
+[ sql ] [ SQL ] SELECT * FROM `cms_app_template` WHERE  `current` = 1  AND `status` = 1 LIMIT 1 [ RunTime:0.000465s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `cms_block` [ RunTime:0.000618s ]
+[ sql ] [ SQL ] SELECT * FROM `cms_block` WHERE  `index_code` = 'index_banner' LIMIT 1 [ RunTime:0.000498s ]
+[ sql ] [ SQL ] SELECT * FROM `cms_block` WHERE  `index_code` = 'index_ad1' LIMIT 1 [ RunTime:0.000420s ]
+[ sql ] [ SQL ] SELECT * FROM `cms_block` WHERE  `index_code` = 'news_banner' LIMIT 1 [ RunTime:0.000465s ]
+[ sql ] [ SQL ] SELECT * FROM `cms_block` WHERE  `index_code` = 'member_banner' LIMIT 1 [ RunTime:0.000542s ]
+[ sql ] [ SQL ] SELECT * FROM `cms_block` WHERE  `index_code` = 'page_ad1' LIMIT 1 [ RunTime:0.000380s ]
+[ sql ] [ SQL ] SELECT * FROM `cms_block` WHERE  `index_code` = 'page_ad2' LIMIT 1 [ RunTime:0.000473s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `cms_image_category` [ RunTime:0.000597s ]
+[ sql ] [ SQL ] SELECT * FROM `cms_image_category` WHERE  `language_id` = 1  AND `parent_id` = 0 ORDER BY `sort` ASC,`id` ASC [ RunTime:0.000544s ]
+---------------------------------------------------------------
+[ 2020-12-14T16:38:49+08:00 ] 0.0.0.0 GET localhost:82/manage/Image/index.html?page=2
+[运行时间：0.048648s] [吞吐率：20.56req/s] [内存消耗：3,646.81kb] [文件加载：60]
+[ info ] [ LANG ] /Users/hahah./Documents/wwwroot/hardware-tools/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'manage',
+    1 => 'Image',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost:82',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4350.4 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'sec-fetch-site' => 'same-origin',
+  'sec-fetch-mode' => 'navigate',
+  'sec-fetch-user' => '?1',
+  'sec-fetch-dest' => 'document',
+  'referer' => 'http://localhost:82/manage/Image/index.html?page=1',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; Hm_lvt_dea6bad1057861a8f0ec2b6f8332eec1=1593507666,1594256411; reload=; live_num=; url_num=0; UM_distinctid=1743435027a3dc-0ea8b851e725b8-67360a77-13c680-1743435027b8d0; CNZZDATA1272141907=1901091492-1598602705-%7C1602575711; ECS[visit_times]=19; __atuvc=10%7C45%2C10%7C46%2C17%7C47; SESS49960de5880e8c687434170f6476605b=tgySfQ7IbpkSz5_48Ec9Q2a6yiZergRJ0VD2PXyZbGI; PHPSESSID=pqgiuf487ccjii7ovi3m64n1sm; thinkphp_show_page_trace=0|0; _dt-key=7428147e9db77d83c10001eeab47c5d4',
+)
+[ info ] [ PARAM ] array (
+  'page' => '2',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => '',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\Manage\controller\ImageController->index[ /Users/hahah./Documents/wwwroot/hardware-tools/application/manage/controller/ImageController.php ]
+[ info ] [ VIEW ] /Users/hahah./Documents/wwwroot/hardware-tools/public/../application/manage/view/image/index.php [ array (
+  0 => 'user',
+  1 => 'userMenu',
+  2 => 'language',
+  3 => 'languages',
+  4 => 'tinymce',
+  5 => 'sort',
+  6 => 'cid',
+  7 => 'keyword',
+  8 => 'list',
+  9 => 'category',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000608s ] mysql:host=127.0.0.1;port=3306;dbname=hardware-tools;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `cms_admin_user` [ RunTime:0.000723s ]
+[ sql ] [ SQL ] SELECT * FROM `cms_admin_user` WHERE  `id` = 1  AND `status` = 1 LIMIT 1 [ RunTime:0.000423s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `cms_website_language` [ RunTime:0.000693s ]
+[ sql ] [ SQL ] SELECT * FROM `cms_website_language` WHERE  `status` = 1  AND `is_default` = 1  AND `is_avail` = 1 LIMIT 1 [ RunTime:0.000396s ]
+[ sql ] [ SQL ] SELECT * FROM `cms_website_language` WHERE  `status` = 1  AND `is_avail` = 1 [ RunTime:0.000392s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `cms_app_template` [ RunTime:0.000610s ]
+[ sql ] [ SQL ] SELECT * FROM `cms_app_template` WHERE  `current` = 1  AND `status` = 1 LIMIT 1 [ RunTime:0.000344s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `cms_block` [ RunTime:0.000579s ]
+[ sql ] [ SQL ] SELECT * FROM `cms_block` WHERE  `index_code` = 'index_banner' LIMIT 1 [ RunTime:0.000399s ]
+[ sql ] [ SQL ] SELECT * FROM `cms_block` WHERE  `index_code` = 'index_ad1' LIMIT 1 [ RunTime:0.000354s ]
+[ sql ] [ SQL ] SELECT * FROM `cms_block` WHERE  `index_code` = 'news_banner' LIMIT 1 [ RunTime:0.000341s ]
+[ sql ] [ SQL ] SELECT * FROM `cms_block` WHERE  `index_code` = 'member_banner' LIMIT 1 [ RunTime:0.000391s ]
+[ sql ] [ SQL ] SELECT * FROM `cms_block` WHERE  `index_code` = 'page_ad1' LIMIT 1 [ RunTime:0.000525s ]
+[ sql ] [ SQL ] SELECT * FROM `cms_block` WHERE  `index_code` = 'page_ad2' LIMIT 1 [ RunTime:0.000506s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `cms_image` [ RunTime:0.000694s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `cms_image` WHERE  `language_id` = 1 LIMIT 1 [ RunTime:0.000289s ]
+[ sql ] [ SQL ] SELECT * FROM `cms_image` WHERE  `language_id` = 1 ORDER BY `id` DESC LIMIT 15,15 [ RunTime:0.000291s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `cms_image_category` [ RunTime:0.000442s ]
+[ sql ] [ SQL ] SELECT * FROM `cms_image_category` WHERE  `language_id` = 1  AND `parent_id` = 0 ORDER BY `sort` ASC,`id` ASC [ RunTime:0.000263s ]
+---------------------------------------------------------------
+[ 2020-12-14T16:38:49+08:00 ] 0.0.0.0 POST localhost:82/Manage/imageCategory/get_category
+[运行时间：0.034531s] [吞吐率：28.96req/s] [内存消耗：3,251.36kb] [文件加载：49]
+[ info ] [ LANG ] /Users/hahah./Documents/wwwroot/hardware-tools/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'Manage',
+    1 => 'imageCategory',
+    2 => 'get_category',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost:82',
+  'connection' => 'keep-alive',
+  'content-length' => '0',
+  'accept' => '*/*',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4350.4 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://localhost:82',
+  'sec-fetch-site' => 'same-origin',
+  'sec-fetch-mode' => 'cors',
+  'sec-fetch-dest' => 'empty',
+  'referer' => 'http://localhost:82/manage/Image/index.html?page=2',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'cookie' => 'thinkphp_show_page_trace=0|0; Hm_lvt_dea6bad1057861a8f0ec2b6f8332eec1=1593507666,1594256411; reload=; live_num=; url_num=0; UM_distinctid=1743435027a3dc-0ea8b851e725b8-67360a77-13c680-1743435027b8d0; CNZZDATA1272141907=1901091492-1598602705-%7C1602575711; ECS[visit_times]=19; __atuvc=10%7C45%2C10%7C46%2C17%7C47; SESS49960de5880e8c687434170f6476605b=tgySfQ7IbpkSz5_48Ec9Q2a6yiZergRJ0VD2PXyZbGI; PHPSESSID=pqgiuf487ccjii7ovi3m64n1sm; thinkphp_show_page_trace=0|0; _dt-key=7428147e9db77d83c10001eeab47c5d4',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => '',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\Manage\controller\ImageCategoryController->get_category[ /Users/hahah./Documents/wwwroot/hardware-tools/application/Manage/controller/ImageCategoryController.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000681s ] mysql:host=127.0.0.1;port=3306;dbname=hardware-tools;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `cms_admin_user` [ RunTime:0.000747s ]
+[ sql ] [ SQL ] SELECT * FROM `cms_admin_user` WHERE  `id` = 1  AND `status` = 1 LIMIT 1 [ RunTime:0.000504s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `cms_website_language` [ RunTime:0.000530s ]
+[ sql ] [ SQL ] SELECT * FROM `cms_website_language` WHERE  `status` = 1  AND `is_default` = 1  AND `is_avail` = 1 LIMIT 1 [ RunTime:0.000418s ]
+[ sql ] [ SQL ] SELECT * FROM `cms_website_language` WHERE  `status` = 1  AND `is_avail` = 1 [ RunTime:0.000337s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `cms_app_template` [ RunTime:0.000432s ]
+[ sql ] [ SQL ] SELECT * FROM `cms_app_template` WHERE  `current` = 1  AND `status` = 1 LIMIT 1 [ RunTime:0.000220s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `cms_block` [ RunTime:0.000334s ]
+[ sql ] [ SQL ] SELECT * FROM `cms_block` WHERE  `index_code` = 'index_banner' LIMIT 1 [ RunTime:0.000207s ]
+[ sql ] [ SQL ] SELECT * FROM `cms_block` WHERE  `index_code` = 'index_ad1' LIMIT 1 [ RunTime:0.000223s ]
+[ sql ] [ SQL ] SELECT * FROM `cms_block` WHERE  `index_code` = 'news_banner' LIMIT 1 [ RunTime:0.000273s ]
+[ sql ] [ SQL ] SELECT * FROM `cms_block` WHERE  `index_code` = 'member_banner' LIMIT 1 [ RunTime:0.000259s ]
+[ sql ] [ SQL ] SELECT * FROM `cms_block` WHERE  `index_code` = 'page_ad1' LIMIT 1 [ RunTime:0.000213s ]
+[ sql ] [ SQL ] SELECT * FROM `cms_block` WHERE  `index_code` = 'page_ad2' LIMIT 1 [ RunTime:0.000207s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `cms_image_category` [ RunTime:0.000411s ]
+[ sql ] [ SQL ] SELECT * FROM `cms_image_category` WHERE  `language_id` = 1  AND `parent_id` = 0 ORDER BY `sort` ASC,`id` ASC [ RunTime:0.000379s ]
+---------------------------------------------------------------
+[ 2020-12-14T16:38:52+08:00 ] 0.0.0.0 GET localhost:82/manage/Image/index.html?page=1
+[运行时间：0.047651s] [吞吐率：20.99req/s] [内存消耗：3,649.84kb] [文件加载：60]
+[ info ] [ LANG ] /Users/hahah./Documents/wwwroot/hardware-tools/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'manage',
+    1 => 'Image',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost:82',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4350.4 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'sec-fetch-site' => 'same-origin',
+  'sec-fetch-mode' => 'navigate',
+  'sec-fetch-user' => '?1',
+  'sec-fetch-dest' => 'document',
+  'referer' => 'http://localhost:82/manage/Image/index.html?page=2',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; Hm_lvt_dea6bad1057861a8f0ec2b6f8332eec1=1593507666,1594256411; reload=; live_num=; url_num=0; UM_distinctid=1743435027a3dc-0ea8b851e725b8-67360a77-13c680-1743435027b8d0; CNZZDATA1272141907=1901091492-1598602705-%7C1602575711; ECS[visit_times]=19; __atuvc=10%7C45%2C10%7C46%2C17%7C47; SESS49960de5880e8c687434170f6476605b=tgySfQ7IbpkSz5_48Ec9Q2a6yiZergRJ0VD2PXyZbGI; PHPSESSID=pqgiuf487ccjii7ovi3m64n1sm; thinkphp_show_page_trace=0|0; _dt-key=7428147e9db77d83c10001eeab47c5d4',
+)
+[ info ] [ PARAM ] array (
+  'page' => '1',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => '',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\Manage\controller\ImageController->index[ /Users/hahah./Documents/wwwroot/hardware-tools/application/manage/controller/ImageController.php ]
+[ info ] [ VIEW ] /Users/hahah./Documents/wwwroot/hardware-tools/public/../application/manage/view/image/index.php [ array (
+  0 => 'user',
+  1 => 'userMenu',
+  2 => 'language',
+  3 => 'languages',
+  4 => 'tinymce',
+  5 => 'sort',
+  6 => 'cid',
+  7 => 'keyword',
+  8 => 'list',
+  9 => 'category',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000559s ] mysql:host=127.0.0.1;port=3306;dbname=hardware-tools;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `cms_admin_user` [ RunTime:0.000809s ]
+[ sql ] [ SQL ] SELECT * FROM `cms_admin_user` WHERE  `id` = 1  AND `status` = 1 LIMIT 1 [ RunTime:0.000445s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `cms_website_language` [ RunTime:0.000537s ]
+[ sql ] [ SQL ] SELECT * FROM `cms_website_language` WHERE  `status` = 1  AND `is_default` = 1  AND `is_avail` = 1 LIMIT 1 [ RunTime:0.000376s ]
+[ sql ] [ SQL ] SELECT * FROM `cms_website_language` WHERE  `status` = 1  AND `is_avail` = 1 [ RunTime:0.000358s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `cms_app_template` [ RunTime:0.000531s ]
+[ sql ] [ SQL ] SELECT * FROM `cms_app_template` WHERE  `current` = 1  AND `status` = 1 LIMIT 1 [ RunTime:0.000271s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `cms_block` [ RunTime:0.000434s ]
+[ sql ] [ SQL ] SELECT * FROM `cms_block` WHERE  `index_code` = 'index_banner' LIMIT 1 [ RunTime:0.000278s ]
+[ sql ] [ SQL ] SELECT * FROM `cms_block` WHERE  `index_code` = 'index_ad1' LIMIT 1 [ RunTime:0.000406s ]
+[ sql ] [ SQL ] SELECT * FROM `cms_block` WHERE  `index_code` = 'news_banner' LIMIT 1 [ RunTime:0.000314s ]
+[ sql ] [ SQL ] SELECT * FROM `cms_block` WHERE  `index_code` = 'member_banner' LIMIT 1 [ RunTime:0.000260s ]
+[ sql ] [ SQL ] SELECT * FROM `cms_block` WHERE  `index_code` = 'page_ad1' LIMIT 1 [ RunTime:0.000274s ]
+[ sql ] [ SQL ] SELECT * FROM `cms_block` WHERE  `index_code` = 'page_ad2' LIMIT 1 [ RunTime:0.000256s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `cms_image` [ RunTime:0.000456s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `cms_image` WHERE  `language_id` = 1 LIMIT 1 [ RunTime:0.000298s ]
+[ sql ] [ SQL ] SELECT * FROM `cms_image` WHERE  `language_id` = 1 ORDER BY `id` DESC LIMIT 0,15 [ RunTime:0.000311s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `cms_image_category` [ RunTime:0.000460s ]
+[ sql ] [ SQL ] SELECT * FROM `cms_image_category` WHERE  `language_id` = 1  AND `parent_id` = 0 ORDER BY `sort` ASC,`id` ASC [ RunTime:0.000333s ]
+---------------------------------------------------------------
+[ 2020-12-14T16:38:52+08:00 ] 0.0.0.0 POST localhost:82/Manage/imageCategory/get_category
+[运行时间：0.041469s] [吞吐率：24.11req/s] [内存消耗：3,251.36kb] [文件加载：49]
+[ info ] [ LANG ] /Users/hahah./Documents/wwwroot/hardware-tools/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'Manage',
+    1 => 'imageCategory',
+    2 => 'get_category',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost:82',
+  'connection' => 'keep-alive',
+  'content-length' => '0',
+  'accept' => '*/*',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4350.4 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://localhost:82',
+  'sec-fetch-site' => 'same-origin',
+  'sec-fetch-mode' => 'cors',
+  'sec-fetch-dest' => 'empty',
+  'referer' => 'http://localhost:82/manage/Image/index.html?page=1',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'cookie' => 'thinkphp_show_page_trace=0|0; Hm_lvt_dea6bad1057861a8f0ec2b6f8332eec1=1593507666,1594256411; reload=; live_num=; url_num=0; UM_distinctid=1743435027a3dc-0ea8b851e725b8-67360a77-13c680-1743435027b8d0; CNZZDATA1272141907=1901091492-1598602705-%7C1602575711; ECS[visit_times]=19; __atuvc=10%7C45%2C10%7C46%2C17%7C47; SESS49960de5880e8c687434170f6476605b=tgySfQ7IbpkSz5_48Ec9Q2a6yiZergRJ0VD2PXyZbGI; PHPSESSID=pqgiuf487ccjii7ovi3m64n1sm; thinkphp_show_page_trace=0|0; _dt-key=7428147e9db77d83c10001eeab47c5d4',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => '',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\Manage\controller\ImageCategoryController->get_category[ /Users/hahah./Documents/wwwroot/hardware-tools/application/Manage/controller/ImageCategoryController.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000560s ] mysql:host=127.0.0.1;port=3306;dbname=hardware-tools;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `cms_admin_user` [ RunTime:0.000747s ]
+[ sql ] [ SQL ] SELECT * FROM `cms_admin_user` WHERE  `id` = 1  AND `status` = 1 LIMIT 1 [ RunTime:0.000554s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `cms_website_language` [ RunTime:0.000736s ]
+[ sql ] [ SQL ] SELECT * FROM `cms_website_language` WHERE  `status` = 1  AND `is_default` = 1  AND `is_avail` = 1 LIMIT 1 [ RunTime:0.000524s ]
+[ sql ] [ SQL ] SELECT * FROM `cms_website_language` WHERE  `status` = 1  AND `is_avail` = 1 [ RunTime:0.000532s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `cms_app_template` [ RunTime:0.000762s ]
+[ sql ] [ SQL ] SELECT * FROM `cms_app_template` WHERE  `current` = 1  AND `status` = 1 LIMIT 1 [ RunTime:0.000533s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `cms_block` [ RunTime:0.000729s ]
+[ sql ] [ SQL ] SELECT * FROM `cms_block` WHERE  `index_code` = 'index_banner' LIMIT 1 [ RunTime:0.000564s ]
+[ sql ] [ SQL ] SELECT * FROM `cms_block` WHERE  `index_code` = 'index_ad1' LIMIT 1 [ RunTime:0.000554s ]
+[ sql ] [ SQL ] SELECT * FROM `cms_block` WHERE  `index_code` = 'news_banner' LIMIT 1 [ RunTime:0.000538s ]
+[ sql ] [ SQL ] SELECT * FROM `cms_block` WHERE  `index_code` = 'member_banner' LIMIT 1 [ RunTime:0.000543s ]
+[ sql ] [ SQL ] SELECT * FROM `cms_block` WHERE  `index_code` = 'page_ad1' LIMIT 1 [ RunTime:0.000593s ]
+[ sql ] [ SQL ] SELECT * FROM `cms_block` WHERE  `index_code` = 'page_ad2' LIMIT 1 [ RunTime:0.000817s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `cms_image_category` [ RunTime:0.000964s ]
+[ sql ] [ SQL ] SELECT * FROM `cms_image_category` WHERE  `language_id` = 1  AND `parent_id` = 0 ORDER BY `sort` ASC,`id` ASC [ RunTime:0.000311s ]
