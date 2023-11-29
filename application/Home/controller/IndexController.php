@@ -217,6 +217,8 @@ class IndexController extends BaseController
         if (!empty($_GET)) {
             $this->assign('show_reason', 1);
         }
+
+        $this->assign('yunying', 1);
         return view($this->view_name);
     }
 
@@ -249,8 +251,8 @@ class IndexController extends BaseController
                         $volume += 2 * $value;
                     }
                 }
-                if ($volume >= 320) {
-                    echo json_encode(['code' => 2, 'info' => '最长边与其他边的两倍之和为' . $volume . 'cm超过320cm！']);
+                if ($volume >= 313) {
+                    echo json_encode(['code' => 2, 'info' => '最长边与其他边的两倍之和为' . $volume . 'cm超过313cm！']);
                     exit;
                 }
                 echo json_encode(['code' => 1, 'info' => 'success']);

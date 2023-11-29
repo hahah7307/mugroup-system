@@ -20,6 +20,7 @@
     .layui-body {left: 20px!important;}
     .layui-form-label {width: 100px!important;}
     .layui-form-item .layui-inline {margin-right: 0!important;}
+    .layui-form-label {width: 120px!important;}
 </style>
 <body class="layui-body">
     <div class="right">
@@ -27,19 +28,19 @@
         <div class="layui-form">
             <div class="layui-form-item">
                 <div class="layui-inline layui-col-md3">
-                    <label class="layui-form-label">包装长(cm)</label>
+                    <label class="layui-form-label">包装长(cm)<span class="red">*</span></label>
                     <div class="layui-input-inline">
                         <input type="text" autocomplete="off" class="layui-input w300" name="length" id="length" onkeyup="value=value.replace(/^\D*(\d*(?:\.\d{0,2})?).*$/g, '$1')" value="{:input('length')}">
                     </div>
                 </div>
                 <div class="layui-inline layui-col-md3">
-                    <label class="layui-form-label">包装宽(cm)</label>
+                    <label class="layui-form-label">包装宽(cm)<span class="red">*</span></label>
                     <div class="layui-input-inline">
                         <input type="text" autocomplete="off" class="layui-input w300" name="width" id="width" onkeyup="value=value.replace(/^\D*(\d*(?:\.\d{0,2})?).*$/g, '$1')" value="{:input('width')}">
                     </div>
                 </div>
                 <div class="layui-inline layui-col-md3">
-                    <label class="layui-form-label">包装高(cm)</label>
+                    <label class="layui-form-label">包装高(cm)<span class="red">*</span></label>
                     <div class="layui-input-inline">
                         <input type="text" autocomplete="off" class="layui-input w300" name="height" id="height" onkeyup="value=value.replace(/^\D*(\d*(?:\.\d{0,2})?).*$/g, '$1')" value="{:input('height')}">
                     </div>
@@ -48,7 +49,7 @@
             </div>
             <div class="layui-form-item">
                 <div class="layui-inline layui-col-md3">
-                    <label class="layui-form-label">毛重(kg)</label>
+                    <label class="layui-form-label">毛重(kg)<span class="red">*</span></label>
                     <div class="layui-input-inline">
                         <input type="text" autocomplete="off" class="layui-input w300" name="gross_weight" value="{:input('gross_weight')}">
                     </div>
@@ -80,19 +81,19 @@
                     </div>
                 </div>
                 <div class="layui-inline layui-col-md3">
-                    <label class="layui-form-label">采购成本</label>
+                    <label class="layui-form-label">采购成本(¥)<span class="red">*</span></label>
                     <div class="layui-input-inline">
                         <input type="text" autocomplete="off" class="layui-input w300" name="cost" value="{:input('cost')}">
                     </div>
                 </div>
                 <div class="layui-inline layui-col-md3">
-                    <label class="layui-form-label">最低市场售价</label>
+                    <label class="layui-form-label">最低市场售价($)<span class="red">*</span></label>
                     <div class="layui-input-inline">
                         <input type="text" autocomplete="off" class="layui-input w300" name="min_price" value="{:input('min_price')}">
                     </div>
                 </div>
                 <div class="layui-inline layui-col-md3">
-                    <label class="layui-form-label">目标定价</label>
+                    <label class="layui-form-label">目标定价($)<span class="red">*</span></label>
                     <div class="layui-input-inline">
                         <input type="text" autocomplete="off" class="layui-input w300" name="target_pricing" value="{:input('target_pricing')}">
                     </div>
@@ -129,7 +130,7 @@
 
     {if condition="($show_reason == 1)"}
     <div class="right">
-        <div class="title">良仓新</div>
+        <div class="title"><b class="black">一号仓</b></div>
         <div class="layui-row">
             <div class="layui-col-md3">
                 <div class="layui-form-item">
@@ -165,7 +166,7 @@
             </div>
             <div class="layui-col-md3">
                 <div class="layui-form-item">
-                    <label class="layui-form-label">FOB成本</label>
+                    <label class="layui-form-label">FOB成本($)</label>
                     <div class="layui-text-inline">{$fob}</div>
                 </div>
             </div>
@@ -173,26 +174,26 @@
         <div class="layui-row">
             <div class="layui-col-md3">
                 <div class="layui-form-item">
-                    <label class="layui-form-label">头程成本</label>
+                    <label class="layui-form-label">头程成本($)</label>
                     <div class="layui-text-inline">{$initial_cost}</div>
                 </div>
             </div>
             <div class="layui-col-md3">
                 <div class="layui-form-item">
-                    <label class="layui-form-label">关税</label>
+                    <label class="layui-form-label">关税($)</label>
                     <div class="layui-text-inline">{$tariff}</div>
                 </div>
             </div>
             <div class="layui-col-md3">
                 <div class="layui-form-item">
-                    <label class="layui-form-label">4个月仓储费</label>
+                    <label class="layui-form-label">4个月仓储费($)</label>
                     <div class="layui-text-inline">{$liang_storage_charge}</div>
                 </div>
             </div>
             <div class="layui-col-md3">
                 <div class="layui-form-item">
-                    <label class="layui-form-label">尾程</label>
-                    <div class="layui-text-inline" id="liang_tail_end">{$liang_tail_end}</div>
+                    <label class="layui-form-label"><b class="black">尾程($)</b></label>
+                    <div class="layui-text-inline" id="liang_tail_end"><b class="black">{$liang_tail_end}</b></div>
                 </div>
             </div>
         </div>
@@ -200,82 +201,82 @@
             <div class="layui-col-md3">
                 <div class="layui-form-item">
                     <label class="layui-form-label">头程成本占比</label>
-                    <div class="layui-text-inline">{$initial_cost_rate}</div>
+                    <div class="layui-text-inline">{$initial_cost_rate|decimal2percentage}</div>
                 </div>
             </div>
             <div class="layui-col-md3">
                 <div class="layui-form-item">
                     <label class="layui-form-label">关税占比</label>
-                    <div class="layui-text-inline">{$tariff_proportion}</div>
+                    <div class="layui-text-inline">{$tariff_proportion|decimal2percentage}</div>
                 </div>
             </div>
             <div class="layui-col-md3">
                 <div class="layui-form-item">
                     <label class="layui-form-label">仓储费占比</label>
-                    <div class="layui-text-inline">{$liang_storage_charge_proportion}</div>
+                    <div class="layui-text-inline">{$liang_storage_charge_proportion|decimal2percentage}</div>
                 </div>
             </div>
             <div class="layui-col-md3">
                 <div class="layui-form-item">
                     <label class="layui-form-label">尾程占比</label>
-                    <div class="layui-text-inline">{$liang_tail_end_proportion}</div>
+                    <div class="layui-text-inline">{$liang_tail_end_proportion|decimal2percentage}</div>
                 </div>
             </div>
         </div>
         <div class="layui-row">
             <div class="layui-col-md3">
                 <div class="layui-form-item">
-                    <label class="layui-form-label">广告费</label>
+                    <label class="layui-form-label">广告费($)</label>
                     <div class="layui-text-inline">{$advertising_expenses}</div>
                 </div>
             </div>
             <div class="layui-col-md3">
                 <div class="layui-form-item">
-                    <label class="layui-form-label">退货费</label>
+                    <label class="layui-form-label">退货费($)</label>
                     <div class="layui-text-inline">{$return_fee}</div>
                 </div>
             </div>
             <div class="layui-col-md3">
                 <div class="layui-form-item">
-                    <label class="layui-form-label">平台费</label>
+                    <label class="layui-form-label">平台费($)</label>
                     <div class="layui-text-inline">{$platform_fees}</div>
                 </div>
             </div>
             <div class="layui-col-md3">
                 <div class="layui-form-item">
-                    <label class="layui-form-label">零利润售价</label>
-                    <div class="layui-text-inline">{$liang_no_profit_price}</div>
+                    <label class="layui-form-label"><b class="black">零利润售价($)</b></label>
+                    <div class="layui-text-inline"><b class="black">{$liang_no_profit_price}</b></div>
                 </div>
             </div>
         </div>
         <div class="layui-row">
             <div class="layui-col-md3">
                 <div class="layui-form-item">
-                    <label class="layui-form-label">最低售价利润</label>
-                    <div class="layui-text-inline">{$liang_min_selling_profit}</div>
+                    <label class="layui-form-label"><b class="black">最低售价利润($)</b></label>
+                    <div class="layui-text-inline"><b class="black">{$liang_min_selling_profit}</b></div>
                 </div>
             </div>
             <div class="layui-col-md3">
                 <div class="layui-form-item">
-                    <label class="layui-form-label">最低售价利润率</label>
-                    <div class="layui-text-inline">{$liang_min_selling_profit_rate}</div>
+                    <label class="layui-form-label"><b class="black">最低售价利润率</b></label>
+                    <div class="layui-text-inline"><b class="black">{$liang_min_selling_profit_rate|decimal2percentage}</b></div>
                 </div>
             </div>
             <div class="layui-col-md3">
                 <div class="layui-form-item">
-                    <label class="layui-form-label">目标定价利润</label>
-                    <div class="layui-text-inline">{$liang_target_pricing_profit}</div>
+                    <label class="layui-form-label w200"><b class="black">目标定价利润($)</b></label>
+                    <div class="layui-text-inline"><b class="black">{$liang_target_pricing_profit}</b></div>
                 </div>
             </div>
             <div class="layui-col-md3">
                 <div class="layui-form-item">
-                    <label class="layui-form-label">目标定价利润率</label>
-                    <div class="layui-text-inline">{$liang_target_pricing_profit_rate}</div>
+                    <label class="layui-form-label"><b class="black">目标定价利润率</b></label>
+                    <div class="layui-text-inline"><b class="black">{$liang_target_pricing_profit_rate|decimal2percentage}</b></div>
                 </div>
             </div>
         </div>
 
-        <div class="title">乐歌</div>
+        <div class="title"><b class="black">二号仓</b></div>
         <div class="layui-row">
             <div class="layui-col-md3">
                 <div class="layui-form-item">
@@ -311,7 +312,7 @@
             </div>
             <div class="layui-col-md3">
                 <div class="layui-form-item">
-                    <label class="layui-form-label">FOB成本</label>
+                    <label class="layui-form-label">FOB成本($)</label>
                     <div class="layui-text-inline">{$fob}</div>
                 </div>
             </div>
@@ -319,26 +320,26 @@
         <div class="layui-row">
             <div class="layui-col-md3">
                 <div class="layui-form-item">
-                    <label class="layui-form-label">头程成本</label>
+                    <label class="layui-form-label">头程成本($)</label>
                     <div class="layui-text-inline">{$initial_cost}</div>
                 </div>
             </div>
             <div class="layui-col-md3">
                 <div class="layui-form-item">
-                    <label class="layui-form-label">关税</label>
+                    <label class="layui-form-label">关税($)</label>
                     <div class="layui-text-inline">{$tariff}</div>
                 </div>
             </div>
             <div class="layui-col-md3">
                 <div class="layui-form-item">
-                    <label class="layui-form-label">4个月仓储费</label>
+                    <label class="layui-form-label">4个月仓储费($)</label>
                     <div class="layui-text-inline">{$loctek_storage_charge}</div>
                 </div>
             </div>
             <div class="layui-col-md3">
                 <div class="layui-form-item">
-                    <label class="layui-form-label">尾程</label>
-                    <div class="layui-text-inline" id="loctek_tail_end">{$loctek_tail_end}</div>
+                    <label class="layui-form-label"><b class="black">尾程($)</b></label>
+                    <div class="layui-text-inline" id="loctek_tail_end"><b class="black">{$loctek_tail_end}</b></div>
                 </div>
             </div>
         </div>
@@ -346,77 +347,77 @@
             <div class="layui-col-md3">
                 <div class="layui-form-item">
                     <label class="layui-form-label">头程成本占比</label>
-                    <div class="layui-text-inline">{$initial_cost_rate}</div>
+                    <div class="layui-text-inline">{$initial_cost_rate|decimal2percentage}</div>
                 </div>
             </div>
             <div class="layui-col-md3">
                 <div class="layui-form-item">
                     <label class="layui-form-label">关税占比</label>
-                    <div class="layui-text-inline">{$tariff_proportion}</div>
+                    <div class="layui-text-inline">{$tariff_proportion|decimal2percentage}</div>
                 </div>
             </div>
             <div class="layui-col-md3">
                 <div class="layui-form-item">
                     <label class="layui-form-label">仓储费占比</label>
-                    <div class="layui-text-inline">{$loctek_storage_charge_proportion}</div>
+                    <div class="layui-text-inline">{$loctek_storage_charge_proportion|decimal2percentage}</div>
                 </div>
             </div>
             <div class="layui-col-md3">
                 <div class="layui-form-item">
                     <label class="layui-form-label">尾程占比</label>
-                    <div class="layui-text-inline">{$loctek_tail_end_proportion}</div>
+                    <div class="layui-text-inline">{$loctek_tail_end_proportion|decimal2percentage}</div>
                 </div>
             </div>
         </div>
         <div class="layui-row">
             <div class="layui-col-md3">
                 <div class="layui-form-item">
-                    <label class="layui-form-label">广告费</label>
+                    <label class="layui-form-label">广告费($)</label>
                     <div class="layui-text-inline">{$advertising_expenses}</div>
                 </div>
             </div>
             <div class="layui-col-md3">
                 <div class="layui-form-item">
-                    <label class="layui-form-label">退货费</label>
+                    <label class="layui-form-label">退货费($)</label>
                     <div class="layui-text-inline">{$return_fee}</div>
                 </div>
             </div>
             <div class="layui-col-md3">
                 <div class="layui-form-item">
-                    <label class="layui-form-label">平台费</label>
+                    <label class="layui-form-label">平台费($)</label>
                     <div class="layui-text-inline">{$platform_fees}</div>
                 </div>
             </div>
             <div class="layui-col-md3">
                 <div class="layui-form-item">
-                    <label class="layui-form-label">零利润售价</label>
-                    <div class="layui-text-inline">{$loctek_no_profit_price}</div>
+                    <label class="layui-form-label"><b class="black">零利润售价($)</b></label>
+                    <div class="layui-text-inline"><b class="black">{$loctek_no_profit_price}</b></div>
                 </div>
             </div>
         </div>
         <div class="layui-row">
             <div class="layui-col-md3">
                 <div class="layui-form-item">
-                    <label class="layui-form-label">最低售价利润</label>
-                    <div class="layui-text-inline">{$loctek_min_selling_profit}</div>
+                    <label class="layui-form-label"><b class="black">最低售价利润($)</b></label>
+                    <div class="layui-text-inline"><b class="black">{$loctek_min_selling_profit}</b></b></div>
                 </div>
             </div>
             <div class="layui-col-md3">
                 <div class="layui-form-item">
-                    <label class="layui-form-label">最低售价利润率</label>
-                    <div class="layui-text-inline">{$loctek_min_selling_profit_rate}</div>
+                    <label class="layui-form-label"><b class="black">最低售价利润率</b></label>
+                    <div class="layui-text-inline"><b class="black">{$loctek_min_selling_profit_rate|decimal2percentage}</b></div>
                 </div>
             </div>
             <div class="layui-col-md3">
                 <div class="layui-form-item">
-                    <label class="layui-form-label">目标定价利润</label>
-                    <div class="layui-text-inline">{$loctek_target_pricing_profit}</div>
+                    <label class="layui-form-label"><b class="black">目标定价利润($)</b></label>
+                    <div class="layui-text-inline"><b class="black">{$loctek_target_pricing_profit}</b></div>
                 </div>
             </div>
             <div class="layui-col-md3">
                 <div class="layui-form-item">
-                    <label class="layui-form-label">目标定价利润率</label>
-                    <div class="layui-text-inline">{$loctek_target_pricing_profit_rate}</div>
+                    <label class="layui-form-label"><b class="black">目标定价利润率</b></label>
+                    <div class="layui-text-inline"><b class="black">{$loctek_target_pricing_profit_rate|decimal2percentage}</b></div>
                 </div>
             </div>
         </div>
