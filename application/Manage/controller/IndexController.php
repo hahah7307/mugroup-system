@@ -15,25 +15,6 @@ class IndexController extends BaseController
 {
     public function index()
     {
-        // 会员
-        $member = MemberModel::all(['status' => MemberModel::STATUS_ACTIVE]);
-        $this->assign('member', $member);
-
-        // 公告
-        $notice = NoticeModel::all(['language_id' => $this->language_id, 'status' => NoticeModel::STATUS_ACTIVE]);
-        $this->assign('notice', $notice);
-
-        // 文章
-        $article = ArticleModel::all(['language_id' => $this->language_id, 'status' => ArticleModel::STATUS_ACTIVE]);
-        $this->assign('article', $article);
-
-        // 单页
-        $page = PageModel::all(['language_id' => $this->language_id, 'status' => PageModel::STATUS_ACTIVE]);
-        $this->assign('page', $page);
-
-        // 文章列表
-        $article_list = ArticleModel::where(['language_id' => $this->language_id, 'status' => ArticleModel::STATUS_ACTIVE])->order('view_num desc')->limit(9)->select();
-        $this->assign('article_list', $article_list);
 
         return view();
     }

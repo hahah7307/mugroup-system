@@ -40,31 +40,8 @@ class BaseController extends Controller
 			$this->error('您没有操作权限！');
 		}
 
-		// 获取语言信息
-		$language = WebsiteLanguage::current_lang();
-		$languages = WebsiteLanguage::all(['status' => WebsiteLanguage::STATUS_ACTIVE, 'is_avail' => WebsiteLanguage::AVIAIL_ACTIVE]);
-		$this->language_id = $language['id'];
-		$this->assign('language', $language);
-		$this->assign('languages', $languages);
-
 		// 记录当前模块名
 		session('module', $this->request->module());
-
-		// 模板
-		$template = AppTemplate::get(['current' => AppTemplate::CURRENT_ACTIVE, 'status' => AppTemplate::STATUS_ACTIVE]);
-		$this->template = $template['mark'];
-
-		// 广告位
-		$bannerTips = include APP_PATH . "Home/view/" . $this->template . "/bannerTips.php";
-		if ($bannerTips) {
-			$banner = array();
-			foreach ($bannerTips as $k => $v) {
-				$block = BlockModel::get(['index_code' => $k]);
-				$block['tips'] = $v['title'];
-				$banner[$block['block_code']][] = $block;
-			}
-			$this->banners = $banner;
-		}
 
 		// 编辑器插件、模块
 		$this->assign('tinymce', ['plugins' => Config::get('TINYMCE_PLUGINS'), 'toolbar' => Config::get('TINYMCE_TOOLBAR')]);

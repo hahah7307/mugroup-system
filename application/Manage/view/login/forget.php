@@ -17,7 +17,6 @@
     <div class="layadmin-user-login-main">
         <div class="layadmin-user-login-box layadmin-user-login-header">
             <h2>忘记密码</h2>
-            <p>这里是可以修改的系统名称</p>
         </div>
         <div class="layadmin-user-login-box layadmin-user-login-body layui-form">
 

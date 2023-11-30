@@ -18,7 +18,6 @@
         <div class="layadmin-user-login-main">
             <div class="layadmin-user-login-box layadmin-user-login-header">
                 <h2>后台登录</h2>
-                <p>宁波市鄞州五金工具国际商会</p>
             </div>
             <div class="layadmin-user-login-box layadmin-user-login-body layui-form">
                 <div class="layui-form-item">
@@ -42,10 +41,9 @@
                         </div>
                     </div>
                 </div>
-                <div class="layui-form-item" style="margin-bottom: 20px;">
-                    <!-- <input type="checkbox" name="remember" lay-skin="primary" title="记住密码"> -->
-                    <a href="{:url('Login/forget')}" class="layadmin-user-jump-change layadmin-link" style="margin-top: 7px;">忘记密码？</a>
-                </div>
+<!--                <div class="layui-form-item" style="margin-bottom: 20px;">-->
+<!--                    <a href="{:url('Login/forget')}" class="layadmin-user-jump-change layadmin-link" style="margin-top: 7px;">忘记密码？</a>-->
+<!--                </div>-->
                 <div class="layui-form-item">
                     <button class="layui-btn layui-btn-fluid" lay-submit lay-filter="user-login">登 录</button>
                 </div>
@@ -53,10 +51,10 @@
         </div>
     
         <div class="layui-trans layadmin-user-login-footer">
-            <!-- <p>© 2020 <a href="javascript:;">www.hahah.cn</a></p> -->
         </div>
     </div>
-<script src="/static/layuiadmin/layui/layui.js"></script>  
+<script src="/static/layuiadmin/layui/layui.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/axios@0.24.0/dist/axios.min.js"></script>
 <script>
 layui.config({
     base: '/static/layuiadmin/' //静态资源所在路径
@@ -79,31 +77,30 @@ layui.config({
     //提交
     form.on('submit(user-login)', function(obj){
         //请求登入接口
-        admin.req({
-            url: "{:url('Login/index')}" //实际使用请改成服务端真实接口
-            ,data: obj.field
-            ,method: "post"
-            ,datatype: "json"
-            ,done: function(res){
-                if (res.code == 1) {
-                    //登入成功的提示与跳转
-                    layer.msg(res.msg, {
-                        offset: '15px'
-                        ,icon: 1
-                        ,time: 1000
-                    }, function(){
-                        location.href = '../'; //后台主页
-                    });  
-                } else {
-                    layer.msg(res.msg, {
-                        offset: '15px'
-                        ,icon: 2
-                        ,time: 1000
-                    }, function(){
-                        $(".user-login-codeimg").click();
-                    });
-                }
+        axios.post("{:url('Login/index')}", obj.field)
+        .then(function (response) {
+            var res = response.data;
+            if (res.code === 1) {
+                //登入成功的提示与跳转
+                layer.msg(res.msg, {
+                    offset: '15px'
+                    ,icon: 1
+                    ,time: 1000
+                }, function(){
+                    location.href = '../'; //后台主页
+                });
+            } else {
+                layer.msg(res.msg, {
+                    offset: '15px'
+                    ,icon: 2
+                    ,time: 1000
+                }, function(){
+                    $(".user-login-codeimg").click();
+                });
             }
+        })
+        .catch(function (error) {
+            console.log(error);
         });
     });
 });
