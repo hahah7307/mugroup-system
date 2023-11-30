@@ -55,32 +55,6 @@
                     </div>
                 </div>
                 <div class="layui-inline layui-col-md3">
-                    <label class="layui-form-label">关税率</label>
-                    <div class="layui-input-inline">
-                        <input type="text" autocomplete="off" class="layui-input w300" name="tariff_rate" value="{:input('tariff_rate', 0.25)}">
-                    </div>
-                </div>
-                <div class="layui-inline layui-col-md3">
-                    <label class="layui-form-label">汇率</label>
-                    <div class="layui-input-inline">
-                        <input type="text" autocomplete="off" class="layui-input w300" name="exchange_rate" value="{:input('exchange_rate', 6.95)}">
-                    </div>
-                </div>
-                <div class="layui-inline layui-col-md3">
-                    <label class="layui-form-label">派送方式</label>
-                    <div class="layui-input-inline">
-                        <input type="text" autocomplete="off" class="layui-input w300" name="delivery" value="{:input('delivery', 'FBM')}">
-                    </div>
-                </div>
-            </div>
-            <div class="layui-form-item">
-                <div class="layui-inline layui-col-md3">
-                    <label class="layui-form-label">头程价格标准(元/CBM)</label>
-                    <div class="layui-input-inline">
-                        <input type="text" autocomplete="off" class="layui-input w300" name="flp_standard" value="{:input('flp_standard', 500)}">
-                    </div>
-                </div>
-                <div class="layui-inline layui-col-md3">
                     <label class="layui-form-label">采购成本(¥)<span class="red">*</span></label>
                     <div class="layui-input-inline">
                         <input type="text" autocomplete="off" class="layui-input w300" name="cost" value="{:input('cost')}">
@@ -96,6 +70,32 @@
                     <label class="layui-form-label">目标定价($)<span class="red">*</span></label>
                     <div class="layui-input-inline">
                         <input type="text" autocomplete="off" class="layui-input w300" name="target_pricing" value="{:input('target_pricing')}">
+                    </div>
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <div class="layui-inline layui-col-md3">
+                    <label class="layui-form-label">头程价格标准(元/CBM)</label>
+                    <div class="layui-input-inline">
+                        <input type="text" autocomplete="off" class="layui-input w300" name="flp_standard" value="{:input('flp_standard', 500)}">
+                    </div>
+                </div>
+                <div class="layui-inline layui-col-md3">
+                    <label class="layui-form-label">关税率</label>
+                    <div class="layui-input-inline">
+                        <input type="text" autocomplete="off" class="layui-input w300" name="tariff_rate" value="{:input('tariff_rate', 0.25)}">
+                    </div>
+                </div>
+                <div class="layui-inline layui-col-md3">
+                    <label class="layui-form-label">汇率</label>
+                    <div class="layui-input-inline">
+                        <input type="text" autocomplete="off" class="layui-input w300" name="exchange_rate" value="{:input('exchange_rate', 6.95)}">
+                    </div>
+                </div>
+                <div class="layui-inline layui-col-md3">
+                    <label class="layui-form-label">派送方式</label>
+                    <div class="layui-input-inline">
+                        <input type="text" autocomplete="off" class="layui-input w300" name="delivery" value="{:input('delivery', 'FBM')}">
                     </div>
                 </div>
             </div>

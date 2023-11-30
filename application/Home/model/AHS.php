@@ -16,7 +16,7 @@ class AHS extends Model
         $arr = [$a, $b, $c];
         sort($arr);
         $length = array_reverse($arr);
-        return $length[0] / self::CM2INCHES > 48 || $length[1] / self::CM2INCHES > 30 || ($length[0] + ($length[1] + $length[2]) * 2) / self::CM2INCHES > 105;
+        return $length[0] > floor(48 * self::CM2INCHES) || $length[1] > floor(30 * self::CM2INCHES) || ($length[0] + ($length[1] + $length[2]) * 2) > floor(105 * self::CM2INCHES);
     }
 
     static public function AHSWeight($w)
