@@ -20,6 +20,7 @@
                     </a>
                     <dl class="layui-nav-child">
                         <dd><a layui-href="{:url('Price/index')}">核价模板</a></dd>
+                        <dd><a layui-href="{:url('Param/price')}">参数配置</a></dd>
                     </dl>
                 </li>
                 <li data-name="Site" class="layui-nav-item">

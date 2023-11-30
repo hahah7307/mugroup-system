@@ -54,7 +54,7 @@
         </div>
     </div>
 <script src="/static/layuiadmin/layui/layui.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/axios@0.24.0/dist/axios.min.js"></script>
+<script src="/static/js/axios.min.js"></script>
 <script>
 layui.config({
     base: '/static/layuiadmin/' //静态资源所在路径
@@ -77,7 +77,7 @@ layui.config({
     //提交
     form.on('submit(user-login)', function(obj){
         //请求登入接口
-        axios.post("{:url('Login/index')}", obj.field)
+        axios.post("{:url('index')}", obj.field)
         .then(function (response) {
             var res = response.data;
             if (res.code === 1) {

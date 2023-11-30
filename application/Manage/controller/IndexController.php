@@ -3,7 +3,7 @@ namespace app\Manage\controller;
 
 use app\Manage\model\InquiryModel;
 use app\Manage\model\ProductModel;
-use app\Manage\model\ArticleModel;
+use app\Manage\model\PriceModel;
 use app\Manage\model\MemberModel;
 use app\Manage\model\NoticeModel;
 use app\Manage\model\PageModel;

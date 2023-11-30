@@ -2,10 +2,6 @@
 namespace app\Manage\controller;
 
 use app\Manage\model\AccountModel;
-use app\Manage\model\WebsiteLanguage;
-use app\Manage\model\AppTemplate;
-use app\Manage\model\BlockModel;
-use app\Manage\model\InquiryModel;
 use think\Controller;
 use think\Db;
 use think\Config;
@@ -42,6 +38,9 @@ class BaseController extends Controller
 
 		// 记录当前模块名
 		session('module', $this->request->module());
+
+        // 加载自定义配置
+        Config::load(APP_PATH . 'price.php');
 
 		// 编辑器插件、模块
 		$this->assign('tinymce', ['plugins' => Config::get('TINYMCE_PLUGINS'), 'toolbar' => Config::get('TINYMCE_TOOLBAR')]);
