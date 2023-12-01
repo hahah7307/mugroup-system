@@ -409,7 +409,6 @@
 </div>
 {/if}
 </div>
-</html>
 <script>
     layui.config({
         base: '/static/layuiadmin/' //静态资源所在路径
