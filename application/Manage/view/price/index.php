@@ -36,37 +36,48 @@
             <button class="layui-btn layui-btn-normal" lay-submit lay-filter="Sort">排序</button>
             <table class="layui-table">
                 <colgroup>
+                    <col width="50">
                     <col>
                     <col>
-                    <col width="80">
-                    <col width="80">
-                    <col width="180">
+                    <col>
+                    <col>
+                    <col>
+                    <col>
+                    <col>
                     <col width="150">
                 </colgroup>
                 <thead>
                 <tr>
-                    <th>标题</th>
-                    <th class="tc">分类</th>
-                    <th class="tc">排序</th>
-                    <th class="tc">状态</th>
-                    <th class="tc">发布时间</th>
+                    <th class="tc">
+                        <input type="checkbox" lay-skin="primary" id="YanNanQiu_checkall" lay-filter="YanNanQiu_checkall">
+                    </th>
+                    <th class="tc">长</th>
+                    <th class="tc">宽</th>
+                    <th class="tc">高</th>
+                    <th class="tc">毛重</th>
+                    <th class="tc">采购成本</th>
+                    <th class="tc">最低市场价</th>
+                    <th class="tc">目标定价</th>
                     <th class="tc">操作</th>
                 </tr>
                 </thead>
                 <tbody>
                 {foreach name="list" item="v"}
                 <tr>
-                    <td>{$v.title}</td>
-                    <td class="tc">{$v.category.name}</td>
                     <td class="tc">
-                        <input type="text" class="layui-input w50 h30" name="sort[{$v.id}]" value="{$v.sort}" placeholder="排序">
+                        <div class="YanNanQiu_Checkbox">
+                            <input type="checkbox" name="id[]" lay-skin="primary" lay-filter="imgbox" class="YanNanQiu_imgId" value="{$v.id}">
+                        </div>
                     </td>
+                    <td class="tc">{$v.length}</td>
+                    <td class="tc">{$v.width}</td>
+                    <td class="tc">{$v.height}</td>
+                    <td class="tc">{$v.gross_weight}</td>
+                    <td class="tc">{$v.cost}</td>
+                    <td class="tc">{$v.min_price}</td>
+                    <td class="tc">{$v.target_pricing}</td>
                     <td class="tc">
-                        <input type="checkbox" class="h30" name="look" value="{$v.id}" lay-skin="switch" lay-text="是|否" lay-filter="formLock" {if condition="$v.status eq 1"}checked{/if}>
-                    </td>
-                    <td class="tc">{$v.created_at|date="Y-m-d H:i:s", ###}</td>
-                    <td class="tc">
-                        <a href="{:url('edit', ['id' => $v.id])}" class="layui-btn layui-btn-normal layui-btn-sm">编辑</a>
+                        <a href="{:url('info', ['id' => $v.id])}" class="layui-btn layui-btn-sm">详情</a>
                         <button data-id="{$v.id}" class="layui-btn layui-btn-sm layui-btn-danger ml0" lay-submit lay-filter="Detele">删除</button>
                     </td>
                 </tr>

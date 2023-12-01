@@ -15,6 +15,8 @@
     <link rel="stylesheet" href="/static/fonts/font-awesome.min.css"/>
     <script src="/static/layuiadmin/layui/layui.js"></script>
     <script src="/static/manage/js/xm-select.js"></script>
+    <script src="/static/js/axios.min.js"></script>
+    <script src="/static/manage/js/uploader.js"></script>
 </head>
 <body class="layui-layout-body">
     <div id="LAY_app">

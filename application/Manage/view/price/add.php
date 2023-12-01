@@ -106,8 +106,9 @@
         </div>
         <div class="layui-form-item tr">
             <div class="layui-input-block">
-                <button class="layui-btn w200 button" lay-submit lay-filter="formCoding">提交</button>
-                <a id="export" href="" class="layui-btn layui-btn-normal w200">导出</a>
+                <button class="layui-btn w100 button" lay-submit lay-filter="formCoding">提交</button>
+                <button class="layui-btn layui-btn-normal w100" lay-submit lay-filter="formSave">保存</button>
+                <a id="export" href="" class="layui-btn layui-btn-normal w100">导出</a>
             </div>
         </div>
     </div>
@@ -422,7 +423,6 @@
 
         const urlParams = JSON.stringify({$jsonData});
         let excelUrl = "{:url('excel')}" + "?data=" + urlParams;
-        console.log(excelUrl);
         $("#export").attr("href", excelUrl);
 
         let length = $("#length").val(),
@@ -522,7 +522,6 @@
                 button = $(this);
             $('button').attr('disabled',true);
             button.text('请稍候...');
-            console.log(data.field);
             let arr = [];
             $.each(data.field, function(index,value){
                 console.log("jQuery-each方法遍历数组：",index,value);
@@ -531,6 +530,34 @@
             let urlData;
             urlData = arr.join("&");
             location.href = "{:url('add')}?" + urlData;
+        });
+
+        // 保存
+        form.on('submit(formSave)', function(data) {
+            data.field.data = '{$jsonData}';
+            let text = $(this).text(),
+                button = $(this);
+            $('button').attr('disabled',true);
+            button.text('请稍候...');
+            axios.post("{:url('save')}", data.field)
+                .then(function (response) {
+                    var res = response.data;
+                    if (res.code === 1) {
+                        layer.alert(res.msg,{icon:1,closeBtn:0,title:false,btnAlign:'c',},function(){
+                            location.reload();
+                        });
+                    } else {
+                        layer.alert(res.msg,{icon:2,closeBtn:0,title:false,btnAlign:'c'},function(){
+                            layer.closeAll();
+                            $('button').attr('disabled',false);
+                            button.text(text);
+                        });
+                    }
+                })
+                .catch(function (error) {
+                    console.log(error);
+                });
+            return false;
         });
     });
 </script>

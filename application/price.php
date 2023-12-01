@@ -7,8 +7,8 @@
     'return_rate'  =>  '0.05',
     'platform_rate'  =>  '0.15',
     'kg_pound'  =>  '2.2',
+    'container_volume'  =>  '67',
+    'density_fraction'  =>  '4097',
     'min_3leng'  =>  '240',
     'min_5leng'  =>  '313',
-    'density_fraction'  =>  '4097',
-    'container_volume'  =>  '67',
 ]; ?>

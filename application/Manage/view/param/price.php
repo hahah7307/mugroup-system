@@ -85,7 +85,7 @@
         <div>
             <div class="layui-form-item">
                 <div class="layui-inline layui-col-md3">
-                    <label class="layui-form-label">最低三边和(cm)</label>
+                    <label class="layui-form-label">最长边最大值(cm)</label>
                     <div class="layui-input-inline">
                         <input type="text" autocomplete="off" class="layui-input w300" name="min_3leng" value="{$config['min_3leng']}">
                     </div>
@@ -105,7 +105,6 @@
         </div>
     </div>
 </div>
-<script src="/static/js/axios.min.js"></script>
 <script>
 layui.use(['form', 'jquery'], function(){
 	let $ = layui.jquery,

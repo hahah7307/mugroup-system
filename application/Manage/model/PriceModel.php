@@ -18,16 +18,11 @@ class PriceModel extends Model
 
     protected function setCreatedAtAttr()
     {
-        return time();
+        return date('Y-m-d H:i:s');
     }
 
     protected function setUpdatedAtAttr()
     {
-        return time();
-    }
-
-    public function category()
-    {
-        return $this->hasOne('ArticleCategoryModel', 'id', 'cid');
+        return date('Y-m-d H:i:s');
     }
 }

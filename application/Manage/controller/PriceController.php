@@ -5,6 +5,7 @@ use app\Manage\model\AHS;
 use app\Manage\model\DeliverFeeModel;
 use app\Manage\model\StorageRuleModel;
 use app\Manage\model\PriceModel;
+use app\Manage\validate\PriceValidate;
 use PHPExcel;
 use PHPExcel_IOFactory;
 use PHPExcel_Style_Fill;
@@ -246,6 +247,34 @@ class PriceController extends BaseController
         return view();
     }
 
+    // 保存
+    public function save()
+    {
+        if ($this->request->isPost()) {
+            $post = $this->request->post();
+            $post['storage_info'] = json_encode($post['data']);
+
+            //
+            $dataValidate = new PriceValidate();
+            if ($dataValidate->scene('add')->check($post)) {
+                $model = new PriceModel();
+                if ($model->allowField(true)->save($post)) {
+                    echo json_encode(['code' => 1, 'msg' => '添加成功']);
+                    exit;
+                } else {
+                    echo json_encode(['code' => 0, 'msg' => '添加失败，请重试']);
+                    exit;
+                }
+            } else {
+                echo json_encode(['code' => 0, 'msg' => $dataValidate->getError()]);
+                exit;
+            }
+        } else {
+            echo json_encode(['code' => 0, 'msg' => '异常操作']);
+            exit;
+        }
+    }
+
     // 删除
     public function delete()
     {
@@ -280,7 +309,7 @@ class PriceController extends BaseController
                 $arr = [$length, $width, $height];
                 $maxLength = max($arr);
                 // verify max length
-                if ($maxLength >= 240) {
+                if ($maxLength >= Config::get('min_3leng')) {
                     echo json_encode(['code' => 2, 'info' => '最长边不得超过' . Config::get('min_3leng') . 'cm！']);
                     exit;
                 }
@@ -295,7 +324,7 @@ class PriceController extends BaseController
                         $volume += 2 * $value;
                     }
                 }
-                if ($volume >= 313) {
+                if ($volume >= Config::get('min_5leng')) {
                     echo json_encode(['code' => 2, 'info' => '最长边与其他边的两倍之和为' . $volume . 'cm超过' . Config::get('min_5leng') . 'cm！']);
                     exit;
                 }
