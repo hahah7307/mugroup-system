@@ -7,7 +7,7 @@
 </style>
 <div class="layui-body" id="LAY_app_body">
     <div class="right layui-form">
-        <div class="title">基础默认值</div>
+        <div class="title">输入默认值</div>
 		<div>
             <div class="layui-form-item">
                 <div class="layui-inline layui-col-md3">
@@ -57,6 +57,10 @@
                     </div>
                 </div>
             </div>
+		</div>
+
+        <div class="title">基础默认值</div>
+        <div>
             <div class="layui-form-item">
                 <div class="layui-inline layui-col-md3">
                     <label class="layui-form-label">磅/千克</label>
@@ -64,8 +68,19 @@
                         <input type="text" autocomplete="off" class="layui-input w300" name="kg_pound" value="{$config['kg_pound']}">
                     </div>
                 </div>
+                <div class="layui-inline layui-col-md3">
+                    <label class="layui-form-label">装柜体积</label>
+                    <div class="layui-input-inline">
+                        <input type="text" autocomplete="off" class="layui-input w300" name="container_volume" value="{$config['container_volume']}">
+                    </div>
+                </div>
+                <label class="layui-form-label">体积重比值(1/密度)</label>
+                <div class="layui-input-inline">
+                    <input type="text" autocomplete="off" class="layui-input w300" name="density_fraction" value="{$config['density_fraction']}">
+                </div>
             </div>
-		</div>
+        </div>
+
         <div class="title">比较默认值</div>
         <div>
             <div class="layui-form-item">
@@ -82,10 +97,10 @@
                     </div>
                 </div>
             </div>
-            <div class="layui-form-item">
-                <div class="layui-input-block">
-                    <button class="layui-btn w200" lay-submit lay-filter="formCoding">提交保存</button>
-                </div>
+        </div>
+        <div class="layui-form-item">
+            <div class="layui-input-block">
+                <button class="layui-btn w200" lay-submit lay-filter="formCoding">提交保存</button>
             </div>
         </div>
     </div>

@@ -9,4 +9,6 @@
     'kg_pound'  =>  '2.2',
     'min_3leng'  =>  '240',
     'min_5leng'  =>  '313',
+    'density_fraction'  =>  '4097',
+    'container_volume'  =>  '67',
 ]; ?>

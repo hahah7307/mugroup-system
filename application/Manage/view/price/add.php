@@ -107,7 +107,7 @@
         <div class="layui-form-item tr">
             <div class="layui-input-block">
                 <button class="layui-btn w200 button" lay-submit lay-filter="formCoding">提交</button>
-                <a id="export" href="{:url('excel')}?data=$jsonData" class="layui-btn layui-btn-normal w200">导出</a>
+                <a id="export" href="" class="layui-btn layui-btn-normal w200">导出</a>
             </div>
         </div>
     </div>
@@ -417,14 +417,16 @@
         index: 'lib/index' //主入口模块
     }).use('index');
 
-    layui.use(['form', 'jquery', 'laydate'], function() {
-        var $ = layui.jquery,
+    layui.use(['form', 'jquery'], function() {
+        let $ = layui.jquery,
             form = layui.form;
 
-        var excelUrl = "{:url('excel')}" + "?data=" + '{$jsonData}';
-        $("a #export").attr("href", excelUrl);
+        const urlParams = JSON.stringify({$jsonData});
+        let excelUrl = "{:url('excel')}" + "?data=" + urlParams;
+        console.log(excelUrl);
+        $("#export").attr("href", excelUrl);
 
-        var length = $("#length").val(),
+        let length = $("#length").val(),
             width = $("#width").val(),
             height = $("#height").val();
         $(function(){
@@ -517,17 +519,17 @@
 
         // 提交
         form.on('submit(formCoding)', function(data) {
-            var text = $(this).text(),
+            let text = $(this).text(),
                 button = $(this);
             $('button').attr('disabled',true);
             button.text('请稍候...');
             console.log(data.field);
-            var arr = [];
+            let arr = [];
             $.each(data.field, function(index,value){
                 console.log("jQuery-each方法遍历数组：",index,value);
                 arr.push(index + "=" + value);
             })
-            var urlData;
+            let urlData;
             urlData = arr.join("&");
             location.href = "{:url('add')}?" + urlData;
         });
