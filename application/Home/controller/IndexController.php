@@ -159,8 +159,8 @@ class IndexController extends BaseController
             'return_rate'       =>  $return_rate,
             'platform_rate'     =>  $platform_rate,
         ];
-        $data['storage']['liang'] = [
-            'storage_name'  => '良仓新',
+        $data['storage'][] = [
+            'storage_name'  => '一号仓',
             'data'          =>  [
                 'volume'                        =>  $volume,
                 'gross_weight_lbs'              =>  $gross_weight_lbs,
@@ -185,8 +185,8 @@ class IndexController extends BaseController
                 'target_pricing_profit_rate'    =>  $liang_target_pricing_profit_rate
             ]
         ];
-        $data['storage']['loctek'] = [
-            'storage_name'  =>  '乐歌',
+        $data['storage'][] = [
+            'storage_name'  =>  '二号仓',
             'data'          =>  [
                 'volume'                        =>  $volume,
                 'gross_weight_lbs'              =>  $gross_weight_lbs,
@@ -350,7 +350,7 @@ class IndexController extends BaseController
         ;
 
         $objPHPExcel->setActiveSheetIndex(0)
-            ->setCellValue('A2', $dataArr['storage']['liang']['storage_name'])
+            ->setCellValue('A2', $dataArr['storage'][0]['storage_name'])
             ->setCellValue('B2', '')
             ->setCellValue('C2', $dataArr['tariff_rate'])
             ->setCellValue('D2', $dataArr['length'])
@@ -367,32 +367,32 @@ class IndexController extends BaseController
             ->setCellValue('O2', $dataArr['return_rate'])
             ->setCellValue('P2', $dataArr['platform_rate'])
 
-            ->setCellValue('Q2', $dataArr['storage']['liang']['data']['volume'])
-            ->setCellValue('R2', $dataArr['storage']['liang']['data']['gross_weight_lbs'])
-            ->setCellValue('S2', $dataArr['storage']['liang']['data']['volume_lbs'])
+            ->setCellValue('Q2', $dataArr['storage'][0]['data']['volume'])
+            ->setCellValue('R2', $dataArr['storage'][0]['data']['gross_weight_lbs'])
+            ->setCellValue('S2', $dataArr['storage'][0]['data']['volume_lbs'])
             ->setCellValue('T2', 1)
-            ->setCellValue('U2', $dataArr['storage']['liang']['data']['loading_qty'])
-            ->setCellValue('V2', $dataArr['storage']['liang']['data']['fob'])
-            ->setCellValue('W2', $dataArr['storage']['liang']['data']['initial_cost'])
-            ->setCellValue('X2', $dataArr['storage']['liang']['data']['initial_cost_rate'])
-            ->setCellValue('Y2', $dataArr['storage']['liang']['data']['tariff'])
-            ->setCellValue('Z2', $dataArr['storage']['liang']['data']['tariff_proportion'])
-            ->setCellValue('AA2', $dataArr['storage']['liang']['data']['storage_charge'])
-            ->setCellValue('AB2', $dataArr['storage']['liang']['data']['storage_charge_proportion'])
-            ->setCellValue('AC2', $dataArr['storage']['liang']['data']['tail_end'])
-            ->setCellValue('AD2', $dataArr['storage']['liang']['data']['tail_end_proportion'])
-            ->setCellValue('AE2', $dataArr['storage']['liang']['data']['advertising_expenses'])
-            ->setCellValue('AF2', $dataArr['storage']['liang']['data']['return_fee'])
-            ->setCellValue('AG2', $dataArr['storage']['liang']['data']['platform_fees'])
-            ->setCellValue('AH2', $dataArr['storage']['liang']['data']['no_profit_price'])
-            ->setCellValue('AI2', $dataArr['storage']['liang']['data']['min_selling_profit'])
-            ->setCellValue('AJ2', $dataArr['storage']['liang']['data']['min_selling_profit_rate'])
-            ->setCellValue('AK2', $dataArr['storage']['liang']['data']['target_pricing_profit'])
-            ->setCellValue('AL2', $dataArr['storage']['liang']['data']['target_pricing_profit_rate'])
+            ->setCellValue('U2', $dataArr['storage'][0]['data']['loading_qty'])
+            ->setCellValue('V2', $dataArr['storage'][0]['data']['fob'])
+            ->setCellValue('W2', $dataArr['storage'][0]['data']['initial_cost'])
+            ->setCellValue('X2', $dataArr['storage'][0]['data']['initial_cost_rate'])
+            ->setCellValue('Y2', $dataArr['storage'][0]['data']['tariff'])
+            ->setCellValue('Z2', $dataArr['storage'][0]['data']['tariff_proportion'])
+            ->setCellValue('AA2', $dataArr['storage'][0]['data']['storage_charge'])
+            ->setCellValue('AB2', $dataArr['storage'][0]['data']['storage_charge_proportion'])
+            ->setCellValue('AC2', $dataArr['storage'][0]['data']['tail_end'])
+            ->setCellValue('AD2', $dataArr['storage'][0]['data']['tail_end_proportion'])
+            ->setCellValue('AE2', $dataArr['storage'][0]['data']['advertising_expenses'])
+            ->setCellValue('AF2', $dataArr['storage'][0]['data']['return_fee'])
+            ->setCellValue('AG2', $dataArr['storage'][0]['data']['platform_fees'])
+            ->setCellValue('AH2', $dataArr['storage'][0]['data']['no_profit_price'])
+            ->setCellValue('AI2', $dataArr['storage'][0]['data']['min_selling_profit'])
+            ->setCellValue('AJ2', $dataArr['storage'][0]['data']['min_selling_profit_rate'])
+            ->setCellValue('AK2', $dataArr['storage'][0]['data']['target_pricing_profit'])
+            ->setCellValue('AL2', $dataArr['storage'][0]['data']['target_pricing_profit_rate'])
         ;
 
         $objPHPExcel->setActiveSheetIndex(0)
-            ->setCellValue('A3', $dataArr['storage']['loctek']['storage_name'])
+            ->setCellValue('A3', $dataArr['storage'][1]['storage_name'])
             ->setCellValue('B3', '')
             ->setCellValue('C3', $dataArr['tariff_rate'])
             ->setCellValue('D3', $dataArr['length'])
@@ -409,28 +409,28 @@ class IndexController extends BaseController
             ->setCellValue('O3', $dataArr['return_rate'])
             ->setCellValue('P3', $dataArr['platform_rate'])
 
-            ->setCellValue('Q3', $dataArr['storage']['loctek']['data']['volume'])
-            ->setCellValue('R3', $dataArr['storage']['loctek']['data']['gross_weight_lbs'])
-            ->setCellValue('S3', $dataArr['storage']['loctek']['data']['volume_lbs'])
+            ->setCellValue('Q3', $dataArr['storage'][1]['data']['volume'])
+            ->setCellValue('R3', $dataArr['storage'][1]['data']['gross_weight_lbs'])
+            ->setCellValue('S3', $dataArr['storage'][1]['data']['volume_lbs'])
             ->setCellValue('T3', 1)
-            ->setCellValue('U3', $dataArr['storage']['loctek']['data']['loading_qty'])
-            ->setCellValue('V3', $dataArr['storage']['loctek']['data']['fob'])
-            ->setCellValue('W3', $dataArr['storage']['loctek']['data']['initial_cost'])
-            ->setCellValue('X3', $dataArr['storage']['loctek']['data']['initial_cost_rate'])
-            ->setCellValue('Y3', $dataArr['storage']['loctek']['data']['tariff'])
-            ->setCellValue('Z3', $dataArr['storage']['loctek']['data']['tariff_proportion'])
-            ->setCellValue('AA3', $dataArr['storage']['loctek']['data']['storage_charge'])
-            ->setCellValue('AB3', $dataArr['storage']['loctek']['data']['storage_charge_proportion'])
-            ->setCellValue('AC3', $dataArr['storage']['loctek']['data']['tail_end'])
-            ->setCellValue('AD3', $dataArr['storage']['loctek']['data']['tail_end_proportion'])
-            ->setCellValue('AE3', $dataArr['storage']['loctek']['data']['advertising_expenses'])
-            ->setCellValue('AF3', $dataArr['storage']['loctek']['data']['return_fee'])
-            ->setCellValue('AG3', $dataArr['storage']['loctek']['data']['platform_fees'])
-            ->setCellValue('AH3', $dataArr['storage']['loctek']['data']['no_profit_price'])
-            ->setCellValue('AI3', $dataArr['storage']['loctek']['data']['min_selling_profit'])
-            ->setCellValue('AJ3', $dataArr['storage']['loctek']['data']['min_selling_profit_rate'])
-            ->setCellValue('AK3', $dataArr['storage']['loctek']['data']['target_pricing_profit'])
-            ->setCellValue('AL3', $dataArr['storage']['loctek']['data']['target_pricing_profit_rate'])
+            ->setCellValue('U3', $dataArr['storage'][1]['data']['loading_qty'])
+            ->setCellValue('V3', $dataArr['storage'][1]['data']['fob'])
+            ->setCellValue('W3', $dataArr['storage'][1]['data']['initial_cost'])
+            ->setCellValue('X3', $dataArr['storage'][1]['data']['initial_cost_rate'])
+            ->setCellValue('Y3', $dataArr['storage'][1]['data']['tariff'])
+            ->setCellValue('Z3', $dataArr['storage'][1]['data']['tariff_proportion'])
+            ->setCellValue('AA3', $dataArr['storage'][1]['data']['storage_charge'])
+            ->setCellValue('AB3', $dataArr['storage'][1]['data']['storage_charge_proportion'])
+            ->setCellValue('AC3', $dataArr['storage'][1]['data']['tail_end'])
+            ->setCellValue('AD3', $dataArr['storage'][1]['data']['tail_end_proportion'])
+            ->setCellValue('AE3', $dataArr['storage'][1]['data']['advertising_expenses'])
+            ->setCellValue('AF3', $dataArr['storage'][1]['data']['return_fee'])
+            ->setCellValue('AG3', $dataArr['storage'][1]['data']['platform_fees'])
+            ->setCellValue('AH3', $dataArr['storage'][1]['data']['no_profit_price'])
+            ->setCellValue('AI3', $dataArr['storage'][1]['data']['min_selling_profit'])
+            ->setCellValue('AJ3', $dataArr['storage'][1]['data']['min_selling_profit_rate'])
+            ->setCellValue('AK3', $dataArr['storage'][1]['data']['target_pricing_profit'])
+            ->setCellValue('AL3', $dataArr['storage'][1]['data']['target_pricing_profit_rate'])
         ;
 
         // Rename sheet
