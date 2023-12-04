@@ -14,13 +14,23 @@
                     </a>
                 </li>
                 <li data-name="Member" class="layui-nav-item">
-                    <a layui-href="javascript:;" lay-tips="会员" lay-direction="2">
-                        <i class="layui-icon iconfont icon-chanpin"></i>
+                    <a layui-href="javascript:;" lay-tips="核价" lay-direction="2">
+                        <i class="layui-icon iconfont icon-xunpan"></i>
                         <cite>模板</cite>
                     </a>
                     <dl class="layui-nav-child">
                         <dd><a layui-href="{:url('Price/index')}">核价模板</a></dd>
                         <dd><a layui-href="{:url('Param/price')}">参数配置</a></dd>
+                        <dd><a layui-href="{:url('Deliver/index')}">运送费</a></dd>
+                    </dl>
+                </li>
+                <li data-name="Storage" class="layui-nav-item">
+                    <a layui-href="javascript:;" lay-tips="仓库" lay-direction="2">
+                        <i class="layui-icon iconfont icon-chanpin"></i>
+                        <cite>仓库相关</cite>
+                    </a>
+                    <dl class="layui-nav-child">
+                        <dd><a layui-href="{:url('Storage/index')}">仓库列表</a></dd>
                     </dl>
                 </li>
                 <li data-name="Site" class="layui-nav-item">
