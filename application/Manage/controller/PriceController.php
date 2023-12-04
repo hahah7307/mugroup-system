@@ -286,8 +286,6 @@ class PriceController extends BaseController
     {
         $info = PriceModel::get(['id' => $id, 'state' => PriceModel::STATUS_ACTIVE]);
         $info['storage_info'] = json_decode(json_decode($info['storage_info']), true);
-//        echo "<pre>";
-//        var_dump($info->toArray());exit();
 
         $this->assign('info', $info);
         return view();

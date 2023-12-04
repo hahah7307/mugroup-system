@@ -9,6 +9,7 @@
 </style>
 <div class="layui-body">
 <div class="right">
+    <a href="{:session('manage.back_url')}" class="layui-btn layui-btn-danger layui-btn-sm fr"><i class="layui-icon">&#xe603;</i>返回上一页</a>
     <div class="title">核价模板</div>
     <div class="layui-form">
         <div class="layui-form-item">

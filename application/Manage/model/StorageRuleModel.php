@@ -19,12 +19,12 @@ class StorageRuleModel extends Model
 
     protected function setCreatedAtAttr()
     {
-        return time();
+        return date('Y-m-d H:i:s');
     }
 
     protected function setUpdatedAtAttr()
     {
-        return time();
+        return date('Y-m-d H:i:s');
     }
 
     /**
@@ -43,7 +43,7 @@ class StorageRuleModel extends Model
         $storage_rules = self::all(['state' => self::STATE_ACTIVE, 'storage_id' => $storage_id]);
         $price = 0;
         foreach ($storage_rules as $rule) {
-            $ruleCondition = json_decode(json_decode($rule->condition), true);
+            $ruleCondition = json_decode($rule->condition, true);
             if ($ruleCondition['max'] == 0 && $w > $ruleCondition['min']) {
                 $price = $rule->value;
                 break;
