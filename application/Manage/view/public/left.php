@@ -21,7 +21,6 @@
                     <dl class="layui-nav-child">
                         <dd><a layui-href="{:url('Price/index')}">核价模板</a></dd>
                         <dd><a layui-href="{:url('Param/price')}">参数配置</a></dd>
-                        <dd><a layui-href="{:url('Deliver/index')}">运送费</a></dd>
                     </dl>
                 </li>
                 <li data-name="Storage" class="layui-nav-item">
