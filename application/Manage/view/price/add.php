@@ -108,6 +108,7 @@
         <div class="layui-form-item tr">
             <div class="layui-input-block">
                 <button class="layui-btn w100 button" lay-submit lay-filter="formCoding">提交</button>
+                <a href="{:url('add')}" class="layui-btn layui-btn-normal w100">重置</a>
                 <button class="layui-btn layui-btn-normal w100" lay-submit lay-filter="formSave">保存</button>
                 <a id="export" href="" class="layui-btn layui-btn-normal w100">导出</a>
             </div>
