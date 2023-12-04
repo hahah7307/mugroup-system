@@ -5,7 +5,7 @@
     .layui-body {left: 220px!important;}
     .layui-form-label {width: 100px!important;}
     .layui-form-item .layui-inline {margin-right: 0!important;}
-    .layui-form-label {width: 120px!important;}
+    .layui-form-label {width: 160px!important;}
 </style>
 <div class="layui-body">
 <div class="right">
