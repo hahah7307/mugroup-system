@@ -1,12 +1,6 @@
 <?php
 namespace app\Home\controller;
-use app\Home\model\WebsiteLanguage;
-use app\Home\model\WebsiteModel;
 use app\Home\model\AppTemplate;
-use app\Home\model\NavigationModel;
-use app\Home\model\ProductCategoryModel;
-use app\Home\model\LinkModel;
-use app\Home\model\PageModel;
 use think\Controller;
 use think\Config;
 use think\Session;
