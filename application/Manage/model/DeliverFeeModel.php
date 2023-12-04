@@ -19,12 +19,12 @@ class DeliverFeeModel extends Model
 
     protected function setCreatedAtAttr()
     {
-        return time();
+        return date('Y-m-d H:i:s');
     }
 
     protected function setUpdatedAtAttr()
     {
-        return time();
+        return date('Y-m-d H:i:s');
     }
 
     /**
