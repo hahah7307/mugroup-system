@@ -112,8 +112,8 @@ class PriceController extends BaseController
         $liang_outbound = StorageRuleModel::w2outbound(1, $w);
         $liang_deliver_fee = DeliverFeeModel::w2deliverFee(1, $w);
         $liang_ahs_fee = AHS::AHSFeeLiang($w, $length, $width, $height);
-        $liang_tail_end = round(300 / $loading_qty + $liang_outbound + ($liang_deliver_fee + 2.71 + $liang_ahs_fee['basicFee'] + $liang_ahs_fee['additionalFee']) * 1.18 + 3, 2);
-        $this->assign('liang_tail_end_count', "300 / " . $loading_qty . " + " . $liang_outbound . " + (" . $liang_deliver_fee . " + 2.71 + " . $liang_ahs_fee['basicFee'] . " + " . $liang_ahs_fee['additionalFee'] . ") * 1.18 + 3");
+        $liang_tail_end = round(300 / $loading_qty + $liang_outbound + ($liang_deliver_fee + 2.92 + $liang_ahs_fee['basicFee'] + $liang_ahs_fee['additionalFee']) * 1.18 + 3, 2);
+        $this->assign('liang_tail_end_count', "300 / " . $loading_qty . " + " . $liang_outbound . " + (" . $liang_deliver_fee . " + 2.92 + " . $liang_ahs_fee['basicFee'] . " + " . $liang_ahs_fee['additionalFee'] . ") * 1.18 + 3");
         $this->assign('liang_tail_end', $liang_tail_end);
 
         $loctek_outbound = StorageRuleModel::w2outbound(2, $w);

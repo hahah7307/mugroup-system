@@ -27,11 +27,11 @@ class AHS extends Model
     static public function AHSFeeLiang($w, $a, $b, $c)
     {
         if (self::AHSWeight($w)) {
-            $basicFee = 1.83;
-            $additionalFee = 3.66;
+            $basicFee = 0.53;
+            $additionalFee = 4.43;
         } elseif (self::AHSDimension($a, $b, $c)) {
-            $basicFee = 1.83;
-            $additionalFee = 2.55;
+            $basicFee = 0.53;
+            $additionalFee = 3.06;
         } else {
             $basicFee = 0.9;
             $additionalFee = 0;
