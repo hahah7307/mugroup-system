@@ -42,13 +42,13 @@ class AHS extends Model
     static public function AHSFeeLoctek($w, $a, $b, $c)
     {
         if (self::AHSWeight($w) && $w > 70) {
-            $basicFee = 2.78;
+            $basicFee = 1;
             $additionalFee = 11.5;
         } elseif (self::AHSDimension($a, $b, $c)) {
-            $basicFee = 2.78;
+            $basicFee = 1;
             $additionalFee = 8.5;
         } elseif (self::AHSWeight($w)) {
-            $basicFee = 2.78;
+            $basicFee = 1;
             $additionalFee = 1.5;
         } else {
             $basicFee = 0;
