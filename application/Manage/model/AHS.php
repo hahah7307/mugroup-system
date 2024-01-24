@@ -28,10 +28,10 @@ class AHS extends Model
     {
         if (self::AHSWeight($w)) {
             $basicFee = 0.8;
-            $additionalFee = 4.43;
+            $additionalFee = 6;
         } elseif (self::AHSDimension($a, $b, $c)) {
             $basicFee = 0.8;
-            $additionalFee = 3.06;
+            $additionalFee = 5.4;
         } else {
             $basicFee = 0;
             $additionalFee = 0;
