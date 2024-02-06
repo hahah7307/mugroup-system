@@ -44,12 +44,11 @@ class AHS extends Model
         if (self::AHSWeight($w) && $w > 70) {
             $basicFee = 1.73;
             $additionalFee = 11.5;
-        } elseif (self::AHSDimension($a, $b, $c)) {
+        } elseif (self::AHSDimension($a, $b, $c) || self::AHSWeight($w)) {
             $basicFee = 1.73;
-            $additionalFee = 8.5;
-        } elseif (self::AHSWeight($w)) {
-            $basicFee = 1.73;
-            $additionalFee = 9.7;
+            $additionalFeeDimension = self::AHSDimension($a, $b, $c) ? 8.5 : 0;
+            $additionalFeeWeight = self::AHSWeight($w) ? 9.7 : 0;
+            $additionalFee = max($additionalFeeDimension, $additionalFeeWeight);
         } else {
             $basicFee = 0;
             $additionalFee = 0;
