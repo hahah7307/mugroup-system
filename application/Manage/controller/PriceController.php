@@ -112,15 +112,15 @@ class PriceController extends BaseController
         $liang_outbound = StorageRuleModel::w2outbound(1, $w);
         $liang_deliver_fee = DeliverFeeModel::w2deliverFee(1, $w);
         $liang_ahs_fee = AHS::AHSFeeLiang($gross_weight_lbs, $length, $width, $height);
-        $liang_tail_end = round(300 / $loading_qty + $liang_outbound + ($liang_deliver_fee + 2.8 + $liang_ahs_fee['basicFee'] + $liang_ahs_fee['additionalFee']) * 1.18 + 3, 2);
-        $this->assign('liang_tail_end_count', "300 / " . $loading_qty . " + " . $liang_outbound . " + (" . $liang_deliver_fee . " + 2.8 + " . $liang_ahs_fee['basicFee'] . " + " . $liang_ahs_fee['additionalFee'] . ") * 1.18 + 3");
+        $liang_tail_end = round(300 / $loading_qty + $liang_outbound + ($liang_deliver_fee + 2.8 + $liang_ahs_fee['basicFee'] + $liang_ahs_fee['additionalFee']) * 1.16 + 3, 2);
+        $this->assign('liang_tail_end_count', "300 / " . $loading_qty . " + " . $liang_outbound . " + (" . $liang_deliver_fee . " + 2.8 + " . $liang_ahs_fee['basicFee'] . " + " . $liang_ahs_fee['additionalFee'] . ") * 1.16 + 3");
         $this->assign('liang_tail_end', $liang_tail_end);
 
         $loctek_outbound = StorageRuleModel::w2outbound(2, $gross_weight_lbs);
         $loctek_deliver_fee = DeliverFeeModel::w2deliverFee(2, $w);
         $loctek_ahs_fee = AHS::AHSFeeLoctek($gross_weight_lbs, $length, $width, $height);
-        $loctek_tail_end = round(400 / $loading_qty + $loctek_outbound + ($loctek_deliver_fee + 2.9 + $loctek_ahs_fee['basicFee'] + $loctek_ahs_fee['additionalFee']) * 1.18 + 3, 2);
-        $this->assign('loctek_tail_end_count', "400 / " . $loading_qty . " + " . $loctek_outbound . " + (" . $loctek_deliver_fee . " + 2.9 + " . $loctek_ahs_fee['basicFee'] . " + " . $loctek_ahs_fee['additionalFee'] . ") * 1.18 + 3");
+        $loctek_tail_end = round(400 / $loading_qty + $loctek_outbound + ($loctek_deliver_fee + 2.9 + $loctek_ahs_fee['basicFee'] + $loctek_ahs_fee['additionalFee']) * 1.16 + 3, 2);
+        $this->assign('loctek_tail_end_count', "400 / " . $loading_qty . " + " . $loctek_outbound . " + (" . $loctek_deliver_fee . " + 2.9 + " . $loctek_ahs_fee['basicFee'] . " + " . $loctek_ahs_fee['additionalFee'] . ") * 1.16 + 3");
         $this->assign('loctek_tail_end', $loctek_tail_end);
 
         // tail_end_proportion
