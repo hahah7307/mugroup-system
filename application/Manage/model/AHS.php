@@ -27,11 +27,11 @@ class AHS extends Model
     static public function AHSFeeLiang($w, $a, $b, $c)
     {
         if (self::AHSWeight($w)) {
-            $basicFee = 0.69;
-            $additionalFee = 4.35;
+            $basicFee = 4.1;
+            $additionalFee = 6.86;
         } elseif (self::AHSDimension($a, $b, $c)) {
-            $basicFee = 0.69;
-            $additionalFee = 3;
+            $basicFee = 4.1;
+            $additionalFee = 4.73;
         } else {
             $basicFee = 0;
             $additionalFee = 0;
@@ -42,10 +42,10 @@ class AHS extends Model
     static public function AHSFeeLoctek($w, $a, $b, $c)
     {
         if (self::AHSWeight($w)) {
-            $basicFee = 1.73;
+            $basicFee = 2.71;
             $additionalFee = 7.5;
         } elseif (self::AHSDimension($a, $b, $c)) {
-            $basicFee = 1.73;
+            $basicFee = 2.71;
             $additionalFee = 6.6;
         } else {
             $basicFee = 0;
