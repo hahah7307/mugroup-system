@@ -45,20 +45,24 @@ class PriceController extends BaseController
      */
     public function add()
     {
+        $filename = APP_PATH . 'price.php';
+        $web_params = file_exists($filename) ? include($filename) : [];
+        $this->assign('config', $web_params);
+
         $length = input('length');
         $width = input('width');
         $height = input('height');
-        $tariff_rate = input('tariff_rate', 0.25);
+        $tariff_rate = input('tariff_rate', $web_params['tariff_rate']);
         $gross_weight = input('gross_weight', 1);
-        $delivery = input('delivery', 'FBM');
-        $exchange_rate = input('exchange_rate', 6.95);
-        $flp_standard = input('flp_standard', 500);
+        $delivery = input('delivery', $web_params['delivery']);
+        $exchange_rate = input('exchange_rate', $web_params['exchange_rate']);
+        $flp_standard = input('flp_standard', $web_params['flp_standard']);
         $cost = input('cost', 0);
         $min_price = input('min_price', 0);
         $target_pricing = input('target_pricing', 0);
-        $ad_rate = input('ad_rate', 0.1);
-        $return_rate = input('return_rate', 0.05);
-        $platform_rate = input('platform_rate', 0.15);
+        $ad_rate = input('ad_rate', $web_params['ad_rate']);
+        $return_rate = input('return_rate', $web_params['return_rate']);
+        $platform_rate = input('platform_rate', $web_params['platform_rate']);
 
         // volume
         $volume = round($length * $width * $height / 1000000, 4);
