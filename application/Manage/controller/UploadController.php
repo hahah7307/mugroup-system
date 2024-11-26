@@ -129,7 +129,7 @@ class UploadController extends Controller
     {
         header("content-type:text/html;charset=utf-8");
         // dump($_FILES);exit;
-        
+
         if (empty($_FILES)) {
             echo json_encode(['code' => 0, 'msg' => '请先上传文件']);
             exit();
@@ -153,7 +153,7 @@ class UploadController extends Controller
             echo json_encode(['code' => 0, 'msg' => '文件大小超过10M']);
             exit();
         }
-        //phpinfo函数会以数组的形式返回关于文件路径的信息 
+        //phpinfo函数会以数组的形式返回关于文件路径的信息
         //[dirname]:目录路径[basename]:文件名[extension]:文件后缀名[filename]:不包含后缀的文件名
         $arr = pathinfo($filename);
         //获取文件的后缀名
@@ -164,18 +164,18 @@ class UploadController extends Controller
         if (!in_array($ext_suffix, $suffix)) {
             //window.history.go(-1)表示返回上一页并刷新页面
             echo json_encode(['code' => 0, 'msg' => '上传了不支持的文件类型']);
-            exit();            
+            exit();
         }
         //检测存放上传文件的路径是否存在，如果不存在则新建目录
-        if (!file_exists('upload/download')){
-            mkdir('upload/download');
+        if (!file_exists('upload/excel')){
+            mkdir('upload/excel');
         }
         //为上传的文件新起一个名字，保证更加安全
         $default_title = date('YmdHis',time()).rand(100,1000);
         $new_filename = $default_title.'.'.$ext_suffix;
         //将文件从临时路径移动到磁盘
-        if (move_uploaded_file($temp_name, 'upload/download/' . $new_filename)){
-            echo json_encode(['code' => 1, 'msg' => '文件上传成功', 'data' => ['src' => '/upload/download/' . $new_filename], 'ext' => $ext_suffix]);
+        if (move_uploaded_file($temp_name, 'upload/excel/' . $new_filename)){
+            echo json_encode(['code' => 1, 'msg' => '文件上传成功', 'data' => $new_filename, 'origin' => $arr['filename']]);
             exit;
         }else{
             echo json_encode(['code' => 0, 'msg' => '文件上传失败']);

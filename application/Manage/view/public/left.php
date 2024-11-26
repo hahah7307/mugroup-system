@@ -16,9 +16,11 @@
                 <li data-name="Member" class="layui-nav-item">
                     <a layui-href="javascript:;" lay-tips="核价" lay-direction="2">
                         <i class="layui-icon iconfont icon-xunpan"></i>
-                        <cite>模板</cite>
+                        <cite>产品开发</cite>
                     </a>
                     <dl class="layui-nav-child">
+                        <dd><a layui-href="{:url('Quote/table')}">报价管理</a></dd>
+                        <dd><a layui-href="{:url('Quote/product')}">报价产品</a></dd>
                         <dd><a layui-href="{:url('Price/index')}">核价模板</a></dd>
                         <dd><a layui-href="{:url('Param/price')}">参数配置</a></dd>
                     </dl>

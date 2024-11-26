@@ -2,6 +2,8 @@
 
 namespace app\Manage\model;
 
+use think\Config;
+use think\exception\DbException;
 use think\Model;
 use think\Session;
 
@@ -64,6 +66,24 @@ class AccountModel extends Model
                     }
                 }
             }
+        }
+    }
+
+    /**
+     * @throws DbException
+     */
+    static public function account_access_ids()
+    {
+        $accountOnj = new AccountModel();
+        $account = $accountOnj->where(['id' => Session::get(Config::get('USER_LOGIN_FLAG'))])->find();
+        if ($account['super'] == 1) {
+            return $accountOnj->column('id');
+        } elseif ($account['manage'] == 1) {
+            $userRoleObj = new AdminUserRoleModel();
+            $userRole = $userRoleObj->where(['user_id' => $account['id']])->find();
+            return $userRoleObj->where(['role_id' => $userRole['role_id']])->column('user_id');
+        } else {
+            return [$account['id']];
         }
     }
 }
