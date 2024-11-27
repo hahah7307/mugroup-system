@@ -2,6 +2,7 @@
 namespace app\Manage\controller;
 
 use app\Manage\model\AccountModel;
+use app\Manage\model\PriceModel;
 use app\Manage\model\QuoteProductModel;
 use app\Manage\model\QuoteTableModel;
 use app\Manage\model\StorageRuleModel;
@@ -10,6 +11,8 @@ use PHPExcel_IOFactory;
 use PHPExcel_Reader_Exception;
 use PHPExcel_Worksheet_Drawing;
 use think\Db;
+use think\db\exception\DataNotFoundException;
+use think\db\exception\ModelNotFoundException;
 use think\Exception;
 use think\exception\DbException;
 use think\Session;
@@ -143,37 +146,59 @@ class QuoteController extends BaseController
         return view();
     }
 
-    // 添加
-    public function add()
+    /**
+     * @throws DbException
+     */
+    public function sample()
     {
+        // 查看权限
+        $access_ids = AccountModel::account_access_ids();
+        $where['develop_id'] = ['in', $access_ids];
+
+        // 报价单列表
+        $quoteTableObj = new QuoteProductModel();
+        $list = $quoteTableObj->with(['developer'])->where($where)->order('id asc')->paginate(Config::get('PAGE_NUM'));
+        $this->assign('list', $list);
+
+        Session::set(Config::get('BACK_URL'), $this->request->url(), 'manage');
+
+        return view();
+    }
+
+    /**
+     * @throws DbException
+     * @throws ModelNotFoundException
+     * @throws DataNotFoundException
+     */
+    public function accounting($id)
+    {
+        $quoteProductObj = new QuoteProductModel();
+        $info = $quoteProductObj->find($id);
+        $list = $quoteProductObj->where(['table_id' => $info['table_id'], 'product_code' => $info['product_code']])->select();
         if ($this->request->isPost()) {
             $post = $this->request->post();
-            $post['state'] = StorageRuleModel::STATE_ACTIVE;
-            $post['storage_id'] = input('storage_id');
-            $post['condition'] = json_encode(['min' => $post['min'], 'max' => $post['max']]);
-            $dataValidate = new StorageRuleValidate();
-            if ($dataValidate->scene('add')->check($post)) {
-                $model = new StorageRuleModel();
-                if ($model->allowField(true)->save($post)) {
-                    echo json_encode(['code' => 1, 'msg' => '添加成功']);
-                    exit;
-                } else {
-                    echo json_encode(['code' => 0, 'msg' => '添加失败，请重试']);
-                    exit;
-                }
+            $post['product'] = $list->toArray();
+            $result = PriceModel::generateProductAccounting($post);
+            if ($quoteProductObj->where(['table_id' => $info['table_id'], 'product_code' => $info['product_code']])->update(['accounting' => $result, 'status' => 1])) {
+                echo json_encode(['code' => 1, 'msg' => '核算成功']);
             } else {
-                echo json_encode(['code' => 0, 'msg' => $dataValidate->getError()]);
-                exit;
+                echo json_encode(['code' => 0, 'msg' => '核算失败，请重试']);
             }
+            exit;
         } else {
-            $this->assign('storage_id', input('storage_id'));
+            $this->assign('info', $info);
+            $this->assign('accounting', json_decode($info['accounting'], true));
+            $this->assign('list', $list);
+
+            $filename = APP_PATH . 'price.php';
+            $web_params = file_exists($filename) ? include($filename) : [];
+            $this->assign('config', $web_params);
 
             return view();
         }
     }
 
     // 编辑
-
     /**
      * @throws DbException
      */

@@ -20,7 +20,7 @@
                     </a>
                     <dl class="layui-nav-child">
                         <dd><a layui-href="{:url('Quote/table')}">报价管理</a></dd>
-                        <dd><a layui-href="{:url('Quote/product')}">报价产品</a></dd>
+                        <dd><a layui-href="{:url('Quote/sample')}">报价产品</a></dd>
                         <dd><a layui-href="{:url('Price/index')}">核价模板</a></dd>
                         <dd><a layui-href="{:url('Param/price')}">参数配置</a></dd>
                     </dl>
