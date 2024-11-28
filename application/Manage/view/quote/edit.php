@@ -5,36 +5,60 @@
 <div class="layui-body" id="LAY_app_body">
     <div class="right">
         <a href="{:session('manage.back_url')}" class="layui-btn layui-btn-danger layui-btn-sm fr"><i class="layui-icon">&#xe603;</i>返回上一页</a>
-        <div class="title">编辑运送费</div>
+        <div class="title">编辑产品</div>
         <div class="layui-form">
             <div class="layui-form-item">
-                <label class="layui-form-label">名称</label>
+                <label class="layui-form-label">长</label>
                 <div class="layui-input-inline w300">
-                    <input type="text" class="layui-input" name="name" value="{$info.name}">
+                    <input type="text" class="layui-input" name="product_length" value="{$info.product_length}">
                 </div>
             </div>
             <div class="layui-form-item">
-                <label class="layui-form-label">费用</label>
+                <label class="layui-form-label">宽</label>
                 <div class="layui-input-inline w300">
-                    <input type="text" class="layui-input" name="value" value="{$info.value}">
+                    <input type="text" class="layui-input" name="product_width" value="{$info.product_width}">
                 </div>
             </div>
             <div class="layui-form-item">
-                <label class="layui-form-label">描述</label>
+                <label class="layui-form-label">高</label>
                 <div class="layui-input-inline w300">
-                    <input type="text" class="layui-input" name="description" value="{$info.description}">
+                    <input type="text" class="layui-input" name="product_height" value="{$info.product_height}">
                 </div>
             </div>
             <div class="layui-form-item">
-                <label class="layui-form-label">最小重量</label>
+                <label class="layui-form-label">毛重</label>
                 <div class="layui-input-inline w300">
-                    <input type="text" class="layui-input" name="min" value="{:json_decode($info['condition'], true)['min']}">
+                    <input type="text" class="layui-input" name="gross_weight" value="{$info.gross_weight}">
                 </div>
             </div>
             <div class="layui-form-item">
-                <label class="layui-form-label">最大重量</label>
+                <label class="layui-form-label">净重</label>
                 <div class="layui-input-inline w300">
-                    <input type="text" class="layui-input" name="max" value="{:json_decode($info['condition'], true)['max']}">
+                    <input type="text" class="layui-input" name="net_weight" value="{$info.net_weight}">
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <label class="layui-form-label">产品描述</label>
+                <div class="layui-input-inline w300">
+                    <textarea name="" class="layui-textarea">{$info.product_desc}</textarea>
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <label class="layui-form-label">采购价</label>
+                <div class="layui-input-inline w300">
+                    <input type="text" class="layui-input" name="cost" value="{$info.cost}">
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <label class="layui-form-label">采购价币种</label>
+                <div class="layui-input-inline w300">
+                    <input type="text" class="layui-input" name="currency" value="{$info.currency}">
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <label class="layui-form-label">地区</label>
+                <div class="layui-input-inline w300">
+                    <input type="text" class="layui-input" name="region" value="{$info.region}">
                 </div>
             </div>
             <div class="layui-form-item">

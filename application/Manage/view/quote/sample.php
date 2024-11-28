@@ -70,8 +70,8 @@
                     <td>{$v.developer.nickname}</td>
                     <td>{$v.status}</td>
                     <td class="tc">
-                        <a href="{:url('accounting', ['id' => $v.id])}" class="layui-btn layui-btn-normal layui-btn-sm">核价</a>
-                        <a href="{:url('index_edit', ['id' => $v.id])}" class="layui-btn layui-btn-normal layui-btn-sm">编辑</a>
+                        <a href="{:url('accounting', ['id' => $v.id])}" class="layui-btn layui-btn layui-btn-sm">查看</a>
+                        <a href="{:url('edit', ['id' => $v.id])}" class="layui-btn layui-btn-normal layui-btn-sm">编辑</a>
                         <button data-id="{$v.id}" class="layui-btn layui-btn-sm layui-btn-danger ml0" lay-submit lay-filter="Detele">删除</button>
                     </td>
                 </tr>

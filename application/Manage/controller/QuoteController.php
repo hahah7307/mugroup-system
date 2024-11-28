@@ -101,6 +101,7 @@ class QuoteController extends BaseController
                         "product_desc"          =>  $item[9],
                         "cost"                  =>  $item[10],
                         "currency"              =>  $item[11],
+                        "region"                =>  $item[12],
                         "purchaser_id"          =>  $table['user_id'],
                         "develop_id"            =>  1
                     ];
@@ -187,6 +188,7 @@ class QuoteController extends BaseController
             exit;
         } else {
             $this->assign('info', $info);
+            $this->assign('competitor_image', explode(',', $info['competitor_image']));
             $this->assign('accounting', json_decode($info['accounting'], true));
             $this->assign('list', $list);
 
@@ -206,23 +208,41 @@ class QuoteController extends BaseController
     {
         if ($this->request->isPost()) {
             $post = $this->request->post();
-            $post['condition'] = json_encode(['min' => $post['min'], 'max' => $post['max']]);
-            $dataValidate = new StorageRuleValidate();
-            if ($dataValidate->scene('edit')->check($post)) {
-                $model = new StorageRuleModel();
-                if ($model->allowField(true)->save($post, ['id' => $id])) {
-                    echo json_encode(['code' => 1, 'msg' => '修改成功']);
-                    exit;
-                } else {
-                    echo json_encode(['code' => 0, 'msg' => '修改失败，请重试']);
-                    exit;
-                }
+            $model = new QuoteProductModel();
+            if ($model->save($post, ['id' => $id])) {
+                echo json_encode(['code' => 1, 'msg' => '修改成功']);
+                exit;
             } else {
-                echo json_encode(['code' => 0, 'msg' => $dataValidate->getError()]);
+                echo json_encode(['code' => 0, 'msg' => '修改失败，请重试']);
                 exit;
             }
         } else {
-            $info = StorageRuleModel::get(['id' => $id,]);
+            $info = QuoteProductModel::get(['id' => $id,]);
+            $this->assign('info', $info);
+
+            return view();
+        }
+    }
+
+    /**
+     * @throws DbException
+     */
+    public function analysis($id)
+    {
+        if ($this->request->isPost()) {
+            $post = $this->request->post();
+            $data['competitor_image'] = implode(',', $post['competitor_image']);
+            $data['competitor_url'] = $post['competitor_url'];
+            $data['conclusion'] = $post['conclusion'];
+            $model = new QuoteProductModel();
+            if ($model->save($data, ['id' => $id])) {
+                echo json_encode(['code' => 1, 'msg' => '操作成功']);
+            } else {
+                echo json_encode(['code' => 0, 'msg' => '操作失败，请重试']);
+            }
+            exit;
+        } else {
+            $info = QuoteProductModel::get(['id' => $id,]);
             $this->assign('info', $info);
 
             return view();
@@ -230,7 +250,6 @@ class QuoteController extends BaseController
     }
 
     // 删除
-
     /**
      * @throws DbException
      */

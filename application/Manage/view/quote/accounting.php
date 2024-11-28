@@ -11,7 +11,7 @@
 <div class="layui-body">
 <div class="right">
     <a href="{:session('manage.back_url')}" class="layui-btn layui-btn-danger layui-btn-sm fr"><i class="layui-icon">&#xe603;</i>返回上一页</a>
-    <div class="title">核价模板</div>
+    <div class="title">产品核价</div>
     <div class="layui-form">
         {foreach name="list" item="product"}
         <div class="layui-form-item">
@@ -113,7 +113,7 @@
         </div>
         <div class="layui-form-item tr">
             <div class="layui-input-block">
-                <button class="layui-btn w100 button" lay-submit lay-filter="formCoding">提交</button>
+                <button class="layui-btn layui-btn-normal w100 button" lay-submit lay-filter="formCoding">核价</button>
 <!--                <a id="export" href="" class="layui-btn layui-btn-normal w100">导出</a>-->
             </div>
         </div>
@@ -414,21 +414,101 @@
         </div>
     </div>
 </div>
+<div class="right">
+    <div class="title">产品分析</div>
+    <div class="layui-form">
+        <div class="layui-form-item">
+            <label class="layui-form-label">竞品图片</label>
+            <div class="layui-input-inline w300">
+                <span class="input-group-btn">
+                    <button type="button" class="layui-btn layui-btn-sm" id="upload">上传</button>
+                    <ul class="YanNanQiu-upload-list">
+                        {foreach name="competitor_image" item="v"}
+                        <li style="margin: 2px">
+                            <img src="{$v}">
+                            <span>
+                                <i class="fa fa-times"></i>
+                            </span>
+                            <input type="hidden" name="competitor_image[]" value="{$v}">
+                        </li>
+                        {/foreach}
+                    </ul>
+                </span>
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <label class="layui-form-label">竞品地址</label>
+            <div class="layui-input-inline w300" style="display: flex">
+                <input type="text" class="layui-input" name="competitor_url" value="{$info.competitor_url}">
+                {if condition="$info.competitor_url"}
+                <a href="{$info.competitor_url}" target="_blank"><i class="layui-icon iconfont icon-chaolianjie" style="line-height: 38px; font-size: 24px; margin-left: 8px"></i></a>
+                {/if}
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <label class="layui-form-label">结论</label>
+            <div class="layui-input-inline w300">
+                <textarea name="conclusion" class="layui-textarea">{$info.conclusion}</textarea>
+            </div>
+        </div>
+        <div class="layui-form-item tr">
+            <div class="layui-input-block">
+                <button class="layui-btn layui-btn-normal w100 button" lay-submit lay-filter="formAnalysis">提交保存</button>
+            </div>
+        </div>
+    </div>
+</div>
 {/if}
 </div>
 <script>
-    layui.use(['form', 'jquery'], function() {
+    layui.use(['form', 'jquery', 'upload'], function() {
         let $ = layui.jquery,
-            form = layui.form;
+            form = layui.form,
+            upload = layui.upload;
+
+        // 上传
+        let uploadInst = upload.render({
+            elem: '#upload' //绑定元素
+            ,url: '/Manage/upload/image_upload' //上传接口
+            ,exts: 'png|jpg|jpge|gif'
+            ,multiple: true
+            ,before: function (obj){
+                layer.load(1);
+            }
+            ,done: function(res){
+                //上传完毕回调
+                console.log(res);
+                if (res.code === 1) {
+                    let html = $(".YanNanQiu-upload-list").html();
+                    $(".YanNanQiu-upload-list").html(html + '<li style="margin: 2px">' +
+                        '<img src="/upload/images/' + res.data + '">' +
+                        '<span><i class="fa fa-times"></i></span>' +
+                        '<input type="hidden" name="competitor_image[]" value="/upload/images/' + res.data + '">' +
+                        '</li>');
+                    layer.closeAll();
+                } else {
+                    layer.alert(res.msg,{icon:2,closeBtn:0,title:false,btnAlign:'c'},function(){
+                        layer.closeAll();
+                    });
+                }
+            }
+            ,error: function(){
+                //请求异常回调
+            }
+        });
+
+        $('body').on('click','.YanNanQiu-upload-list li>span',function(){
+            console.log('111')
+            $(this).parent().remove();
+        })
 
         //监听提交
-        form.on('submit(formCoding)', function(data){
-            console.log(data.field);
+        form.on('submit(formAnalysis)', function(data){
             let text = $(this).text(),
                 button = $(this);
             $('button').attr('disabled',true);
             button.text('请稍候...');
-            axios.post("{:url('accounting', ['id' => $info['id']])}", data.field, {
+            axios.post("{:url('analysis', ['id' => $info['id']])}", data.field, {
                 headers: {
                     'Content-Type': 'multipart/form-data'
                 }
@@ -450,6 +530,39 @@
                 .catch(function (error) {
                     console.log(error);
                 });
+            return false;
+        });
+
+        //监听提交
+        form.on('submit(formCoding)', function(data){
+            let text = $(this).text(),
+                button = $(this);
+            $('button').attr('disabled',true);
+            button.text('请稍候...');
+            layer.confirm('确认核价吗？',{icon:3,closeBtn:0,title:false,btnAlign:'c'},function(){
+                axios.post("{:url('accounting', ['id' => $info['id']])}", data.field, {
+                    headers: {
+                        'Content-Type': 'multipart/form-data'
+                    }
+                })
+                    .then(function (response) {
+                        let res = response.data;
+                        if (res.code === 1) {
+                            layer.alert(res.msg,{icon:1,closeBtn:0,title:false,btnAlign:'c',},function(){
+                                location.reload();
+                            });
+                        } else {
+                            layer.alert(res.msg,{icon:2,closeBtn:0,title:false,btnAlign:'c'},function(){
+                                layer.closeAll();
+                                $('button').attr('disabled',false);
+                                button.text(text);
+                            });
+                        }
+                    })
+                    .catch(function (error) {
+                        console.log(error);
+                    });
+            });
             return false;
         });
 
