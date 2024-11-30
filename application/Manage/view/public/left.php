@@ -19,10 +19,14 @@
                         <cite>产品开发</cite>
                     </a>
                     <dl class="layui-nav-child">
+                        {if condition="$role eq 'Purchaser' or $user.super"}
                         <dd><a layui-href="{:url('Quote/table')}">报价管理</a></dd>
+                        {/if}
                         <dd><a layui-href="{:url('Quote/sample')}">报价产品</a></dd>
+                        {if condition="$role eq 'Developer' or $user.super"}
                         <dd><a layui-href="{:url('Price/index')}">核价模板</a></dd>
                         <dd><a layui-href="{:url('Param/price')}">参数配置</a></dd>
+                        {/if}
                     </dl>
                 </li>
                 <li data-name="Storage" class="layui-nav-item">
@@ -41,7 +45,6 @@
                     </a>
                     <dl class="layui-nav-child">
                         <dd><a layui-href="{:url('Param/web')}">参数设置</a></dd>
-                        <!-- <dd><a layui-href="{:url('Mail/index')}">邮件设置</a></dd> -->
                         {if condition="$user.super eq 1"}
                         <dd data-name="info">
                             <a layui-href="javascript:;">管理设置</a>

@@ -5,8 +5,6 @@ use app\Manage\model\AccountModel;
 use app\Manage\model\PriceModel;
 use app\Manage\model\QuoteProductModel;
 use app\Manage\model\QuoteTableModel;
-use app\Manage\model\StorageRuleModel;
-use app\Manage\validate\StorageRuleValidate;
 use PHPExcel_IOFactory;
 use PHPExcel_Reader_Exception;
 use PHPExcel_Worksheet_Drawing;
@@ -103,7 +101,7 @@ class QuoteController extends BaseController
                         "currency"              =>  $item[11],
                         "region"                =>  $item[12],
                         "purchaser_id"          =>  $table['user_id'],
-                        "develop_id"            =>  1
+                        "develop_id"            =>  9
                     ];
                 }
                 $productObj = new QuoteProductModel();
@@ -134,8 +132,8 @@ class QuoteController extends BaseController
         $where['table_id'] = $id;
 
         // 查看权限
-        $access_ids = AccountModel::account_access_ids();
-        $where['develop_id'] = ['in', $access_ids];
+//        $access_ids = AccountModel::account_access_ids();
+//        $where['purchaser_id'] = ['in', $access_ids];
 
         // 报价单列表
         $quoteTableObj = new QuoteProductModel();
@@ -149,12 +147,23 @@ class QuoteController extends BaseController
 
     /**
      * @throws DbException
+     * @throws Exception
      */
     public function sample()
     {
         // 查看权限
         $access_ids = AccountModel::account_access_ids();
-        $where['develop_id'] = ['in', $access_ids];
+        if (AccountModel::account_role() == "Developer") {
+            $where['develop_id'] = ['in', $access_ids];
+        } elseif (AccountModel::account_role() == "Purchaser") {
+            $where['purchaser_id'] = ['in', $access_ids];
+        }
+
+        $status = $this->request->get('status', 0, 'intval');
+        $this->assign('status', $status);
+        if ($status != -1) {
+            $where['status'] = $status;
+        }
 
         // 报价单列表
         $quoteTableObj = new QuoteProductModel();

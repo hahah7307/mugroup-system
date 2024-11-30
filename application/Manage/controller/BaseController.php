@@ -3,13 +3,22 @@ namespace app\Manage\controller;
 
 use app\Manage\model\AccountModel;
 use think\Controller;
-use think\Db;
 use think\Config;
+use think\db\exception\DataNotFoundException;
+use think\db\exception\ModelNotFoundException;
+use think\Exception;
+use think\exception\DbException;
 use think\Session;
 use think\Request;
 
 class BaseController extends Controller
 {
+    /**
+     * @throws DataNotFoundException
+     * @throws DbException
+     * @throws ModelNotFoundException
+     * @throws Exception
+     */
     public function _initialize()
     {
 		parent::_initialize();
@@ -18,8 +27,10 @@ class BaseController extends Controller
 		if (empty(Session::get(Config::get('USER_LOGIN_FLAG')))) {
 			$this->redirect('Login/index');
 		} else {
-			$user = AccountModel::where(['id'=>Session::get(Config::get('USER_LOGIN_FLAG')), 'status' => AccountModel::STATUS_ACTIVE])->find();
+            $model = new AccountModel();
+			$user = $model->where(['id'=>Session::get(Config::get('USER_LOGIN_FLAG')), 'status' => AccountModel::STATUS_ACTIVE])->find();
 			$this->assign('user', $user);
+            $this->assign('role', AccountModel::account_role());
 		}
 
 		// 加载菜单
@@ -32,7 +43,7 @@ class BaseController extends Controller
 		$access = Session::get('access', 'access');
 		$controller = strtolower($this->request->controller());
 		$action = strtolower($this->request->action());
-		if (AccountModel::action_access($controller, $action, $access, $user) == false) {
+		if (!AccountModel::action_access($controller, $action, $access, $user)) {
 			$this->error('您没有操作权限！');
 		}
 

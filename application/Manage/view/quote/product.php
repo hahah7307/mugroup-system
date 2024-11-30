@@ -25,6 +25,7 @@
                     <col>
                     <col>
                     <col>
+                    <col>
                     <col class="w180">
                 </colgroup>
                 <thead>
@@ -44,6 +45,7 @@
                     <th>采购价币种</th>
                     <th>销售地区</th>
                     <th>开发人员</th>
+                    <th class="tc">状态</th>
                     <th class="tc">操作</th>
                 </tr>
                 </thead>
@@ -65,6 +67,25 @@
                     <td>{$v.currency}</td>
                     <td>{$v.region}</td>
                     <td>{$v.developer.nickname}</td>
+                    <td class="tc">
+                        {if condition="$v.status eq 0"}
+                        <p class="blue">待核价</p>
+                        {elseif condition="$v.status eq 1"/}
+                        <p class="blue">待分析</p>
+                        {elseif condition="$v.status eq 2" /}
+                        <p class="blue">待审核</p>
+                        {elseif condition="$v.status eq 3" /}
+                        <p class="blue">待打样</p>
+                        {elseif condition="$v.status eq 4" /}
+                        <p class="blue">打样中</p>
+                        {elseif condition="$v.status eq 5" /}
+                        <p class="blue">打样完成</p>
+                        {elseif condition="$v.status eq 6" /}
+                        <p class="green">已完成</p>
+                        {elseif condition="$v.status eq 7" /}
+                        <p class="red">已废弃</p>
+                        {/if}
+                    </td>
                     <td class="tc">
                         <a href="{:url('edit', ['id' => $v.id])}" class="layui-btn layui-btn-normal">编辑</a>
                         <button data-id="{$v.id}" class="layui-btn layui-btn-danger ml0" lay-submit lay-filter="Detele">删除</button>
