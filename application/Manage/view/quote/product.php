@@ -14,6 +14,18 @@
                     <col>
                     <col class="w180">
                     <col class="w120">
+                    <col>
+                    <col>
+                    <col>
+                    <col>
+                    <col>
+                    <col>
+                    <col>
+                    <col>
+                    <col>
+                    <col>
+                    <col>
+                    <col class="w180">
                 </colgroup>
                 <thead>
                 <tr>
@@ -27,11 +39,12 @@
                     <th>高（cm）</th>
                     <th>毛重（kg）</th>
                     <th>净重（kg）</th>
-                    <th>产品描述</th>
+                    <th class="tc">产品描述</th>
                     <th>采购价</th>
                     <th>采购价币种</th>
-                    <th>开发建议</th>
+                    <th>销售地区</th>
                     <th>开发人员</th>
+                    <th class="tc">操作</th>
                 </tr>
                 </thead>
                 <tbody>
@@ -50,8 +63,12 @@
                     <td>{$v.product_desc}</td>
                     <td>{$v.cost}</td>
                     <td>{$v.currency}</td>
-                    <td>{$v.suggestion}</td>
+                    <td>{$v.region}</td>
                     <td>{$v.developer.nickname}</td>
+                    <td class="tc">
+                        <a href="{:url('edit', ['id' => $v.id])}" class="layui-btn layui-btn-normal">编辑</a>
+                        <button data-id="{$v.id}" class="layui-btn layui-btn-danger ml0" lay-submit lay-filter="Detele">删除</button>
+                    </td>
                 </tr>
                 {/foreach}
                 </tbody>
@@ -67,6 +84,32 @@
             upload = layui.upload,
             form = layui.form;
 
+        // 删除
+        form.on('submit(Detele)', function(data){
+            var text = $(this).text(),
+                button = $(this),
+                id = $(this).data('id');
+            layer.confirm('确定删除吗？',{icon:3,closeBtn:0,title:false,btnAlign:'c'},function(){
+                $('button').attr('disabled',true);
+                button.text('请稍候...');
+                $.ajax({
+                    type:'POST',url:"{:url('delete')}",data:{id:id},dataType:'json',
+                    success:function(data){
+                        if(data.code === 1){
+                            layer.alert(data.msg,{icon:1,closeBtn:0,title:false,btnAlign:'c'},function(){
+                                location.reload();
+                            });
+                        }else{
+                            layer.alert(data.msg,{icon:2,closeBtn:0,title:false,btnAlign:'c'},function(){
+                                layer.closeAll();
+                                $('button').attr('disabled',false);
+                                button.text(text);
+                            });
+                        }
+                    }
+                });
+            });
+        });
     });
 </script>
 

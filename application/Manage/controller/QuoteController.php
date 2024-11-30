@@ -355,30 +355,6 @@ class QuoteController extends BaseController
         exit;
     }
 
-    // 编辑
-    /**
-     * @throws DbException
-     */
-    public function sample_set($id)
-    {
-        if ($this->request->isPost()) {
-            $post = $this->request->post();
-            $model = new QuoteProductModel();
-            if ($model->save($post, ['id' => $id])) {
-                echo json_encode(['code' => 1, 'msg' => '修改成功']);
-                exit;
-            } else {
-                echo json_encode(['code' => 0, 'msg' => '修改失败，请重试']);
-                exit;
-            }
-        } else {
-            $info = QuoteProductModel::get(['id' => $id,]);
-            $this->assign('info', $info);
-
-            return view();
-        }
-    }
-
     // 删除
     /**
      * @throws DbException
@@ -387,37 +363,19 @@ class QuoteController extends BaseController
     {
         if ($this->request->isPost()) {
             $post = $this->request->post();
-            $block = StorageRuleModel::get($post['id']);
+            $block = QuoteProductModel::get($post['id']);
+            $imageList = explode(',', $block['img_url']);
             if ($block->delete()) {
+                foreach ($imageList as $item) {
+                    unlink($item);
+                }
                 echo json_encode(['code' => 1, 'msg' => '操作成功']);
-                exit;
             } else {
                 echo json_encode(['code' => 0, 'msg' => '操作失败，请重试']);
-                exit;
             }
         } else {
             echo json_encode(['code' => 0, 'msg' => '异常操作']);
-            exit;
         }
-    }
-
-    // 状态切换
-
-    /**
-     * @throws DbException
-     */
-    public function status()
-    {
-        if ($this->request->isPost()) {
-            $post = $this->request->post();
-            $user = StorageRuleModel::get($post['id']);
-            $user['state'] = $user['state'] == StorageRuleModel::STATE_ACTIVE ? 0 : StorageRuleModel::STATE_ACTIVE;
-            $user->save();
-            echo json_encode(['code' => 1, 'msg' => '操作成功']);
-            exit;
-        } else {
-            echo json_encode(['code' => 0, 'msg' => '异常操作']);
-            exit;
-        }
+        exit;
     }
 }
