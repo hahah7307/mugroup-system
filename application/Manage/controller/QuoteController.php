@@ -208,14 +208,18 @@ class QuoteController extends BaseController
     {
         if ($this->request->isPost()) {
             $post = $this->request->post();
+            $info = QuoteProductModel::get(['id' => $id,]);
+            if (!empty($post['is_sample'])){
+                $post['status'] = max(5, $info['status']);
+                unset($post['is_sample']);
+            }
             $model = new QuoteProductModel();
             if ($model->save($post, ['id' => $id])) {
                 echo json_encode(['code' => 1, 'msg' => '修改成功']);
-                exit;
             } else {
                 echo json_encode(['code' => 0, 'msg' => '修改失败，请重试']);
-                exit;
             }
+            exit;
         } else {
             $info = QuoteProductModel::get(['id' => $id,]);
             $this->assign('info', $info);
@@ -235,12 +239,138 @@ class QuoteController extends BaseController
             $data['competitor_url'] = $post['competitor_url'];
             $data['conclusion'] = $post['conclusion'];
             $model = new QuoteProductModel();
-            if ($model->save($data, ['id' => $id])) {
+            $block = $model->find($post['id']);
+            if ($model->where(['table_id' => $block['table_id'], 'product_code' => $block['product_code']])->save($data, ['id' => $id])) {
                 echo json_encode(['code' => 1, 'msg' => '操作成功']);
             } else {
                 echo json_encode(['code' => 0, 'msg' => '操作失败，请重试']);
             }
             exit;
+        } else {
+            $info = QuoteProductModel::get(['id' => $id,]);
+            $this->assign('info', $info);
+
+            return view();
+        }
+    }
+
+    /**
+     * @throws DbException
+     */
+    public function approved()
+    {
+        if ($this->request->isPost()) {
+            $post = $this->request->post();
+            $model = new QuoteProductModel();
+            $block = $model->find($post['id']);
+            if ($model->where(['table_id' => $block['table_id'], 'product_code' => $block['product_code']])->setField('status', 3)) {
+                echo json_encode(['code' => 1, 'msg' => '操作成功']);
+            } else {
+                echo json_encode(['code' => 0, 'msg' => '操作失败，请重试']);
+            }
+        } else {
+            echo json_encode(['code' => 0, 'msg' => '异常操作']);
+        }
+        exit;
+    }
+
+    /**
+     * @throws DbException
+     */
+    public function reject()
+    {
+        if ($this->request->isPost()) {
+            $post = $this->request->post();
+            $model = new QuoteProductModel();
+            $block = $model->find($post['id']);
+            if ($model->where(['table_id' => $block['table_id'], 'product_code' => $block['product_code']])->setField('status', 7)) {
+                echo json_encode(['code' => 1, 'msg' => '操作成功']);
+            } else {
+                echo json_encode(['code' => 0, 'msg' => '操作失败，请重试']);
+            }
+        } else {
+            echo json_encode(['code' => 0, 'msg' => '异常操作']);
+        }
+        exit;
+    }
+
+    /**
+     * @throws DbException
+     */
+    public function audit()
+    {
+        if ($this->request->isPost()) {
+            $post = $this->request->post();
+            $model = new QuoteProductModel();
+            $block = $model->find($post['id']);
+            if ($model->where(['table_id' => $block['table_id'], 'product_code' => $block['product_code']])->setField('status', 6)) {
+                echo json_encode(['code' => 1, 'msg' => '操作成功']);
+            } else {
+                echo json_encode(['code' => 0, 'msg' => '操作失败，请重试']);
+            }
+        } else {
+            echo json_encode(['code' => 0, 'msg' => '异常操作']);
+        }
+        exit;
+    }
+
+    /**
+     * @throws DbException
+     */
+    public function refuse()
+    {
+        if ($this->request->isPost()) {
+            $post = $this->request->post();
+            $model = new QuoteProductModel();
+            $block = $model->find($post['id']);
+            if ($model->where(['table_id' => $block['table_id'], 'product_code' => $block['product_code']])->setField('status', 6)) {
+                echo json_encode(['code' => 1, 'msg' => '操作成功']);
+            } else {
+                echo json_encode(['code' => 0, 'msg' => '操作失败，请重试']);
+            }
+        } else {
+            echo json_encode(['code' => 0, 'msg' => '异常操作']);
+        }
+        exit;
+    }
+
+    /**
+     * @throws DbException
+     */
+    public function suggestion()
+    {
+        if ($this->request->isPost()) {
+            $post = $this->request->post();
+            $model = new QuoteProductModel();
+            $block = $model->find($post['id']);
+            if ($model->where(['table_id' => $block['table_id'], 'product_code' => $block['product_code']])->setField('status', 3)) {
+                $model->where(['table_id' => $block['table_id'], 'product_code' => $block['product_code']])->setField('suggestion', $post['suggestion']);
+                echo json_encode(['code' => 1, 'msg' => '操作成功']);
+            } else {
+                echo json_encode(['code' => 0, 'msg' => '操作失败，请重试']);
+            }
+        } else {
+            echo json_encode(['code' => 0, 'msg' => '异常操作']);
+        }
+        exit;
+    }
+
+    // 编辑
+    /**
+     * @throws DbException
+     */
+    public function sample_set($id)
+    {
+        if ($this->request->isPost()) {
+            $post = $this->request->post();
+            $model = new QuoteProductModel();
+            if ($model->save($post, ['id' => $id])) {
+                echo json_encode(['code' => 1, 'msg' => '修改成功']);
+                exit;
+            } else {
+                echo json_encode(['code' => 0, 'msg' => '修改失败，请重试']);
+                exit;
+            }
         } else {
             $info = QuoteProductModel::get(['id' => $id,]);
             $this->assign('info', $info);

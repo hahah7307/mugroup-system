@@ -61,18 +61,40 @@
                     <input type="text" class="layui-input" name="region" value="{$info.region}">
                 </div>
             </div>
+            {if condition="$info.status egt 3"}
+            <div class="layui-form-item">
+                <label class="layui-form-label">完成时间</label>
+                <div class="layui-input-inline w300">
+                    <input type="text" class="layui-input" id="sample_date" name="sample_date" placeholder="打样完成时间">
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <label class="layui-form-label">打样完成</label>
+                <div class="layui-input-block">
+                    <input type="checkbox" name="is_sample" value="1" lay-skin="switch">
+                </div>
+            </div>
+            {/if}
             <div class="layui-form-item">
                 <div class="layui-input-block">
                     <button class="layui-btn w200" lay-submit lay-filter="formCoding">提交保存</button>
                 </div>
             </div>
+        </div>
     </div>
 </div>
 <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 <script>
-    layui.use(['form', 'jquery'], function(){
+    layui.use(['form', 'jquery', 'laydate'], function(){
         var $ = layui.jquery,
-            form = layui.form;
+            form = layui.form,
+            laydate = layui.laydate;
+
+        // 显示日期选择器
+        laydate.render({
+            elem: '#sample_date',
+            type: 'date'
+        });
 
         //监听提交
         form.on('submit(formCoding)', function(data){
