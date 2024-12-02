@@ -1,6 +1,9 @@
 
 {include file="public/header" /}
 
+<style>
+    .layui-form-switch {margin-top: 8px !important}
+</style>
 <!-- 主体内容 -->
 <div class="layui-body" id="LAY_app_body">
     <div class="right">
@@ -10,57 +13,77 @@
             <div class="layui-form-item">
                 <label class="layui-form-label">长</label>
                 <div class="layui-input-inline w300">
-                    <input type="text" class="layui-input" name="product_length" value="{$info.product_length}">
+                    <input type="text" class="layui-input" value="{$info.product_length}" disabled>
                 </div>
             </div>
             <div class="layui-form-item">
                 <label class="layui-form-label">宽</label>
                 <div class="layui-input-inline w300">
-                    <input type="text" class="layui-input" name="product_width" value="{$info.product_width}">
+                    <input type="text" class="layui-input" value="{$info.product_width}" disabled>
                 </div>
             </div>
             <div class="layui-form-item">
                 <label class="layui-form-label">高</label>
                 <div class="layui-input-inline w300">
-                    <input type="text" class="layui-input" name="product_height" value="{$info.product_height}">
+                    <input type="text" class="layui-input" value="{$info.product_height}" disabled>
                 </div>
             </div>
             <div class="layui-form-item">
                 <label class="layui-form-label">毛重</label>
                 <div class="layui-input-inline w300">
-                    <input type="text" class="layui-input" name="gross_weight" value="{$info.gross_weight}">
+                    <input type="text" class="layui-input" value="{$info.gross_weight}" disabled>
                 </div>
             </div>
             <div class="layui-form-item">
                 <label class="layui-form-label">净重</label>
                 <div class="layui-input-inline w300">
-                    <input type="text" class="layui-input" name="net_weight" value="{$info.net_weight}">
+                    <input type="text" class="layui-input" value="{$info.net_weight}" disabled>
                 </div>
             </div>
             <div class="layui-form-item">
                 <label class="layui-form-label">产品描述</label>
                 <div class="layui-input-inline w300">
-                    <textarea name="" class="layui-textarea">{$info.product_desc}</textarea>
+                    <textarea class="layui-textarea" disabled>{$info.product_desc}</textarea>
                 </div>
             </div>
             <div class="layui-form-item">
                 <label class="layui-form-label">采购价</label>
                 <div class="layui-input-inline w300">
-                    <input type="text" class="layui-input" name="cost" value="{$info.cost}">
+                    <input type="text" class="layui-input" value="{$info.cost}" disabled>
                 </div>
             </div>
             <div class="layui-form-item">
                 <label class="layui-form-label">采购价币种</label>
                 <div class="layui-input-inline w300">
-                    <input type="text" class="layui-input" name="currency" value="{$info.currency}">
+                    <input type="text" class="layui-input" value="{$info.currency}" disabled>
                 </div>
             </div>
             <div class="layui-form-item">
                 <label class="layui-form-label">地区</label>
                 <div class="layui-input-inline w300">
-                    <input type="text" class="layui-input" name="region" value="{$info.region}">
+                    <input type="text" class="layui-input" value="{$info.region}" disabled>
                 </div>
             </div>
+            <div class="layui-form-item">
+                <label class="layui-form-label">审核时间</label>
+                <div class="layui-input-inline w300">
+                    <input type="text" class="layui-input" value="{$info.audit_date}" disabled>
+                </div>
+            </div>
+            {if condition="$info.status egt 3"}
+            <div class="layui-form-item">
+                <label class="layui-form-label">预计打样完成时间</label>
+                <div class="layui-input-inline w300">
+                    <input type="text" class="layui-input" id="sample_date" name="sample_date" value="{$info.sample_date}" placeholder="打样完成时间">
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <label class="layui-form-label">打样完成</label>
+                <div class="layui-input-block">
+                    <input type="checkbox" name="is_sample" value="1" lay-skin="switch" {if condition="in_array($info['status'], [5,6])"}checked{/if}>
+                </div>
+            </div>
+            {/if}
             <div class="layui-form-item">
                 <div class="layui-input-block">
                     <button class="layui-btn w200" lay-submit lay-filter="formCoding">提交保存</button>
@@ -88,7 +111,7 @@
                 button = $(this);
             $('button').attr('disabled',true);
             button.text('请稍候...');
-            axios.post("{:url('edit', ['id' => $info['id']])}", data.field)
+            axios.post("{:url('sample_set', ['id' => $info['id']])}", data.field)
                 .then(function (response) {
                     var res = response.data;
                     if (res.code === 1) {

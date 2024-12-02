@@ -56,7 +56,7 @@
                     <td>{$v.product_code}</td>
                     <td>{$v.supplier_name}</td>
                     <td>{$v.supplier_code}</td>
-                    <td><img src="/{$v.img_url}" alt="" height="80"></td>
+                    <td><img src="/{$v.img_url}" alt="" height="40"></td>
                     <td>{$v.product_length}</td>
                     <td>{$v.product_width}</td>
                     <td>{$v.product_height}</td>

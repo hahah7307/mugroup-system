@@ -15,7 +15,7 @@
                 </li>
                 <li data-name="Member" class="layui-nav-item">
                     <a layui-href="javascript:;" lay-tips="核价" lay-direction="2">
-                        <i class="layui-icon iconfont icon-xunpan"></i>
+                        <i class="layui-icon iconfont icon-chanpinkaifa"></i>
                         <cite>产品开发</cite>
                     </a>
                     <dl class="layui-nav-child">

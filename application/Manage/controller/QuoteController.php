@@ -149,17 +149,19 @@ class QuoteController extends BaseController
      * @throws DbException
      * @throws Exception
      */
-    public function sample()
+    public function sample(): \think\response\View
     {
         // 查看权限
         $access_ids = AccountModel::account_access_ids();
+        $status = 0;
         if (AccountModel::account_role() == "Developer") {
             $where['develop_id'] = ['in', $access_ids];
+            $status = $this->request->get('status', 0, 'intval');
         } elseif (AccountModel::account_role() == "Purchaser") {
             $where['purchaser_id'] = ['in', $access_ids];
+            $status = $this->request->get('status', 3, 'intval');
         }
 
-        $status = $this->request->get('status', 0, 'intval');
         $this->assign('status', $status);
         if ($status != -1) {
             $where['status'] = $status;
@@ -197,7 +199,7 @@ class QuoteController extends BaseController
             exit;
         } else {
             $this->assign('info', $info);
-            $this->assign('competitor_image', explode(',', $info['competitor_image']));
+            $this->assign('competitor_image', $info['competitor_image'] ? explode(',', $info['competitor_image']) : []);
             $this->assign('accounting', json_decode($info['accounting'], true));
             $this->assign('list', $list);
 
@@ -237,6 +239,49 @@ class QuoteController extends BaseController
         }
     }
 
+    // 编辑
+    /**
+     * @throws DbException
+     */
+    public function sample_set($id)
+    {
+        if ($this->request->isPost()) {
+            $post = $this->request->post();
+            $info = QuoteProductModel::get(['id' => $id,]);
+            if (!in_array($info['status'], [3, 4, 5])) {
+                echo json_encode(['code' => 0, 'msg' => '异常操作！']);
+                exit();
+            }
+            if (empty($post['sample_date'])) {
+                echo json_encode(['code' => 0, 'msg' => '请选择预计打样完成时间']);
+                exit();
+            }
+            if (strtotime('+14 days', strtotime($info['audit_date'])) < strtotime($post['sample_date'])) {
+                echo json_encode(['code' => 0, 'msg' => '请选择审核后14天内的预计打样时间']);
+                exit();
+            }
+            if (!empty($post['is_sample'])){
+                $post['status'] = max(5, $info['status']);
+                $post['sample_completion_date'] = date('Y-m-d');
+                unset($post['is_sample']);
+            } else {
+                $post['status'] = 4;
+            }
+            $model = new QuoteProductModel();
+            if ($model->update($post, ['table_id' => $info['table_id'], 'product_code' => $info['product_code']])) {
+                echo json_encode(['code' => 1, 'msg' => '修改成功']);
+            } else {
+                echo json_encode(['code' => 0, 'msg' => '修改失败，请重试']);
+            }
+            exit;
+        } else {
+            $info = QuoteProductModel::get(['id' => $id,]);
+            $this->assign('info', $info);
+
+            return view();
+        }
+    }
+
     /**
      * @throws DbException
      */
@@ -248,8 +293,11 @@ class QuoteController extends BaseController
             $data['competitor_url'] = $post['competitor_url'];
             $data['conclusion'] = $post['conclusion'];
             $model = new QuoteProductModel();
-            $block = $model->find($post['id']);
-            if ($model->where(['table_id' => $block['table_id'], 'product_code' => $block['product_code']])->save($data, ['id' => $id])) {
+            $block = $model->find($id);
+            if ($model->where(['table_id' => $block['table_id'], 'product_code' => $block['product_code']])->update($data, ['id' => $id])) {
+                if ($block['status'] < 2) {
+                    $model->where(['table_id' => $block['table_id'], 'product_code' => $block['product_code']])->setField('status', 2);
+                }
                 echo json_encode(['code' => 1, 'msg' => '操作成功']);
             } else {
                 echo json_encode(['code' => 0, 'msg' => '操作失败，请重试']);
@@ -273,6 +321,7 @@ class QuoteController extends BaseController
             $model = new QuoteProductModel();
             $block = $model->find($post['id']);
             if ($model->where(['table_id' => $block['table_id'], 'product_code' => $block['product_code']])->setField('status', 3)) {
+                $model->where(['table_id' => $block['table_id'], 'product_code' => $block['product_code']])->setField('audit_date', date('Y-m-d'));
                 echo json_encode(['code' => 1, 'msg' => '操作成功']);
             } else {
                 echo json_encode(['code' => 0, 'msg' => '操作失败，请重试']);
@@ -332,7 +381,7 @@ class QuoteController extends BaseController
             $post = $this->request->post();
             $model = new QuoteProductModel();
             $block = $model->find($post['id']);
-            if ($model->where(['table_id' => $block['table_id'], 'product_code' => $block['product_code']])->setField('status', 6)) {
+            if ($model->where(['table_id' => $block['table_id'], 'product_code' => $block['product_code']])->setField('status', 7)) {
                 echo json_encode(['code' => 1, 'msg' => '操作成功']);
             } else {
                 echo json_encode(['code' => 0, 'msg' => '操作失败，请重试']);
@@ -354,6 +403,7 @@ class QuoteController extends BaseController
             $block = $model->find($post['id']);
             if ($model->where(['table_id' => $block['table_id'], 'product_code' => $block['product_code']])->setField('status', 3)) {
                 $model->where(['table_id' => $block['table_id'], 'product_code' => $block['product_code']])->setField('suggestion', $post['suggestion']);
+                $model->where(['table_id' => $block['table_id'], 'product_code' => $block['product_code']])->setField('sample_date', NULL);
                 echo json_encode(['code' => 1, 'msg' => '操作成功']);
             } else {
                 echo json_encode(['code' => 0, 'msg' => '操作失败，请重试']);
@@ -386,5 +436,51 @@ class QuoteController extends BaseController
             echo json_encode(['code' => 0, 'msg' => '异常操作']);
         }
         exit;
+    }
+
+    /**
+     * @throws ModelNotFoundException
+     * @throws DbException
+     * @throws DataNotFoundException
+     */
+    public function transfer($id)
+    {
+        if ($this->request->isPost()) {
+            $post = $this->request->post();
+            Db::startTrans();
+            try {
+                $model = new QuoteProductModel();
+                if ($model->update(['develop_id' => $post['user_id'][0]], ['id' => $id])) {
+                    Db::commit();
+                    echo json_encode(['code' => 1, 'msg' => '操作成功']);
+                    exit;
+                } else {
+                    throw new Exception("操作失败，请重试");
+                }
+            } catch (Exception $e) {
+                Db::rollback();
+                echo json_encode(['code' => 0, 'msg' => $e->getMessage()]);
+                exit;
+            }
+        } else {
+            $accessIds = AccountModel::account_access_ids();
+            $this->assign('user', AccountModel::get(['id' => ['in', $accessIds]]));
+            $model = new QuoteProductModel();
+            $info = $model->find($id);
+            $this->assign('info', $info);
+
+            $userModel = new AccountModel();
+            $userList = $userModel->where(['id' => ['in', $accessIds]])->select();
+            foreach ($userList as $key => $value) {
+                if ($value['id'] == $info['develop_id']) {
+                    $userList[$key]['develop'] = 1;
+                } else {
+                    $userList[$key]['develop'] = 0;
+                }
+            }
+            $this->assign('userList', $userList);
+
+            return view();
+        }
     }
 }

@@ -424,13 +424,15 @@
                     <button type="button" class="layui-btn layui-btn-sm" id="upload">上传</button>
                     <ul class="YanNanQiu-upload-list">
                         {foreach name="competitor_image" item="v"}
-                        <li style="margin: 2px">
-                            <img src="{$v}">
-                            <span>
-                                <i class="fa fa-times"></i>
-                            </span>
-                            <input type="hidden" name="competitor_image[]" value="{$v}">
-                        </li>
+                            <li style="margin: 2px">
+                                <a href="{$v}" target="_blank">
+                                    <img src="{$v}">
+                                </a>
+                                <span>
+                                    <i class="fa fa-times"></i>
+                                </span>
+                                <input type="hidden" name="competitor_image[]" value="{$v}">
+                            </li>
                         {/foreach}
                     </ul>
                 </span>
@@ -507,7 +509,9 @@
                 if (res.code === 1) {
                     let html = $(".YanNanQiu-upload-list").html();
                     $(".YanNanQiu-upload-list").html(html + '<li style="margin: 2px">' +
+                        '<a href="/upload/images/' + res.data + '" target="_blank">' +
                         '<img src="/upload/images/' + res.data + '">' +
+                        '</a>' +
                         '<span><i class="fa fa-times"></i></span>' +
                         '<input type="hidden" name="competitor_image[]" value="/upload/images/' + res.data + '">' +
                         '</li>');

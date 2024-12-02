@@ -50,6 +50,7 @@
                     <col>
                     <col>
                     <col>
+                    <col>
                     <col class="w100">
                     <col class="w180">
                 </colgroup>
@@ -67,6 +68,7 @@
                     <th>采购价</th>
                     <th>采购价币种</th>
                     <th>地区</th>
+                    <th>预计打样完成时间</th>
                     <th>开发建议</th>
                     <th>开发人员</th>
                     <th class="tc">状态</th>
@@ -88,6 +90,7 @@
                     <td>{$v.cost}</td>
                     <td>{$v.currency}</td>
                     <td>{$v.region}</td>
+                    <td>{$v.sample_date}</td>
                     <td>{$v.suggestion}</td>
                     <td>{$v.developer.nickname}</td>
                     <td class="tc">
@@ -112,10 +115,12 @@
                     <td class="tc">
                         {if condition="$role eq 'Super' or $role eq 'Developer'"}
                         <a href="{:url('accounting', ['id' => $v.id])}" class="layui-btn layui-btn layui-btn-sm">查看</a>
+                        <a href="{:url('transfer', ['id' => $v.id])}" class="layui-btn layui-btn layui-btn-sm">转交</a>
                         <button data-id="{$v.id}" class="layui-btn layui-btn-sm layui-btn-normal ml0" lay-submit lay-filter="Audit">审核</button>
                         {/if}
                         {if condition="$role eq 'Super' or $role eq 'Purchaser'"}
                         <a href="{:url('edit', ['id' => $v.id])}" class="layui-btn layui-btn-normal layui-btn-sm">编辑</a>
+                        <a href="{:url('sample_set', ['id' => $v.id])}" class="layui-btn layui-btn-normal layui-btn-sm">打样</a>
                         <button data-id="{$v.id}" class="layui-btn layui-btn-sm layui-btn-danger ml0" lay-submit lay-filter="Detele">删除</button>
                         {/if}
                     </td>
