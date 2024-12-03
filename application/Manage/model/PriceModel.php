@@ -81,12 +81,12 @@ class PriceModel extends Model
         }
 
         // fob
-        if (strtoupper($data['currency']) == "CNY") {
+        if ($data['cost']) {
             $fob = round($data['cost'] / $data['exchange_rate'], 2);
-        } elseif (strtoupper($data['currency']) == "USD") {
-            $fob = round($data['cost'], 2);
+        } elseif ($data['fob']) {
+            $fob = round($data['fob'], 2);
         } else {
-            $fob = round($data['cost'], 2);
+            $fob = round($data['fob'], 2);
         }
 
         // 头程成本

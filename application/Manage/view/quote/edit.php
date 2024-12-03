@@ -40,25 +40,44 @@
             <div class="layui-form-item">
                 <label class="layui-form-label">产品描述</label>
                 <div class="layui-input-inline w300">
-                    <textarea name="" class="layui-textarea">{$info.product_desc}</textarea>
+                    <textarea name="product_desc" class="layui-textarea">{$info.product_desc}</textarea>
                 </div>
             </div>
             <div class="layui-form-item">
-                <label class="layui-form-label">采购价</label>
+                <label class="layui-form-label">含税出厂价（人民币）</label>
                 <div class="layui-input-inline w300">
                     <input type="text" class="layui-input" name="cost" value="{$info.cost}">
                 </div>
             </div>
             <div class="layui-form-item">
-                <label class="layui-form-label">采购价币种</label>
+                <label class="layui-form-label">FOB价（美金）</label>
                 <div class="layui-input-inline w300">
-                    <input type="text" class="layui-input" name="currency" value="{$info.currency}">
+                    <input type="text" class="layui-input" name="fob" value="{$info.fob}">
                 </div>
             </div>
             <div class="layui-form-item">
-                <label class="layui-form-label">地区</label>
+                <label class="layui-form-label">推荐销售市场</label>
                 <div class="layui-input-inline w300">
                     <input type="text" class="layui-input" name="region" value="{$info.region}">
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <label class="layui-form-label">推荐理由</label>
+                <div class="layui-input-inline w300">
+                    <textarea name="recommendation_reason" class="layui-textarea">{$info.recommendation_reason}</textarea>
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <label class="layui-form-label">竞品链接</label>
+                <div class="layui-input-inline w300">
+                    <textarea name="purchaser_competitor_url" class="layui-textarea">{$info.purchaser_competitor_url}</textarea>
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <label class="layui-form-label">是否多箱装</label>
+                <div class="layui-input-block">
+                    <input type="radio" name="is_multiple_boxes" value="0" title="否" {if condition="$info.is_multiple_boxes eq 0"}checked{/if}>
+                    <input type="radio" name="is_multiple_boxes" value="1" title="是" {if condition="$info.is_multiple_boxes eq 1"}checked{/if}>
                 </div>
             </div>
             <div class="layui-form-item">

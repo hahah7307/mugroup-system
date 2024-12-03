@@ -46,9 +46,15 @@
         <hr class="layui-divider">
         <div class="layui-form-item">
             <div class="layui-inline layui-col-md3">
-                <label class="layui-form-label">采购成本(¥)<span class="red">*</span></label>
+                <label class="layui-form-label">含税出厂价(¥)<span class="red">*</span></label>
                 <div class="layui-input-inline">
                     <input type="text" autocomplete="off" class="layui-input w300" name="cost" value="{$info.cost}" disabled>
+                </div>
+            </div>
+            <div class="layui-inline layui-col-md3">
+                <label class="layui-form-label">FOB价($)<span class="red">*</span></label>
+                <div class="layui-input-inline">
+                    <input type="text" autocomplete="off" class="layui-input w300" name="fob" value="{$info.fob}" disabled>
                 </div>
             </div>
             <div class="layui-inline layui-col-md3">
@@ -63,7 +69,6 @@
                     <input type="text" autocomplete="off" class="layui-input w300" name="target_pricing" value="{$accounting.product.target_pricing}">
                 </div>
             </div>
-            <input type="hidden" name="currency" value="{$info.currency}">
         </div>
         <div class="layui-form-item">
             <div class="layui-inline layui-col-md3">

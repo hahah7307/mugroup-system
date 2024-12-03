@@ -21,7 +21,7 @@ class QuoteController extends BaseController
     /**
      * @throws DbException
      */
-    public function table()
+    public function table(): \think\response\View
     {
         // 查看权限
         $access_ids = AccountModel::account_access_ids();
@@ -86,26 +86,30 @@ class QuoteController extends BaseController
                         continue;
                     }
                     $productData[] = [
-                        "table_id"              =>  $id,
-                        "product_code"          =>  $item[0],
-                        "supplier_name"         =>  $item[1],
-                        "supplier_code"         =>  $item[2],
-                        "img_url"               =>  $imageArr[$key],
-                        "product_length"        =>  $item[4],
-                        "product_width"         =>  $item[5],
-                        "product_height"        =>  $item[6],
-                        "gross_weight"          =>  $item[7],
-                        "net_weight"            =>  $item[8],
-                        "product_desc"          =>  $item[9],
-                        "cost"                  =>  $item[10],
-                        "currency"              =>  $item[11],
-                        "region"                =>  $item[12],
-                        "purchaser_id"          =>  $table['user_id'],
-                        "develop_id"            =>  9
+                        "table_id"                      =>  $id,
+                        "product_code"                  =>  $item[0],
+                        "supplier_name"                 =>  $item[1],
+                        "supplier_code"                 =>  $item[2],
+                        "img_url"                       =>  $imageArr[$key],
+                        "product_length"                =>  $item[4],
+                        "product_width"                 =>  $item[5],
+                        "product_height"                =>  $item[6],
+                        "gross_weight"                  =>  $item[7],
+                        "net_weight"                    =>  $item[8],
+                        "product_desc"                  =>  $item[9],
+                        "cost"                          =>  $item[10],
+                        "fob"                           =>  $item[11],
+                        "region"                        =>  $item[12],
+                        "recommendation_reason"         =>  $item[13],
+                        "purchaser_competitor_url"      =>  $item[14],
+                        "is_multiple_boxes"             =>  $item[15] == '是' ? 1 : 0,
+                        "purchaser_id"                  =>  $table['user_id'],
+                        "develop_id"                    =>  9
                     ];
                 }
                 $productObj = new QuoteProductModel();
                 if (!$productObj->insertAll($productData)) {
+
                     throw new Exception('表格导入失败');
                 }
             } else {
@@ -127,7 +131,7 @@ class QuoteController extends BaseController
     /**
      * @throws DbException
      */
-    public function product($id)
+    public function product($id): \think\response\View
     {
         $where['table_id'] = $id;
 
@@ -189,14 +193,27 @@ class QuoteController extends BaseController
         $list = $quoteProductObj->where(['table_id' => $info['table_id'], 'product_code' => $info['product_code']])->select();
         if ($this->request->isPost()) {
             $post = $this->request->post();
+            if (empty($post['min_price'])) {
+                echo json_encode(['code' => 0, 'msg' => '请填写最低市场售价']);
+                exit();
+            }
+            if (empty($post['target_pricing'])) {
+                echo json_encode(['code' => 0, 'msg' => '请填写目标定价']);
+                exit();
+            }
             $post['product'] = $list->toArray();
             $result = PriceModel::generateProductAccounting($post);
-            if ($quoteProductObj->where(['table_id' => $info['table_id'], 'product_code' => $info['product_code']])->update(['accounting' => $result, 'status' => 1])) {
-                echo json_encode(['code' => 1, 'msg' => '核算成功']);
+            if ($result) {
+                if ($quoteProductObj->where(['table_id' => $info['table_id'], 'product_code' => $info['product_code']])->update(['accounting' => $result, 'status' => 1])) {
+                    echo json_encode(['code' => 1, 'msg' => '核算成功']);
+                } else {
+                    echo json_encode(['code' => 0, 'msg' => '核算失败，请重试']);
+                }
+                exit;
             } else {
-                echo json_encode(['code' => 0, 'msg' => '核算失败，请重试']);
+                echo json_encode(['code' => 0, 'msg' => '核价失败，请重试']);
+                exit();
             }
-            exit;
         } else {
             $this->assign('info', $info);
             $this->assign('competitor_image', $info['competitor_image'] ? explode(',', $info['competitor_image']) : []);
@@ -219,12 +236,12 @@ class QuoteController extends BaseController
     {
         if ($this->request->isPost()) {
             $post = $this->request->post();
-            $info = QuoteProductModel::get(['id' => $id,]);
-            if (!empty($post['is_sample'])){
-                $post['status'] = max(5, $info['status']);
-                unset($post['is_sample']);
-            }
             $model = new QuoteProductModel();
+            $info = $model->find($id);
+            if ($info['status']) {
+                echo json_encode(['code' => 0, 'msg' => '状态异常，不可编辑']);
+                exit();
+            }
             if ($model->save($post, ['id' => $id])) {
                 echo json_encode(['code' => 1, 'msg' => '修改成功']);
             } else {
@@ -423,6 +440,10 @@ class QuoteController extends BaseController
         if ($this->request->isPost()) {
             $post = $this->request->post();
             $block = QuoteProductModel::get($post['id']);
+            if ($block['status']) {
+                echo json_encode(['code' => 0, 'msg' => '状态异常，不可删除']);
+                exit();
+            }
             $imageList = explode(',', $block['img_url']);
             if ($block->delete()) {
                 foreach ($imageList as $item) {

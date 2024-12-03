@@ -246,7 +246,18 @@ function get_real_ip()
 }
 
 // 小数转百分数
-function decimal2percentage($number) {
+function decimal2percentage($number): string
+{
     return $number * 100 . '%';
+}
+
+function combineUrl2html($url, $tag = ','): string
+{
+    $list = explode($tag, $url);
+    $string = "";
+    foreach($list as $item) {
+        $string .= '<a href="' . $item . '" target="_blank">' . $item . '</a><br>';
+    }
+    return $string;
 }
 

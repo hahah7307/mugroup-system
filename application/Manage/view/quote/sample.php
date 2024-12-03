@@ -34,9 +34,8 @@
         </form>
 
         <div class="layui-form">
-            <table class="layui-table">
+            <table class="layui-table" lay-size="sm">
                 <colgroup>
-                    <col class="w80">
                     <col>
                     <col>
                     <col>
@@ -56,18 +55,20 @@
                 </colgroup>
                 <thead>
                 <tr>
-                    <th>ID</th>
                     <th>产品编号</th>
                     <th>产品图片</th>
-                    <th>长（cm）</th>
-                    <th>宽（cm）</th>
-                    <th>高（cm）</th>
-                    <th>毛重（kg）</th>
-                    <th>净重（kg）</th>
-                    <th>产品描述</th>
-                    <th>采购价</th>
-                    <th>采购价币种</th>
-                    <th>地区</th>
+                    <th>外箱长（cm）</th>
+                    <th>外箱宽（cm）</th>
+                    <th>外箱高（cm）</th>
+                    <th>外箱毛重（kg）</th>
+                    <th>产品净重（kg）</th>
+                    <th class="tc">产品描述</th>
+                    <th>含税出厂价（人民币）</th>
+                    <th>FOB价（美金）</th>
+                    <th>推荐市场</th>
+                    <th>推荐理由</th>
+                    <th>竞品链接</th>
+                    <th>多箱装</th>
                     <th>预计打样完成时间</th>
                     <th>开发建议</th>
                     <th>开发人员</th>
@@ -78,7 +79,6 @@
                 <tbody>
                 {foreach name="list" item="v"}
                 <tr>
-                    <td>{$v.id}</td>
                     <td>{$v.product_code}</td>
                     <td><a href="/{$v.img_url}" target="_blank"><img src="/{$v.img_url}" alt="" height="40"></a></td>
                     <td>{$v.product_length}</td>
@@ -88,8 +88,11 @@
                     <td>{$v.net_weight}</td>
                     <td>{$v.product_desc}</td>
                     <td>{$v.cost}</td>
-                    <td>{$v.currency}</td>
+                    <td>{$v.fob}</td>
                     <td>{$v.region}</td>
+                    <td>{$v.recommendation_reason}</td>
+                    <td>{$v.purchaser_competitor_url|combineUrl2html=###, ','}</td>
+                    <td class="tc">{:$v.is_multiple_boxes == 1 ? '<span class="red">是</span>' : '否'}</td>
                     <td>{$v.sample_date}</td>
                     <td>{$v.suggestion}</td>
                     <td>{$v.developer.nickname}</td>
