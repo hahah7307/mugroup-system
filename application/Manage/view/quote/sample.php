@@ -24,8 +24,9 @@
                     <option value="3" {if condition="$status eq 3"}selected{/if}>待打样</option>
                     <option value="4" {if condition="$status eq 4"}selected{/if}>打样中</option>
                     <option value="5" {if condition="$status eq 5"}selected{/if}>打样完成</option>
-                    <option value="6" {if condition="$status eq 6"}selected{/if}>已完成</option>
-                    <option value="7" {if condition="$status eq 7"}selected{/if}>已废弃</option>
+                    <option value="6" {if condition="$status eq 6"}selected{/if}>审核通过</option>
+                    <option value="7" {if condition="$status eq 7"}selected{/if}>未过审核</option>
+                    <option value="8" {if condition="$status eq 8"}selected{/if}>样品失败</option>
                 </select>
             </div>
             <div class="layui-inline">
@@ -66,8 +67,8 @@
                     <th>含税出厂价（人民币）</th>
                     <th>FOB价（美金）</th>
                     <th>推荐市场</th>
-                    <th>推荐理由</th>
-                    <th>竞品链接</th>
+                    <th>采购推荐理由</th>
+                    <th>采购竞品链接</th>
                     <th>多箱装</th>
                     <th>预计打样完成时间</th>
                     <th>开发建议</th>
@@ -110,9 +111,11 @@
                         {elseif condition="$v.status eq 5" /}
                         <p class="blue">打样完成</p>
                         {elseif condition="$v.status eq 6" /}
-                        <p class="green">已完成</p>
+                        <p class="green">审核通过</p>
                         {elseif condition="$v.status eq 7" /}
-                        <p class="red">已废弃</p>
+                        <p class="red">未过审核</p>
+                        {elseif condition="$v.status eq 8" /}
+                        <p class="red">样品失败</p>
                         {/if}
                     </td>
                     <td class="tc">
@@ -157,7 +160,7 @@
                     '<input type="text" id="inputValue" class="layui-input" placeholder="请填写开发意见" />' +
                     '</div>',  // 弹出层内容，包含输入框
                 area: ['400px', '200px'],  // 设置弹出层的大小
-                btn: ['意见', '通过', '废弃', '取消'],  // 三个按钮
+                btn: ['修改意见', '审核通过', '样品失败', '关闭'],  // 三个按钮
                 yes: function(index, layero){
                     let userInput = $("#inputValue").val();  // 获取输入框的值
                     axios.post("{:url('suggestion')}", {id: id, suggestion: userInput})
@@ -181,7 +184,8 @@
                     return false;
                 },
                 btn2: function(index, layero){
-                    axios.post("{:url('audit')}", {id: id})
+                    let userInput = $("#inputValue").val();  // 获取输入框的值
+                    axios.post("{:url('audit')}", {id: id, suggestion: userInput})
                         .then(function (response) {
                             let res = response.data;
                             if (res.code === 1) {
@@ -202,7 +206,8 @@
                     return false;
                 },
                 btn3: function(index, layero){
-                    axios.post("{:url('refuse')}", {id: id})
+                    let userInput = $("#inputValue").val();  // 获取输入框的值
+                    axios.post("{:url('refuse')}", {id: id, suggestion: userInput})
                         .then(function (response) {
                             let res = response.data;
                             if (res.code === 1) {

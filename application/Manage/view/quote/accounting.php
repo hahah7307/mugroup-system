@@ -7,6 +7,7 @@
     .layui-form-item .layui-inline {margin-right: 0!important;}
     .layui-form-label {width: 160px!important;}
     .layui-divider {border-top: 1px solid #eee;  /* 设置灰色的边框 */}
+    .competitor-item {border-right: #eee 1px solid;border-bottom: #eee 1px solid;padding: 0 10px 10px 0;margin: 0 0 20px;}
 </style>
 <div class="layui-body">
 <div class="right">
@@ -420,51 +421,94 @@
     </div>
 </div>
 <div class="right">
-    <div class="title">产品分析</div>
-    <div class="layui-form">
-        <div class="layui-form-item">
-            <label class="layui-form-label">竞品图片</label>
-            <div class="layui-input-inline w300">
-                <span class="input-group-btn">
-                    <button type="button" class="layui-btn layui-btn-sm" id="upload">上传</button>
-                    <ul class="YanNanQiu-upload-list">
-                        {foreach name="competitor_image" item="v"}
-                            <li style="margin: 2px">
-                                <a href="{$v}" target="_blank">
-                                    <img src="{$v}">
-                                </a>
-                                <span>
-                                    <i class="fa fa-times"></i>
-                                </span>
-                                <input type="hidden" name="competitor_image[]" value="{$v}">
-                            </li>
-                        {/foreach}
-                    </ul>
-                </span>
-            </div>
-        </div>
-        <div class="layui-form-item">
-            <label class="layui-form-label">竞品地址</label>
-            <div class="layui-input-inline w300" style="display: flex">
-                <input type="text" class="layui-input" name="competitor_url" value="{$info.competitor_url}">
-                {if condition="$info.competitor_url"}
-                <a href="{$info.competitor_url}" target="_blank"><i class="layui-icon iconfont icon-chaolianjie" style="line-height: 38px; font-size: 24px; margin-left: 8px"></i></a>
+    <div class="title">产品分析&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button class="layui-btn layui-btn-sm btn-lc" lay-submit lay-filter="AttrAdd">+</button></div>
+        <div class="layui-form">
+            <div class="layui-competitor" style="display: flex;flex-wrap: wrap;">
+                {if condition="$competitor neq null"}
+                {foreach name="competitor" key="k" item="item"}
+                <div class="competitor-item">
+                    <div class="layui-form-item fr">
+                        <button class="layui-btn layui-btn-danger layui-btn-sm btn-lc" lay-submit lay-filter="attrDel">×</button>
+                    </div>
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">竞品图片</label>
+                        <div class="layui-input-inline w300">
+                            <span class="input-group-btn">
+                                <button type="button" data-index="{$k}" class="layui-btn layui-btn-sm upload-0">上传</button>
+                                <ul class="YanNanQiu-upload-list">
+                                    {foreach name="item.competitor_image" item="image"}
+                                        <li style="margin: 2px">
+                                            <a href="{$image}" target="_blank">
+                                                <img src="{$image}">
+                                            </a>
+                                            <span>
+                                                <i class="fa fa-times"></i>
+                                            </span>
+                                            <input type="hidden" name="competitor_image[{$k}][]" value="{$image}">
+                                        </li>
+                                    {/foreach}
+                                </ul>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">竞品链接</label>
+                        <div class="layui-input-inline w300" style="display: flex">
+                            <input type="text" class="layui-input" name="competitor_url[{$k}]" value="{$item.competitor_url}">
+                            {if condition="$item.competitor_url"}
+                            <a href="{$item.competitor_url}" target="_blank"><i class="layui-icon iconfont icon-chaolianjie" style="line-height: 38px; font-size: 24px; margin-left: 8px"></i></a>
+                            {/if}
+                        </div>
+                    </div>
+                </div>
+                {/foreach}
+                {else/}
+                <div class="competitor-item">
+                    <div class="layui-form-item fr">
+                        <button class="layui-btn layui-btn-danger layui-btn-sm btn-lc" lay-submit lay-filter="attrDel">×</button>
+                    </div>
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">竞品图片</label>
+                        <div class="layui-input-inline w300">
+                            <span class="input-group-btn">
+                                <button type="button" data-index="0" class="layui-btn layui-btn-sm upload-0">上传</button>
+                                <ul class="YanNanQiu-upload-list">
+                                </ul>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">竞品链接</label>
+                        <div class="layui-input-inline w300" style="display: flex">
+                            <input type="text" class="layui-input" name="competitor_url[0]" value="">
+                        </div>
+                    </div>
+                </div>
                 {/if}
             </div>
-        </div>
-        <div class="layui-form-item">
-            <label class="layui-form-label">结论</label>
-            <div class="layui-input-inline w300">
-                <textarea name="conclusion" class="layui-textarea">{$info.conclusion}</textarea>
+            <div class="layui-form-item">
+                <label class="layui-form-label">竞品集合链接</label>
+                <div class="layui-input-inline w800" style="display: flex">
+                    <input type="text" class="layui-input" name="competitor_addr" value="{$info.competitor_addr}">
+                    {if condition="$info.competitor_addr"}
+                    <a href="{$info.competitor_addr}" target="_blank"><i class="layui-icon iconfont icon-chaolianjie" style="line-height: 38px; font-size: 24px; margin-left: 8px"></i></a>
+                    {/if}
+                </div>
             </div>
-        </div>
-        <div class="layui-form-item tr">
-            <div class="layui-input-block">
-                <button class="layui-btn layui-btn-normal w100 button" lay-submit lay-filter="formAnalysis">分析提交</button>
-                {if condition="$info.status eq 2"}
-                <button class="layui-btn layui-btn-normal" data-id="{$info.id}" lay-submit lay-filter="APPROVED">审核通过</button>
-                <button class="layui-btn layui-btn-danger" data-id="{$info.id}" lay-submit lay-filter="REJECT">审核驳回</button>
-                {/if}
+            <div class="layui-form-item">
+                <label class="layui-form-label">结论</label>
+                <div class="layui-input-inline w800">
+                    <textarea name="conclusion" class="layui-textarea">{$info.conclusion}</textarea>
+                </div>
+            </div>
+            <div class="layui-form-item tr">
+                <div class="layui-input-block">
+                    <button class="layui-btn layui-btn-normal w100 button" lay-submit lay-filter="formAnalysis">分析提交</button>
+                    {if condition="$info.status eq 2"}
+                    <button class="layui-btn layui-btn-normal" data-id="{$info.id}" lay-submit lay-filter="APPROVED">审核通过</button>
+                    <button class="layui-btn layui-btn-danger" data-id="{$info.id}" lay-submit lay-filter="REJECT">审核驳回</button>
+                    {/if}
+                </div>
             </div>
         </div>
     </div>
@@ -499,38 +543,78 @@
             });
         });
 
-        // 上传
-        let uploadInst = upload.render({
-            elem: '#upload' //绑定元素
-            ,url: '/Manage/upload/image_upload' //上传接口
-            ,exts: 'png|jpg|jpge|gif'
-            ,multiple: true
-            ,before: function (obj){
-                layer.load(1);
-            }
-            ,done: function(res){
-                //上传完毕回调
-                console.log(res);
-                if (res.code === 1) {
-                    let html = $(".YanNanQiu-upload-list").html();
-                    $(".YanNanQiu-upload-list").html(html + '<li style="margin: 2px">' +
-                        '<a href="/upload/images/' + res.data + '" target="_blank">' +
-                        '<img src="/upload/images/' + res.data + '">' +
-                        '</a>' +
-                        '<span><i class="fa fa-times"></i></span>' +
-                        '<input type="hidden" name="competitor_image[]" value="/upload/images/' + res.data + '">' +
-                        '</li>');
-                    layer.closeAll();
-                } else {
-                    layer.alert(res.msg,{icon:2,closeBtn:0,title:false,btnAlign:'c'},function(){
-                        layer.closeAll();
-                    });
-                }
-            }
-            ,error: function(){
-                //请求异常回调
-            }
+        let domIndex = 0;
+        // 添加属性
+        form.on('submit(AttrAdd)', function(data) {
+            domIndex ++;
+            let newDom = '<div class="competitor-item">'
+                + '<div class="layui-form-item fr">'
+                + '<button class="layui-btn layui-btn-danger layui-btn-sm btn-lc" lay-submit lay-filter="attrDel">×</button>'
+                + '</div>'
+                + '<div class="layui-form-item">'
+                + '<label class="layui-form-label">竞品图片</label>'
+                + '<div class="layui-input-inline w300">'
+                + '<span class="input-group-btn">'
+                + '<button type="button" data-index="' + domIndex + '" class="layui-btn layui-btn-sm upload-' + domIndex + '">上传</button>'
+                + '<ul class="YanNanQiu-upload-list">'
+                + '</ul>'
+                + '</span>'
+                + '</div>'
+                + '</div>'
+                + '<div class="layui-form-item">'
+                + '<label class="layui-form-label">竞品链接</label>'
+                + '<div class="layui-input-inline w300" style="display: flex">'
+                + '<input type="text" class="layui-input" name="competitor_url[' + domIndex + ']" value="">'
+                + '</div>'
+                + '</div>'
+                + '</div>';
+            $(".layui-competitor").append(newDom);
+            form.render();
+            initUploadButtons(domIndex);
+            return false;
         });
+
+        // 删除属性
+        form.on('submit(attrDel)', function(data) {
+            $(this).parent().parent().remove();
+        });
+
+        initUploadButtons();
+        function initUploadButtons(index = 0) {
+            // 上传
+            let uploadInst = upload.render({
+                elem: '.upload-' + index //绑定元素
+                ,url: '/Manage/upload/image_upload' //上传接口
+                ,exts: 'png|jpg|jpge|gif'
+                ,multiple: true
+                ,before: function (obj){
+                    layer.load(1);
+                }
+                ,done: function(res, index, elem){
+                    console.log(this.item.next().next().html());
+                    //上传完毕回调
+                    if (res.code === 1) {
+                        console.log(this.item.data('index'));
+                        let html = this.item.next().next().html();
+                        this.item.next().next().html(html + '<li style="margin: 2px">' +
+                            '<a href="/upload/images/' + res.data + '" target="_blank">' +
+                            '<img src="/upload/images/' + res.data + '">' +
+                            '</a>' +
+                            '<span><i class="fa fa-times"></i></span>' +
+                            '<input type="hidden" name="competitor_image[' + this.item.data('index') + '][]" value="/upload/images/' + res.data + '">' +
+                            '</li>');
+                        layer.closeAll();
+                    } else {
+                        layer.alert(res.msg,{icon:2,closeBtn:0,title:false,btnAlign:'c'},function(){
+                            layer.closeAll();
+                        });
+                    }
+                }
+                ,error: function(){
+                    //请求异常回调
+                }
+            });
+        }
 
         // 图片删除
         $('body').on('click','.YanNanQiu-upload-list li>span',function(){
@@ -566,6 +650,10 @@
                     .catch(function (error) {
                         console.log(error);
                     });
+            }, function () {
+                layer.closeAll();
+                $('button').attr('disabled',false);
+                button.text(text);
             });
             return false;
         });

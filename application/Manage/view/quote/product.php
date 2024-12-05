@@ -45,8 +45,8 @@
                     <th>含税出厂价（人民币）</th>
                     <th>FOB价（美金）</th>
                     <th>推荐市场</th>
-                    <th>推荐理由</th>
-                    <th>竞品链接</th>
+                    <th>采购推荐理由</th>
+                    <th>采购竞品链接</th>
                     <th>多箱装</th>
                     <th>开发人员</th>
                     <th class="tc">状态</th>
@@ -87,9 +87,11 @@
                         {elseif condition="$v.status eq 5" /}
                         <p class="blue">打样完成</p>
                         {elseif condition="$v.status eq 6" /}
-                        <p class="green">已完成</p>
+                        <p class="green">审核通过</p>
                         {elseif condition="$v.status eq 7" /}
-                        <p class="red">已废弃</p>
+                        <p class="red">未过审核</p>
+                        {elseif condition="$v.status eq 8" /}
+                        <p class="red">样品失败</p>
                         {/if}
                     </td>
                     <td class="tc">
