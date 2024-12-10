@@ -122,7 +122,9 @@
                         {if condition="$role eq 'Super' or $role eq 'Developer'"}
                         <a href="{:url('accounting', ['id' => $v.id])}" class="layui-btn layui-btn layui-btn-sm">查看</a>
                         <a href="{:url('transfer', ['id' => $v.id])}" class="layui-btn layui-btn layui-btn-sm">转交</a>
+                        {if condition="$v.status eq 5"}
                         <button data-id="{$v.id}" class="layui-btn layui-btn-sm layui-btn-normal ml0" lay-submit lay-filter="Audit">审核</button>
+                        {/if}
                         {/if}
                         {if condition="$role eq 'Super' or $role eq 'Purchaser'"}
                         <a href="{:url('edit', ['id' => $v.id])}" class="layui-btn layui-btn-normal layui-btn-sm">编辑</a>

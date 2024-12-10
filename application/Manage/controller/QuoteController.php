@@ -217,7 +217,7 @@ class QuoteController extends BaseController
     {
         // 查看权限
         $access_ids = AccountModel::account_access_ids();
-        $status = 0;
+//        $status = 0;
         $where = [];
         if (AccountModel::account_role() == "Developer") {
             $where['develop_id'] = ['in', $access_ids];
@@ -225,6 +225,8 @@ class QuoteController extends BaseController
         } elseif (AccountModel::account_role() == "Purchaser") {
             $where['purchaser_id'] = ['in', $access_ids];
             $status = $this->request->get('status', 3, 'intval');
+        } else {
+            $status = $this->request->get('status', -1, 'intval');
         }
 
         $this->assign('status', $status);
