@@ -5,6 +5,12 @@
     .layui-layer-btn0 {background-color: #fff !important; color: #333 !important; border: 1px solid #dedede !important;}
     .layui-layer-btn1 {background-color: #1E9FFF !important; color: #fff !important; border: 1px solid #1E9FFF !important;}
     .layui-layer-btn2 {background-color: #FF5722 !important; color: #fff !important; border: 1px solid #FF5722 !important;}
+    .layui-table .purchaser_competitor_url {
+        max-width: 120px;      /* 设置单元格最大宽度 */
+        white-space: nowrap;   /* 防止换行 */
+        overflow: hidden;      /* 超出部分隐藏 */
+        text-overflow: ellipsis; /* 超出部分显示省略号 */
+    }
 </style>
 <!-- 主体内容 -->
 <div class="layui-body" id="LAY_app_body">
@@ -92,7 +98,7 @@
                     <td>{$v.fob}</td>
                     <td>{$v.region}</td>
                     <td>{$v.recommendation_reason}</td>
-                    <td>{$v.purchaser_competitor_url|combineUrl2html=###, ','}</td>
+                    <td class="purchaser_competitor_url">{$v.purchaser_competitor_url|combineUrl2html=###, ','}</td>
                     <td class="tc">{:$v.is_multiple_boxes == 1 ? '<span class="red">是</span>' : '否'}</td>
                     <td>{$v.sample_date}</td>
                     <td>{$v.suggestion}</td>

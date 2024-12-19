@@ -1,6 +1,14 @@
 
 {include file="public/header" /}
 
+<style>
+    .layui-table .purchaser_competitor_url {
+        max-width: 120px;      /* 设置单元格最大宽度 */
+        white-space: nowrap;   /* 防止换行 */
+        overflow: hidden;      /* 超出部分隐藏 */
+        text-overflow: ellipsis; /* 超出部分显示省略号 */
+    }
+</style>
 <!-- 主体内容 -->
 <div class="layui-body" id="LAY_app_body">
     <div class="right">
@@ -70,7 +78,7 @@
                     <td>{$v.fob}</td>
                     <td>{$v.region}</td>
                     <td>{$v.recommendation_reason}</td>
-                    <td>{$v.purchaser_competitor_url|combineUrl2html=###, ','}</td>
+                    <td class="purchaser_competitor_url">{$v.purchaser_competitor_url|combineUrl2html=###, ','}</td>
                     <td class="tc">{:$v.is_multiple_boxes == 1 ? '<span class="red">是</span>' : '否'}</td>
                     <td>{$v.developer.nickname}</td>
                     <td class="tc">
