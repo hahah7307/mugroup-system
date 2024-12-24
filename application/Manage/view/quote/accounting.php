@@ -3,11 +3,17 @@
 
 <style>
     .layui-body {left: 220px!important;}
-    .layui-form-label {width: 100px!important;}
+    .layui-form-label {font-size: 12px; padding: 8px 8px;width: 120px}
     .layui-form-item .layui-inline {margin-right: 0!important;}
     .layui-form-label {width: 160px!important;}
     .layui-divider {border-top: 1px solid #eee;  /* 设置灰色的边框 */}
     .competitor-item {border-right: #eee 1px solid;border-bottom: #eee 1px solid;padding: 0 10px 10px 0;margin: 0 0 20px;}
+    .layui-col-md3 {width: 24%}
+    #lc_tail_end {cursor: pointer}
+    #le_tail_end {cursor: pointer}
+    .layui-layer-btn1 {background-color: #fff !important; color: #333 !important; border: 1px solid #dedede !important;}
+    .layui-layer-btn0 {background-color: #1E9FFF !important; color: #fff !important; border: 1px solid #1E9FFF !important;}
+    .layui-layer-btn2 {background-color: #FF5722 !important; color: #fff !important; border: 1px solid #FF5722 !important;}
 </style>
 <div class="layui-body">
 <div class="right">
@@ -19,25 +25,25 @@
             <div class="layui-inline layui-col-md3">
                 <label class="layui-form-label">包装长(cm)<span class="red">*</span></label>
                 <div class="layui-input-inline">
-                    <input type="text" autocomplete="off" class="layui-input w300" name="length" id="length" value="{$product.product_length}" disabled>
+                    <input type="text" autocomplete="off" class="layui-input w200" name="length" id="length" value="{$product.product_length}" disabled>
                 </div>
             </div>
             <div class="layui-inline layui-col-md3">
                 <label class="layui-form-label">包装宽(cm)<span class="red">*</span></label>
                 <div class="layui-input-inline">
-                    <input type="text" autocomplete="off" class="layui-input w300" name="width" id="width" value="{$product.product_width}" disabled>
+                    <input type="text" autocomplete="off" class="layui-input w200" name="width" id="width" value="{$product.product_width}" disabled>
                 </div>
             </div>
             <div class="layui-inline layui-col-md3">
                 <label class="layui-form-label">包装高(cm)<span class="red">*</span></label>
                 <div class="layui-input-inline">
-                    <input type="text" autocomplete="off" class="layui-input w300" name="height" id="height" value="{$product.product_height}" disabled>
+                    <input type="text" autocomplete="off" class="layui-input w200" name="height" id="height" value="{$product.product_height}" disabled>
                 </div>
             </div>
             <div class="layui-inline layui-col-md3">
                 <label class="layui-form-label">毛重(kg)<span class="red">*</span></label>
                 <div class="layui-input-inline">
-                    <input type="text" autocomplete="off" class="layui-input w300" name="gross_weight" value="{$product.gross_weight}" disabled>
+                    <input type="text" autocomplete="off" class="layui-input w200" name="gross_weight" value="{$product.gross_weight}" disabled>
                 </div>
             </div>
             <div class="red layui-text" id="red-warn" style="line-height:36px"></div>
@@ -49,25 +55,25 @@
             <div class="layui-inline layui-col-md3">
                 <label class="layui-form-label">含税出厂价(¥)<span class="red">*</span></label>
                 <div class="layui-input-inline">
-                    <input type="text" autocomplete="off" class="layui-input w300" name="cost" value="{$info.cost}" disabled>
+                    <input type="text" autocomplete="off" class="layui-input w200" name="cost" value="{$info.cost}">
                 </div>
             </div>
             <div class="layui-inline layui-col-md3">
                 <label class="layui-form-label">FOB价($)<span class="red">*</span></label>
                 <div class="layui-input-inline">
-                    <input type="text" autocomplete="off" class="layui-input w300" name="fob" value="{$info.fob}" disabled>
+                    <input type="text" autocomplete="off" class="layui-input w200" name="fob" value="{$info.fob}">
                 </div>
             </div>
             <div class="layui-inline layui-col-md3">
                 <label class="layui-form-label">最低市场售价($)<span class="red">*</span></label>
                 <div class="layui-input-inline">
-                    <input type="text" autocomplete="off" class="layui-input w300" name="min_price" value="{$accounting.product.min_price}">
+                    <input type="text" autocomplete="off" class="layui-input w200" name="min_price" value="{$accounting.product.min_price}">
                 </div>
             </div>
             <div class="layui-inline layui-col-md3">
                 <label class="layui-form-label">目标定价($)<span class="red">*</span></label>
                 <div class="layui-input-inline">
-                    <input type="text" autocomplete="off" class="layui-input w300" name="target_pricing" value="{$accounting.product.target_pricing}">
+                    <input type="text" autocomplete="off" class="layui-input w200" name="target_pricing" value="{$accounting.product.target_pricing}">
                 </div>
             </div>
         </div>
@@ -75,25 +81,25 @@
             <div class="layui-inline layui-col-md3">
                 <label class="layui-form-label">头程价格标准(元/CBM)</label>
                 <div class="layui-input-inline">
-                    <input type="text" autocomplete="off" class="layui-input w300" name="flp_standard" value="{:input('flp_standard', $config['flp_standard'])}">
+                    <input type="text" autocomplete="off" class="layui-input w200" name="flp_standard" value="{:input('flp_standard', $config['flp_standard'])}">
                 </div>
             </div>
             <div class="layui-inline layui-col-md3">
                 <label class="layui-form-label">关税率</label>
                 <div class="layui-input-inline">
-                    <input type="text" autocomplete="off" class="layui-input w300" name="tariff_rate" value="{:input('tariff_rate', $config['tariff_rate'])}">
+                    <input type="text" autocomplete="off" class="layui-input w200" name="tariff_rate" value="{:input('tariff_rate', $config['tariff_rate'])}">
                 </div>
             </div>
             <div class="layui-inline layui-col-md3">
                 <label class="layui-form-label">汇率</label>
                 <div class="layui-input-inline">
-                    <input type="text" autocomplete="off" class="layui-input w300" name="exchange_rate" value="{:input('exchange_rate', $config['exchange_rate'])}">
+                    <input type="text" autocomplete="off" class="layui-input w200" name="exchange_rate" value="{:input('exchange_rate', $config['exchange_rate'])}">
                 </div>
             </div>
             <div class="layui-inline layui-col-md3">
                 <label class="layui-form-label">派送方式</label>
                 <div class="layui-input-inline">
-                    <input type="text" autocomplete="off" class="layui-input w300" name="delivery" value="{:input('delivery', $config['delivery'])}">
+                    <input type="text" autocomplete="off" class="layui-input w200" name="delivery" value="{:input('delivery', $config['delivery'])}">
                 </div>
             </div>
         </div>
@@ -101,26 +107,40 @@
             <div class="layui-inline layui-col-md3">
                 <label class="layui-form-label">广告费占比</label>
                 <div class="layui-input-inline">
-                    <input type="text" autocomplete="off" class="layui-input w300" name="ad_rate" value="{:input('ad_rate', $config['ad_rate'])}">
+                    <input type="text" autocomplete="off" class="layui-input w200" name="ad_rate" value="{:input('ad_rate', $config['ad_rate'])}">
                 </div>
             </div>
             <div class="layui-inline layui-col-md3">
                 <label class="layui-form-label">退货率</label>
                 <div class="layui-input-inline">
-                    <input type="text" autocomplete="off" class="layui-input w300" name="return_rate" value="{:input('return_rate', $config['return_rate'])}">
+                    <input type="text" autocomplete="off" class="layui-input w200" name="return_rate" value="{:input('return_rate', $config['return_rate'])}">
                 </div>
             </div>
             <div class="layui-inline layui-col-md3">
                 <label class="layui-form-label">平台费占比</label>
                 <div class="layui-input-inline">
-                    <input type="text" autocomplete="off" class="layui-input w300" name="platform_rate" value="{:input('platform_rate', $config['platform_rate'])}">
+                    <input type="text" autocomplete="off" class="layui-input w200" name="platform_rate" value="{:input('platform_rate', $config['platform_rate'])}">
                 </div>
             </div>
+        </div>
+        <div class="layui-form-item">
+            <div class="layui-inline layui-col-md3">
+                <label class="layui-form-label">产品图片</label>
+                <div class="layui-input-inline">
+                    <img src="/{$info.img_url}" width="200">
+                </div>
+            </div>
+            <div class="layui-inline layui-col-md3">
+                <label class="layui-form-label">产品描述</label>
+                <div class="layui-input-inline">
+                    <textarea class="layui-textarea w200" name="product_desc">{$info.product_desc}</textarea>
+                </div>
+            </div> 
         </div>
         <div class="layui-form-item tr">
             <div class="layui-input-block">
                 <button class="layui-btn layui-btn-normal w100 button" lay-submit lay-filter="formCoding">核价提交</button>
-<!--                <a id="export" href="" class="layui-btn layui-btn-normal w100">导出</a>-->
+                <button class="layui-btn layui-btn-normal w100 button" lay-submit lay-filter="formSave">核价保存</button>
             </div>
         </div>
     </div>
@@ -420,6 +440,7 @@
         </div>
     </div>
 </div>
+{/if}
 <div class="right">
     <div class="title">产品分析&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button class="layui-btn layui-btn-sm btn-lc" lay-submit lay-filter="AttrAdd">+</button></div>
         <div class="layui-form">
@@ -432,7 +453,7 @@
                     </div>
                     <div class="layui-form-item">
                         <label class="layui-form-label">竞品图片</label>
-                        <div class="layui-input-inline w300">
+                        <div class="layui-input-inline w200">
                             <span class="input-group-btn">
                                 <button type="button" data-index="{$k}" class="layui-btn layui-btn-sm upload-0">上传</button>
                                 <ul class="YanNanQiu-upload-list">
@@ -453,7 +474,7 @@
                     </div>
                     <div class="layui-form-item">
                         <label class="layui-form-label">竞品链接</label>
-                        <div class="layui-input-inline w300" style="display: flex">
+                        <div class="layui-input-inline w200" style="display: flex">
                             <input type="text" class="layui-input" name="competitor_url[{$k}]" value="{$item.competitor_url}">
                             {if condition="$item.competitor_url"}
                             <a href="{$item.competitor_url}" target="_blank"><i class="layui-icon iconfont icon-chaolianjie" style="line-height: 38px; font-size: 24px; margin-left: 8px"></i></a>
@@ -469,7 +490,7 @@
                     </div>
                     <div class="layui-form-item">
                         <label class="layui-form-label">竞品图片</label>
-                        <div class="layui-input-inline w300">
+                        <div class="layui-input-inline w200">
                             <span class="input-group-btn">
                                 <button type="button" data-index="0" class="layui-btn layui-btn-sm upload-0">上传</button>
                                 <ul class="YanNanQiu-upload-list">
@@ -479,7 +500,7 @@
                     </div>
                     <div class="layui-form-item">
                         <label class="layui-form-label">竞品链接</label>
-                        <div class="layui-input-inline w300" style="display: flex">
+                        <div class="layui-input-inline w200" style="display: flex">
                             <input type="text" class="layui-input" name="competitor_url[0]" value="">
                         </div>
                     </div>
@@ -505,15 +526,12 @@
                 <div class="layui-input-block">
                     <button class="layui-btn layui-btn-normal w100 button" lay-submit lay-filter="formAnalysis">分析提交</button>
                     {if condition="$info.status eq 2"}
-                    <button class="layui-btn layui-btn-normal" data-id="{$info.id}" lay-submit lay-filter="APPROVED">审核通过</button>
-                    <button class="layui-btn layui-btn-danger" data-id="{$info.id}" lay-submit lay-filter="REJECT">审核驳回</button>
+                    <button class="layui-btn layui-btn-normal w100 button" data-id="{$info.id}" lay-submit lay-filter="Audit">报价审核</button>
                     {/if}
                 </div>
             </div>
         </div>
     </div>
-</div>
-{/if}
 </div>
 <script>
     layui.use(['form', 'jquery', 'upload'], function() {
@@ -553,7 +571,7 @@
                 + '</div>'
                 + '<div class="layui-form-item">'
                 + '<label class="layui-form-label">竞品图片</label>'
-                + '<div class="layui-input-inline w300">'
+                + '<div class="layui-input-inline w200">'
                 + '<span class="input-group-btn">'
                 + '<button type="button" data-index="' + domIndex + '" class="layui-btn layui-btn-sm upload-' + domIndex + '">上传</button>'
                 + '<ul class="YanNanQiu-upload-list">'
@@ -563,7 +581,7 @@
                 + '</div>'
                 + '<div class="layui-form-item">'
                 + '<label class="layui-form-label">竞品链接</label>'
-                + '<div class="layui-input-inline w300" style="display: flex">'
+                + '<div class="layui-input-inline w200" style="display: flex">'
                 + '<input type="text" class="layui-input" name="competitor_url[' + domIndex + ']" value="">'
                 + '</div>'
                 + '</div>'
@@ -658,94 +676,173 @@
             return false;
         });
 
+        // 核价保存
+        form.on('submit(formSave)', function(data){
+            let text = $(this).text(),
+                button = $(this);
+            $('button').attr('disabled',true);
+            button.text('请稍候...');
+            layer.confirm('确认保存吗？',{icon:3,closeBtn:0,title:false,btnAlign:'c'},function(){
+                axios.post("{:url('accounting_save', ['id' => $info['id']])}", data.field, {
+                    headers: {
+                        'Content-Type': 'multipart/form-data'
+                    }
+                })
+                    .then(function (response) {
+                        let res = response.data;
+                        if (res.code === 1) {
+                            layer.alert(res.msg,{icon:1,closeBtn:0,title:false,btnAlign:'c',},function(){
+                                location.reload();
+                            });
+                        } else {
+                            layer.alert(res.msg,{icon:2,closeBtn:0,title:false,btnAlign:'c'},function(){
+                                layer.closeAll();
+                                $('button').attr('disabled',false);
+                                button.text(text);
+                            });
+                        }
+                    })
+                    .catch(function (error) {
+                        console.log(error);
+                    });
+            }, function () {
+                layer.closeAll();
+                $('button').attr('disabled',false);
+                button.text(text);
+            });
+            return false;
+        });
+
         // 分析提交
         form.on('submit(formAnalysis)', function(data){
             let text = $(this).text(),
                 button = $(this);
             $('button').attr('disabled',true);
             button.text('请稍候...');
-            axios.post("{:url('analysis', ['id' => $info['id']])}", data.field, {
-                headers: {
-                    'Content-Type': 'multipart/form-data'
-                }
-            })
-                .then(function (response) {
-                    let res = response.data;
-                    if (res.code === 1) {
-                        layer.alert(res.msg,{icon:1,closeBtn:0,title:false,btnAlign:'c',},function(){
-                            location.reload();
-                        });
-                    } else {
-                        layer.alert(res.msg,{icon:2,closeBtn:0,title:false,btnAlign:'c'},function(){
-                            layer.closeAll();
-                            $('button').attr('disabled',false);
-                            button.text(text);
-                        });
+            layer.confirm('确认提交吗？',{icon:3,closeBtn:0,title:false,btnAlign:'c'},function() {
+                axios.post("{:url('analysis', ['id' => $info['id']])}", data.field, {
+                    headers: {
+                        'Content-Type': 'multipart/form-data'
                     }
                 })
-                .catch(function (error) {
-                    console.log(error);
-                });
+                    .then(function (response) {
+                        let res = response.data;
+                        if (res.code === 1) {
+                            layer.alert(res.msg, {icon: 1, closeBtn: 0, title: false, btnAlign: 'c',}, function () {
+                                location.reload();
+                            });
+                        } else {
+                            layer.alert(res.msg, {icon: 2, closeBtn: 0, title: false, btnAlign: 'c'}, function () {
+                                layer.closeAll();
+                                $('button').attr('disabled', false);
+                                button.text(text);
+                            });
+                        }
+                    })
+                    .catch(function (error) {
+                        console.log(error);
+                    });
+            }, function () {
+                layer.closeAll();
+                $('button').attr('disabled',false);
+                button.text(text);
+            });
             return false;
         });
 
-        // 审核通过
-        form.on('submit(APPROVED)', function(data){
+        // 报价审核
+        form.on('submit(Audit)', function(data){
             let text = $(this).text(),
                 button = $(this),
                 id = $(this).data('id');
-            layer.confirm('确定审核通过吗？',{icon:3,closeBtn:0,title:false,btnAlign:'c'},function(){
-                $('button').attr('disabled',true);
-                button.text('请稍候...');
-                axios.post("{:url('approved')}", {id: id})
-                    .then(function (response) {
-                        let res = response.data;
-                        if (res.code === 1) {
-                            layer.alert(res.msg,{icon:1,closeBtn:0,title:false,btnAlign:'c',},function(){
-                                location.reload();
-                            });
-                        } else {
-                            layer.alert(res.msg,{icon:2,closeBtn:0,title:false,btnAlign:'c'},function(){
-                                layer.closeAll();
-                                $('button').attr('disabled',false);
-                                button.text(text);
-                            });
-                        }
-                    })
-                    .catch(function (error) {
-                        console.log(error);
-                    });
-                return false;
-            });
-        });
-
-        // 审核驳回
-        form.on('submit(REJECT)', function(data){
-            let text = $(this).text(),
-                button = $(this),
-                id = $(this).data('id');
-            layer.confirm('确定驳回吗？',{icon:3,closeBtn:0,title:false,btnAlign:'c'},function(){
-                $('button').attr('disabled',true);
-                button.text('请稍候...');
-                axios.post("{:url('reject')}", {id: id})
-                    .then(function (response) {
-                        let res = response.data;
-                        if (res.code === 1) {
-                            layer.alert(res.msg,{icon:1,closeBtn:0,title:false,btnAlign:'c',},function(){
-                                location.reload();
-                            });
-                        } else {
-                            layer.alert(res.msg,{icon:2,closeBtn:0,title:false,btnAlign:'c'},function(){
-                                layer.closeAll();
-                                $('button').attr('disabled',false);
-                                button.text(text);
-                            });
-                        }
-                    })
-                    .catch(function (error) {
-                        console.log(error);
-                    });
-                return false;
+            $('button').attr('disabled',true);
+            button.text('请稍候...');
+            layer.open({
+                type: 1,  // 页面层
+                title: '报价审核意见',  // 弹出层标题
+                content: '<div style="padding: 20px;">' +
+                    '<input type="text" id="inputValue" class="layui-input" />' +
+                    '</div>',  // 弹出层内容，包含输入框
+                area: ['400px', '200px'],  // 设置弹出层的大小
+                btn: ['审核通过', '审核驳回', '报价失败', '关闭'],  // 三个按钮
+                yes: function(index, layero){
+                    let userInput = $("#inputValue").val();  // 获取输入框的值``
+                    axios.post("{:url('accounting_approve')}", {id: id, content: userInput})
+                        .then(function (response) {
+                            let res = response.data;
+                            if (res.code === 1) {
+                                layer.alert(res.msg,{icon:1,closeBtn:0,title:false,btnAlign:'c',},function(){
+                                    location.reload();
+                                });
+                            } else {
+                                layer.alert(res.msg,{icon:2,closeBtn:0,title:false,btnAlign:'c'},function(){
+                                    layer.closeAll();
+                                    $('button').attr('disabled',false);
+                                    button.text(text);
+                                });
+                            }
+                        })
+                        .catch(function (error) {
+                            console.log(error);
+                        });
+                    return false;
+                },
+                btn2: function(index, layero){
+                    let userInput = $("#inputValue").val();  // 获取输入框的值
+                    axios.post("{:url('accounting_dismiss')}", {id: id, content: userInput})
+                        .then(function (response) {
+                            let res = response.data;
+                            if (res.code === 1) {
+                                layer.alert(res.msg,{icon:1,closeBtn:0,title:false,btnAlign:'c',},function(){
+                                    location.reload();
+                                });
+                            } else {
+                                layer.alert(res.msg,{icon:2,closeBtn:0,title:false,btnAlign:'c'},function(){
+                                    layer.closeAll();
+                                    $('button').attr('disabled',false);
+                                    button.text(text);
+                                });
+                            }
+                        })
+                        .catch(function (error) {
+                            console.log(error);
+                        });
+                    return false;
+                },
+                btn3: function(index, layero){
+                    let userInput = $("#inputValue").val();  // 获取输入框的值
+                    axios.post("{:url('accounting_deny')}", {id: id, content: userInput})
+                        .then(function (response) {
+                            let res = response.data;
+                            if (res.code === 1) {
+                                layer.alert(res.msg,{icon:1,closeBtn:0,title:false,btnAlign:'c',},function(){
+                                    location.reload();
+                                });
+                            } else {
+                                layer.alert(res.msg,{icon:2,closeBtn:0,title:false,btnAlign:'c'},function(){
+                                    layer.closeAll();
+                                    $('button').attr('disabled',false);
+                                    button.text(text);
+                                });
+                            }
+                        })
+                        .catch(function (error) {
+                            console.log(error);
+                        });
+                    return false;
+                },
+                btn4: function(index, layero){
+                    // 取消按钮回调
+                    layer.closeAll();
+                    $('button').attr('disabled',false);
+                    button.text(text);
+                },
+                end: function() {
+                    // 取消按钮回调
+                    layer.closeAll();
+                    $('button').attr('disabled',false);
+                    button.text(text);
+                }
             });
         });
     });

@@ -10,8 +10,13 @@ class QuoteProductModel extends Model
 
     protected $resultSetType = 'collection';
 
-    public function developer()
+    public function developer(): \think\model\relation\HasOne
     {
         return $this->hasOne('AccountModel', 'id', 'develop_id');
+    }
+
+    public function purchaser(): \think\model\relation\HasOne
+    {
+        return $this->hasOne('AccountModel', 'id', 'purchaser_id');
     }
 }

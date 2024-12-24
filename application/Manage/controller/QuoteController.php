@@ -3,6 +3,7 @@ namespace app\Manage\controller;
 
 use app\Manage\model\AccountModel;
 use app\Manage\model\PriceModel;
+use app\Manage\model\QuoteAccountingLogModel;
 use app\Manage\model\QuoteProductModel;
 use app\Manage\model\QuoteTableModel;
 use PHPExcel_IOFactory;
@@ -242,7 +243,7 @@ class QuoteController extends BaseController
 
         // 报价单列表
         $quoteTableObj = new QuoteProductModel();
-        $list = $quoteTableObj->with(['developer'])->where($where)->order('id asc')->paginate(Config::get('PAGE_NUM'));
+        $list = $quoteTableObj->with(['developer', 'purchaser'])->where($where)->order('id asc')->paginate(Config::get('PAGE_NUM'));
         $this->assign('list', $list);
 
         Session::set(Config::get('BACK_URL'), $this->request->url(), 'manage');
@@ -262,6 +263,10 @@ class QuoteController extends BaseController
         $list = $quoteProductObj->where(['table_id' => $info['table_id'], 'product_code' => $info['product_code']])->select();
         if ($this->request->isPost()) {
             $post = $this->request->post();
+            if (!(floatval($post['cost']) xor floatval($post['fob']))) {
+                echo json_encode(['code' => 0, 'msg' => '请填写出厂价或Fob价']);
+                exit();
+            }
             if (empty($post['min_price'])) {
                 echo json_encode(['code' => 0, 'msg' => '请填写最低市场售价']);
                 exit();
@@ -273,7 +278,13 @@ class QuoteController extends BaseController
             $post['product'] = $list->toArray();
             $result = PriceModel::generateProductAccounting($post);
             if ($result) {
-                if ($quoteProductObj->where(['table_id' => $info['table_id'], 'product_code' => $info['product_code']])->update(['accounting' => $result, 'status' => 1])) {
+                $updateData = [
+                    'accounting'    =>  $result,
+                    'status'        =>  1,
+                    'cost'          =>  $post['cost'],
+                    'fob'           =>  $post['fob']
+                ];
+                if ($quoteProductObj->where(['table_id' => $info['table_id'], 'product_code' => $info['product_code']])->update($updateData)) {
                     echo json_encode(['code' => 1, 'msg' => '核算成功']);
                 } else {
                     echo json_encode(['code' => 0, 'msg' => '核算失败，请重试']);
@@ -296,6 +307,77 @@ class QuoteController extends BaseController
 
             return view();
         }
+    }
+
+    /**
+     * @throws DataNotFoundException
+     * @throws ModelNotFoundException
+     * @throws DbException
+     */
+    public function accounting_save($id)
+    {
+        if ($this->request->isPost()) {
+            $quoteProductObj = new QuoteProductModel();
+            $info = $quoteProductObj->find($id);
+            $model = new QuoteAccountingLogModel();
+            $newLog = [
+                'table_id'      =>  $info['table_id'],
+                'product_code'  =>  $info['product_code'],
+                'cost'          =>  $info['cost'],
+                'fob'           =>  $info['fob'],
+                'accounting'    =>  $info['accounting'],
+                'created_time'  =>  date('Y-m-d H:i:s')
+            ];
+
+            if ($model->insert($newLog)) {
+                echo json_encode(['code' => 1, 'msg' => '保存成功']);
+            } else {
+                echo json_encode(['code' => 0, 'msg' => '保存失败，请重试']);
+            }
+        } else {
+            echo json_encode(['code' => 0, 'msg' => '异常操作，请重试']);
+        }
+        exit();
+    }
+
+    /**
+     * @throws DbException
+     * @throws ModelNotFoundException
+     * @throws DataNotFoundException
+     */
+    public function accounting_log($id): \think\response\View
+    {
+        $quoteProductObj = new QuoteProductModel();
+        $info = $quoteProductObj->find($id);
+        $where['table_id'] = $info['table_id'];
+        $where['product_code'] = $info['product_code'];
+
+        // 列表
+        $model = new QuoteAccountingLogModel();
+        $list = $model->where($where)->order('id desc')->select();
+        $this->assign('list', $list);
+
+        return view();
+    }
+
+    /**
+     * @throws DataNotFoundException
+     * @throws ModelNotFoundException
+     * @throws DbException
+     */
+    public function accounting_detail($id): \think\response\View
+    {
+        $model = new QuoteAccountingLogModel();
+        $detail = $model->find($id);
+        $quoteProductObj = new QuoteProductModel();
+        $info = $quoteProductObj->where(['table_id' => $detail['table_id'], 'product_code' => $detail['product_code']])->find();
+        $list = $quoteProductObj->where(['table_id' => $info['table_id'], 'product_code' => $info['product_code']])->select();
+
+        $this->assign('info', $info);
+        $this->assign('accounting', json_decode($info['accounting'], true));
+        $this->assign('list', $list);
+
+        return view();
     }
 
     // 打样
@@ -344,14 +426,22 @@ class QuoteController extends BaseController
     /**
      * @throws DbException
      */
-    public function approved()
+    public function accounting_approve()
     {
         if ($this->request->isPost()) {
             $post = $this->request->post();
             $model = new QuoteProductModel();
             $block = $model->find($post['id']);
-            if ($model->where(['table_id' => $block['table_id'], 'product_code' => $block['product_code']])->setField('status', 3)) {
-                $model->where(['table_id' => $block['table_id'], 'product_code' => $block['product_code']])->setField('audit_date', date('Y-m-d'));
+            $where = [
+                'table_id'      =>  $block['table_id'],
+                'product_code'  =>  $block['product_code']
+            ];
+            $updateData = [
+                'status'        =>  3,
+                'audit_date'    =>  date('Y-m-d'),
+                'audit_content' =>  $post['content']
+            ];
+            if ($model->save($updateData, $where)) {
                 echo json_encode(['code' => 1, 'msg' => '操作成功']);
             } else {
                 echo json_encode(['code' => 0, 'msg' => '操作失败，请重试']);
@@ -365,13 +455,51 @@ class QuoteController extends BaseController
     /**
      * @throws DbException
      */
-    public function reject()
+    public function accounting_dismiss()
     {
         if ($this->request->isPost()) {
             $post = $this->request->post();
             $model = new QuoteProductModel();
             $block = $model->find($post['id']);
-            if ($model->where(['table_id' => $block['table_id'], 'product_code' => $block['product_code']])->setField('status', 7)) {
+            $where = [
+                'table_id'      =>  $block['table_id'],
+                'product_code'  =>  $block['product_code']
+            ];
+            $updateData = [
+                'status'        =>  0,
+                'audit_date'    =>  date('Y-m-d'),
+                'audit_content' =>  $post['content']
+            ];
+            if ($model->save($updateData, $where)) {
+                echo json_encode(['code' => 1, 'msg' => '操作成功']);
+            } else {
+                echo json_encode(['code' => 0, 'msg' => '操作失败，请重试']);
+            }
+        } else {
+            echo json_encode(['code' => 0, 'msg' => '异常操作']);
+        }
+        exit;
+    }
+
+    /**
+     * @throws DbException
+     */
+    public function accounting_deny()
+    {
+        if ($this->request->isPost()) {
+            $post = $this->request->post();
+            $model = new QuoteProductModel();
+            $block = $model->find($post['id']);
+            $where = [
+                'table_id'      =>  $block['table_id'],
+                'product_code'  =>  $block['product_code']
+            ];
+            $updateData = [
+                'status'        =>  11,
+                'audit_date'    =>  date('Y-m-d'),
+                'audit_content' =>  $post['content']
+            ];
+            if ($model->save($updateData, $where)) {
                 echo json_encode(['code' => 1, 'msg' => '操作成功']);
             } else {
                 echo json_encode(['code' => 0, 'msg' => '操作失败，请重试']);
@@ -409,10 +537,8 @@ class QuoteController extends BaseController
             $data['conclusion'] = $post['conclusion'];
             $model = new QuoteProductModel();
             $block = $model->find($id);
-            if ($model->where(['table_id' => $block['table_id'], 'product_code' => $block['product_code']])->update($data, ['id' => $id])) {
-                if ($block['status'] < 2) {
-                    $model->where(['table_id' => $block['table_id'], 'product_code' => $block['product_code']])->setField('status', 2);
-                }
+            $data['status'] = max($block['status'], 2);
+            if ($model->where(['table_id' => $block['table_id'], 'product_code' => $block['product_code']])->update($data)) {
                 echo json_encode(['code' => 1, 'msg' => '操作成功']);
             } else {
                 echo json_encode(['code' => 0, 'msg' => '操作失败，请重试']);
@@ -429,7 +555,7 @@ class QuoteController extends BaseController
     /**
      * @throws DbException
      */
-    public function audit()
+    public function sample_approve()
     {
         if ($this->request->isPost()) {
             $post = $this->request->post();
@@ -458,7 +584,36 @@ class QuoteController extends BaseController
     /**
      * @throws DbException
      */
-    public function refuse()
+    public function sample_dismiss()
+    {
+        if ($this->request->isPost()) {
+            $post = $this->request->post();
+            if (empty($post['suggestion'])) {
+                echo json_encode(['code' => 0, 'msg' => '请填写开发意见']);
+                exit();
+            }
+            $model = new QuoteProductModel();
+            $block = $model->find($post['id']);
+            if ($block['status'] != 5) {
+                echo json_encode(['code' => 0, 'msg' => '状态异常，不可操作']);
+                exit;
+            }
+            if ($model->where(['table_id' => $block['table_id'], 'product_code' => $block['product_code']])->setField('status', 8)) {
+                $model->where(['table_id' => $block['table_id'], 'product_code' => $block['product_code']])->setField('suggestion', $post['suggestion']);
+                echo json_encode(['code' => 1, 'msg' => '操作成功']);
+            } else {
+                echo json_encode(['code' => 0, 'msg' => '操作失败，请重试']);
+            }
+        } else {
+            echo json_encode(['code' => 0, 'msg' => '异常操作']);
+        }
+        exit;
+    }
+
+    /**
+     * @throws DbException
+     */
+    public function sample_deny()
     {
         if ($this->request->isPost()) {
             $post = $this->request->post();

@@ -15,7 +15,9 @@
 <!-- 主体内容 -->
 <div class="layui-body" id="LAY_app_body">
     <div class="right">
+        {if condition="$role neq 'Developer'"}
         <a href="{:url('Quote/table')}" class="layui-btn layui-btn-danger layui-btn-sm fr"><i class="layui-icon">&#xe603;</i>返回上一页</a>
+        {/if}
         <div class="title">报价产品列表</div>
         <form class="layui-form search-form" method="get">
             <div class="layui-inline w200">
@@ -29,10 +31,12 @@
                     <option value="2" {if condition="$status eq 2"}selected{/if}>待审核</option>
                     <option value="3" {if condition="$status eq 3"}selected{/if}>待打样</option>
                     <option value="4" {if condition="$status eq 4"}selected{/if}>打样中</option>
-                    <option value="5" {if condition="$status eq 5"}selected{/if}>打样完成</option>
-                    <option value="6" {if condition="$status eq 6"}selected{/if}>审核通过</option>
-                    <option value="7" {if condition="$status eq 7"}selected{/if}>未过审核</option>
-                    <option value="8" {if condition="$status eq 8"}selected{/if}>样品失败</option>
+                    <option value="5" {if condition="$status eq 5"}selected{/if}>样品待核价</option>
+                    <option value="6" {if condition="$status eq 6"}selected{/if}>样品待分析</option>
+                    <option value="7" {if condition="$status eq 7"}selected{/if}>样品待审核</option>
+                    <option value="8" {if condition="$status eq 8"}selected{/if}>样品通过</option>
+                    <option value="11" {if condition="$status eq 11"}selected{/if}>报价失败</option>
+                    <option value="12" {if condition="$status eq 12"}selected{/if}>样品失败</option>
                 </select>
             </div>
             <div class="layui-inline">
@@ -43,42 +47,33 @@
         <div class="layui-form">
             <table class="layui-table" lay-size="sm">
                 <colgroup>
-                    <col>
-                    <col>
-                    <col>
-                    <col>
-                    <col>
-                    <col>
-                    <col>
-                    <col>
-                    <col>
-                    <col>
-                    <col>
-                    <col>
-                    <col>
-                    <col>
                     <col class="w100">
-                    <col class="w180">
+                    <col>
+                    <col>
+                    <col>
+                    <col>
+                    <col>
+                    <col>
+                    <col>
+                    <col>
+                    <col class="w60">
+                    <col class="w60">
+                    <col class="w100">
+                    <col class="w250">
                 </colgroup>
                 <thead>
                 <tr>
                     <th>产品编号</th>
                     <th>产品图片</th>
-                    <th>外箱长（cm）</th>
-                    <th>外箱宽（cm）</th>
-                    <th>外箱高（cm）</th>
-                    <th>外箱毛重（kg）</th>
-                    <th>产品净重（kg）</th>
+                    <th>包装尺寸</th>
                     <th class="tc">产品描述</th>
-                    <th>含税出厂价（人民币）</th>
-                    <th>FOB价（美金）</th>
+                    <th>含税出厂价（¥）</th>
+                    <th>FOB价（$）</th>
                     <th>推荐市场</th>
                     <th>采购推荐理由</th>
                     <th>采购竞品链接</th>
-                    <th>多箱装</th>
-                    <th>预计打样完成时间</th>
-                    <th>开发建议</th>
-                    <th>开发人员</th>
+                    <th>采购</th>
+                    <th>开发</th>
                     <th class="tc">状态</th>
                     <th class="tc">操作</th>
                 </tr>
@@ -88,20 +83,14 @@
                 <tr>
                     <td>{$v.product_code}</td>
                     <td><a href="/{$v.img_url}" target="_blank"><img src="/{$v.img_url}" alt="" height="40"></a></td>
-                    <td>{$v.product_length}</td>
-                    <td>{$v.product_width}</td>
-                    <td>{$v.product_height}</td>
-                    <td>{$v.gross_weight}</td>
-                    <td>{$v.net_weight}</td>
+                    <td>{$v.product_length}*{$v.product_width}*{$v.product_height}<br>{$v.gross_weight}({$v.net_weight})</td>
                     <td>{$v.product_desc}</td>
                     <td>{$v.cost}</td>
                     <td>{$v.fob}</td>
                     <td>{$v.region}</td>
                     <td>{$v.recommendation_reason}</td>
                     <td class="purchaser_competitor_url">{$v.purchaser_competitor_url|combineUrl2html=###, ','}</td>
-                    <td class="tc">{:$v.is_multiple_boxes == 1 ? '<span class="red">是</span>' : '否'}</td>
-                    <td>{$v.sample_date}</td>
-                    <td>{$v.suggestion}</td>
+                    <td>{$v.purchaser.nickname}</td>
                     <td>{$v.developer.nickname}</td>
                     <td class="tc">
                         {if condition="$v.status eq 0"}
@@ -115,12 +104,16 @@
                         {elseif condition="$v.status eq 4" /}
                         <p class="blue">打样中</p>
                         {elseif condition="$v.status eq 5" /}
-                        <p class="blue">打样完成</p>
+                        <p class="blue">样品待核价</p>
                         {elseif condition="$v.status eq 6" /}
-                        <p class="green">审核通过</p>
+                        <p class="blue">样品待分析</p>
                         {elseif condition="$v.status eq 7" /}
-                        <p class="red">未过审核</p>
+                        <p class="blue">样品待审核</p>
                         {elseif condition="$v.status eq 8" /}
+                        <p class="green">样品通过</p>
+                        {elseif condition="$v.status eq 11" /}
+                        <p class="red">报价失败</p>
+                        {elseif condition="$v.status eq 12" /}
                         <p class="red">样品失败</p>
                         {/if}
                     </td>
@@ -128,12 +121,12 @@
                         {if condition="$role eq 'Super' or $role eq 'Developer'"}
                         <a href="{:url('accounting', ['id' => $v.id])}" class="layui-btn layui-btn layui-btn-sm">查看</a>
                         <a href="{:url('transfer', ['id' => $v.id])}" class="layui-btn layui-btn layui-btn-sm">转交</a>
+                        <a href="{:url('accounting_log', ['id' => $v.id])}" class="layui-btn layui-btn layui-btn-sm">核价记录</a>
                         {if condition="$v.status eq 5"}
                         <button data-id="{$v.id}" class="layui-btn layui-btn-sm layui-btn-normal ml0" lay-submit lay-filter="Audit">审核</button>
                         {/if}
                         {/if}
                         {if condition="$role eq 'Super' or $role eq 'Purchaser'"}
-                        <a href="{:url('edit', ['id' => $v.id])}" class="layui-btn layui-btn-normal layui-btn-sm">编辑</a>
                         <a href="{:url('sample_set', ['id' => $v.id])}" class="layui-btn layui-btn-normal layui-btn-sm">打样</a>
                         <button data-id="{$v.id}" class="layui-btn layui-btn-sm layui-btn-danger ml0" lay-submit lay-filter="Detele">删除</button>
                         {/if}
