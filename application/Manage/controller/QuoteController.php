@@ -318,6 +318,11 @@ class QuoteController extends BaseController
         if ($this->request->isPost()) {
             $quoteProductObj = new QuoteProductModel();
             $info = $quoteProductObj->find($id);
+            if (($type == 1 && empty($info['accounting']))
+                || ($type == 2 && empty($info['prototype_accounting']))) {
+                echo json_encode(['code' => 0, 'msg' => '请先提交核价']);
+                exit();
+            }
             $model = new QuoteAccountingLogModel();
             $newLog = [
                 'table_id'      =>  $info['table_id'],
@@ -725,8 +730,9 @@ class QuoteController extends BaseController
                 'product_code'  =>  $block['product_code']
             ];
             $updateData = [
-                'status'        =>  8,
-                'suggestion'    =>  $post['suggestion']
+                'status'                =>  8,
+                'suggestion'            =>  $post['suggestion'],
+                'prototype_audit_date'  =>  date('Y-m-d')
             ];
             if ($model->save($updateData, $where)) {
                 echo json_encode(['code' => 1, 'msg' => '操作成功']);
@@ -761,8 +767,9 @@ class QuoteController extends BaseController
                 'product_code'  =>  $block['product_code']
             ];
             $updateData = [
-                'status'        =>  3,
-                'suggestion'    =>  $post['suggestion']
+                'status'                =>  3,
+                'suggestion'            =>  $post['suggestion'],
+                'prototype_audit_date'  =>  date('Y-m-d')
             ];
             if ($model->save($updateData, $where)) {
                 echo json_encode(['code' => 1, 'msg' => '操作成功']);
@@ -797,8 +804,9 @@ class QuoteController extends BaseController
                 'product_code'  =>  $block['product_code']
             ];
             $updateData = [
-                'status'        =>  12,
-                'suggestion'    =>  $post['suggestion']
+                'status'                =>  12,
+                'suggestion'            =>  $post['suggestion'],
+                'prototype_audit_date'  =>  date('Y-m-d')
             ];
             if ($model->save($updateData, $where)) {
                 echo json_encode(['code' => 1, 'msg' => '操作成功']);

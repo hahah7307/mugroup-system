@@ -18,7 +18,7 @@
 <div class="layui-body">
 <div class="right">
     <a href="{:session('manage.back_url')}" class="layui-btn layui-btn-danger layui-btn-sm fr"><i class="layui-icon">&#xe603;</i>返回上一页</a>
-    <div class="title">产品核价</div>
+    <div class="title">样品核价</div>
     <div class="layui-form">
         {foreach name="list" item="product"}
         <div class="layui-form-item">
@@ -145,8 +145,8 @@
         </div>
         <div class="layui-form-item tr">
             <div class="layui-input-block">
-                <button class="layui-btn layui-btn-normal w100 button" lay-submit lay-filter="formCoding">核价提交</button>
-                <button class="layui-btn layui-btn-normal w100 button" lay-submit lay-filter="formSave">核价保存</button>
+                <button class="layui-btn layui-btn-normal w100 button" lay-submit lay-filter="formCoding">提交</button>
+                <button class="layui-btn layui-btn-normal w100 button" lay-submit lay-filter="formSave">保存</button>
             </div>
         </div>
     </div>
@@ -530,9 +530,9 @@
             </div>
             <div class="layui-form-item tr">
                 <div class="layui-input-block">
-                    <button class="layui-btn layui-btn-normal w100 button" lay-submit lay-filter="formAnalysis">分析提交</button>
+                    <button class="layui-btn layui-btn-normal w100 button" lay-submit lay-filter="formAnalysis">提交</button>
                     {if condition="$info.status eq 7"}
-                    <button class="layui-btn layui-btn-normal w100 button" data-id="{$info.id}" lay-submit lay-filter="Audit">样品审核</button>
+                    <button class="layui-btn layui-btn-normal w100 button" data-id="{$info.id}" lay-submit lay-filter="Audit">审核</button>
                     {/if}
                 </div>
             </div>

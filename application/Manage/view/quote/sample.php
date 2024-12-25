@@ -18,7 +18,7 @@
         {if condition="$role neq 'Developer'"}
         <a href="{:url('Quote/table')}" class="layui-btn layui-btn-danger layui-btn-sm fr"><i class="layui-icon">&#xe603;</i>返回上一页</a>
         {/if}
-        <div class="title">报价产品列表</div>
+        <div class="title">报价列表</div>
         <form class="layui-form search-form" method="get">
             <div class="layui-inline w200">
                 <input type="text" class="layui-input" name="keyword" value="{$keyword}" placeholder="">
