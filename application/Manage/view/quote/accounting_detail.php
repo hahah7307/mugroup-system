@@ -20,23 +20,27 @@
 <div class="layui-body">
 <div class="right">
     <div class="layui-form">
-        {foreach name="list" item="product"}
+        {foreach name="$accounting.product.width" key="k" item="v"}
         <div class="layui-form-item">
-            <div class="layui-inline layui-col-md3">
-                <label class="layui-form-label">包装长(cm)<span class="red">*</span></label>
-                <div class="layui-text-inline">{$product.product_length}</div>
+            <div class="layui-inline layui-col-md2">
+                <label class="layui-form-label w80">包装长(cm)<span class="red">*</span></label>
+                <div class="layui-text-inline w150">{:$accounting['product']['length'][$k]}</div>
             </div>
-            <div class="layui-inline layui-col-md3">
-                <label class="layui-form-label">包装宽(cm)<span class="red">*</span></label>
-                <div class="layui-text-inline">{$product.product_width}</div>
+            <div class="layui-inline layui-col-md2">
+                <label class="layui-form-label w80">包装宽(cm)<span class="red">*</span></label>
+                <div class="layui-text-inline w150">{:$accounting['product']['height'][$k]}</div>
             </div>
-            <div class="layui-inline layui-col-md3">
-                <label class="layui-form-label">包装高(cm)<span class="red">*</span></label>
-                <div class="layui-text-inline">{$product.product_height}</div>
+            <div class="layui-inline layui-col-md2">
+                <label class="layui-form-label w80">包装高(cm)<span class="red">*</span></label>
+                <div class="layui-text-inline w150">{:$accounting['product']['width'][$k]}</div>
             </div>
-            <div class="layui-inline layui-col-md3">
-                <label class="layui-form-label">毛重(kg)<span class="red">*</span></label>
-                <div class="layui-text-inline">{$product.gross_weight}</div>
+            <div class="layui-inline layui-col-md2">
+                <label class="layui-form-label w80">毛重(kg)<span class="red">*</span></label>
+                <div class="layui-text-inline w150">{:$accounting['product']['gross_weight'][$k]}</div>
+            </div>
+            <div class="layui-inline layui-col-md2">
+                <label class="layui-form-label w80">净重(kg)<span class="red">*</span></label>
+                <div class="layui-text-inline w150">{:$accounting['product']['net_weight'][$k]}</div>
             </div>
             <div class="red layui-text" id="red-warn" style="line-height:36px"></div>
             <input type="hidden" name="product_id[]" value="{$product.id}">
@@ -46,11 +50,11 @@
         <div class="layui-form-item">
             <div class="layui-inline layui-col-md3">
                 <label class="layui-form-label">含税出厂价(¥)<span class="red">*</span></label>
-                <div class="layui-text-inline">{$info.cost}</div>
+                <div class="layui-text-inline">{$accounting.product.cost}</div>
             </div>
             <div class="layui-inline layui-col-md3">
                 <label class="layui-form-label">FOB价($)<span class="red">*</span></label>
-                <div class="layui-text-inline">{$info.fob}</div>
+                <div class="layui-text-inline">{$accounting.product.fob}</div>
             </div>
             <div class="layui-inline layui-col-md3">
                 <label class="layui-form-label">最低市场售价($)<span class="red">*</span></label>
@@ -96,13 +100,12 @@
         <div class="layui-form-item">
             <div class="layui-inline layui-col-md3">
                 <label class="layui-form-label">产品描述</label>
-                <div class="layui-text-inline">{$info.product_desc}</div>
+                <div class="layui-text-inline">{$accounting.product.product_desc}</div>
             </div> 
         </div>
     </div>
 </div>
 
-{if condition="$info.accounting"}
 <div class="right">
     <div class="title"><b class="black">一号仓</b></div>
     <div class="layui-row">
@@ -396,7 +399,6 @@
         </div>
     </div>
 </div>
-{/if}
 </div>
 <script>
     layui.use(['form', 'jquery', 'upload'], function() {

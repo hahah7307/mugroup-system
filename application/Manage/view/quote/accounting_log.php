@@ -14,6 +14,8 @@
                     <col>
                     <col>
                     <col>
+                    <col class="w80">
+                    <col class="w60">
                     <col class="w180">
                     <col class="w100">
                 </colgroup>
@@ -23,6 +25,8 @@
                     <th>产品编号</th>
                     <th>采购价格（¥）</th>
                     <th>Fob价（$）</th>
+                    <th>类型</th>
+                    <th>创建人</th>
                     <th>创建时间</th>
                     <th class="tc">操作</th>
                 </tr>
@@ -34,6 +38,8 @@
                     <td>{$v.product_code}</td>
                     <td class="tr">{$v.cost}</td>
                     <td class="tr">{$v.fob}</td>
+                    <td>{:$v['type'] == 1 ? '报价核价' : '样品核价'}</td>
+                    <td>{$v.user.nickname}</td>
                     <td>{$v.created_time}</td>
                     <td class="tc">
                         <button data-url="{:url('Quote/accounting_detail', ['id' => $v['id']])}" class="layui-btn layui-btn-sm" lay-submit lay-filter="Detail">核价详情</button>

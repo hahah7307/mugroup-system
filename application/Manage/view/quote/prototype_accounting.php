@@ -25,31 +25,31 @@
             <div class="layui-inline layui-col-md2">
                 <label class="layui-form-label">包装长(cm)<span class="red">*</span></label>
                 <div class="layui-input-inline w80">
-                    <input type="text" autocomplete="off" class="layui-input w150" name="length[]" id="length" value="{$product.product_length}" disabled>
+                    <input type="text" autocomplete="off" class="layui-input w150" name="length[]" id="length" value="{:$product.prototype_product_length ?? $product.product_length}">
                 </div>
             </div>
             <div class="layui-inline layui-col-md2">
                 <label class="layui-form-label">包装宽(cm)<span class="red">*</span></label>
                 <div class="layui-input-inline w80">
-                    <input type="text" autocomplete="off" class="layui-input w150" name="width[]" id="width" value="{$product.product_width}" disabled>
+                    <input type="text" autocomplete="off" class="layui-input w150" name="width[]" id="width" value="{:$product.prototype_product_width ?? $product.product_width}">
                 </div>
             </div>
             <div class="layui-inline layui-col-md2">
                 <label class="layui-form-label">包装高(cm)<span class="red">*</span></label>
                 <div class="layui-input-inline w80">
-                    <input type="text" autocomplete="off" class="layui-input w150" name="height[]" id="height" value="{$product.product_height}" disabled>
+                    <input type="text" autocomplete="off" class="layui-input w150" name="height[]" id="height" value="{:$product.prototype_product_height ?? $product.product_height}">
                 </div>
             </div>
             <div class="layui-inline layui-col-md2">
                 <label class="layui-form-label">毛重(kg)<span class="red">*</span></label>
                 <div class="layui-input-inline w80">
-                    <input type="text" autocomplete="off" class="layui-input w150" name="gross_weight[]" value="{$product.gross_weight}" disabled>
+                    <input type="text" autocomplete="off" class="layui-input w150" name="gross_weight[]" value="{:$product.prototype_gross_weight ?? $product.gross_weight}">
                 </div>
             </div>
             <div class="layui-inline layui-col-md2">
                 <label class="layui-form-label">净重(kg)<span class="red">*</span></label>
                 <div class="layui-input-inline w80">
-                    <input type="text" autocomplete="off" class="layui-input w150" name="net_weight[]" value="{$product.net_weight}" disabled>
+                    <input type="text" autocomplete="off" class="layui-input w150" name="net_weight[]" value="{:$product.prototype_net_weight ?? $product.net_weight}">
                 </div>
             </div>
             <div class="red layui-text" id="red-warn" style="line-height:36px"></div>
@@ -61,13 +61,13 @@
             <div class="layui-inline layui-col-md3">
                 <label class="layui-form-label">含税出厂价(¥)<span class="red">*</span></label>
                 <div class="layui-input-inline">
-                    <input type="text" autocomplete="off" class="layui-input w200" name="cost" value="{$info.cost}">
+                    <input type="text" autocomplete="off" class="layui-input w200" name="cost" value="{:$info.prototype_cost ?? $info.cost}">
                 </div>
             </div>
             <div class="layui-inline layui-col-md3">
                 <label class="layui-form-label">FOB价($)<span class="red">*</span></label>
                 <div class="layui-input-inline">
-                    <input type="text" autocomplete="off" class="layui-input w200" name="fob" value="{$info.fob}">
+                    <input type="text" autocomplete="off" class="layui-input w200" name="fob" value="{:$info.prototype_fob ?? $info.fob}">
                 </div>
             </div>
             <div class="layui-inline layui-col-md3">
@@ -87,25 +87,25 @@
             <div class="layui-inline layui-col-md3">
                 <label class="layui-form-label">头程价格标准(元/CBM)</label>
                 <div class="layui-input-inline">
-                    <input type="text" autocomplete="off" class="layui-input w200" name="flp_standard" value="{:input('flp_standard', $config['flp_standard'])}">
+                    <input type="text" autocomplete="off" class="layui-input w200" name="flp_standard" value="{$accounting.product.flp_standard}">
                 </div>
             </div>
             <div class="layui-inline layui-col-md3">
                 <label class="layui-form-label">关税率</label>
                 <div class="layui-input-inline">
-                    <input type="text" autocomplete="off" class="layui-input w200" name="tariff_rate" value="{:input('tariff_rate', $config['tariff_rate'])}">
+                    <input type="text" autocomplete="off" class="layui-input w200" name="tariff_rate" value="{$accounting.product.tariff_rate}">
                 </div>
             </div>
             <div class="layui-inline layui-col-md3">
                 <label class="layui-form-label">汇率</label>
                 <div class="layui-input-inline">
-                    <input type="text" autocomplete="off" class="layui-input w200" name="exchange_rate" value="{:input('exchange_rate', $config['exchange_rate'])}">
+                    <input type="text" autocomplete="off" class="layui-input w200" name="exchange_rate" value="{$accounting.product.exchange_rate}">
                 </div>
             </div>
             <div class="layui-inline layui-col-md3">
                 <label class="layui-form-label">派送方式</label>
                 <div class="layui-input-inline">
-                    <input type="text" autocomplete="off" class="layui-input w200" name="delivery" value="{:input('delivery', $config['delivery'])}">
+                    <input type="text" autocomplete="off" class="layui-input w200" name="delivery" value="{$accounting.product.delivery}">
                 </div>
             </div>
         </div>
@@ -113,19 +113,19 @@
             <div class="layui-inline layui-col-md3">
                 <label class="layui-form-label">广告费占比</label>
                 <div class="layui-input-inline">
-                    <input type="text" autocomplete="off" class="layui-input w200" name="ad_rate" value="{:input('ad_rate', $config['ad_rate'])}">
+                    <input type="text" autocomplete="off" class="layui-input w200" name="ad_rate" value="{$accounting.product.ad_rate}">
                 </div>
             </div>
             <div class="layui-inline layui-col-md3">
                 <label class="layui-form-label">退货率</label>
                 <div class="layui-input-inline">
-                    <input type="text" autocomplete="off" class="layui-input w200" name="return_rate" value="{:input('return_rate', $config['return_rate'])}">
+                    <input type="text" autocomplete="off" class="layui-input w200" name="return_rate" value="{$accounting.product.return_rate}">
                 </div>
             </div>
             <div class="layui-inline layui-col-md3">
                 <label class="layui-form-label">平台费占比</label>
                 <div class="layui-input-inline">
-                    <input type="text" autocomplete="off" class="layui-input w200" name="platform_rate" value="{:input('platform_rate', $config['platform_rate'])}">
+                    <input type="text" autocomplete="off" class="layui-input w200" name="platform_rate" value="{$accounting.product.platform_rate}">
                 </div>
             </div>
         </div>
@@ -139,7 +139,7 @@
             <div class="layui-inline layui-col-md3">
                 <label class="layui-form-label">产品描述</label>
                 <div class="layui-input-inline">
-                    <textarea class="layui-textarea w200" name="product_desc">{$info.product_desc}</textarea>
+                    <textarea class="layui-textarea w200" name="product_desc" disabled>{$info.product_desc}</textarea>
                 </div>
             </div> 
         </div>
@@ -152,7 +152,7 @@
     </div>
 </div>
 
-{if condition="$info.accounting"}
+{if condition="$info.prototype_accounting"}
 <div class="right">
     <div class="title"><b class="black">一号仓</b></div>
     <div class="layui-row">
@@ -448,11 +448,11 @@
 </div>
 {/if}
 <div class="right">
-    <div class="title">产品分析&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button class="layui-btn layui-btn-sm btn-lc" lay-submit lay-filter="AttrAdd">+</button></div>
+    <div class="title">样品分析&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button class="layui-btn layui-btn-sm btn-lc" lay-submit lay-filter="AttrAdd">+</button></div>
         <div class="layui-form">
             <div class="layui-competitor" style="display: flex;flex-wrap: wrap;">
-                {if condition="$competitor neq null"}
-                {foreach name="competitor" key="k" item="item"}
+                {if condition="$prototype_competitor neq null"}
+                {foreach name="prototype_competitor" key="k" item="item"}
                 <div class="competitor-item">
                     <div class="layui-form-item fr">
                         <button class="layui-btn layui-btn-danger layui-btn-sm btn-lc" lay-submit lay-filter="attrDel">×</button>
@@ -516,23 +516,23 @@
             <div class="layui-form-item">
                 <label class="layui-form-label">竞品集合链接</label>
                 <div class="layui-input-inline w800" style="display: flex">
-                    <input type="text" class="layui-input" name="competitor_addr" value="{$info.competitor_addr}">
-                    {if condition="$info.competitor_addr"}
-                    <a href="{$info.competitor_addr}" target="_blank"><i class="layui-icon iconfont icon-chaolianjie" style="line-height: 38px; font-size: 24px; margin-left: 8px"></i></a>
+                    <input type="text" class="layui-input" name="prototype_competitor_addr" value="{$info.prototype_competitor_addr}">
+                    {if condition="$info.prototype_competitor_addr"}
+                    <a href="{$info.prototype_competitor_addr}" target="_blank"><i class="layui-icon iconfont icon-chaolianjie" style="line-height: 38px; font-size: 24px; margin-left: 8px"></i></a>
                     {/if}
                 </div>
             </div>
             <div class="layui-form-item">
                 <label class="layui-form-label">结论</label>
                 <div class="layui-input-inline w800">
-                    <textarea name="conclusion" class="layui-textarea">{$info.conclusion}</textarea>
+                    <textarea name="prototype_conclusion" class="layui-textarea">{$info.prototype_conclusion}</textarea>
                 </div>
             </div>
             <div class="layui-form-item tr">
                 <div class="layui-input-block">
                     <button class="layui-btn layui-btn-normal w100 button" lay-submit lay-filter="formAnalysis">分析提交</button>
-                    {if condition="$info.status eq 2"}
-                    <button class="layui-btn layui-btn-normal w100 button" data-id="{$info.id}" lay-submit lay-filter="Audit">报价审核</button>
+                    {if condition="$info.status eq 7"}
+                    <button class="layui-btn layui-btn-normal w100 button" data-id="{$info.id}" lay-submit lay-filter="Audit">样品审核</button>
                     {/if}
                 </div>
             </div>
@@ -652,7 +652,7 @@
             $('button').attr('disabled',true);
             button.text('请稍候...');
             layer.confirm('确认核价吗？',{icon:3,closeBtn:0,title:false,btnAlign:'c'},function(){
-                axios.post("{:url('accounting', ['id' => $info['id']])}", data.field, {
+                axios.post("{:url('prototype_accounting', ['id' => $info['id']])}", data.field, {
                     headers: {
                         'Content-Type': 'multipart/form-data'
                     }
@@ -689,7 +689,7 @@
             $('button').attr('disabled',true);
             button.text('请稍候...');
             layer.confirm('确认保存吗？',{icon:3,closeBtn:0,title:false,btnAlign:'c'},function(){
-                axios.post("{:url('accounting_save', ['id' => $info['id'], 'type' => 1])}", data.field, {
+                axios.post("{:url('accounting_save', ['id' => $info['id'], 'type' => 2])}", data.field, {
                     headers: {
                         'Content-Type': 'multipart/form-data'
                     }
@@ -726,7 +726,7 @@
             $('button').attr('disabled',true);
             button.text('请稍候...');
             layer.confirm('确认提交吗？',{icon:3,closeBtn:0,title:false,btnAlign:'c'},function() {
-                axios.post("{:url('analysis', ['id' => $info['id']])}", data.field, {
+                axios.post("{:url('prototype_analysis', ['id' => $info['id']])}", data.field, {
                     headers: {
                         'Content-Type': 'multipart/form-data'
                     }
@@ -773,7 +773,7 @@
                 btn: ['审核通过', '审核驳回', '报价失败', '关闭'],  // 三个按钮
                 yes: function(index, layero){
                     let userInput = $("#inputValue").val();  // 获取输入框的值``
-                    axios.post("{:url('accounting_approve')}", {id: id, content: userInput})
+                    axios.post("{:url('sample_approve')}", {id: id, suggestion: userInput})
                         .then(function (response) {
                             let res = response.data;
                             if (res.code === 1) {
@@ -795,7 +795,7 @@
                 },
                 btn2: function(index, layero){
                     let userInput = $("#inputValue").val();  // 获取输入框的值
-                    axios.post("{:url('accounting_dismiss')}", {id: id, content: userInput})
+                    axios.post("{:url('sample_dismiss')}", {id: id, suggestion: userInput})
                         .then(function (response) {
                             let res = response.data;
                             if (res.code === 1) {
@@ -817,7 +817,7 @@
                 },
                 btn3: function(index, layero){
                     let userInput = $("#inputValue").val();  // 获取输入框的值
-                    axios.post("{:url('accounting_deny')}", {id: id, content: userInput})
+                    axios.post("{:url('sample_deny')}", {id: id, suggestion: userInput})
                         .then(function (response) {
                             let res = response.data;
                             if (res.code === 1) {

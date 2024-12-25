@@ -20,9 +20,14 @@
                     </a>
                     <dl class="layui-nav-child">
                         {if condition="$role eq 'Purchaser' or $user.super"}
-                        <dd><a layui-href="{:url('Quote/table')}">报价管理</a></dd>
+                        <dd><a layui-href="{:url('Quote/table')}">报价单</a></dd>
                         {/if}
-                        <dd><a layui-href="{:url('Quote/sample')}">报价产品</a></dd>
+                        {if condition="$role eq 'Developer' or $user.super"}
+                        <dd><a layui-href="{:url('Quote/sample')}">报价管理</a></dd>
+                        {/if}
+                        {if condition="$role eq 'Developer' or $role eq 'Purchaser' or $user.super"}
+                        <dd><a layui-href="{:url('Quote/prototype')}">打样管理</a></dd>
+                        {/if}
                         {if condition="$role eq 'Developer' or $user.super"}
                         <dd><a layui-href="{:url('Price/index')}">核价模板</a></dd>
                         <dd><a layui-href="{:url('Param/price')}">参数配置</a></dd>

@@ -59,7 +59,7 @@
                     <col class="w60">
                     <col class="w60">
                     <col class="w100">
-                    <col class="w200">
+                    <col class="w150">
                 </colgroup>
                 <thead>
                 <tr>
@@ -119,9 +119,11 @@
                     </td>
                     <td class="tc">
                         {if condition="$role eq 'Super' or $role eq 'Developer'"}
-                        <a href="{:url('accounting', ['id' => $v.id])}" class="layui-btn layui-btn layui-btn-sm">查看</a>
-                        <a href="{:url('transfer', ['id' => $v.id])}" class="layui-btn layui-btn layui-btn-sm">转交</a>
+                        <a href="{:url('prototype_accounting', ['id' => $v.id])}" class="layui-btn layui-btn layui-btn-sm">查看</a>
                         <a href="{:url('accounting_log', ['id' => $v.id])}" class="layui-btn layui-btn layui-btn-sm">核价记录</a>
+                        {/if}
+                        {if condition="$role eq 'Super' or $role eq 'Purchaser'"}
+                        <a href="{:url('sample_set', ['id' => $v.id])}" class="layui-btn layui-btn-normal layui-btn-sm">打样</a>
                         {/if}
                     </td>
                 </tr>
