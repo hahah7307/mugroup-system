@@ -81,9 +81,9 @@ class PriceModel extends Model
         }
 
         // fob
-        if ($data['cost']) {
+        if (floatval($data['cost'])) {
             $fob = round($data['cost'] / $data['exchange_rate'], 2);
-        } elseif ($data['fob']) {
+        } elseif (floatval($data['fob'])) {
             $fob = round($data['fob'], 2);
         } else {
             $fob = round($data['fob'], 2);

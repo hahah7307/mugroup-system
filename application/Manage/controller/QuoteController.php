@@ -324,15 +324,18 @@ class QuoteController extends BaseController
                 exit();
             }
             $model = new QuoteAccountingLogModel();
+            $accounting = json_decode($info['accounting'], true);
+            $prototype_accounting = json_decode($info['prototype_accounting'], true);
             $newLog = [
-                'table_id'      =>  $info['table_id'],
-                'product_code'  =>  $info['product_code'],
-                'cost'          =>  $type == 1 ? $info['cost'] : $info['prototype_cost'],
-                'fob'           =>  $type == 1 ? $info['fob'] : $info['prototype_fob'],
-                'accounting'    =>  $type == 1 ? $info['accounting'] : $info['prototype_accounting'],
-                'type'          =>  $type,
-                'user_id'       =>  Session::get(Config::get('USER_LOGIN_FLAG')),
-                'created_time'  =>  date('Y-m-d H:i:s')
+                'table_id'          =>  $info['table_id'],
+                'product_code'      =>  $info['product_code'],
+                'cost'              =>  $type == 1 ? $info['cost'] : $info['prototype_cost'],
+                'fob'               =>  $type == 1 ? $info['fob'] : $info['prototype_fob'],
+                'accounting'        =>  $type == 1 ? $info['accounting'] : $info['prototype_accounting'],
+                'target_pricing'    =>  $type == 1 ? $accounting['product']['target_pricing'] : $prototype_accounting['product']['target_pricing'],
+                'type'              =>  $type,
+                'user_id'           =>  Session::get(Config::get('USER_LOGIN_FLAG')),
+                'created_time'      =>  date('Y-m-d H:i:s')
             ];
 
             if ($model->insert($newLog)) {

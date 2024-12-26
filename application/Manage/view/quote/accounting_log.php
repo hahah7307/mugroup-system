@@ -14,6 +14,7 @@
                     <col>
                     <col>
                     <col>
+                    <col>
                     <col class="w80">
                     <col class="w60">
                     <col class="w180">
@@ -25,6 +26,7 @@
                     <th>产品编号</th>
                     <th>采购价格（¥）</th>
                     <th>Fob价（$）</th>
+                    <th>目标定价（$）</th>
                     <th>类型</th>
                     <th>创建人</th>
                     <th>创建时间</th>
@@ -38,6 +40,7 @@
                     <td>{$v.product_code}</td>
                     <td class="tr">{$v.cost}</td>
                     <td class="tr">{$v.fob}</td>
+                    <td class="tr">{$v.target_pricing}</td>
                     <td>{:$v['type'] == 1 ? '报价核价' : '样品核价'}</td>
                     <td>{$v.user.nickname}</td>
                     <td>{$v.created_time}</td>

@@ -87,25 +87,25 @@
             <div class="layui-inline layui-col-md3">
                 <label class="layui-form-label">头程价格标准(元/CBM)</label>
                 <div class="layui-input-inline">
-                    <input type="text" autocomplete="off" class="layui-input w200" name="flp_standard" value="{:input('flp_standard', $config['flp_standard'])}">
+                    <input type="text" autocomplete="off" class="layui-input w200" name="flp_standard" value="{:$accounting.product.flp_standard ?? $config['flp_standard']}">
                 </div>
             </div>
             <div class="layui-inline layui-col-md3">
                 <label class="layui-form-label">关税率</label>
                 <div class="layui-input-inline">
-                    <input type="text" autocomplete="off" class="layui-input w200" name="tariff_rate" value="{:input('tariff_rate', $config['tariff_rate'])}">
+                    <input type="text" autocomplete="off" class="layui-input w200" name="tariff_rate" value="{:$accounting.product.tariff_rate ?? $config['tariff_rate']}">
                 </div>
             </div>
             <div class="layui-inline layui-col-md3">
                 <label class="layui-form-label">汇率</label>
                 <div class="layui-input-inline">
-                    <input type="text" autocomplete="off" class="layui-input w200" name="exchange_rate" value="{:input('exchange_rate', $config['exchange_rate'])}">
+                    <input type="text" autocomplete="off" class="layui-input w200" name="exchange_rate" value="{:$accounting.product.exchange_rate ?? $config['exchange_rate']}">
                 </div>
             </div>
             <div class="layui-inline layui-col-md3">
                 <label class="layui-form-label">派送方式</label>
                 <div class="layui-input-inline">
-                    <input type="text" autocomplete="off" class="layui-input w200" name="delivery" value="{:input('delivery', $config['delivery'])}">
+                    <input type="text" autocomplete="off" class="layui-input w200" name="delivery" value="{:$accounting.product.delivery ?? $config['delivery']}">
                 </div>
             </div>
         </div>
@@ -113,19 +113,19 @@
             <div class="layui-inline layui-col-md3">
                 <label class="layui-form-label">广告费占比</label>
                 <div class="layui-input-inline">
-                    <input type="text" autocomplete="off" class="layui-input w200" name="ad_rate" value="{:input('ad_rate', $config['ad_rate'])}">
+                    <input type="text" autocomplete="off" class="layui-input w200" name="ad_rate" value="{:$accounting.product.ad_rate ?? $config['ad_rate']}">
                 </div>
             </div>
             <div class="layui-inline layui-col-md3">
                 <label class="layui-form-label">退货率</label>
                 <div class="layui-input-inline">
-                    <input type="text" autocomplete="off" class="layui-input w200" name="return_rate" value="{:input('return_rate', $config['return_rate'])}">
+                    <input type="text" autocomplete="off" class="layui-input w200" name="return_rate" value="{:$accounting.product.return_rate ?? $config['return_rate']}">
                 </div>
             </div>
             <div class="layui-inline layui-col-md3">
                 <label class="layui-form-label">平台费占比</label>
                 <div class="layui-input-inline">
-                    <input type="text" autocomplete="off" class="layui-input w200" name="platform_rate" value="{:input('platform_rate', $config['platform_rate'])}">
+                    <input type="text" autocomplete="off" class="layui-input w200" name="platform_rate" value="{:$accounting.product.platform_rate ?? $config['platform_rate']}">
                 </div>
             </div>
         </div>

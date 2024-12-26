@@ -2,7 +2,7 @@
     'flp_standard'  =>  '700',
     'delivery'  =>  'FBM',
     'tariff_rate'  =>  '0.25',
-    'exchange_rate'  =>  '7',
+    'exchange_rate'  =>  '7.1',
     'ad_rate'  =>  '0.1',
     'return_rate'  =>  '0.05',
     'platform_rate'  =>  '0.15',
