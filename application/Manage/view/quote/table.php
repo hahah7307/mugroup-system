@@ -6,6 +6,14 @@
     <div class="right">
         <a href="{:url('Storage/index')}" class="layui-btn layui-btn-danger layui-btn-sm fr"><i class="layui-icon">&#xe603;</i>返回上一页</a>
         <div class="title">报价表</div>
+        <form class="layui-form search-form" method="get">
+            <div class="layui-inline w200">
+                <input type="text" class="layui-input" name="keyword" value="{$keyword}" placeholder="">
+            </div>
+            <div class="layui-inline">
+                <button class="layui-btn" lay-submit lay-filter="Search"><i class="layui-icon">&#xe615;</i> 查询</button>
+            </div>
+        </form>
 
         <div class="layui-form">
             <button type="button" class="layui-btn  layui-btn-normal" id="excel">导入</button>

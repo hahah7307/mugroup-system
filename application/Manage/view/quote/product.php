@@ -34,9 +34,9 @@
                     <col>
                     <col>
                     <col>
-                    <col>
-                    <col>
-                    <col class="w180">
+                    <col class="w60">
+                    <col class="w100">
+                    <col class="w120">
                 </colgroup>
                 <thead>
                 <tr>
@@ -56,7 +56,7 @@
                     <th>采购推荐理由</th>
                     <th>采购竞品链接</th>
                     <th>多箱装</th>
-                    <th>开发人员</th>
+                    <th>开发</th>
                     <th class="tc">状态</th>
                     <th class="tc">操作</th>
                 </tr>
@@ -103,8 +103,8 @@
                         {/if}
                     </td>
                     <td class="tc">
-                        <a href="{:url('edit', ['id' => $v.id])}" class="layui-btn layui-btn-normal">编辑</a>
-                        <button data-id="{$v.id}" class="layui-btn layui-btn-danger ml0" lay-submit lay-filter="Detele">删除</button>
+                        <a href="{:url('edit', ['id' => $v.id])}" class="layui-btn layui-btn-normal layui-btn-sm">编辑</a>
+                        <button data-id="{$v.id}" class="layui-btn layui-btn-danger layui-btn-sm ml0" lay-submit lay-filter="Detele">删除</button>
                     </td>
                 </tr>
                 {/foreach}

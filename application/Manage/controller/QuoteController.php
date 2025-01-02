@@ -24,13 +24,21 @@ class QuoteController extends BaseController
      */
     public function table(): \think\response\View
     {
+        $keyword = $this->request->get('keyword', '', 'htmlspecialchars');
+        $this->assign('keyword', $keyword);
+        if ($keyword) {
+            $where['table_name'] = ['like', '%' . $keyword . '%'];
+        } else {
+            $where = [];
+        }
+
         // 查看权限
         $access_ids = AccountModel::account_access_ids();
         $where['user_id'] = ['in', $access_ids];
 
         // 报价单列表
         $quoteTableObj = new QuoteTableModel();
-        $list = $quoteTableObj->where($where)->order('id asc')->paginate(Config::get('PAGE_NUM'));
+        $list = $quoteTableObj->where($where)->order('id desc')->paginate(Config::get('PAGE_NUM'), false, ['keyword' => $keyword]);
         $this->assign('list', $list);
 
         Session::set(Config::get('BACK_URL'), $this->request->url(), 'manage');
@@ -218,9 +226,16 @@ class QuoteController extends BaseController
      */
     public function sample(): \think\response\View
     {
+        $keyword = $this->request->get('keyword', '', 'htmlspecialchars');
+        $this->assign('keyword', $keyword);
+        if ($keyword) {
+            $where['product_code|product_desc'] = ['like', '%' . $keyword . '%'];
+        } else {
+            $where = [];
+        }
+
         // 查看权限
         $access_ids = AccountModel::account_access_ids();
-        $where = [];
         if (AccountModel::account_role() == "Developer") {
             $where['develop_id'] = ['in', $access_ids];
             $status = $this->request->get('status', 0, 'intval');
@@ -238,7 +253,7 @@ class QuoteController extends BaseController
 
         // 报价单列表
         $quoteTableObj = new QuoteProductModel();
-        $list = $quoteTableObj->with(['developer', 'purchaser'])->where($where)->order('id asc')->paginate(Config::get('PAGE_NUM'));
+        $list = $quoteTableObj->with(['developer', 'purchaser'])->where($where)->order('id asc')->paginate(Config::get('PAGE_NUM'), false, ['query' => ['keyword' => $keyword, 'status' => $status]]);
         $this->assign('list', $list);
 
         Session::set(Config::get('BACK_URL'), $this->request->url(), 'manage');
@@ -568,9 +583,16 @@ class QuoteController extends BaseController
      */
     public function prototype(): \think\response\View
     {
+        $keyword = $this->request->get('keyword', '', 'htmlspecialchars');
+        $this->assign('keyword', $keyword);
+        if ($keyword) {
+            $where['product_code|product_desc'] = ['like', '%' . $keyword . '%'];
+        } else {
+            $where = [];
+        }
+
         // 查看权限
         $access_ids = AccountModel::account_access_ids();
-        $where = [];
         if (AccountModel::account_role() == "Developer") {
             $where['develop_id'] = ['in', $access_ids];
             $status = $this->request->get('status', 5, 'intval');
@@ -588,7 +610,7 @@ class QuoteController extends BaseController
 
         // 报价单列表
         $quoteTableObj = new QuoteProductModel();
-        $list = $quoteTableObj->with(['developer', 'purchaser'])->where($where)->order('id asc')->paginate(Config::get('PAGE_NUM'));
+        $list = $quoteTableObj->with(['developer', 'purchaser'])->where($where)->order('id asc')->paginate(Config::get('PAGE_NUM'), false, ['keyword' => $keyword, 'status' => $status]);
         $this->assign('list', $list);
 
         Session::set(Config::get('BACK_URL'), $this->request->url(), 'manage');
