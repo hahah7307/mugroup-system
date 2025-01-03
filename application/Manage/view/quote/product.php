@@ -93,12 +93,16 @@
                         {elseif condition="$v.status eq 4" /}
                         <p class="blue">打样中</p>
                         {elseif condition="$v.status eq 5" /}
-                        <p class="blue">打样完成</p>
+                        <p class="blue">样品待核价</p>
                         {elseif condition="$v.status eq 6" /}
-                        <p class="green">审核通过</p>
+                        <p class="blue">样品待分析</p>
                         {elseif condition="$v.status eq 7" /}
-                        <p class="red">未过审核</p>
+                        <p class="blue">样品待审核</p>
                         {elseif condition="$v.status eq 8" /}
+                        <p class="green">样品通过</p>
+                        {elseif condition="$v.status eq 11" /}
+                        <p class="red">报价失败</p>
+                        {elseif condition="$v.status eq 12" /}
                         <p class="red">样品失败</p>
                         {/if}
                     </td>

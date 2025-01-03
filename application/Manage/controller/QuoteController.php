@@ -38,7 +38,7 @@ class QuoteController extends BaseController
 
         // 报价单列表
         $quoteTableObj = new QuoteTableModel();
-        $list = $quoteTableObj->where($where)->order('id desc')->paginate(Config::get('PAGE_NUM'), false, ['keyword' => $keyword]);
+        $list = $quoteTableObj->with(['user'])->where($where)->order('id desc')->paginate(Config::get('PAGE_NUM'), false, ['keyword' => $keyword]);
         $this->assign('list', $list);
 
         Session::set(Config::get('BACK_URL'), $this->request->url(), 'manage');
@@ -243,7 +243,7 @@ class QuoteController extends BaseController
             $where['purchaser_id'] = ['in', $access_ids];
             $status = $this->request->get('status', 3, 'intval');
         } else {
-            $status = $this->request->get('status', -1, 'intval');
+            $status = $this->request->get('status', 2, 'intval');
         }
 
         $this->assign('status', $status);
@@ -253,7 +253,7 @@ class QuoteController extends BaseController
 
         // 报价单列表
         $quoteTableObj = new QuoteProductModel();
-        $list = $quoteTableObj->with(['developer', 'purchaser'])->where($where)->order('id asc')->paginate(Config::get('PAGE_NUM'), false, ['query' => ['keyword' => $keyword, 'status' => $status]]);
+        $list = $quoteTableObj->with(['developer', 'purchaser'])->where($where)->order('id desc')->paginate(Config::get('PAGE_NUM'), false, ['query' => ['keyword' => $keyword, 'status' => $status]]);
         $this->assign('list', $list);
 
         Session::set(Config::get('BACK_URL'), $this->request->url(), 'manage');
@@ -600,7 +600,7 @@ class QuoteController extends BaseController
             $where['purchaser_id'] = ['in', $access_ids];
             $status = $this->request->get('status', 3, 'intval');
         } else {
-            $status = $this->request->get('status', -1, 'intval');
+            $status = $this->request->get('status', 2, 'intval');
         }
 
         $this->assign('status', $status);
@@ -610,7 +610,7 @@ class QuoteController extends BaseController
 
         // 报价单列表
         $quoteTableObj = new QuoteProductModel();
-        $list = $quoteTableObj->with(['developer', 'purchaser'])->where($where)->order('id asc')->paginate(Config::get('PAGE_NUM'), false, ['keyword' => $keyword, 'status' => $status]);
+        $list = $quoteTableObj->with(['developer', 'purchaser'])->where($where)->order('id desc')->paginate(Config::get('PAGE_NUM'), false, ['keyword' => $keyword, 'status' => $status]);
         $this->assign('list', $list);
 
         Session::set(Config::get('BACK_URL'), $this->request->url(), 'manage');

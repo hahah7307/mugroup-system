@@ -21,6 +21,7 @@
                 <colgroup>
                     <col class="w80">
                     <col>
+                    <col class="w80">
                     <col class="w180">
                     <col class="w120">
                 </colgroup>
@@ -28,6 +29,7 @@
                 <tr>
                     <th>ID</th>
                     <th>表名</th>
+                    <th>采购</th>
                     <th>导入时间</th>
                     <th class="tc">操作</th>
                 </tr>
@@ -37,6 +39,7 @@
                 <tr>
                     <td>{$v.id}</td>
                     <td>{$v.table_name}</td>
+                    <td>{$v.user.nickname}</td>
                     <td>{$v.created_time}</td>
                     <td class="tc">
                         <a href="{:url('product', ['id' => $v.id])}" class="layui-btn layui-btn-sm">查看产品</a>

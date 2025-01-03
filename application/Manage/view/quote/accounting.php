@@ -174,6 +174,12 @@
                 <div class="layui-text-inline">{$accounting.storage.0.data.volume_lbs}</div>
             </div>
         </div>
+        <div class="layui-col-md3">
+            <div class="layui-form-item">
+                <label class="layui-form-label"><b class="black">最低市场售价($)</b></label>
+                <div class="layui-text-inline"><b class="black">{$accounting.product.min_price}</b></div>
+            </div>
+        </div>
     </div>
     <div class="layui-row">
         <div class="layui-col-md3">
@@ -192,6 +198,12 @@
             <div class="layui-form-item">
                 <label class="layui-form-label">FOB成本($)</label>
                 <div class="layui-text-inline">{$accounting.storage.0.data.fob}</div>
+            </div>
+        </div>
+        <div class="layui-col-md3">
+            <div class="layui-form-item">
+                <label class="layui-form-label"><b class="black">目标定价($)</b></label>
+                <div class="layui-text-inline"><b class="black">{$accounting.product.target_pricing}</b></div>
             </div>
         </div>
     </div>
@@ -320,6 +332,12 @@
                 <div class="layui-text-inline">{$accounting.storage.1.data.volume_lbs}</div>
             </div>
         </div>
+        <div class="layui-col-md3">
+            <div class="layui-form-item">
+                <label class="layui-form-label"><b class="black">最低市场售价($)</b></label>
+                <div class="layui-text-inline"><b class="black">{$accounting.product.min_price}</b></div>
+            </div>
+        </div>
     </div>
     <div class="layui-row">
         <div class="layui-col-md3">
@@ -338,6 +356,12 @@
             <div class="layui-form-item">
                 <label class="layui-form-label">FOB成本($)</label>
                 <div class="layui-text-inline">{$accounting.storage.1.data.fob}</div>
+            </div>
+        </div>
+        <div class="layui-col-md3">
+            <div class="layui-form-item">
+                <label class="layui-form-label"><b class="black">目标定价($)</b></label>
+                <div class="layui-text-inline"><b class="black">{$accounting.product.target_pricing}</b></div>
             </div>
         </div>
     </div>
