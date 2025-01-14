@@ -21,6 +21,7 @@ class QuoteController extends BaseController
 {
     /**
      * @throws DbException
+     * @throws Exception
      */
     public function table(): \think\response\View
     {
@@ -41,8 +42,15 @@ class QuoteController extends BaseController
         $list = $quoteTableObj->with(['user'])->where($where)->order('id desc')->paginate(Config::get('PAGE_NUM'), false, ['keyword' => $keyword]);
         $this->assign('list', $list);
 
-        Session::set(Config::get('BACK_URL'), $this->request->url(), 'manage');
+        $monthSum = $quoteTableObj->alias('a')
+            ->join('nbtlz_quote_product b', 'a.id = b.table_id')
+            ->where(['created_time' => ['egt', date('Y-m-') . '-01 00:00:00']])
+            ->where(['created_time' => ['lt', date('Y-m-d H:i:s', strtotime('last day of this month'))]])
+            ->where(['purchaser_id' => ['in', $access_ids]])
+            ->count();
+        $this->assign('monthSum', $monthSum);
 
+        Session::set(Config::get('BACK_URL'), $this->request->url(), 'manage');
         return view();
     }
 
@@ -890,5 +898,51 @@ class QuoteController extends BaseController
 
             return view();
         }
+    }
+
+    /**
+     * @throws DbException
+     * @throws Exception
+     */
+    public function recommend(): \think\response\View
+    {
+        // 查看权限
+        $access_ids = AccountModel::account_access_ids();
+
+        $month = $this->request->get('month', date('Y-m'));
+        $monthStart = $month . '-01 00:00:00';
+        $monthNext = date('Y-m-01 00:00:00', strtotime('+1 month'));
+        $this->assign('month', $month);
+
+        // 报价单列表
+        $quoteTableObj = new QuoteTableModel();
+        $list = $quoteTableObj->query('
+SELECT
+	d.nickname,
+	COUNT( b.id ) count 
+FROM
+	( SELECT user_id FROM nbtlz_admin_user_role WHERE role_id = 8 ) a
+	LEFT JOIN nbtlz_quote_product b ON a.user_id = b.purchaser_id
+	LEFT JOIN nbtlz_quote_table c ON b.table_id = c.id
+	LEFT JOIN nbtlz_admin_user d ON a.user_id = d.id 
+WHERE
+	c.created_time >= "' . $monthStart . '" 
+	AND c.created_time < "' . $monthNext . '" 
+GROUP BY
+	nickname 
+ORDER BY
+	count DESC;
+        ');
+        $this->assign('list', $list);
+
+        $monthSum = $quoteTableObj->alias('a')
+            ->join('nbtlz_quote_product b', 'a.id = b.table_id')
+            ->where(['created_time' => ['egt', $monthStart]])
+            ->where(['created_time' => ['lt', $monthNext]])
+            ->where(['purchaser_id' => ['in', $access_ids]])
+            ->count();
+        $this->assign('monthSum', $monthSum);
+
+        return view();
     }
 }

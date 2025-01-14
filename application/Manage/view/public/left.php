@@ -29,6 +29,7 @@
                         <dd><a layui-href="{:url('Quote/prototype')}">打样管理</a></dd>
                         {/if}
                         {if condition="$role eq 'Developer' or $user.super"}
+                        <dd><a layui-href="{:url('Quote/recommend')}">推荐统计</a></dd>
                         <dd><a layui-href="{:url('Price/index')}">核价模板</a></dd>
                         <dd><a layui-href="{:url('Param/price')}">参数配置</a></dd>
                         {/if}
