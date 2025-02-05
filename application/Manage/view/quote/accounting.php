@@ -154,7 +154,7 @@
 
 {if condition="$info.accounting"}
 <div class="right">
-    <div class="title"><b class="black">一号仓</b></div>
+    <div class="title"><b class="black">良仓</b></div>
     <div class="layui-row">
         <div class="layui-col-md3">
             <div class="layui-form-item">
@@ -312,7 +312,7 @@
         </div>
     </div>
 
-    <div class="title"><b class="black">二号仓</b></div>
+    <div class="title"><b class="black">乐歌</b></div>
     <div class="layui-row">
         <div class="layui-col-md3">
             <div class="layui-form-item">

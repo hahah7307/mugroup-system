@@ -64,7 +64,7 @@ class PriceModel extends Model
             $le_outbound = StorageRuleModel::w2outbound(2, $gross_weight_lbs);
             $le_deliver_fee = DeliverFeeModel::w2deliverFee(2, $w);
             $le_ahs_fee = AHS::AHSFeeLoctek($gross_weight_lbs, $item['product_length'], $item['product_width'], $item['product_height']);
-            $le_tail_end += round(400 / $loading_qty + $le_outbound + ($le_deliver_fee + 5 + $le_ahs_fee['basicFee'] + $le_ahs_fee['additionalFee']) * 1.16 + 3, 2);
+            $le_tail_end += round(300 / $loading_qty + $le_outbound + ($le_deliver_fee + 2.9 + $le_ahs_fee['basicFee'] + $le_ahs_fee['additionalFee']) * 1.16 + 3, 2);
 
             // 仓储
             $lc_warehouse_rent += round(10 * 0.3 * $volume + 90 * 0.35 * $volume, 2);
@@ -72,7 +72,7 @@ class PriceModel extends Model
 
             //
             $lc_tail_label[] = "300 / " . $loading_qty . " + " . $lc_outbound . " + (" . $lc_deliver_fee . " + 4.43 + " . $lc_ahs_fee['basicFee'] . " + " . $lc_ahs_fee['additionalFee'] . ") * 1.16 + 3";
-            $le_tail_label[] = "400 / " . $loading_qty . " + " . $le_outbound . " + (" . $le_deliver_fee . " + 5 + " . $le_ahs_fee['basicFee'] . " + " . $le_ahs_fee['additionalFee'] . ") * 1.16 + 3";
+            $le_tail_label[] = "300 / " . $loading_qty . " + " . $le_outbound . " + (" . $le_deliver_fee . " + 2.9 + " . $le_ahs_fee['basicFee'] . " + " . $le_ahs_fee['additionalFee'] . ") * 1.16 + 3";
 
             $volumeSum += $volume;
             $gross_weight_lbsSum += $gross_weight_lbs;
@@ -143,7 +143,7 @@ class PriceModel extends Model
         $result['lc_tail_end_label'] = implode('；', $lc_tail_label);
         $result['le_tail_end_label'] = implode('；', $le_tail_label);
         $result['storage'][] = [
-            'storage_name'  => '一号仓',
+            'storage_name'  => '良仓',
             'data'          =>  [
                 'volume'                        =>  $volumeSum,
                 'gross_weight_lbs'              =>  $gross_weight_lbsSum,
@@ -169,7 +169,7 @@ class PriceModel extends Model
             ]
         ];
         $result['storage'][] = [
-            'storage_name'  =>  '二号仓',
+            'storage_name'  =>  '乐歌',
             'data'          =>  [
                 'volume'                        =>  $volumeSum,
                 'gross_weight_lbs'              =>  $gross_weight_lbsSum,
