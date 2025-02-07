@@ -123,8 +123,8 @@ class PriceController extends BaseController
         $loctek_outbound = StorageRuleModel::w2outbound(2, $gross_weight_lbs);
         $loctek_deliver_fee = DeliverFeeModel::w2deliverFee(2, $w);
         $loctek_ahs_fee = AHS::AHSFeeLoctek($gross_weight_lbs, $length, $width, $height);
-        $loctek_tail_end = round(300 / $loading_qty + $loctek_outbound + ($loctek_deliver_fee + 2.9 + $loctek_ahs_fee['basicFee'] + $loctek_ahs_fee['additionalFee']) * 1.16 + 3, 2);
-        $this->assign('loctek_tail_end_count', "300 / " . $loading_qty . " + " . $loctek_outbound . " + (" . $loctek_deliver_fee . " + 2.9 + " . $loctek_ahs_fee['basicFee'] . " + " . $loctek_ahs_fee['additionalFee'] . ") * 1.16 + 3");
+        $loctek_tail_end = round(350 / $loading_qty + $loctek_outbound + ($loctek_deliver_fee + 2.9 + $loctek_ahs_fee['basicFee'] + $loctek_ahs_fee['additionalFee']) * 1.16 + 3, 2);
+        $this->assign('loctek_tail_end_count', "350 / " . $loading_qty . " + " . $loctek_outbound . " + (" . $loctek_deliver_fee . " + 2.9 + " . $loctek_ahs_fee['basicFee'] . " + " . $loctek_ahs_fee['additionalFee'] . ") * 1.16 + 3");
         $this->assign('loctek_tail_end', $loctek_tail_end);
 
         // tail_end_proportion
