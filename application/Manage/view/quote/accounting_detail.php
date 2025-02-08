@@ -15,6 +15,7 @@
         .layui-body {position: unset}
         .layui-col-md3 {width: 24%}
         .layui-form-label {font-size: 12px; padding: 8px 8px;width: 120px}
+        .miss {display: none}
     </style>
 </head>
 <div class="layui-body">
@@ -107,6 +108,7 @@
 </div>
 
 <div class="right">
+    <div class="miss">
     <div class="title"><b class="black">良仓</b></div>
     <div class="layui-row">
         <div class="layui-col-md3">
@@ -251,6 +253,7 @@
                 <div class="layui-text-inline"><b class="black">{$accounting.storage.0.data.target_pricing_profit_rate|decimal2percentage}</b></div>
             </div>
         </div>
+    </div>
     </div>
 
     <div class="title"><b class="black">乐歌</b></div>

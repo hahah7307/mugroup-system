@@ -14,6 +14,7 @@
     .layui-layer-btn1 {background-color: #fff !important; color: #333 !important; border: 1px solid #dedede !important;}
     .layui-layer-btn0 {background-color: #1E9FFF !important; color: #fff !important; border: 1px solid #1E9FFF !important;}
     .layui-layer-btn2 {background-color: #FF5722 !important; color: #fff !important; border: 1px solid #FF5722 !important;}
+    .miss {display: none}
 </style>
 <div class="layui-body">
 <div class="right">
@@ -154,6 +155,7 @@
 
 {if condition="$info.prototype_accounting"}
 <div class="right">
+    <div class="miss">
     <div class="title"><b class="black">良仓</b></div>
     <div class="layui-row">
         <div class="layui-col-md3">
@@ -310,6 +312,7 @@
                 <div class="layui-text-inline"><b class="black">{$accounting.storage.0.data.target_pricing_profit_rate|decimal2percentage}</b></div>
             </div>
         </div>
+    </div>
     </div>
 
     <div class="title"><b class="black">乐歌</b></div>
