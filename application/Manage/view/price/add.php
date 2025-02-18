@@ -6,6 +6,7 @@
     .layui-form-label {width: 100px!important;}
     .layui-form-item .layui-inline {margin-right: 0!important;}
     .layui-form-label {width: 160px!important;}
+    .miss {display: none}
 </style>
 <div class="layui-body">
 <div class="right">
@@ -118,6 +119,7 @@
 
 {if condition="($show_reason == 1)"}
 <div class="right">
+    <div class="miss">
     <div class="title"><b class="black">良仓</b></div>
     <div class="layui-row">
         <div class="layui-col-md3">
@@ -262,6 +264,7 @@
                 <div class="layui-text-inline"><b class="black">{$liang_target_pricing_profit_rate|decimal2percentage}</b></div>
             </div>
         </div>
+    </div>
     </div>
 
     <div class="title"><b class="black">乐歌</b></div>
