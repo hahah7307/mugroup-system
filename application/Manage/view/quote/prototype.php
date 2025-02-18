@@ -60,6 +60,7 @@
                     <col class="w60">
                     <col class="w100">
                     <col class="w150">
+                    <col class="w150">
                 </colgroup>
                 <thead>
                 <tr>
@@ -75,6 +76,7 @@
                     <th>采购</th>
                     <th>开发</th>
                     <th class="tc">状态</th>
+                    <th class="tc">创建时间</th>
                     <th class="tc">操作</th>
                 </tr>
                 </thead>
@@ -117,6 +119,7 @@
                         <p class="red">样品失败</p>
                         {/if}
                     </td>
+                    <td>{$v.quote.created_time}</td>
                     <td class="tc">
                         {if condition="$role eq 'Super' or $role eq 'Developer'"}
                         <a href="{:url('prototype_accounting', ['id' => $v.id])}" class="layui-btn layui-btn layui-btn-sm">查看</a>

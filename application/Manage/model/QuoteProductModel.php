@@ -19,4 +19,9 @@ class QuoteProductModel extends Model
     {
         return $this->hasOne('AccountModel', 'id', 'purchaser_id');
     }
+
+    public function quote(): \think\model\relation\HasOne
+    {
+        return $this->hasOne('QuoteTableModel', 'id', 'table_id');
+    }
 }

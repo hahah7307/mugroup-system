@@ -261,7 +261,7 @@ class QuoteController extends BaseController
 
         // 报价单列表
         $quoteTableObj = new QuoteProductModel();
-        $list = $quoteTableObj->with(['developer', 'purchaser'])->where($where)->order('id desc')->paginate(Config::get('PAGE_NUM'), false, ['query' => ['keyword' => $keyword, 'status' => $status]]);
+        $list = $quoteTableObj->with(['developer', 'purchaser', 'quote'])->where($where)->order('id desc')->paginate(Config::get('PAGE_NUM'), false, ['query' => ['keyword' => $keyword, 'status' => $status]]);
         $this->assign('list', $list);
 
         Session::set(Config::get('BACK_URL'), $this->request->url(), 'manage');
@@ -618,7 +618,7 @@ class QuoteController extends BaseController
 
         // 报价单列表
         $quoteTableObj = new QuoteProductModel();
-        $list = $quoteTableObj->with(['developer', 'purchaser'])->where($where)->order('id desc')->paginate(Config::get('PAGE_NUM'), false, ['keyword' => $keyword, 'status' => $status]);
+        $list = $quoteTableObj->with(['developer', 'purchaser', 'quote'])->where($where)->order('id desc')->paginate(Config::get('PAGE_NUM'), false, ['keyword' => $keyword, 'status' => $status]);
         $this->assign('list', $list);
 
         Session::set(Config::get('BACK_URL'), $this->request->url(), 'manage');
