@@ -102,7 +102,7 @@ class PriceController extends BaseController
         // storage_charge
         $liang_storage_charge = round(10 * 0.3 * $volume + 90 * 0.35 * $volume, 2);
         $this->assign('liang_storage_charge', $liang_storage_charge);
-        $loctek_storage_charge = round(30 * 0.25 * $volume + 60 * 0.3 * $volume, 2);
+        $loctek_storage_charge = round(30 * 0.2 * $volume + 60 * 0.3 * $volume, 2);
         $this->assign('loctek_storage_charge', $loctek_storage_charge);
 
         // storage_charge_proportion

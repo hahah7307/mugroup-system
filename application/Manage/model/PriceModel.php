@@ -68,7 +68,7 @@ class PriceModel extends Model
 
             // 仓储
             $lc_warehouse_rent += round(10 * 0.3 * $volume + 90 * 0.35 * $volume, 2);
-            $le_warehouse_rent += round(30 * 0.25 * $volume + 60 * 0.3 * $volume, 2);
+            $le_warehouse_rent += round(30 * 0.2 * $volume + 60 * 0.3 * $volume, 2);
 
             //
             $lc_tail_label[] = "300 / " . $loading_qty . " + " . $lc_outbound . " + (" . $lc_deliver_fee . " + 4.43 + " . $lc_ahs_fee['basicFee'] . " + " . $lc_ahs_fee['additionalFee'] . ") * 1.16 + 3";
