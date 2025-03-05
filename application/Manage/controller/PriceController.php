@@ -92,7 +92,7 @@ class PriceController extends BaseController
         $this->assign('initial_cost_rate', $initial_cost_rate);
 
         // tariff
-        $tariff = round($fob * 0.7 * $tariff_rate, 2);
+        $tariff = round($fob * 0.5 * $tariff_rate, 2);
         $this->assign('tariff', $tariff);
 
         // tariff_proportion

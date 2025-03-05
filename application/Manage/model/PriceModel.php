@@ -96,7 +96,7 @@ class PriceModel extends Model
         $initial_cost_rate = round($initial_cost / $data['target_pricing'], 4);
 
         // 关税
-        $tariff = round($fob * 0.7 * $data['tariff_rate'], 2);
+        $tariff = round($fob * 0.5 * $data['tariff_rate'], 2);
 
         // 关税占比
         $tariff_proportion = round($tariff / $data['target_pricing'], 4);
