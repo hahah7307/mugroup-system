@@ -11,19 +11,19 @@
         <div class="title">产品打样</div>
         <div class="layui-form">
             <div class="layui-form-item">
-                <label class="layui-form-label">长</label>
+                <label class="layui-form-label">外箱长</label>
                 <div class="layui-input-inline w300">
                     <input type="text" class="layui-input" value="{$info.product_length}" disabled>
                 </div>
             </div>
             <div class="layui-form-item">
-                <label class="layui-form-label">宽</label>
+                <label class="layui-form-label">外箱宽</label>
                 <div class="layui-input-inline w300">
                     <input type="text" class="layui-input" value="{$info.product_width}" disabled>
                 </div>
             </div>
             <div class="layui-form-item">
-                <label class="layui-form-label">高</label>
+                <label class="layui-form-label">外箱高</label>
                 <div class="layui-input-inline w300">
                     <input type="text" class="layui-input" value="{$info.product_height}" disabled>
                 </div>
@@ -38,6 +38,24 @@
                 <label class="layui-form-label">净重</label>
                 <div class="layui-input-inline w300">
                     <input type="text" class="layui-input" value="{$info.net_weight}" disabled>
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <label class="layui-form-label">产品长</label>
+                <div class="layui-input-inline w300">
+                    <input type="text" class="layui-input" value="{$info.p_length}" disabled>
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <label class="layui-form-label">产品宽</label>
+                <div class="layui-input-inline w300">
+                    <input type="text" class="layui-input" value="{$info.p_width}" disabled>
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <label class="layui-form-label">产品高</label>
+                <div class="layui-input-inline w300">
+                    <input type="text" class="layui-input" value="{$info.p_height}" disabled>
                 </div>
             </div>
             <div class="layui-form-item">

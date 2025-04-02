@@ -56,6 +56,7 @@
                     <col>
                     <col>
                     <col>
+                    <col>
                     <col class="w60">
                     <col class="w60">
                     <col class="w100">
@@ -68,6 +69,7 @@
                     <th>产品图片</th>
                     <th>包装尺寸</th>
                     <th class="tc">产品描述</th>
+                    <th>产品尺寸</th>
                     <th>含税出厂价（¥）</th>
                     <th>FOB价（$）</th>
                     <th>推荐市场</th>
@@ -87,6 +89,7 @@
                     <td><a href="/{$v.img_url}" target="_blank"><img src="/{$v.img_url}" alt="" height="40"></a></td>
                     <td>{$v.product_length}*{$v.product_width}*{$v.product_height}<br>{$v.gross_weight}({$v.net_weight})</td>
                     <td>{$v.product_desc}</td>
+                    <td>{$v.p_length}*{$v.p_width}*{$v.p_height}</td>
                     <td>{$v.cost}</td>
                     <td>{$v.fob}</td>
                     <td>{$v.region}</td>

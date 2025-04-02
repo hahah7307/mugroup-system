@@ -34,6 +34,9 @@
                     <col>
                     <col>
                     <col>
+                    <col>
+                    <col>
+                    <col>
                     <col class="w60">
                     <col class="w100">
                     <col class="w120">
@@ -49,6 +52,9 @@
                     <th>外箱高（cm）</th>
                     <th>外箱毛重（kg）</th>
                     <th>产品净重（kg）</th>
+                    <th>产品长（cm）</th>
+                    <th>产品宽（cm）</th>
+                    <th>产品高（cm）</th>
                     <th class="tc">产品描述</th>
                     <th>含税出厂价（人民币）</th>
                     <th>FOB价（美金）</th>
@@ -73,6 +79,9 @@
                     <td>{$v.product_height}</td>
                     <td>{$v.gross_weight}</td>
                     <td>{$v.net_weight}</td>
+                    <td>{$v.p_length}</td>
+                    <td>{$v.p_width}</td>
+                    <td>{$v.p_height}</td>
                     <td>{$v.product_desc}</td>
                     <td>{$v.cost}</td>
                     <td>{$v.fob}</td>
